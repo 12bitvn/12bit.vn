@@ -7,7 +7,6 @@ body {
   font-size: 18px;
   line-height: 1.6;
   font-weight: $font-weight-normal;
-  font-display: auto;
   color: $color-dark;
 }
 
@@ -193,15 +192,16 @@ a[target="_blank"] {
     }
     code, pre {
       font-family: $font-monospace;
-      background-color: rgba($color-dark, .08);
-      padding: 0 10px 3px;
       border-radius: 4px;
+      font-size: 16px;
     }
-    pre {
-      padding: 15px;
-      code {
-        background-color: transparent;
-      }
+    p code {
+      background: rgba(0,0,0,.05);
+      padding: 3px 4px;
+      margin: 0 2px;
+    }
+    .hljs {
+      padding: 1em;
     }
     a {
       color: $color-primary;

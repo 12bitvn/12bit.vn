@@ -93,12 +93,11 @@ self.addEventListener('install', (e) => {
         caches.open("precache").then((cache) => {
             // Add /broken.png to "precache"
             cache.add("/broken.png");
-            
         })
     );
 });
 ```
 
-Giờ quay lại event fetch và thay fetch('/broken.png') bằng caches.match('/broken.png')
+Giờ quay lại event fetch và thay `fetch('/broken.png')` bằng `caches.match('/broken.png')`
 
 Đoạn code đầy đủ sẽ như sau:
