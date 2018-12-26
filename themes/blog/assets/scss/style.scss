@@ -151,7 +151,6 @@ a[target="_blank"] {
   }
   &__date {
     color: $color-light;
-    @include font-size(0.8);
   }
   &__content {
     p {
@@ -188,13 +187,12 @@ a[target="_blank"] {
     }
     code, pre {
       font-family: $font-monospace;
-      font-size: 14px;
       background-color: rgba($color-dark, .08);
       padding: 0 10px 3px;
       border-radius: 4px;
     }
     pre {
-      padding: 0;
+      padding: 15px;
       code {
         background-color: transparent;
       }
