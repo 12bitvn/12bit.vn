@@ -1,6 +1,10 @@
 ---
 title: "Xử lý khi không load được ảnh bằng cách sử dụng service worker"
 date: 2018-12-26T09:36:03+07:00
+tags: [javascript]
+author:
+    name: Duoc Nguyen
+    github: nguyenvanduocit
 draft: false
 ---
 

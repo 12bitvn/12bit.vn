@@ -151,7 +151,7 @@ a[target="_blank"] {
   &__intro {
     color: $color-light;
   }
-  &__date {
+  &__meta {
     color: $color-light;
     @at-root .tils &{
       @include font-size(1);

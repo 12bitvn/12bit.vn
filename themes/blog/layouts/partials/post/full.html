@@ -1,0 +1,7 @@
+<article class="article article--{{ .Type }}">
+    {{ partial "post/header" . }}
+    <div class="article__content">
+        {{ .Content }}
+    </div>
+    {{ partial "post/comment" .}}
+</article>

@@ -1,12 +1,5 @@
 {{ partial "header" . }}
 <div id="content" class="site-content site-content--{{ .Type }}">
-  <article class="article article--{{ .Type }}">
-    <h1 class="article__title">{{ .Title }}</h1>
-    <time class="article__date">{{ .Date.Format "January 02, 2006" }}</time>
-    <div class="article__content">
-      {{ .Content }}
-    </div>
-  </article>
+  {{ partial "post/full" . }}
 </div><!-- #content -->
-{{ partial "comment" . }}
 {{ partial "footer" . }}

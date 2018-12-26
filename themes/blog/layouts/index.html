@@ -3,10 +3,7 @@
 <div id="content" class="site-content">
   <div class="tils">
     {{ range $paginator.Pages }}
-    <article class="article article--{{ .Type }}">
-      <h2 class="article__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-      <time class="article__date">{{ .Date.Format "January 02, 2006" }}</time>
-    </article>
+    {{ partial "post/item" . }}
     {{ end }}
   </div>
 {{ template "_internal/pagination.html" . }}
