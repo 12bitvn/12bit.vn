@@ -138,9 +138,10 @@ a[target="_blank"] {
     border: none;
   }
   &__title {
-    @include font-size(2);
+    @include font-size(1.5);
+    line-height: 1.2;
     margin-bottom: 0;
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-normal;
     color: $color-primary;
     a {
       color: $color-primary;

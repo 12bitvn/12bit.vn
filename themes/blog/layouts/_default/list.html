@@ -4,9 +4,6 @@
     {{ range .Paginator.Pages }}
     <article class="article">
       <h2 class="article__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-      <div class="article__content">
-        {{ .Content }}
-      </div>
     </article>
     {{ end }}
   </div>
