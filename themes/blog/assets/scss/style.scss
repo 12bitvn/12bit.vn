@@ -75,6 +75,7 @@ a[target="_blank"] {
   .site-title {
     @include font-size(2);
     margin: 10px 0;
+    line-height: 1.0;
     @include breakpoint(tablet) {
       margin: 0;
       @include font-size(3);
@@ -129,8 +130,6 @@ a[target="_blank"] {
 /***** ARTICLE ITEM *****/
 .article {
   margin: 2rem 0;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid rgba($color-dark, .1);
   &:first-child {
     margin-top: 0;
   }
@@ -146,12 +145,18 @@ a[target="_blank"] {
     a {
       color: $color-primary;
     }
+    @at-root .tils &{
+      @include font-size(1.3);
+    }
   }
   &__intro {
     color: $color-light;
   }
   &__date {
     color: $color-light;
+    @at-root .tils &{
+      @include font-size(1);
+    }
   }
   &__content {
     p {
@@ -383,5 +388,14 @@ a[target="_blank"] {
         font-weight: $font-weight-bold;
       }
     }
+  }
+}
+
+figcaption{
+  h4{
+    margin: 0;
+    text-align: center;
+    font-weight: normal;
+    font-style: italic;
   }
 }
