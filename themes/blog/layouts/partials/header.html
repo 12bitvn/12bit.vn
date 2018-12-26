@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="title" content="{{ .Title }}">
+  <meta name="description" content="{{ .Description }}">
+  <!-- Start of Open Graph -->
+  <meta property="og:title" content="{{ .Title }}">
+{{ if .IsPage }}
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="{{ .Date.Format "2006-01-02" }}">
+{{ else }}
+  <meta property="og:type" content="website">
+{{ end }}
+  <meta property="og:description" content="{{ .Description }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+{{ if .Params.thumbnail }}
+  <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.thumbnail }}">
+{{ end }}
+{{ range .Params.tags }}
+  <meta property="og:tags" content="{{ . }}">
+{{ end }}
+  <!-- End of Open Graph -->
+  <!-- Start of Twitter -->
+{{ if .Site.Params.twitter_card_whitelisted }}
+{{ if .Params.twitter_summary }}
+  <meta property="twitter:card" content="{{ .Params.twitter_summary }}">
+{{ else if .Description }}
+  <meta property="twitter:card" content="{{ .Description }}">
+{{ else }}
+  <meta property="twitter:card" content="{{ .Title }}">
+{{ end }}
+{{ end }}
+  <meta property="twitter:description" content="{{ .Description }}">
+  <meta property="twitter:title" content="{{ .Title }}">
+{{ if .Params.thumbnail }}
+  <meta property="twitter:image" content="{{ .Site.BaseURL }}{{ .Params.thumbnail }}">
+{{ end }}
+  <!-- End of Twitter -->
+{{ .Hugo.Generator }}
+  <title>{{ .Title }}</title>
+{{ range .Params.css }}
+  <link rel="stylesheet" href="{{ . }}">
+{{ end }}
+{{ if .Site.RSSLink }}
+  <link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+{{ end }}
+{{ if isset .Site.Params "favicon" }}
+  <link rel="icon" href="{{ .Site.BaseURL }}/{{ .Site.Params.favicon }}" />
+{{ end }}
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.1/dist/instantsearch.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.1"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css">
+  {{ $style := resources.Get "scss/style.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+{{ partial "seo_schema" . }}
+
+{{ $highlightStyle := resources.Get "css/github.css" }}
+<link rel="stylesheet" href="{{ $highlightStyle.RelPermalink }}">
+</head>
+
+<body>
+  <div id="wrap">
+    <header id="masthead" class="site-header">
+      <div class="left">
+        {{ if .IsPage }}
+        <h2 class="site-title">
+        {{ else }}
+        <h1 class="site-title">
+        {{ end }}
+          <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}<sup class="pantone" style="background-color: #fa7268">#fa7268</sup></a>
+        {{ if .IsPage }}
+        </h2>
+        {{ else }}
+        </h1>
+        {{ end }}
+        <p class="site-desc">{{ .Site.Params.Description }}</p>
+      </div>
+      <div class="right">
+        {{ $currentPage := . }}
+        <nav class="site-navigation">
+          <ul>
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+              {{ if .HasChildren }}
+              <li class="site-navigation__item {{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+              <a href="#">
+                {{ .Pre }}
+                <span>{{ .Name }}</span>
+              </a>
+              </li>
+              <ul class="sub-menu">
+                {{ range .Children }}
+                <li class="site-navigation__item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                  <a href="{{ .URL }}">{{ .Name }}</a>
+                </li>
+                {{ end }}
+              </ul>
+              {{ else }}
+              <li class="site-navigation__item">
+                <a href="{{ .URL }}">
+                  {{ .Pre }}
+                  <span>{{ .Name }}</span>
+                </a>
+              </li>
+              {{ end }}
+            {{ end }}
+          </ul>
+        </nav>
+      </div>
+    </header><!-- #masthead -->
+
+    <div id="algolia" style="display: none;">
+      <div id="search-box">
+        <!-- SearchBox widget will appear here -->
+      </div>
+
+      <div id="hits">
+        <!-- Hits widget will appear here -->
+      </div>
+    </div>

@@ -1,0 +1,23 @@
+<footer id="colophon" class="site-footer">
+  <p>Forked from <a href="https://til.12bit.vn" class="main-domain" target="_blank">til.12bit.vn</a></p>
+</footer><!-- #colophon -->
+</div>
+<!-- #wrap -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+{{ $js := resources.Get "js/app.js" | resources.Minify | resources.Fingerprint }}
+{{ $commentJs := resources.Get "js/comment.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $js.RelPermalink }}"></script>
+
+{{ if .IsPage }}
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="/js/md5.min.js"></script>
+<script src="{{ $commentJs.RelPermalink }}"></script>
+{{ end }}
+
+{{ $highlightJs := resources.Get "js/highlight.pack.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $highlightJs.RelPermalink }}"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

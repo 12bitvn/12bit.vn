@@ -1,0 +1,5 @@
+---
+title: "{{ .Name }}"
+date: {{ .Date }}
+---
+

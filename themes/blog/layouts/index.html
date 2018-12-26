@@ -1,0 +1,17 @@
+{{ partial "header" . }}
+{{ $paginator := .Paginate (where .Pages "Type" "posts") }}
+<div id="content" class="site-content">
+  <div class="tils">
+    {{ range $paginator.Pages }}
+    <article class="article article--{{ .Type }}">
+      <h2 class="article__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <time class="article__date">{{ .Date.Format "January 02, 2006" }}</time>
+      <div class="article__content">
+        {{ .Content }}
+      </div>
+    </article>
+    {{ end }}
+  </div>
+{{ template "_internal/pagination.html" . }}
+</div><!-- #content -->
+{{ partial "footer" . }}

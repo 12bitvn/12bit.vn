@@ -1,0 +1,21 @@
+@mixin font-size($font-size) {
+  font-size: #{$font-size * 16}px;
+  font-size: #{$font-size}rem;
+}
+
+$break-phone: 414px;
+$break-tablet: 768px;
+$break-desktop: 1280px;
+@mixin breakpoint($point) {
+  @if $point == phone {
+    @media (min-width: $break-phone) { @content; }
+  }
+
+  @if $point == tablet {
+    @media (min-width: $break-tablet) { @content; }
+  }
+
+  @if $point == desktop {
+    @media (min-width: $break-desktop) { @content; }
+  }
+}

@@ -1,0 +1,77 @@
+.comment {
+  /** Comment Heading **/
+  &__title {
+    font-weight: $font-weight-bold;
+    @include font-size(1.2);
+  }
+  &__form {
+    margin-bottom: 2rem;
+  }
+  /** Form Input **/
+  &__form-input {
+    margin-bottom: 1rem;
+    label {
+      display: block;
+      @include font-size(1)
+    }
+    input, textarea {
+      width: 100%;
+      border-radius: 4px;
+      border: 2px solid rgba($color-dark, .2);
+      padding: 10px 10px;
+      outline: none;
+      @include font-size(1);
+      &:focus {
+        border-color: $color-primary;
+      }
+    }
+    textarea {
+      height: 100px;
+    }
+    input[type="checkbox"],
+    input[type="radio"] {
+      width: auto;
+    }
+    input[type="submit"] {
+      background-color: $color-primary;
+      border: none;
+      color: #fff;
+      font-weight: $font-weight-bold;
+      width: auto;
+      padding: 10px 15px;
+      cursor: pointer;
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+  /** Comment Item **/
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    margin: 1.5rem 0;
+    @include font-size(1);
+    .avatar {
+      margin-right: 1rem;
+      width: 60px;
+      height: 60px;
+    }
+    .avatar img {
+      border-radius: 50%;
+      width: 100%;
+      height: auto;
+    }
+    .author {
+      margin: 0;
+      padding: 0;
+    }
+    .author time {
+      font-weight: $font-weight-normal;
+      margin-left: 1rem;
+      color: rgba($color-dark, .5);
+    }
+    .content {
+      margin-top: 10px;
+    }
+  }
+}
