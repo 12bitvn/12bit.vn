@@ -153,6 +153,7 @@ a[target="_blank"] {
   }
   &__meta {
     color: $color-light;
+    margin-bottom: 10px;
     @at-root .tils &{
       @include font-size(1);
     }
@@ -309,5 +310,15 @@ figcaption{
     text-align: center;
     font-weight: normal;
     font-style: italic;
+  }
+}
+
+.toc{
+  &__title{
+    margin: 0;
+  }
+  #TableOfContents > ul {
+    list-style: none;
+    padding-left: 0;
   }
 }

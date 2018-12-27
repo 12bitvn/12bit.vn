@@ -2,6 +2,7 @@
 title: "Xử lý khi không load được ảnh bằng cách sử dụng service worker"
 date: 2018-12-26T09:36:03+07:00
 tags: [javascript]
+thumbnail: img/posts/xu-li-anh-khi-khong-load-duoc-ban-service-worker-01.png
 author:
     name: Duoc Nguyen
     github: nguyenvanduocit
@@ -105,3 +106,4 @@ self.addEventListener('install', (e) => {
 Giờ quay lại event fetch và thay `fetch('/broken.png')` bằng `caches.match('/broken.png')`
 
 Đoạn code đầy đủ sẽ như sau:
+
