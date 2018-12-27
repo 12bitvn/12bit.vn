@@ -1,12 +1,12 @@
 {{ partial "header" . }}
-<div id="content" class="site-content">
+<main id="content" class="site-content">
   <div class="tils">
     {{ range .Paginator.Pages }}
     <article class="article">
-      <h2 class="article__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <h1 class="article__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
     </article>
     {{ end }}
   </div>
 {{ template "_internal/pagination.html" . }}
-</div><!-- #content -->
+</main><!-- #content -->
 {{ partial "footer" . }}

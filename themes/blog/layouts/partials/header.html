@@ -70,11 +70,7 @@
   <div id="wrap">
     <header id="masthead" class="site-header">
       <div class="left">
-        {{ if .IsPage }}
-        <h2 class="site-title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h2>
-        {{ else }}
         <h1 class="site-title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
-        {{ end }}
         <p class="site-desc">{{ .Site.Params.Description }}</p>
       </div>
       <div class="right">
@@ -110,13 +106,3 @@
         </nav>
       </div>
     </header><!-- #masthead -->
-
-    <div id="algolia" style="display: none;">
-      <div id="search-box">
-        <!-- SearchBox widget will appear here -->
-      </div>
-
-      <div id="hits">
-        <!-- Hits widget will appear here -->
-      </div>
-    </div>
