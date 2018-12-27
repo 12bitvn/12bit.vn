@@ -11,7 +11,7 @@
     description: A short description for the post.
     date: 2018-12-27T09:55:11+07:00
     tags: [max, three, tags]
-    thumbnail: /img/default-thumb.png
+    thumbnail: /img/posts/default-thumb-1200-630.jpg
     author:
         name: Your Name
         github: github_username
