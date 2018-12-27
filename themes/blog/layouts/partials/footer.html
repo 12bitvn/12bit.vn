@@ -4,7 +4,6 @@
 </div>
 <!-- #wrap -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 {{ $js := resources.Get "js/app.js" | resources.Minify | resources.Fingerprint }}
 {{ $commentJs := resources.Get "js/comment.js" | resources.Minify | resources.Fingerprint }}
 <script src="{{ $js.RelPermalink }}"></script>
