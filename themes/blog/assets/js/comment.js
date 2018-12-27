@@ -8,7 +8,7 @@ var app = new Vue({
     email: '',
     slug: '',
     comments: [],
-    graphqlEndpoint: 'https://api.graph.cool/simple/v1/cjmgeu7349fgx0199m25vmn1w'
+    graphqlEndpoint: 'https://api.graph.cool/simple/v1/cjq6ekfc67g5w0179c5v9205a'
   },
   async mounted () {
     this.slug = this.$el.dataset.slug
@@ -35,6 +35,7 @@ var app = new Vue({
       }
 
       this.author = this.isAnonymous ? 'Anonymous' : this.author
+      this.email = this.isAnonymous ? '' : this.email
 
       let query = `mutation {
         createComment(
@@ -83,12 +84,20 @@ var app = new Vue({
       let monthIndex = date.getMonth()
       let year = date.getFullYear()
       return monthNames[monthIndex] + ' ' + day + ', ' + year
+    },
+    getRandomHexColor (color = '#') {
+      let hex = [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f']
+      color += hex[Math.floor(Math.random() * 16)]
+      return color.length === 7 ? color : this.getRandomHexColor(color)
     }
   },
   filters: {
-    avatar (email) {
-      if (email === '') {
+    avatar (email, name, color) {
+      color = color.substr(1)
+      if (email === '' && name.toLowerCase() === 'anonymous') {
         return '/img/icon/default-avatar.png';
+      } else if (email === '') {
+        return `https://ui-avatars.com/api/?background=${color}&color=fff&rounded=true&site=60&name=${name[0]}`
       }
       return `https://www.gravatar.com/avatar/${md5(email)}?s=60`;
     }
