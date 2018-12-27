@@ -1,0 +1,5 @@
+{{ if .GitInfo }}
+<section class="gitinfo single-section">
+  <p>Last update on {{ .Lastmod.Format "January 02, 2006" }} by {{ .GitInfo.AuthorName }} with message: <a href="https://github.com/12bitvn/12bit.vn/commit/{{ .GitInfo.Hash }}" target="_blank">{{ .GitInfo.Subject }}</a></p>
+</section>
+{{ end }}

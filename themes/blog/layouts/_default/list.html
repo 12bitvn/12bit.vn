@@ -2,9 +2,7 @@
 <main id="content" class="site-content">
   <div class="tils">
     {{ range .Paginator.Pages }}
-    <article class="article">
-      <h1 class="article__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-    </article>
+    {{ partial "post/list-item" . }}
     {{ end }}
   </div>
 {{ template "_internal/pagination.html" . }}

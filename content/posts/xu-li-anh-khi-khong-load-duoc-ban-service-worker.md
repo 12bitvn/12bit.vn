@@ -1,7 +1,7 @@
 ---
 title: "Xử lý khi không load được ảnh bằng cách sử dụng service worker"
 date: 2018-12-26T09:36:03+07:00
-tags: [javascript]
+tags: ["javascript"]
 thumbnail: img/posts/xu-li-anh-khi-khong-load-duoc-ban-service-worker-01.png
 author:
     name: Duoc Nguyen
@@ -107,3 +107,8 @@ Giờ quay lại event fetch và thay `fetch('/broken.png')` bằng `caches.matc
 
 Đoạn code đầy đủ sẽ như sau:
 
+{{< gist nguyenvanduocit 2b8cc058f5c097436a6ecb2bb4dd523e >}}
+
+## Demo
+
+Bạn xem demo tại đây: [Handling Broken Images With Serice Worker](https://relaxed-panini-d5b8df.netlify.com/). — demo của athlonUA.

@@ -1,5 +1,5 @@
-<div id="js_comment" class="comment" data-slug="{{ .URL }}">
-<h3 class="comment__title">Comments</h3>
+<section id="js_comment" class="comment single-section" data-slug="{{ .URL }}">
+<h1 class="comment__title single-section__title">Comments</h1>
 <div class="comment__form">
     <div class="comment__form-input">
     <textarea name="content" id="content" @focus="isFocusOnContent = true" v-model="content" placeholder="What are you thinking?"></textarea>
@@ -42,4 +42,4 @@
     </div>
     </div>
 </div>
-</div>
+</section>
