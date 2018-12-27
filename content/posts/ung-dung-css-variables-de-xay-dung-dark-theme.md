@@ -1,7 +1,8 @@
 ---
 title: "Ứng dụng CSS variables để xây dựng tính năng dark theme"
 date: 2018-10-26T17:42:49+07:00
-tags: ["css", "javascript"]
+tags: ["css"]
+thumbnail: /img/posts/ung-dung-css-variables-de-xay-dung-dark-theme.jpeg
 author:
     name: Thien Nguyen
     github: tatthien
