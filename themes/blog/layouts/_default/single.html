@@ -1,6 +1,7 @@
 {{ partial "header" . }}
 <main id="content" class="site-content site-content--{{ .Type }}">
-  {{ partial "post/full" . }}
+  {{ partial "post/single" . }}
+  {{ partial "gitinfo" . }}
   {{ partial "post/related" . }}
   {{ partial "post/comment" . }}
 </main><!-- #content -->

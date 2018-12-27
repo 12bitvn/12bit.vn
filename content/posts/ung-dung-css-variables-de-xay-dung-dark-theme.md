@@ -1,7 +1,7 @@
 ---
 title: "Ứng dụng CSS variables để xây dựng tính năng dark theme"
 date: 2018-10-26T17:42:49+07:00
-tags: ['css']
+tags: ["css", "javascript"]
 author:
     name: Thien Nguyen
     github: tatthien
