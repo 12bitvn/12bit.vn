@@ -71,16 +71,7 @@
     <header id="masthead" class="site-header">
       <div class="left">
         {{ if .IsPage }}
-        <h2 class="site-title">
-        {{ else }}
-        <h1 class="site-title">
-        {{ end }}
-          <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-        {{ if .IsPage }}
-        </h2>
-        {{ else }}
-        </h1>
-        {{ end }}
+        <h1 class="site-title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
         <p class="site-desc">{{ .Site.Params.Description }}</p>
       </div>
       <div class="right">
