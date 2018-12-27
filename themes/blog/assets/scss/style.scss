@@ -46,6 +46,22 @@ a[target="_blank"] {
   text-indent: -999999px;
 }
 
+sub, sup {
+  font-size: 80%;
+}
+
+.footnote-ref {
+  font-weight: $font-weight-bold;
+}
+
+.footnote-return {
+  position: relative;
+  top: -.5em;
+  sup {
+    top: 0;
+  }
+}
+
 #wrap {
   max-width: $content-width;
   margin: 0 auto;
