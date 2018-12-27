@@ -42,6 +42,10 @@ a[target="_blank"] {
   color: red;
 }
 
+.rendered-text {
+  text-indent: -999999px;
+}
+
 #wrap {
   max-width: $content-width;
   margin: 0 auto;
@@ -81,6 +85,7 @@ a[target="_blank"] {
     }
     a {
       color: $color-dark;
+      font-size: 0;
     }
     sup {
       color: #fff;
