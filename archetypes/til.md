@@ -1,5 +1,0 @@
----
-title: "{{ .Name }}"
-date: {{ .Date }}
----
-
