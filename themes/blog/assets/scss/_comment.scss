@@ -1,9 +1,5 @@
 .comment {
   /** Comment Heading **/
-  &__title {
-    font-weight: $font-weight-bold;
-    @include font-size(1.2);
-  }
   &__form {
     margin-bottom: 2rem;
   }
