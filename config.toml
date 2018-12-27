@@ -1,4 +1,4 @@
-baseURL = "https://12bit-blog.netlify.com"
+baseURL = "https://12bit-blog.netlify.com/"
 languageCode = "vi-vn"
 title = "12bit.vn"
 theme = "blog"
@@ -10,22 +10,12 @@ googleAnalytics = "UA-126210212-1"
 uglyURLs=true
 paginate=20
 
-
-[outputFormats.Algolia]
-baseName = "algolia"
-isPlainText = true
-mediaType = "application/json"
-notAlternative = true
-
-[params.algolia]
-vars = ["title", "content", "summary", "date", "publishdate", "permalink"]
-params = ["tags"]
-
 [outputs]
-home = ["HTML", "RSS", "Algolia"]
+  home = ["HTML", "RSS"]
 
 [params]
   description = "write and share to learn"
   favicon = "img/icon/favicon.png"
+
 [blackfriday]
   hrefTargetBlank = true
