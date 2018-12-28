@@ -82,3 +82,27 @@ https://12bit.vn là nơi chia sẻ kiến thức lập trình web.
 {{% alert info %}}
 https://12bit.vn là nơi chia sẻ kiến thức lập trình web.
 {{% /alert %}}
+
+## embed Runkit
+
+```markdown
+{{%/* runkit unique-id */%}}
+your code block with ``` code and ```
+{{%/* /runkit */%}}
+```
+
+{{% runkit abc %}}
+```
+const object1 = {};
+Reflect.set(object1, 'property1', 42);
+
+console.log(object1.property1);
+// expected output: 42
+
+const array1 = ['duck', 'duck', 'duck'];
+Reflect.set(array1, 2, 'goose');
+
+console.log(array1[2]);
+// expected output: "goose"
+```
+{{% /runkit %}}
