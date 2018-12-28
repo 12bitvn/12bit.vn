@@ -43,7 +43,19 @@ Reflect có các phương thức tương ứng với các trap mà bạn đã bi
 
 Bạn có thể sử dụng reflect như sau:
 
-{{<runkit nguyenvanduocit 5c2599f52eac850012c97ad8>}}
+{{% runkit example-1 %}}
+const object1 = {};
+Reflect.set(object1, 'property1', 42);
+
+console.log(object1.property1);
+// expected output: 42
+
+const array1 = ['duck', 'duck', 'duck'];
+Reflect.set(array1, 2, 'goose');
+
+console.log(array1[2]);
+// expected output: "goose"
+{{% /runkit %}}
 
 Có thể làm tương tự với các phương thức khác.
 
@@ -51,7 +63,21 @@ Có thể làm tương tự với các phương thức khác.
 
 Ta có ví dụ nhự sau:
 
-{{<runkit nguyenvanduocit >}}
+{{% runkit example-2 %}}
+/*
+var obj = new Proxy({}, {
+  get: function (target, key, receiver) {
+    console.log(`getting ${key}!`);
+    return Reflect.get(target, key, receiver);
+  },
+  set: function (target, key, value, receiver) {
+    console.log(`setting ${key}!`);
+    return Reflect.set(target, key, value, receiver);
+  }
+});
+obj.count+2
+*/
+{{% /runkit %}}
 
 Như đã nói, Reflect có các phương thức tương ứng với các trap, vì vậy bạn chỉ cần return trực tiếp là được.
 

@@ -230,6 +230,9 @@ sub, sup {
   }
   &__content {
     margin-top: 30px;
+    .runkit{
+      margin-bottom: 1.5rem;
+    }
     p {
       margin: 0 0 1.5rem;
       line-height: 1.3;
