@@ -392,7 +392,7 @@ figcaption{
 }
 
 .single-section{
-  margin-top: 50px;
+  margin-bottom: 50px;
   &__title{
     @include font-size(1.3);
     margin-top: 0;
@@ -400,6 +400,7 @@ figcaption{
 }
 
 .footnotes{
+  margin-bottom: 50px;
   margin-top: 50px;
   hr{
     opacity: .3;
