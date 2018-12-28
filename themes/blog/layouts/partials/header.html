@@ -14,7 +14,7 @@
 {{ if .IsPage }}
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="{{ .Date.Format "2006-01-02" }}">
-{{ else }}
+  {{ else }}
   <meta property="og:type" content="website">
 {{ end }}
   <meta property="og:description" content="{{ .Description }}">
@@ -41,6 +41,9 @@
   <meta property="twitter:title" content="{{ .Title }}">
 {{ if .Params.thumbnail }}
   <meta property="twitter:image" content="{{ .Site.BaseURL }}{{ .Params.thumbnail }}">
+{{ end }}
+{{ if .Params.canonical }}
+<link rel="canonical" href="{{ .Params.canonical }}"/>
 {{ end }}
   <!-- End of Twitter -->
 {{ .Hugo.Generator }}
