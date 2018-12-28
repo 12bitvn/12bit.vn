@@ -329,7 +329,7 @@ figcaption{
     margin: 0;
     text-align: center;
     font-weight: normal;
-    font-style: italic;
+    @include font-size(.9)
   }
 }
 
