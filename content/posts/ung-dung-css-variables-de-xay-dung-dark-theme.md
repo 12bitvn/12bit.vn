@@ -54,5 +54,4 @@ Demo
 
 {{<codepen tatthien LgMKpm>}}
 
-Browsers support
-https://caniuse.com/#feat=css-variables
+{{% caniuse feature="css-variables" %}}

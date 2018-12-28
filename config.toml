@@ -19,7 +19,7 @@ paginate=20
 
 [blackfriday]
   hrefTargetBlank = true
-
+  noreferrerLinks = true
 [menu]
   [[menu.main]]
     identifier = "about"

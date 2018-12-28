@@ -1,0 +1,12 @@
+{{ .Page.Scratch.Set "include_image_zoom" true }}
+{{- $title := .Get "url" | default "" -}}
+{{- $src := .Get "src" | default "" -}}
+<p>
+  <img
+    data-zoomable
+    src="{{ $src }}"
+    data-zoom-src="{{ $src }}"
+    title="{{ $title }}"
+    alt="{{ $title }}"
+  >
+</p>

@@ -9,21 +9,31 @@
 </div>
 <!-- #wrap -->
 
-{{ $js := resources.Get "js/app.js" | resources.Minify | resources.Fingerprint }}
+{{ $app := resources.Get "js/app.js" | resources.Minify | resources.Fingerprint }}
 {{ $commentJs := resources.Get "js/comment.js" | resources.Minify | resources.Fingerprint }}
-<script src="{{ $js.RelPermalink }}"></script>
+<script src="{{ $app.RelPermalink }}"></script>
 
 {{ if .IsPage }}
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
 <script src="/js/md5.min.js"></script>
 <script src="{{ $commentJs.RelPermalink }}"></script>
 {{ end }}
 
 {{ $highlightJs := resources.Get "js/highlight.pack.js" | resources.Minify | resources.Fingerprint }}
-<script src="{{ $highlightJs.RelPermalink }}"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+<script src="{{ $highlightJs.RelPermalink }}" async defer onload="hljs.initHighlightingOnLoad();"></script>
+
+{{ if ($.Page.Scratch.Get "include_embedly") "true" }}
+<script src="//cdn.embedly.com/widgets/platform.js" async defer onload="mediumZoom('[data-zoomable]');"></script>
+{{ end }}
+
 {{ if ($.Page.Scratch.Get "include_caniuse") "true" }}
 <script async src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/caniuse-embed.min.js"></script>
+{{ end }}
+{{ if ($.Page.Scratch.Get "include_mermaid") "true" }}
+<script async src="https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js"></script>
+{{ end }}
+{{ if ($.Page.Scratch.Get "include_image_zoom") "true" }}
+<script src="https://unpkg.com/medium-zoom@1.0.2/dist/medium-zoom.min.js" async defer onload="mediumZoom('[data-zoomable]');"></script>
 {{ end }}
 </body>
 

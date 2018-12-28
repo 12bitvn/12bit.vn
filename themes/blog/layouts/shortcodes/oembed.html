@@ -1,0 +1,7 @@
+{{ .Page.Scratch.Set "include_embedly" true }}
+{{- $url := .Get "url" -}}
+{{- $title := .Get "url" | default "" -}}
+
+<div class="oembed-card">
+  <a data-card-controls="0" class="embedly-card" href="{{ $url }}">{{ $title }}</a>
+</div>

@@ -114,3 +114,52 @@ console.log(array1[2]);
 ```
 
 {{< caniuse feature="proxy" >}}
+
+## mermaid
+
+```markdown
+{{</* mermaid */>}}
+graph TB
+    c1-->a2
+    subgraph one
+    a1-->a2
+    end
+    subgraph two
+    b1-->b2
+    end
+    subgraph three
+    c1-->c2
+    end
+{{</* /mermaid */>}}
+```
+
+{{< mermaid >}}
+graph TB
+    c1-->a2
+    subgraph one
+    a1-->a2
+    end
+    subgraph two
+    b1-->b2
+    end
+    subgraph three
+    c1-->c2
+    end
+{{< /mermaid >}}
+
+## image-zoom
+
+```markdown
+{{</* zoom-img src="/img/posts/default-thumb-1200-630.png" */>}}
+```
+
+{{< zoom-img src="/img/posts/default-thumb-1200-630.png" >}}
+
+## oembed
+
+```markdown
+{{</* oembed url="https://open.spotify.com/playlist/37i9dQZEVXbc3uyDjJcA7l" title="ahhi" */>}}
+```
+
+{{< oembed url="https://open.spotify.com/playlist/37i9dQZEVXbc3uyDjJcA7l" title="ahhi">}}
+
