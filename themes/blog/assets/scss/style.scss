@@ -62,6 +62,19 @@ sub, sup {
   }
 }
 
+.alert-box {
+  border: 2px dashed rgba($color-dark, .2);
+  border-radius: 4px;
+  margin: 1rem 0;
+  padding: 0 1rem;
+  $list: 'warning', 'success', 'danger', 'info';
+  @each $alert in $list {
+    &--#{$alert} {
+      @extend %color-#{$alert}
+    }
+  }
+}
+
 #wrap {
   max-width: $content-width;
   margin: 0 auto;

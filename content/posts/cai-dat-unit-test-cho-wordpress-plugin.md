@@ -108,7 +108,9 @@ Câu lệnh trên sẽ thực hiện các việc sau:
 - Sử dụng `svn` để tải về thư viện test cho WordPress.
 - Sử dụng `mysqladmin` để tạo database với những thông số bạn cung cấp từ câu lệnh.
 
-_Lưu ý: source code WordPress mà câu lệnh này tải về sẽ nằm ở một folder tạm để bạn có thể dùng các functions của WordPress trong quá trình viết test. Nó sẽ không override folder WordPress chứa plugin của bạn. Database cũng vậy, sẽ được tạo một database riêng để test._
+{{<alert info>}}
+Source code WordPress mà câu lệnh này tải về sẽ nằm ở một folder tạm để bạn có thể dùng các functions của WordPress trong quá trình viết test. Nó sẽ không override folder WordPress chứa plugin của bạn. Database cũng vậy, sẽ được tạo một database riêng để test.
+{{</alert>}}
 
 ## Chạy thử unit test
 
