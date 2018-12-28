@@ -194,7 +194,7 @@ sub, sup {
   }
   &__title {
     margin-top: 0;
-    @include font-size(1.5);
+    @include font-size(1.8);
     line-height: 1.2;
     margin-bottom: 0;
     font-weight: $font-weight-normal;
@@ -202,8 +202,13 @@ sub, sup {
     a {
       color: $color-primary;
     }
-    @at-root .tils &{
+    @at-root .index &{
       @include font-size(1.3);
+    }
+    @at-root .single &:before{
+      content: "#";
+      display: inline-block;
+      margin-right: 10px;
     }
   }
   &__intro {
@@ -275,7 +280,8 @@ sub, sup {
         color: #fff;
       }
     }
-    h1, h2 {
+    h1, h2, h3 {
+      margin-top: 0;
       &:before {
         color: $color-light;
         margin-right: 5px;
@@ -284,8 +290,17 @@ sub, sup {
     h1:before {
       content: '#'
     }
-    h2:before {
-      content: '##'
+    h2{
+      @include font-size(1.4);
+      &:before {
+        content: '##'
+      }
+    }
+    h3{
+      @include font-size(1.2);
+      &:before {
+        content: '###'
+      }
     }
     img {
       max-width: 100%;
