@@ -29,7 +29,7 @@ Before creating a post, make sure you know how to use Markdown.
 ### Front matter
 
 | Variable        | Description           |
-| ------------- |:-------------:|
+| ------------- |-------------|
 | `title`      | The post title. |
 | `description`      | The post description.      |
 | `date` | The post date, it will be generated automatically. A date is specified in the format `YYYY-MM-DD HH:MM:SS +/-TTTT`.    |
@@ -44,13 +44,13 @@ We use Markdown for the post content, there are some conventions you should know
 
 **Shortcodes**
 
-If you want to embed things such as Codepen, Gist, Youtube, please use ![Hugo Shortcode](https://gohugo.io/content-management/shortcodes/) instead of insert the raw HTML. 
+If you want to embed things such as Codepen, Gist, Youtube, please use [Hugo Shortcode](https://gohugo.io/content-management/shortcodes/) instead of insert the raw HTML. 
 
 Beside the built-in shortcodes that Hugo supports, we also add custom shortcodes:
 
 **1. CodePen**
 
-```markdown
+```
 {{<codepen your_user_name pen_id>}}
 
 # example
