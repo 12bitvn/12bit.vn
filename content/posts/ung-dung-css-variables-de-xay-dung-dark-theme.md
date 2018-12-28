@@ -52,5 +52,7 @@ Việc còn lại cần làm là bạn dùng JavaScript để thay đổi class 
 
 Demo
 
+{{<codepen tatthien LgMKpm>}}
+
 Browsers support
 https://caniuse.com/#feat=css-variables
