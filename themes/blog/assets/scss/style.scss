@@ -42,6 +42,26 @@ a[target="_blank"] {
   color: red;
 }
 
+.rendered-text {
+  text-indent: -999999px;
+}
+
+sub, sup {
+  font-size: 80%;
+}
+
+.footnote-ref {
+  font-weight: $font-weight-bold;
+}
+
+.footnote-return {
+  position: relative;
+  top: -.5em;
+  sup {
+    top: 0;
+  }
+}
+
 #wrap {
   max-width: $content-width;
   margin: 0 auto;
@@ -81,6 +101,7 @@ a[target="_blank"] {
     }
     a {
       color: $color-dark;
+      font-size: 0;
     }
     sup {
       color: #fff;
@@ -228,12 +249,11 @@ a[target="_blank"] {
       height: auto;
     }
     blockquote {
-      @include font-size(1.5);
       font-style: italic;
-      border: 2px dashed rgba($color-dark, .1);
+      border: 2px dashed rgba($color-dark, .2);
       border-radius: 4px;
       margin: 1rem 0;
-      padding: 1rem;
+      padding: 0 1rem;
     }
     figure {
       padding: 0;

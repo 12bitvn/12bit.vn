@@ -30,7 +30,7 @@
     <div class="comment__item" v-for="comment in comments" :key="comment.id" :id="comment.id">
     <div class="left">
         <div class="avatar">
-        <img :src="comment.email | avatar" :alt="comment.author">
+        <img :src="comment.email | avatar(comment.author, getRandomHexColor())" :alt="comment.author">
         </div>
     </div>
     <div class="right">
