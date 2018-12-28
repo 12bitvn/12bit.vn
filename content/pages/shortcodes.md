@@ -31,7 +31,7 @@ Thay vì dùng `{{</* */>}}` chúng ta sẽ dùng `{{%/* */%}}` để có thể 
 
 ```markdown
 {{%/* alert type */%}}
-Nội dung bên trong.
+Nội dung bên trong. **Tự tin dùng markdown đi các bạn!**
 {{%/* /alert */%}}
 ```
 
