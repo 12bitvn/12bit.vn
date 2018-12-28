@@ -19,3 +19,14 @@ paginate=20
 
 [blackfriday]
   hrefTargetBlank = true
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    title = "Lời giới thiệu"
+    url = "/pages/about.html"
+
+  [[menu.main]]
+    identifier = "shortcodes"
+    title = "Shortcodes"
+    url = "/pages/shortcodes.html"

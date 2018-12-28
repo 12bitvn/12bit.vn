@@ -1,5 +1,10 @@
 <footer id="colophon" class="site-footer">
-  <p>Forked and contribute on <a href="https://github.com/12bitvn/12bit.vn" class="main-domain" target="_blank">GitHub</a></p>
+  <nav role="navigation" class="site-footer__nav">
+    {{ range .Site.Menus.main }}
+    <a href="{{ .URL }}" class="sub-color">{{ .Title }}</a>
+    {{ end }}
+  </nav>
+  <p>Forked and contribute on <a href="https://github.com/12bitvn/12bit.vn" target="_blank">GitHub</a></p>
 </footer><!-- #colophon -->
 </div>
 <!-- #wrap -->

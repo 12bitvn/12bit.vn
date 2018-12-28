@@ -26,6 +26,13 @@ a {
   &:hover {
     color: $color-dark;
   }
+
+  &.sub-color {
+    color: $color-light;
+    &:hover {
+      color: $color-dark;
+    }
+  }
 }
 
 a[target="_blank"] {
@@ -220,9 +227,6 @@ sub, sup {
     @at-root .tils &{
       @include font-size(1);
     }
-    a {
-      color: $color-light;
-    }
   }
   &__content {
     margin-top: 30px;
@@ -342,7 +346,7 @@ sub, sup {
 }
 
 /***** FOOTER *****/
-#colophon {
+.site-footer {
   padding: 2rem 0;
   margin-top: 4rem;
   font-family: $font-title;
@@ -351,11 +355,14 @@ sub, sup {
   p {
     margin: 0;
   }
-  .main-domain {
-    color: $color-primary;
-    font-weight: $font-weight-bold;
+  &__nav {
+    margin-bottom: 1rem;
+    a {
+      padding: 0 0.5rem;
+    }
   }
 }
+
 
 /***** PAGINATION *****/
 .pagination{
