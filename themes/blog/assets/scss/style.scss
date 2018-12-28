@@ -62,6 +62,42 @@ sub, sup {
   }
 }
 
+.alert-box {
+  border: 2px dashed rgba($color-dark, .2);
+  border-radius: 4px;
+  margin: 1rem 0;
+  padding: 0 1rem;
+  $list: 'warning', 'success', 'danger', 'info';
+  p:first-child:before {
+    padding-right: 10px;
+  }
+  @each $alert in $list {
+    &--#{$alert} {
+      @extend %color-#{$alert}
+    }
+  }
+  &--info {
+    p:first-child:before {
+      content: '💡'
+    }
+  }
+  &--success {
+    p:first-child:before {
+      content: '🙌'
+    }
+  }
+  &--warning {
+    p:first-child:before {
+      content: '⚠️'
+    }
+  }
+  &--danger {
+    p:first-child:before {
+      content: '🚫'
+    }
+  }
+}
+
 #wrap {
   max-width: $content-width;
   margin: 0 auto;
@@ -185,7 +221,7 @@ sub, sup {
   &__content {
     margin-top: 30px;
     p {
-      margin: 0 0 1rem;
+      margin: 0 0 1.5rem;
       line-height: 1.3;
     }
     ol,
@@ -221,6 +257,7 @@ sub, sup {
       font-family: $font-body;
       border-radius: 4px;
       font-size: 16px;
+      margin-bottom: 1.5rem;
     }
     p code {
       background: rgba(0,0,0,.05);
@@ -258,11 +295,12 @@ sub, sup {
       border: 2px dashed rgba($color-dark, .2);
       border-radius: 4px;
       margin: 1rem 0;
-      padding: 0 1rem;
+      padding: 1.5rem 1rem 0;
     }
     figure {
       padding: 0;
       margin: 1rem 0;
+      text-align: center;
       a {
         font-size: 0;
         &:after {
