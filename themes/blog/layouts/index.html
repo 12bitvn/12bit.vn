@@ -1,6 +1,6 @@
 {{ partial "header" . }}
 {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
-<main id="content" class="site-content index">
+<main id="content" class="site-content index list">
   <div class="tils">
     {{ range $paginator.Pages }}
     {{ partial "post/list-item" . }}

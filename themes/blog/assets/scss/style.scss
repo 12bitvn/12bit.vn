@@ -209,7 +209,7 @@ sub, sup {
     a {
       color: $color-primary;
     }
-    @at-root .index &{
+    @at-root .list &{
       @include font-size(1.3);
     }
     @at-root .single &:before{

@@ -14,13 +14,13 @@ Bên cạnh những [shortcode đã được tích hợp sẵn](https://gohugo.i
 ## CodePen
 
 ```
-{{</*codepen username pen_id*/>}}
+{{</* codepen username pen_id */>}}
 ```
 
 Ví dụ
 
 ```
-{{</*codepen tatthien LgMKpm*/>}}
+{{</* codepen tatthien LgMKpm */>}}
 ```
 
 {{<codepen tatthien LgMKpm>}}
@@ -83,7 +83,7 @@ https://12bit.vn là nơi chia sẻ kiến thức lập trình web.
 https://12bit.vn là nơi chia sẻ kiến thức lập trình web.
 {{% /alert %}}
 
-## embed Runkit
+## Runkit
 
 ```markdown
 {{%/* runkit unique-id */%}}
