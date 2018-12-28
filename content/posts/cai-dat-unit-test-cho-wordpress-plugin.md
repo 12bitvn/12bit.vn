@@ -108,9 +108,9 @@ Câu lệnh trên sẽ thực hiện các việc sau:
 - Sử dụng `svn` để tải về thư viện test cho WordPress.
 - Sử dụng `mysqladmin` để tạo database với những thông số bạn cung cấp từ câu lệnh.
 
-{{<alert info>}}
+{{% alert info %}}
 Source code WordPress mà câu lệnh này tải về sẽ nằm ở một folder tạm để bạn có thể dùng các functions của WordPress trong quá trình viết test. Nó sẽ không override folder WordPress chứa plugin của bạn. Database cũng vậy, sẽ được tạo một database riêng để test.
-{{</alert>}}
+{{% /alert %}}
 
 ## Chạy thử unit test
 
@@ -148,7 +148,7 @@ class FunctionsTest extends WP_UnitTestCase {
 	function test_get_author_name() {
 		$this->class_instance->set_author_name( '12bit.vn' );
 		$author_name = $this->class_instance->get_author_name();
-		
+
 		$this->assertEquals( $author_name, '12bit.vn' );
 	}
 }

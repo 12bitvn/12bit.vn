@@ -1,12 +1,3 @@
 <div class="alert-box alert-box--{{ .Get 0 }}">
-    {{ $icon := "💡" }}
-    {{ if eq (.Get 0) "warning"}}
-        {{ $icon = "⚠️" }}
-    {{ else if eq (.Get 0) "success"}}
-        {{ $icon = "🙌" }}   
-    {{ else if eq (.Get 0) "danger"}}
-        {{ $icon = "🚫" }}   
-    {{ end }}
-    
-    <p>{{ $icon }}<em>{{ .Inner }}</em></p>
+  {{ .Inner }}
 </div>
