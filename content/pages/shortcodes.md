@@ -106,3 +106,11 @@ console.log(array1[2]);
 // expected output: "goose"
 ```
 {{% /runkit %}}
+
+## caniuse
+
+```markdown
+{{</* caniuse feature="proxy" */>}}
+```
+
+{{< caniuse feature="proxy" >}}

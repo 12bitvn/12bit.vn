@@ -82,3 +82,5 @@ obj.count+2
 Như đã nói, Reflect có các phương thức tương ứng với các trap, vì vậy bạn chỉ cần return trực tiếp là được.
 
 Bài viết ngắn gọn này nhằm sử dụng làm tham khảo cho các bài viết khác, cũng như cung cấp thông tin ngắn gọn về reflect và cách dùng nó với proxy.
+
+{{% caniuse feature="proxy" %}}

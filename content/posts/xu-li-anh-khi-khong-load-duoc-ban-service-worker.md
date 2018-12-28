@@ -5,7 +5,7 @@ tags: ["javascript"]
 thumbnail: img/posts/xu-li-anh-khi-khong-load-duoc-ban-service-worker-01.png
 canonical: https://medium.com/12bit/x%C3%A2y-d%E1%BB%B1ng-3d-button-trong-flutter-3ffc403ac346
 author:
-    name: Duoc Nguyen
+    name: vominh
     github: nguyenvanduocit
 draft: false
 ---

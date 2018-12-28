@@ -22,6 +22,9 @@
 {{ $highlightJs := resources.Get "js/highlight.pack.js" | resources.Minify | resources.Fingerprint }}
 <script src="{{ $highlightJs.RelPermalink }}"></script>
 <script>hljs.initHighlightingOnLoad();</script>
+{{ if ($.Page.Scratch.Get "include_caniuse") "true" }}
+<script async src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/caniuse-embed.min.js"></script>
+{{ end }}
 </body>
 
 </html>

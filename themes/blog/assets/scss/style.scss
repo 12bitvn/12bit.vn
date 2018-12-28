@@ -35,6 +35,16 @@ a {
   }
 }
 
+ol, ul{
+  li{
+    line-height: 1.0;
+    margin-bottom: 15px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
 a[target="_blank"] {
   &:after {
     $newtab-link-icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' class='i-external' viewBox='0 0 32 32' width='14' height='14' fill='none' stroke='#{$color-light}' stroke-linecap='round' stroke-linejoin='round' stroke-width='9.38%'><path d='M14 9 L3 9 3 29 23 29 23 18 M18 4 L28 4 28 14 M28 4 L14 18'/></svg>";
@@ -427,5 +437,25 @@ figcaption{
   margin-top: 50px;
   hr{
     opacity: .3;
+  }
+}
+
+.ciu_embed{
+  line-height: 0;
+}
+
+.youtube_embed{
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
   }
 }

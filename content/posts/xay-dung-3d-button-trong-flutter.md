@@ -4,7 +4,7 @@ date: 2018-12-10T16:24:00+07:00
 tags: [flutter, mobile, ui]
 thumbnail: https://cdn-images-1.medium.com/max/1000/1*RRIkgyR8vHZFB2bX5G9M3g.png
 author:
-    name: Duoc Nguyen
+    name: vominh
     github: nguyenvanduocit
 draft: false
 ---

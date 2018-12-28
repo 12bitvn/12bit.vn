@@ -1,0 +1,3 @@
+{{ .Page.Scratch.Set "include_caniuse" true }}
+{{ $periods := .Get "periods" | default "future_1,current,past_1,past_2" }}
+<div class="ciu_embed" data-feature="{{ .Get "feature" }}" data-periods="{{ $periods }}"></div>
