@@ -185,7 +185,7 @@ sub, sup {
 
 /***** ARTICLE ITEM *****/
 .article {
-  margin: 2rem 0;
+  margin: 0 0 1rem;
   &:first-child {
     margin-top: 0;
   }
@@ -193,6 +193,7 @@ sub, sup {
     border: none;
   }
   &__title {
+    margin-top: 0;
     @include font-size(1.5);
     line-height: 1.2;
     margin-bottom: 0;
