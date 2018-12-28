@@ -1,7 +1,7 @@
 ---
 title: "Reflect trong ES6"
 description: A short description for the post.
-date: 2018-12-28T10:33:00+07:00
+date: 2018-03-28T10:33:00+07:00
 tags: ["JavaScript", "es6", "reflection", "reflect"]
 author:
     name: vominh
