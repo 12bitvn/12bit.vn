@@ -15,8 +15,11 @@ Bên cạnh những [shortcode đã được tích hợp sẵn](https://gohugo.i
 
 ```
 {{</*codepen username pen_id*/>}}
+```
 
-# ví dụ
+Ví dụ
+
+```
 {{</*codepen tatthien LgMKpm*/>}}
 ```
 
@@ -24,56 +27,58 @@ Bên cạnh những [shortcode đã được tích hợp sẵn](https://gohugo.i
 
 ## Alert box
 
-```
-{{</*alert type*/>}}
+Thay vì dùng `{{</* */>}}` chúng ta sẽ dùng `{{%/* */%}}` để có thể sử dụng Markdown bên trong shortcode.
+
+```markdown
+{{%/* alert type */%}}
 Nội dung bên trong.
-{{</*/alert*/>}}
+{{%/* /alert */%}}
 ```
 
 ### Success
 
-```
-{{</*alert success*/>}}
-Chúc mừng! bạn đã được tăng lương.
-{{</*/alert*/>}}
+```markdown
+{{%/* alert success */%}}
+Chúc mừng! **bạn đã được tăng lương**.
+{{%/* /alert */%}}
 ```
 
-{{<alert success>}}
-Chúc mừng! bạn đã được tăng lương.
-{{</alert>}}
+{{% alert success %}}
+Chúc mừng! **bạn đã được tăng lương**.
+{{% /alert %}}
 
 ### Warning
 
-```
-{{</*alert warning*/>}}
+```markdown
+{{%/* alert warning */%}}
 Chú ý ngã 4
-{{</*/alert*/>}}
+{{%/* /alert */%}}
 ```
 
-{{<alert warning>}}
+{{% alert warning %}}
 Chú ý ngã 4
-{{</alert>}}
+{{% /alert %}}
 
 ### Danger
 
-```
-{{</*alert danger*/>}}
+```markdown
+{{%/* alert danger */%}}
 Xin đừng hút thuốc
-{{</*/alert*/>}}
+{{%/* /alert */%}}
 ```
 
-{{<alert danger>}}
+{{% alert danger %}}
 Xin đừng hút thuốc
-{{</alert>}}
+{{% /alert %}}
 
 ### Info
 
-```
-{{</*alert info*/>}}
-12bit.vn là nơi chia sẻ kiến thức lập trình web.
-{{</*/alert*/>}}
+```markdown
+{{%/* alert info */%}}
+https://12bit.vn là nơi chia sẻ kiến thức lập trình web.
+{{%/* /alert */%}}
 ```
 
-{{<alert info>}}
-12bit.vn là nơi chia sẻ kiến thức lập trình web.
-{{</alert>}}
+{{% alert info %}}
+https://12bit.vn là nơi chia sẻ kiến thức lập trình web.
+{{% /alert %}}
