@@ -298,9 +298,6 @@ sub, sup {
     }
     h3{
       @include font-size(1.2);
-      &:before {
-        content: '###'
-      }
     }
     img {
       max-width: 100%;
