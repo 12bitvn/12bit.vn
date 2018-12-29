@@ -11,7 +11,7 @@ draft: false
 
 Bên cạnh những [shortcode đã được tích hợp sẵn](https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes) trong Hugo, tụi mình còn build thêm một số shortcode để phục vụ cho việc thể hiện nội dung bài viết được rõ ràng và sinh động hơn.
 
-## CodePen
+## codepen
 
 ```
 {{</* codepen username pen_id */>}}
@@ -25,7 +25,7 @@ Ví dụ
 
 {{<codepen tatthien LgMKpm>}}
 
-## Alert box
+## alert
 
 Thay vì dùng `{{</* */>}}` chúng ta sẽ dùng `{{%/* */%}}` để có thể sử dụng Markdown bên trong shortcode.
 
@@ -35,7 +35,7 @@ Nội dung bên trong. **Tự tin dùng markdown đi các bạn!**
 {{%/* /alert */%}}
 ```
 
-### Success
+### success
 
 ```markdown
 {{%/* alert success */%}}
@@ -47,7 +47,7 @@ Chúc mừng! **bạn đã được tăng lương**.
 Chúc mừng! **bạn đã được tăng lương**.
 {{% /alert %}}
 
-### Warning
+### warning
 
 ```markdown
 {{%/* alert warning */%}}
@@ -59,7 +59,7 @@ Chú ý ngã 4
 Chú ý ngã 4
 {{% /alert %}}
 
-### Danger
+### danger
 
 ```markdown
 {{%/* alert danger */%}}
@@ -71,7 +71,7 @@ Xin đừng hút thuốc
 Xin đừng hút thuốc
 {{% /alert %}}
 
-### Info
+### info
 
 ```markdown
 {{%/* alert info */%}}
@@ -83,7 +83,7 @@ https://12bit.vn là nơi chia sẻ kiến thức lập trình web.
 https://12bit.vn là nơi chia sẻ kiến thức lập trình web.
 {{% /alert %}}
 
-## Runkit
+## runkit
 
 ```markdown
 {{%/* runkit unique-id */%}}
