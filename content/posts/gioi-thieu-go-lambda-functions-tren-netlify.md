@@ -7,7 +7,7 @@ thumbnail: /img/posts/gioi-thieu-go-lambda-functions-tren-netlify.png
 author:
     name: Thien Nguyen
     github: tatthien
-draft: false
+draft: true
 ---
 
 Bài viết này mình xin giới thiệu cách deploy một lambda function viết bằng Go lên Netlify.

@@ -6,7 +6,7 @@ thumbnail: /img/posts/ung-dung-css-variables-de-xay-dung-dark-theme.jpeg
 author:
     name: Thien Nguyen
     github: tatthien
-draft: false
+draft: true
 ---
 
 Mấy ngày trước mình có xây dựng tính năng dark theme cho trang [TIL của 12bit](https://til.12bit.vn/). Ban đầu hướng tiếp cận của mình khá là truyền thống đó là thay đổi class cho body để override lại CSS theo từng theme kiểu như:

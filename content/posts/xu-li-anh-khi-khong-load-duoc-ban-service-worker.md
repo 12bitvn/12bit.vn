@@ -7,7 +7,7 @@ canonical: https://medium.com/12bit/x%C3%A2y-d%E1%BB%B1ng-3d-button-trong-flutte
 author:
     name: vominh
     github: nguyenvanduocit
-draft: false
+draft: true
 ---
 
 Có nhiều lý đo dể một website không load được ảnh, ví dụ như file ảnh đã bị xóa, ảnh quá nặng và bị timeout, … Trong những trường hợp đó thì tùy browser mà lỗi sẽ hiển thị khác nhau, có thể xấu có thể đẹp.

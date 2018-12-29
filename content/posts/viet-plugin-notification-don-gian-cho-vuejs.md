@@ -6,7 +6,7 @@ thumbnail: https://cdn-images-1.medium.com/max/1000/1*3sMN6Ni2PRo_LEcrSdGc0g.jpe
 author:
     name: Thien Nguyen
     github: tatthien
-draft: false
+draft: true
 ---
 
 Bài viết hôm nay chúng ta sẽ cùng tìm hiểu cách viết plugin đơn giản cho Vue có chức năng hiển thị notification thông qua việc sử dụng thư viện [notie](https://github.com/jaredreich/notie).

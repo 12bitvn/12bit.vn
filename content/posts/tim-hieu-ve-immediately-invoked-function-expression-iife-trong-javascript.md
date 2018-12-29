@@ -7,7 +7,7 @@ thumbnail: /img/posts/tim-hieu-ve-immediately-invoked-function-expression-iife-t
 author:
     name: Thien Nguyen
     github: tatthien
-draft: false
+draft: true
 ---
 
 Trong bài viết này chúng ta cùng tìm hiểu một cách khai báo function rất quen thuộc trong Javascript. Tuy nó quen thuộc nhưng có thể chúng ta chưa biết tên gọi hoặc cách thức hoạt động của nó nhứ thế nào?
