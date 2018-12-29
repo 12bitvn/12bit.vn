@@ -23,7 +23,7 @@ paginate=20
 [menu]
   [[menu.main]]
     identifier = "about"
-    title = "Lời giới thiệu"
+    title = "giới thiệu"
     url = "/pages/about.html"
 
   [[menu.main]]
