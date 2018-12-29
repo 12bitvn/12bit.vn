@@ -9,6 +9,8 @@
 </div>
 <!-- #wrap -->
 
+{{ template "_internal/google_analytics_async.html" . }}
+
 {{ $app := resources.Get "js/app.js" | resources.Minify | resources.Fingerprint }}
 {{ $commentJs := resources.Get "js/comment.js" | resources.Minify | resources.Fingerprint }}
 <script src="{{ $app.RelPermalink }}"></script>

@@ -28,5 +28,5 @@ paginate=20
 
   [[menu.main]]
     identifier = "shortcodes"
-    title = "Shortcodes"
+    title = "shortcodes"
     url = "/pages/shortcodes.html"
