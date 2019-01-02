@@ -2,11 +2,10 @@
 title: "Xử lý khi không load được ảnh bằng cách sử dụng service worker"
 date: 2018-12-26T09:36:03+07:00
 tags: ["javascript"]
-thumbnail: img/articles/xu-li-anh-khi-khong-load-duoc-ban-service-worker-01.png
-canonical: https://medium.com/12bit/x%C3%A2y-d%E1%BB%B1ng-3d-button-trong-flutter-3ffc403ac346
+images: ["/articles/xu-li-anh-khi-khong-load-duoc-ban-service-worker/images/thumbnail.png"]
 author:
     name: vominh
-    github: nguyenvanduocit
+    github: vominh
 draft: false
 ---
 
