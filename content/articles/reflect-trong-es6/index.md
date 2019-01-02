@@ -1,8 +1,9 @@
 ---
 title: "Reflect trong ES6"
-description: A short description for the post.
 date: 2018-03-28T10:33:00+07:00
-tags: ["JavaScript", "es6", "reflection", "reflect"]
+tags: ["javascript", "es6", "reflection", "reflect"]
+images:
+  - https://cdn-images-1.medium.com/max/1000/1*NMSSehwvDCy6X9J-xXYH9g.png
 author:
     name: vominh
     github: vominh

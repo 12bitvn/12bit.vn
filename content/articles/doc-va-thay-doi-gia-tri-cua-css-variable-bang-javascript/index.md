@@ -3,7 +3,8 @@ title: "Thay đổi giá trị CSS Variable bằng JavaScript"
 description: "Thay đổi giá trị CSS Variable bằng JavaScript"
 date: 2018-10-31T10:25:03+07:00
 tags: ["CSS Variable", JavaScript]
-thumbnail: /img/articles/default-thumb-1200-630.png
+images:
+  - https://cdn-images-1.medium.com/max/2000/1*Sgkp2XjaIpdrcWnU-WlWVw.png
 author:
     name: vominh
     github: vominh

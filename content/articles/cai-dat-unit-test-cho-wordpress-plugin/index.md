@@ -3,7 +3,8 @@ title: "Cài đặt unit test cho WordPress Plugin"
 description: Đối với developers thì dường như viết unit test là điều gì đó rất đáng sợ và tốn thời gian.
 date: 2018-03-14T11:35:13+07:00
 tags: [wordpress, plugin, unit test]
-thumbnail: https://cdn-images-1.medium.com/max/1000/1*-zCsjQTZQQA5oBsIxkrwhw.jpeg
+images:
+  - https://cdn-images-1.medium.com/max/1000/1*-zCsjQTZQQA5oBsIxkrwhw.jpeg
 author:
     name: Thien Nguyen
     github: tatthien
