@@ -3,11 +3,11 @@ title: "Tự động switch dark mode dựa trên thiết lập hệ thống"
 description: A short description for the post.
 date: 2018-11-12T00:34:12+07:00
 tags: [JavaScript, "dark mode"]
-thumbnail: /img/posts/default-thumb-1200-630.png
+thumbnail: /img/articles/default-thumb-1200-630.png
 author:
     name: vominh
     github: vominh
-draft: true
+draft: false
 ---
 
 ![dark mode](https://cdn-images-1.medium.com/max/2000/1*10yZFqVvZ_l7GBlo8CD0mw.png)
@@ -47,4 +47,4 @@ Hiện tại bạn chưa thể sử dụng prefers-color-scheme được trên c
 ## Tham khảo
 
 1. [Dark Mode and CSS](https://blog.iconfactory.com/2018/10/dark-mode-and-css/)
-1. [Using dark mode in CSS with MacOS Mojave](https://paulmillr.com/posts/using-dark-mode-in-css/)
+1. [Using dark mode in CSS with MacOS Mojave](https://paulmillr.com/articles/using-dark-mode-in-css/)

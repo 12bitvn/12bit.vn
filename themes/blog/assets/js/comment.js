@@ -13,7 +13,7 @@ var app = new Vue({
   async mounted () {
     this.slug = this.$el.dataset.slug
 
-    // Make sure that DOM is rendered already then get commetns by the post slug.
+    // Make sure that DOM is rendered already then get commetns by the article slug.
     let data = await this.getComments()
     this.comments = data.allComments
   },

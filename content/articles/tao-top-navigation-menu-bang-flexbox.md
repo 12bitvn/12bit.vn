@@ -3,11 +3,11 @@ title: "Tạo top navigation bar bằng flex box"
 description: A short description for the post.
 date: 2018-11-13T00:07:47+07:00
 tags: [flexbox, css, html]
-thumbnail: /img/posts/default-thumb-1200-630.png
+thumbnail: /img/articles/default-thumb-1200-630.png
 author:
     name: vominh
     github: vominh
-draft: true
+draft: false
 ---
 
 Nhìn qua nhiều website, chúng ta cũng dễ nhận ra rằng có rất nhiều website chia sẻ một layout giống nhau, trong đo header và footer là giống nhau nhiều nhất:Trong bài viết này mình sẽ cùng nhau hiện thực một menu giống như vậy bằng flex box. Cụ thể là sẽ dựa vào thiết kế của Bevy để xây dựng lại một menu tương tự.

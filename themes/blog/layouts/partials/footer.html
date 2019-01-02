@@ -25,7 +25,7 @@
 <script src="{{ $highlightJs.RelPermalink }}" async defer onload="hljs.initHighlightingOnLoad();"></script>
 
 {{ if ($.Page.Scratch.Get "include_embedly") "true" }}
-<script src="//cdn.embedly.com/widgets/platform.js" async defer onload="mediumZoom('[data-zoomable]');"></script>
+<script src="//cdn.embedly.com/widgets/platform.js" async defer></script>
 {{ end }}
 
 {{ if ($.Page.Scratch.Get "include_caniuse") "true" }}

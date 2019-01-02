@@ -2,12 +2,12 @@
 title: "Xử lý khi không load được ảnh bằng cách sử dụng service worker"
 date: 2018-12-26T09:36:03+07:00
 tags: ["javascript"]
-thumbnail: img/posts/xu-li-anh-khi-khong-load-duoc-ban-service-worker-01.png
+thumbnail: img/articles/xu-li-anh-khi-khong-load-duoc-ban-service-worker-01.png
 canonical: https://medium.com/12bit/x%C3%A2y-d%E1%BB%B1ng-3d-button-trong-flutter-3ffc403ac346
 author:
     name: vominh
     github: nguyenvanduocit
-draft: true
+draft: false
 ---
 
 Có nhiều lý đo dể một website không load được ảnh, ví dụ như file ảnh đã bị xóa, ảnh quá nặng và bị timeout, … Trong những trường hợp đó thì tùy browser mà lỗi sẽ hiển thị khác nhau, có thể xấu có thể đẹp.

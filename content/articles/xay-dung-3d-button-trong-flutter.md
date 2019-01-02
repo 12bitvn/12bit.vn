@@ -6,7 +6,7 @@ thumbnail: https://cdn-images-1.medium.com/max/1000/1*RRIkgyR8vHZFB2bX5G9M3g.png
 author:
     name: vominh
     github: nguyenvanduocit
-draft: true
+draft: false
 ---
 
 2 ngày trước, phiên bản 1.0 của Flutter được chính thức phát hành trong sự kiện Flutter Live.

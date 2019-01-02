@@ -7,7 +7,7 @@ thumbnail: https://cdn-images-1.medium.com/max/1000/1*G-yRIqhUzxT3dwMqa2N_aA.jpe
 author:
     name: Thien Nguyen
     github: tatthien
-draft: true
+draft: false
 ---
 
 Đây là phần tiếp theo trong loạt bài bảo mật và tăng tốc cho site WordPress, dự kiến cũng sẽ là một trong những chủ đề của [Saigon WordPress Meetup #23](https://www.meetup.com/Saigon-WordPress/events/248725158/).

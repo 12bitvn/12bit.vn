@@ -1,9 +1,9 @@
 {{ partial "header" . }}
-{{ $paginator := .Paginate (where .Pages "Type" "posts") }}
+{{ $paginator := .Paginate (where .Pages "Type" "articles") }}
 <main id="content" class="site-content index list">
   <div class="tils">
     {{ range $paginator.Pages }}
-    {{ partial "post/list-item" . }}
+    {{ partial "article/list-item" . }}
     {{ end }}
   </div>
 {{ template "_internal/pagination.html" . }}

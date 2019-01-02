@@ -4,14 +4,14 @@
 
 1. Make sure you have [Hugo installed](https://gohugo.io/getting-started/installing/).
 2. Fork this repo.
-3. Execute `hugo new posts/your-post.md` in your terminal. A `content/posts/your-post.md` file will be created with some placeholder content, like this:
+3. Execute `hugo new articles/your-post.md` in your terminal. A `content/articles/your-post.md` file will be created with some placeholder content, like this:
     ```yaml
     ---
     title: "Test"
     description: A short description for the post.
     date: 2018-12-27T09:55:11+07:00
     tags: [max, three, tags]
-    images: [/img/posts/default-thumb-1200-630.jpg]
+    images: [/img/articles/default-thumb-1200-630.jpg]
     author:
         name: Your Name
         github: github_username
@@ -34,7 +34,7 @@ Before creating a post, make sure you know how to use Markdown.
 | `description`      | The post description.      |
 | `date` | The post date, it will be generated automatically. A date is specified in the format `YYYY-MM-DD HH:MM:SS +/-TTTT`.    |
 | `tags` | One or multiple tags can be added to a post. We recommend you to add maximum 3 tags per post.|
-| `images` | The featured image. Although it's defined as an array (YAML array), you just need to add one image. It should be placed in `/static/img/posts/`|
+| `images` | The featured image. Although it's defined as an array (YAML array), you just need to add one image. It should be placed in `/static/img/articles/`|
 | `author` | Please provide your `name` and your `github_username`. We'll use them to generate the author information for each post.|
 | `draft` | Set to `true` if you don't want a specific post to show up when the site is generated. |
 

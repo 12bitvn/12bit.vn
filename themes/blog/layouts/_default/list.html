@@ -2,7 +2,7 @@
 <main id="content" class="site-content list">
   <div class="tils">
     {{ range .Paginator.Pages }}
-    {{ partial "post/list-item" . }}
+    {{ partial "article/list-item" . }}
     {{ end }}
   </div>
 {{ template "_internal/pagination.html" . }}

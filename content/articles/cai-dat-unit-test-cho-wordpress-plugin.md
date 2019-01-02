@@ -7,7 +7,7 @@ thumbnail: https://cdn-images-1.medium.com/max/1000/1*-zCsjQTZQQA5oBsIxkrwhw.jpe
 author:
     name: Thien Nguyen
     github: tatthien
-draft: true
+draft: false
 ---
 
 Đối với developers thì dường như viết unit test là điều gì đó rất đáng sợ và tốn thời gian. Bạn có thể code một theme hoặc một plugin hoàn chỉnh nhưng bảo bạn viết unit test cho nó thì thật sự là cực hình.

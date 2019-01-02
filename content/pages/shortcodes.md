@@ -2,7 +2,7 @@
 title: "Shortcodes"
 description: Danh sách custom shortcodes.
 date: 2018-12-28T13:15:32+07:00
-thumbnail: /img/posts/default-thumb-1200-630.png
+thumbnail: /img/articles/default-thumb-1200-630.png
 author:
     name: 12bit Team
     github: 12bitvn
@@ -150,10 +150,10 @@ graph TB
 ## image-zoom
 
 ```markdown
-{{</* zoom-img src="/img/posts/default-thumb-1200-630.png" */>}}
+{{</* zoom-img src="/img/articles/default-thumb-1200-630.png" */>}}
 ```
 
-{{< zoom-img src="/img/posts/default-thumb-1200-630.png" >}}
+{{< zoom-img src="/img/articles/default-thumb-1200-630.png" >}}
 
 ## oembed
 

@@ -7,7 +7,7 @@ thumbnail: https://cdn-images-1.medium.com/max/1000/1*3WMyVChdsdfgp9YmfE104A.jpe
 author:
     name: Thien Nguyen
     github: tatthien
-draft: true
+draft: false
 ---
 
 Bài viết này chúng ta cùng tìm hiểu thẻ `<polygon>` trong SVG. Thật ra bài này cũng rất ngẫu nhiên. Mình chợt nghĩ tới polygon, nên viết một vài điều ra đây. 😂

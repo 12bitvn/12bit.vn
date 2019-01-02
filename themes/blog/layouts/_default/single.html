@@ -1,8 +1,9 @@
 {{ partial "header" . }}
 <main id="content" class="site-content site-content--{{ .Type }} post single">
-  {{ partial "post/single" . }}
+  {{ partial "article/single" . }}
+  {{ partial "tags" . }}
   {{ partial "gitinfo" . }}
-  {{ partial "post/related" . }}
-  {{ partial "post/comment" . }}
+  {{ partial "article/related" . }}
+  {{ partial "article/comment" . }}
 </main><!-- #content -->
 {{ partial "footer" . }}

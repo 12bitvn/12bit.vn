@@ -3,11 +3,11 @@ title: "Tìm hiểu về Immediately-invoked function expression (IIFE) trong Ja
 description: A short description for the post.
 date: 2018-08-13T22:14:45+07:00
 tags: [javascript]
-thumbnail: /img/posts/tim-hieu-ve-immediately-invoked-function-expression-iife-trong-javascript.png
+thumbnail: /img/articles/tim-hieu-ve-immediately-invoked-function-expression-iife-trong-javascript.png
 author:
     name: Thien Nguyen
     github: tatthien
-draft: true
+draft: false
 ---
 
 Trong bài viết này chúng ta cùng tìm hiểu một cách khai báo function rất quen thuộc trong Javascript. Tuy nó quen thuộc nhưng có thể chúng ta chưa biết tên gọi hoặc cách thức hoạt động của nó nhứ thế nào?
@@ -78,7 +78,7 @@ console.log(a)
 // ReferenceError: a is not defined
 ```
 
-> Bạn có thể tham khảo thêm bài viết của anh HuyTD về vấn đề Garbage Collection trong Javascript: https://thefullsnack.com/posts/javascript-v8-notes.html
+> Bạn có thể tham khảo thêm bài viết của anh HuyTD về vấn đề Garbage Collection trong Javascript: https://thefullsnack.com/articles/javascript-v8-notes.html
 
 ## Lời kết
 
