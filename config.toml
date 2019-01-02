@@ -6,7 +6,7 @@ enableGitInfo = true
 disqusShortname = "shortname"
 enableEmoji = true
 enableRobotsTXT = true
-googleAnalytics = "UA-126210212-1"
+googleAnalytics = "UA-131517577-1"
 uglyURLs=true
 paginate=20
 
