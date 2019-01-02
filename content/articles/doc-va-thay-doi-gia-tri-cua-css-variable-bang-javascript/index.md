@@ -2,7 +2,7 @@
 title: "Thay đổi giá trị CSS Variable bằng JavaScript"
 description: "Thay đổi giá trị CSS Variable bằng JavaScript"
 date: 2018-10-31T10:25:03+07:00
-tags: ["CSS Variable", JavaScript]
+tags: ["css variable", javascript]
 images:
   - https://cdn-images-1.medium.com/max/2000/1*Sgkp2XjaIpdrcWnU-WlWVw.png
 author:
@@ -13,7 +13,7 @@ draft: false
 
 ![](https://cdn-images-1.medium.com/max/2000/1*Sgkp2XjaIpdrcWnU-WlWVw.png)
 
-CSS Variable có nhiều ứng dụng thú vị mà bạn có thể đã đọc qua như ứng dụng vào xây [xây dựng theme cho website]({{< ref "/articles/ung-dung-css-variables-de-xay-dung-dark-theme.md" >}}) mà Thiện đã chia sẽ trong bài viết.
+CSS Variable có nhiều ứng dụng thú vị mà bạn có thể đã đọc qua như ứng dụng vào [xây dựng theme cho website]({{< ref "/articles/ung-dung-css-variables-de-xay-dung-dark-theme/index.md" >}}) mà Thiện đã chia sẽ trong bài viết.
 
 Bài viết đó chỉ dừng lại ở việc cho phép người dùng thay đổi các theme đã có, làm thế nào nếu chúng ta muốn cho phép họ tự tạo theme của riêng họ bằng cách thay đổi giá trị của các màu sắc.
 

@@ -1,9 +1,9 @@
 ---
 title: "Tự động switch dark mode dựa trên thiết lập hệ thống"
-description: A short description for the post.
 date: 2018-11-12T00:34:12+07:00
-tags: [JavaScript, "dark mode"]
-thumbnail: /img/articles/default-thumb-1200-630.png
+tags: [javascript, dark mode]
+images:
+  - https://cdn-images-1.medium.com/max/1000/1*10yZFqVvZ_l7GBlo8CD0mw.png
 author:
     name: vominh
     github: vominh

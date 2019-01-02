@@ -3,7 +3,8 @@ title: "Tìm hiểu về Immediately-invoked function expression (IIFE) trong Ja
 description: A short description for the post.
 date: 2018-08-13T22:14:45+07:00
 tags: [javascript]
-thumbnail: /img/articles/tim-hieu-ve-immediately-invoked-function-expression-iife-trong-javascript.png
+images:
+  - https://cdn-images-1.medium.com/max/1000/1*wyEFyJkOy7IrrivMUhwvPg.png
 author:
     name: Thien Nguyen
     github: tatthien

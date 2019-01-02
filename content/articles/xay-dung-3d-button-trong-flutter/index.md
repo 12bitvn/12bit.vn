@@ -2,7 +2,8 @@
 title: "Xây dựng 3D button trong Flutter"
 date: 2018-12-10T16:24:00+07:00
 tags: [flutter, mobile, ui]
-thumbnail: https://cdn-images-1.medium.com/max/1000/1*RRIkgyR8vHZFB2bX5G9M3g.png
+images:
+  - https://cdn-images-1.medium.com/max/1000/1*RRIkgyR8vHZFB2bX5G9M3g.png
 author:
     name: vominh
     github: nguyenvanduocit
@@ -11,7 +12,7 @@ draft: false
 
 2 ngày trước, phiên bản 1.0 của Flutter được chính thức phát hành trong sự kiện Flutter Live.
 
-{{< youtube kpcjBD1XDwU >}} 
+{{< youtube kpcjBD1XDwU >}}
 
 Nhưng cộng đồng đã có thể sử dụng Flutter từ khá lâu thông qua các version beta, thậm chí đã nhiều production application được phát hành, như app Google Ads, Alibaba, NOW Live của Tencent , bạn có thể xem thêm tại trang showcase.
 

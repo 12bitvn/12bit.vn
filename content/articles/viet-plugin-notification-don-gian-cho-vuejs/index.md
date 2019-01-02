@@ -2,7 +2,8 @@
 title: "Viết plugin notification đơn giản cho Vue.js"
 date: 2018-03-05T17:45:43+07:00
 tags: [vuejs, javascript, plugin]
-thumbnail: https://cdn-images-1.medium.com/max/1000/1*3sMN6Ni2PRo_LEcrSdGc0g.jpeg
+images:
+  - https://cdn-images-1.medium.com/max/1000/1*3sMN6Ni2PRo_LEcrSdGc0g.jpeg
 author:
     name: Thien Nguyen
     github: tatthien

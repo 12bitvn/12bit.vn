@@ -1,9 +1,9 @@
 ---
 title: "Tạo top navigation bar bằng flex box"
-description: A short description for the post.
 date: 2018-11-13T00:07:47+07:00
 tags: [flexbox, css, html]
-thumbnail: /img/articles/default-thumb-1200-630.png
+images:
+  - https://cdn-images-1.medium.com/max/800/1*TUt8lSXrOAZMIDyNMx14wQ.png
 author:
     name: vominh
     github: vominh

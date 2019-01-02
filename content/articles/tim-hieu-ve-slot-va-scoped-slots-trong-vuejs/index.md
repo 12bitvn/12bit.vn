@@ -2,7 +2,8 @@
 title: "Tìm hiểu về slot và scoped slots trong Vue.js"
 date: 2018-03-26T10:10:50+07:00
 tags: [vuejs, slot, javascript]
-thumbnail: https://cdn-images-1.medium.com/max/1000/1*qgwDRRz5olTU0BitXlSmVQ.jpeg
+images:
+  - https://cdn-images-1.medium.com/max/1000/1*qgwDRRz5olTU0BitXlSmVQ.jpeg
 author:
     name: Thien Nguyen
     github: tatthien
@@ -105,11 +106,11 @@ Ta có một componet `card` gồm 3 phần `header`, `content`, `footer` Ta s�
   <header class="card-header">
     <slot name="header"></slot>
   </header>
-  
+
   <div class="card-content">
     <slot></slot>
   </div>
-  
+
   <footer class="card-footer">
     <slot name="footer"></slot>
   </footer>
@@ -136,11 +137,11 @@ Kết quả render:
   <header class="card-header">
     <h2>Vue.js is awesome</h2>
   </header>
-  
+
   <div class="card-content">
     <p>The Progressive JavaScript Framework</p>
   </div>
-  
+
   <footer class="card-footer">
     <p>Created by Evan You</p>
   </footer>

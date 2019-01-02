@@ -3,7 +3,8 @@ title: "Tìm hiểu <polygon> trong SVG"
 description: polygon định nghĩa một hình đóng (closed shape) bao gồm những đoạn thẳng. Điểm cuối sẽ kết nối với điểm đầu.
 date: 2018-03-09T14:09:42+07:00
 tags: [polygon, svg, html]
-thumbnail: https://cdn-images-1.medium.com/max/1000/1*3WMyVChdsdfgp9YmfE104A.jpeg
+images:
+  - https://cdn-images-1.medium.com/max/1000/1*3WMyVChdsdfgp9YmfE104A.jpeg
 author:
     name: Thien Nguyen
     github: tatthien
