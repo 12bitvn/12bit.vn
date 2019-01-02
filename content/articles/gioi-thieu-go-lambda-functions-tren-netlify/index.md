@@ -3,7 +3,8 @@ title: "Giới thiệu Go Lambda Functions trên Netlify"
 description: Bài viết này mình xin giới thiệu cách deploy một lambda function viết bằng Go lên Netlify.
 date: 2018-12-06T17:44:44+07:00
 tags: [go, lambda function, netlify]
-thumbnail: /img/articles/gioi-thieu-go-lambda-functions-tren-netlify.png
+images:
+  - /articles/gioi-thieu-go-lambda-functions-tren-netlify/images/01.png
 author:
     name: Thien Nguyen
     github: tatthien
@@ -42,7 +43,25 @@ go get https://github.com/aws/aws-lambda-go
 
 Code của chúng ta sẽ nằm trong `main.go`
 
-{{<gist tatthien d93702ef858903ca44c0b58bd9216a13>}}
+```go
+package main
+
+import (
+	"github.com/aws/aws-lambda-go/events"
+	"github.com/aws/aws-lambda-go/lambda"
+)
+
+func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
+	return events.APIGatewayProxyResponse{
+		StatusCode: 200,
+		Body:       "Hello from 12bit.vn",
+	}, nil
+}
+
+func main() {
+	lambda.Start(handler)
+}
+```
 
 Đoạn code trên thực hiện một tác vụ đơn giản đó là trả về chuỗi _“Hello from 12bit.vn”_ khi chúng ta gởi một request vào đúng endpoint của function đó.
 
@@ -54,7 +73,20 @@ Content-Type: application/json
 
 Chúng ta thay đổi code bên trong function `handler` một chút.
 
-{{<gist tatthien dacb7903bfc7f35027b64f7d088d4997>}}
+```go
+func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
+	body, _ := json.Marshal(map[string]interface{}{
+		"msg": "Hello from 12bit.vn",
+	})
+	return events.APIGatewayProxyResponse{
+		Headers: map[string]string{
+			"content-type": "application/json",
+		},
+		StatusCode: 200,
+		Body:       string(body),
+	}, nil
+}
+```
 
 Dữ liệu trả về sẽ có type JSON
 
@@ -146,7 +178,7 @@ https://go-lambda-netlify.netlify.com/.netlify/functions/hello
 
 > Các bạn có thể dùng Unique Deploy URL hoặc Live URL đều được, tùy mục đích sử dụng.
 
-![Postman](/img/articles/gioi-thieu-go-lambda-functions-tren-netlify.png)
+{{<figure src="/articles/gioi-thieu-go-lambda-functions-tren-netlify/images/01.png" title="Dùng Postman để test request">}}
 
 ## Kết luận
 

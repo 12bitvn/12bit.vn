@@ -3,7 +3,7 @@ title: "Tối ưu tốc độ cho site WordPress - Phần 1"
 description: Phần 1 hướng tới các bạn đang vận hành những site sử dụng WordPress và không bắt buộc phải có kỹ năng về lập trình.
 date: 2018-03-07T17:22:17+07:00
 tags: [wordpress, speed, performance]
-thumbnail: https://cdn-images-1.medium.com/max/1000/1*G-yRIqhUzxT3dwMqa2N_aA.jpeg
+images: [https://cdn-images-1.medium.com/max/1000/1*G-yRIqhUzxT3dwMqa2N_aA.jpeg]
 author:
     name: Thien Nguyen
     github: tatthien
