@@ -1,2 +1,2 @@
 deploy:
-	hugo && netlify deploy --prod
+	rm -rf public && hugo && netlify deploy --prod
