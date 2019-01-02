@@ -1,9 +1,9 @@
 ---
 title: "5 application giúp tăng productivity trên macOS"
-description: A short description for the post.
 date: 2018-11-14T17:32:30+07:00
 tags: [mac, tool, productivity]
-thumbnail: /img/articles/default-thumb-1200-630.png
+images:
+  - https://cdn-images-1.medium.com/max/800/1*-wInHZvoCHnKWYZcnNKc0w.png
 author:
     name: vominh
     github: vominh
