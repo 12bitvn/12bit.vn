@@ -1,4 +1,4 @@
-baseURL = "https://12bit-blog.netlify.com/"
+baseURL = "https://12bit.vn/"
 languageCode = "vi-vn"
 title = "12bit.vn"
 theme = "blog"
