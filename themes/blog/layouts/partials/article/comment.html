@@ -1,45 +1,45 @@
 <section id="js_comment" class="comment single-section" data-slug="{{ .URL }}">
-<h1 class="comment__title single-section__title">Comments</h1>
-<div class="comment__form">
-    <div class="comment__form-input">
-    <textarea name="content" id="content" @focus="isFocusOnContent = true" v-model="content" placeholder="What are you thinking?"></textarea>
-    </div>
-    <template v-if="isFocusOnContent">
-    <div class="comment__form-input">
-        <label for="anonymous">
-        <input type="checkbox" id="anonymous" v-model="isAnonymous">
-        <span>comment as an anonymous</span>
-        </label>
-    </div>
-    <template v-if="!isAnonymous">
-        <div class="comment__form-input">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" v-model="author">
-        </div>
-        <div class="comment__form-input">
-        <label for="email">Email <span>(optional)</span></label>
-        <input type="email" id="email" name="email" v-model="email">
-        </div>
-    </template>
-    </template>
-    <div class="comment__form-input">
-    <input type="submit" value="Post comment" @click.prevent="postComment">
-    </div>
-</div>
-<div class="comment__list">
-    <div class="comment__item" v-for="comment in comments" :key="comment.id" :id="comment.id">
-    <div class="left">
-        <div class="avatar">
-        <img :src="comment.email | avatar(comment.author, getRandomHexColor())" :alt="comment.author">
-        </div>
-    </div>
-    <div class="right">
-        <h4 class="author">
-        <span v-text="comment.author"></span>
-        <time v-text="formatDate(comment.createdAt)"></time>
-        </h4>
-        <p class="content" v-text="comment.content"></p>
-    </div>
-    </div>
-</div>
+  <h1 class="comment__title single-section__title">Comments</h1>
+  <div class="comment__form">
+      <div class="comment__form-input">
+      <textarea name="content" id="content" @focus="isFocusOnContent = true" v-model="content" placeholder="What are you thinking?"></textarea>
+      </div>
+      <template v-if="isFocusOnContent">
+      <div class="comment__form-input">
+          <label for="anonymous">
+          <input type="checkbox" id="anonymous" v-model="isAnonymous">
+          <span>comment as an anonymous</span>
+          </label>
+      </div>
+      <template v-if="!isAnonymous">
+          <div class="comment__form-input">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" v-model="author">
+          </div>
+          <div class="comment__form-input">
+          <label for="email">Email <span>(optional)</span></label>
+          <input type="email" id="email" name="email" v-model="email">
+          </div>
+      </template>
+      </template>
+      <div class="comment__form-input">
+      <input type="submit" value="Post comment" @click.prevent="postComment">
+      </div>
+  </div>
+  <div class="comment__list">
+      <div class="comment__item" v-for="comment in comments" :key="comment.id" :id="comment.id">
+      <div class="left">
+          <div class="avatar">
+          <img :src="comment.email | avatar(comment.author, getRandomHexColor())" :alt="comment.author">
+          </div>
+      </div>
+      <div class="right">
+          <h4 class="author">
+          <span v-text="comment.author"></span>
+          <time v-text="formatDate(comment.createdAt)"></time>
+          </h4>
+          <p class="content" v-text="comment.content"></p>
+      </div>
+      </div>
+  </div>
 </section>
