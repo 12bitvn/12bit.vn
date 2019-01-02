@@ -2,7 +2,8 @@
 title: "Xử lý khi không load được ảnh bằng cách sử dụng service worker"
 date: 2018-12-26T09:36:03+07:00
 tags: ["javascript"]
-images: ["/articles/xu-li-anh-khi-khong-load-duoc-ban-service-worker/images/thumbnail.png"]
+images:
+  - https://cdn-images-1.medium.com/max/800/1*0kYnh-CVbxaqnu8blSwyUg.png
 author:
     name: vominh
     github: vominh
