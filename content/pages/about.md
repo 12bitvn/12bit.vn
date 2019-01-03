@@ -39,7 +39,7 @@ Cảm ơn các bạn rất nhiều vì đã chú ý tới blog. Rất mong đư�
 
 ## Cảm ơn
 
-Xin chân thành cảm ơn các bạn đã đóng góp cùng 12bit.vn, dưới đây là danh sách các bạn đã contribute vào blog:
+Xin chân thành cảm ơn các bạn dưới đây đã đóng góp vào blog 12bit.vn:
 
 {{<contributors "12bitvn/12bit.vn">}}
 
