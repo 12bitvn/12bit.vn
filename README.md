@@ -26,7 +26,7 @@
 
 Before creating a post, make sure you know how to use Markdown.
 
-### Front matter
+### Header
 
 | Variable        | Description           |
 | ------------- |-------------|
@@ -34,18 +34,14 @@ Before creating a post, make sure you know how to use Markdown.
 | `description`      | The post description.      |
 | `date` | The post date, it will be generated automatically. A date is specified in the format `YYYY-MM-DD HH:MM:SS +/-TTTT`.    |
 | `tags` | One or multiple tags can be added to a post. We recommend you to add maximum 3 tags per post.|
-| `images` | The featured image. Although it's defined as an array (YAML array), you just need to add one image. It should be placed in `/static/img/articles/`|
+| `images` | The featured image. Although it's defined as an array (YAML array), you just need to add one image. It should be placed in the same folder with post content. Eg `/articles/my-awesome-post/images/`|
 | `author` | Please provide your `name` and your `github_username`. We'll use them to generate the author information for each post.|
 | `draft` | Set to `true` if you don't want a specific post to show up when the site is generated. |
 
-### Content
-
-We use Markdown for the post content, there are some conventions you should know when writing your posts.
+### Conventions
 
 **Shortcodes**
 
-If you want to embed things such as Codepen, Gist, Youtube, please use [Hugo Shortcode](https://gohugo.io/content-management/shortcodes/) instead of insert the raw HTML.
-
-Beside the built-in shortcodes that Hugo're supporting, we also add a list of custom shortcodes [here](https://12bit.vn/pages/shortcodes.html)
+If you want to embed things such as Codepen, Gist, Youtube, please use [Hugo Shortcode](https://gohugo.io/content-management/shortcodes/) instead of insert the raw HTML. Beside the built-in shortcodes that Hugo're supporting, we also add a list of custom shortcodes [here](https://12bit.vn/pages/shortcodes.html)
 
 Don't find your shortcodes? create a pull request now!
