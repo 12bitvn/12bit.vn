@@ -5,8 +5,8 @@ let articleContentTop = articleContent.offsetTop
 toc.style.top = articleContentTop + 'px'
 
 window.addEventListener('scroll', function () {
-  let top = window.pageXOffset || document.documentElement.scrollTop
-  if (top > 150) {
+  let scrolled = window.pageXOffset || document.documentElement.scrollTop
+  if (scrolled > 150) {
     toc.classList.add('sticky')
     toc.style.top = 70 + 'px'
   } else {
