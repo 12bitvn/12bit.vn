@@ -136,6 +136,7 @@ sub, sup {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
+  margin-bottom: 30px;
   flex-flow: column;
   @include breakpoint(tablet) {
     padding: 2rem 0;
@@ -150,7 +151,7 @@ sub, sup {
   .site-title {
     @include font-size(2);
     margin: 10px 0;
-    line-height: 1.0;
+    line-height: 0;
     @include breakpoint(tablet) {
       margin: 0;
       @include font-size(3);
@@ -159,12 +160,8 @@ sub, sup {
       color: $color-dark;
       font-size: 0;
     }
-    sup {
-      color: #fff;
-      top: -1.5rem;
-      padding: 0 7px;
-      border-radius: 50px;
-      @include font-size(1);
+    .logo{
+      height: 25px;
     }
   }
   .site-desc {
@@ -179,8 +176,12 @@ sub, sup {
       display: flex;
       justify-content: center;
       align-items: center;
+      li{
+        margin: 0;
+      }
       a{
         display: block;
+        color: #e74c3c;
       }
     }
     &__item{
@@ -215,7 +216,7 @@ sub, sup {
   &__title {
     margin-top: 0;
     @include font-size(1.8);
-    line-height: 1.2;
+    line-height: 1.1;
     margin-bottom: 0;
     font-weight: $font-weight-normal;
     color: $color-primary;
@@ -237,8 +238,8 @@ sub, sup {
   &__meta {
     color: $color-light;
     margin-bottom: 10px;
-    @at-root .tils &{
-      @include font-size(1);
+    @at-root .list &{
+      @include font-size(0.9);
     }
   }
   &__content {

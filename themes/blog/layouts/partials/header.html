@@ -36,7 +36,7 @@
       <div class="left">
         <h1 class="site-title">
           <a href="{{ .Site.BaseURL }}">
-            <svg width="100" viewBox="0 0 154 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <svg class="logo" viewBox="0 0 154 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 <path d="M141,19 L154,19 L154,33 L141,33 L141,52 L154,52 L154,66 L127,66 L127,52 L127,6 L141,6 L141,19 Z" id="t" fill="#1E221D"></path>
                 <path d="M107,19 L121,19 L121,66 L107,66 L107,19 Z M107,0 L121,0 L121,14 L107,14 L107,0 Z" id="i" fill="#1E221D"></path>
@@ -47,7 +47,6 @@
             </svg>
           </a>
         </h1>
-        <p class="site-desc">{{ .Site.Params.Description }}</p>
       </div>
       <div class="right">
         {{ $currentPage := . }}
@@ -59,13 +58,13 @@
               <li class="site-navigation__item {{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
               <a href="#">
                 {{ .Pre }}
-                <span>{{ .Name }}</span>
+                <span>{{ .Title }}</span>
               </a>
               </li>
               <ul class="sub-menu">
                 {{ range .Children }}
                 <li class="site-navigation__item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-                  <a href="{{ .URL }}">{{ .Name }}</a>
+                  <a href="{{ .URL }}">{{ .Title }}</a>
                 </li>
                 {{ end }}
               </ul>
@@ -73,7 +72,7 @@
               <li class="site-navigation__item">
                 <a href="{{ .URL }}">
                   {{ .Pre }}
-                  <span>{{ .Name }}</span>
+                  <span>{{ .Title }}</span>
                 </a>
               </li>
               {{ end }}
