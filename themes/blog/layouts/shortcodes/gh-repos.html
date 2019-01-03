@@ -3,7 +3,7 @@
   {{ $repoName := .Get 1 }}
   {{ $url := print "https://api.github.com/repos/" $username "/"  $repoName}}
   {{ $repo := getJSON $url }}
-  <table>
+  <table class="styled-table">
     <tr>
       <th>Name</th>
       <td><a href="{{ $repo.html_url }}" target="_blank">{{ $repo.full_name }}</a></td>

@@ -161,7 +161,9 @@ graph TB
 {{</* oembed url="https://open.spotify.com/playlist/37i9dQZEVXbc3uyDjJcA7l" title="ahhi" */>}}
 ```
 
-{{< oembed url="https://open.spotify.com/playlist/37i9dQZEVXbc3uyDjJcA7l" title="ahhi">}}
+{{< oembed url="https://open.spotify.com/playlist/37i9dQZEVXbc3uyDjJcA7l">}}
+
+{{< oembed url="https://www.facebook.com/12bit.vn/photos/a.204143553518059/341131916485888/?type=3&theater">}}
 
 ## gh-repos
 
