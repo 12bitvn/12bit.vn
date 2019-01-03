@@ -39,8 +39,7 @@ a {
 }
 
 ol, ul{
-  li{
-    line-height: 1.0;
+  li {
     margin-bottom: 15px;
     &:last-child{
       margin-bottom: 0;
@@ -214,7 +213,6 @@ sub, sup {
     }
     p {
       margin: 0 0 1.5rem;
-      line-height: 1.3;
     }
     ol,
     ul {
@@ -309,22 +307,9 @@ sub, sup {
       }
     }
   }
-  &--til {
-    .article__content {
-      ul,
-      ol {
-        list-style: none;
-        padding: 0;
-        li {
-          position: relative;
-          &:before {
-            content: '-';
-            position: absolute;
-            left: 0;
-          }
-        }
-      }
-    }
+  /* Article customize */
+  &--pages {
+
   }
 }
 
@@ -390,12 +375,32 @@ figcaption{
 }
 
 .toc{
+  position: absolute;
+  right: 50%;
+  margin-right: 339px;
+  width: 200px;
+  padding: 0 1rem;
   &__title{
     margin: 0;
   }
-  #TableOfContents > ul {
+  ul {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
+  }
+  li {
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  a {
+    @include font-size(1);
+    color: $color-light;
+    &:hover {
+      color: $color-dark;
+    }
+  }
+  /** Sticky **/
+  &.sticky {
+    position: fixed;
   }
 }
 

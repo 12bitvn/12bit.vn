@@ -3,7 +3,7 @@
   <header>
     <h1>Tag: {{ .Title -}}</h1>
   </header>
-  <div class="tils">
+  <div>
     {{ range .Paginator.Pages }}
     {{ partial "article/list-item" . }}
     {{ end }}
