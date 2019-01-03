@@ -1,6 +1,10 @@
+{{ $height := 500 }}
+{{ if isset .Params 2 }}
+  {{ $height = .Get 2 }}
+{{ end }}
 <p>
   <iframe
-    height='500'
+    height='{{ $height }}'
     scrolling='no'
     src='//codepen.io/{{ index .Params 0 }}/embed/{{ index .Params 1 }}/?height=265&theme-id=dark&default-tab=result'
     frameborder='no'

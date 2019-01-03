@@ -22,16 +22,16 @@ Bên cạnh những [shortcode đã được tích hợp sẵn](https://gohugo.i
 ## codepen
 
 ```
-{{</* codepen username pen_id */>}}
+{{</* codepen username pen_id height_in_px */>}}
 ```
 
-Ví dụ
+Nếu không set giá trị `height` thì `height` mặc định sẽ là 500px. Ví dụ:
 
 ```
-{{</* codepen tatthien LgMKpm */>}}
+{{</* codepen tatthien LgMKpm 400 */>}}
 ```
 
-{{<codepen tatthien LgMKpm>}}
+{{<codepen tatthien LgMKpm 400>}}
 
 ## alert
 
