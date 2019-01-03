@@ -1,6 +1,6 @@
 {{ partial "header" . }}
 <main id="content" class="site-content list">
-  <div class="tils">
+  <div>
     {{ range .Paginator.Pages }}
     {{ partial "article/list-item" . }}
     {{ end }}
