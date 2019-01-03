@@ -26,7 +26,7 @@ menu:
     title: giới thiệu
     url: /pages/about.html
   - identifier: rss
-    title: rss
+    title: RSS
     url: /index.xml
   footer:
     - identifier: about
