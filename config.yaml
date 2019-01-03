@@ -25,6 +25,13 @@ menu:
   - identifier: about
     title: giới thiệu
     url: /pages/about.html
-  - identifier: shortcodes
-    title: shortcodes
-    url: /pages/shortcodes.html
+  - identifier: rss
+    title: rss
+    url: /index.xml
+  footer:
+    - identifier: about
+      title: giới thiệu
+      url: /pages/about.html
+    - identifier: shortcodes
+      title: shortcodes
+      url: /pages/shortcodes.html

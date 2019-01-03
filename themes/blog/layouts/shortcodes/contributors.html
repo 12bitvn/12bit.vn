@@ -1,7 +1,7 @@
 {{ $repoName := .Get 0 }}
 {{ $url := print "https://api.github.com/repos/" $repoName "/stats/contributors?access_token=" $.Site.Data.auth.github_access_token}}
+{{ $contributes := getJSON $url }}
 <div class="contributors">
-  {{ $contributes := getJSON $url }}
   {{ range sort $contributes "total" "desc" }}
   <div class="contributor">
     <img class="contributor__avatar" src="{{.author.avatar_url}}" alt="">
