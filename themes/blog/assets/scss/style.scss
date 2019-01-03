@@ -20,7 +20,9 @@ h6 {
   font-family: $font-title;
   font-weight: $font-weight-bold;
 }
-
+p{
+  margin-top: 0;
+}
 a {
   text-decoration: none;
   color: $color-primary;
@@ -413,6 +415,7 @@ figcaption{
 .tags-section {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
   h1 {
     margin-bottom: 0;
   }
