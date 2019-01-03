@@ -1,0 +1,12 @@
+.oembed-card{
+  margin-bottom: 1.5rem;
+  padding: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,.04), inset 0 0 0 1px rgba(0,0,0,.09);
+  .embedly-card-hug{
+    margin: 0 auto !important;
+    min-width: 100% !important;
+    iframe{
+      min-width: 100% !important;
+    }
+  }
+}
