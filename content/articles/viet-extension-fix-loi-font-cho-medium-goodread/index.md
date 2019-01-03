@@ -4,7 +4,7 @@ description: A short description for the post.
 date: 2018-06-25T06:14:44+07:00
 tags: ["Chrome Extension"]
 images:
-  - /img/articles/default-thumb-1200-630.png
+  - /articles/viet-extension-fix-loi-font-cho-medium-goodread/images/thumbnail.png
 author:
     name: vominh
     github: vominh
