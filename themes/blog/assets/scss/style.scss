@@ -335,6 +335,7 @@ sub, sup {
   text-align: center;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   @include font-size(0.9);
   p {
     margin: 0;
@@ -343,6 +344,12 @@ sub, sup {
     a {
       padding: 0 0.5rem;
     }
+  }
+  a:after{
+    display: none;
+  }
+  .license-url{
+    line-height: 0;
   }
 }
 
