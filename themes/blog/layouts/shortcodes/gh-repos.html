@@ -1,7 +1,6 @@
 <div class="gh-repo">
-  {{ $username := .Get 0 }}
-  {{ $repoName := .Get 1 }}
-  {{ $url := print "https://api.github.com/repos/" $username "/"  $repoName}}
+  {{ $repoName := .Get 0 }}
+  {{ $url := print "https://api.github.com/repos/" $repoName}}
   {{ $repo := getJSON $url }}
   <table class="styled-table">
     <tr>

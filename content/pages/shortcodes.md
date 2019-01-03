@@ -11,6 +11,14 @@ draft: false
 
 Bên cạnh những [shortcode đã được tích hợp sẵn](https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes) trong Hugo, tụi mình còn build thêm một số shortcode để phục vụ cho việc thể hiện nội dung bài viết được rõ ràng và sinh động hơn.
 
+## contributers
+
+```markdown
+{{</*contributors "12bitvn/12bit.vn"*/>}}
+```
+
+{{<contributors "12bitvn/12bit.vn">}}
+
 ## codepen
 
 ```
@@ -168,7 +176,7 @@ graph TB
 ## gh-repos
 
 ```markdown
-{{</*gh-repos vuejs vue*/>}}
+{{</*gh-repos "vuejs/vue"*/>}}
 ```
 
-{{<gh-repos vuejs vue>}}
+{{<gh-repos "vuejs/vue">}}

@@ -37,4 +37,10 @@ Chúng ta không có một định hướng rõ ràng về cách trình bày c�
 
 Cảm ơn các bạn rất nhiều vì đã chú ý tới blog. Rất mong được các bạn giúp đỡ.
 
+## Cảm ơn
+
+Xin chân thành cảm ơn các bạn đã đóng góp cùng 12bit.vn, dưới đây là danh sách các bạn đã contribute vào blog:
+
+{{<contributors "12bitvn/12bit.vn">}}
+
 — 12bit Team
