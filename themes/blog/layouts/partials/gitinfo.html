@@ -1,5 +1,6 @@
 {{ if .GitInfo }}
 <section class="gitinfo single-section">
-  <p>Last update on {{ .Lastmod.Format "January 02, 2006" }} by <a href="https://github.com/12bitvn/12bit.vn/commit/{{ .GitInfo.Hash }}" target="_blank">{{ .GitInfo.AuthorName }}</a></p>
+  {{ $commit := getJSON "https://api.github.com/repos/12bitvn/12bit.vn/git/commits/" .GitInfo.Hash }}
+  <p>Last commit by {{ $commit.committer.name }} on {{ $commit.committer.date| dateFormat "January 02, 2006"  }}: <a href="{{$commit.html_url}}" target="_blank">open on Github</a></p>
 </section>
 {{ end }}

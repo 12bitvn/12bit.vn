@@ -163,3 +163,7 @@ graph TB
 
 {{< oembed url="https://open.spotify.com/playlist/37i9dQZEVXbc3uyDjJcA7l" title="ahhi">}}
 
+## gh-repos
+
+{{< gh-repos url="https://api.github.com/repos/12bitvn/12bit.vn" >}}
+
