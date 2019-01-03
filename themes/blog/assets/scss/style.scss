@@ -156,6 +156,7 @@ sub, sup {
       &:first-child{
         padding-left: 0;
       }
+      word-spacing: -5px;
     }
     .cta {
       border: 2px solid $color-primary;
@@ -330,13 +331,15 @@ sub, sup {
   padding: 2rem 0;
   margin-top: 4rem;
   font-family: $font-title;
-  border-top: 1px solid $color-light;
+  border-top: 1px solid lighten($color-light, 70);
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  @include font-size(0.9);
   p {
     margin: 0;
   }
   &__nav {
-    margin-bottom: 1rem;
     a {
       padding: 0 0.5rem;
     }
