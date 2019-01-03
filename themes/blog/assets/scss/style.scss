@@ -381,12 +381,15 @@ figcaption{
   margin-right: 339px;
   width: 200px;
   padding: 0 .5rem;
-  display: none;
-  @include breakpoint(tablet) {
-    display: block;
-  }
   &__title{
+    display: none;
     margin: 0;
+  }
+  @media (max-width: $break-tablet) {
+    position: static !important;
+    &__title{
+      display: block;
+    }
   }
   ul {
     list-style: none;
