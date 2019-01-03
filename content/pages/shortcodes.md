@@ -165,5 +165,8 @@ graph TB
 
 ## gh-repos
 
-{{< gh-repos url="https://api.github.com/repos/12bitvn/12bit.vn" >}}
+```markdown
+{{</*gh-repos vuejs vue*/>}}
+```
 
+{{<gh-repos vuejs vue>}}

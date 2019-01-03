@@ -483,6 +483,25 @@ figcaption{
 
 .oembed-card{
   margin-bottom: 1.5rem;
-  padding: 10px 0 0 0;
-  box-shadow: 0 1px 4px rgba(0,0,0,.04), inset 0 0 0 1px rgba(0,0,0,.09);
+  padding: 0;
+  /*box-shadow: 0 1px 4px rgba(0,0,0,.04), inset 0 0 0 1px rgba(0,0,0,.09);*/
+  .embedly-card-hug{
+    margin: 0 auto !important;
+  }
+}
+
+table {
+  border: solid 1px #acd8ee;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table th {
+  border: solid 1px #ffffff;
+  background-color: #DDEFEF;
+  padding: 10px;
+  text-align: left;
+}
+table tbody td {
+  border: solid 1px #DDEEEE;
+  padding: 10px;
 }

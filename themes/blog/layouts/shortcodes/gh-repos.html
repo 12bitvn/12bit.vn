@@ -1,5 +1,40 @@
-<ul class="ghStarred">
-  {{ $url := .Get "url" }}
-  {{ range getJSON $url }}
-  {{ end }}
-</ul>
+<div class="gh-repo">
+  {{ $username := .Get 0 }}
+  {{ $repoName := .Get 1 }}
+  {{ $url := print "https://api.github.com/repos/" $username "/"  $repoName}}
+  {{ $repo := getJSON $url }}
+  <table>
+    <tr>
+      <th>Name</th>
+      <td><a href="{{ $repo.html_url }}" target="_blank">{{ $repo.full_name }}</a></td>
+    </tr>
+    <tr>
+      <th>Description</th>
+      <td>{{ $repo.description }}</td>
+    </tr>
+    <tr>
+      <th>Owner</th>
+      <td><a href="{{ $repo.owner.url }}" target="_blank">{{ $repo.owner.login }}</a></td>
+    </tr>
+    <tr>
+      <th>Forks</th>
+      <td><a href="{{ $repo.forks_url }}" target="_blank">{{ $repo.forks_count }}</a></td>
+    </tr>
+    <tr>
+      <th>Watchers</th>
+      <td>{{ $repo.watchers }}</td>
+    </tr>
+    <tr>
+      <th>Open issues</th>
+      <td>{{ $repo.open_issues_count }}</td>
+    </tr>
+    <tr>
+      <th>Updated at</th>
+      <td>{{ $repo.updated_at }}</td>
+    </tr>
+    <tr>
+      <th>License</th>
+      <td>{{ $repo.license.name }}</td>
+    </tr>
+  </table>
+</div>
