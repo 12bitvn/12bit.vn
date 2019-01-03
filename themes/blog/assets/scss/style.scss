@@ -379,7 +379,7 @@ figcaption{
   position: absolute;
   right: 50%;
   margin-right: 339px;
-  width: 200px;
+  width: 250px;
   padding: 0 .5rem;
   &__title{
     display: none;
@@ -394,7 +394,6 @@ figcaption{
   ul {
     list-style: none;
     padding: 0;
-    margin-top: 0;
   }
   li {
     line-height: 1.2;
@@ -412,10 +411,16 @@ figcaption{
     &:hover {
       color: $color-dark;
     }
+    &:after{
+      opacity: 0;
+      content: "↫";
+      margin-left: 5px;
+      transition: opacity 0.2s ease-in-out;
+    }
     &.active{
       color: $color-primary;
       &:after{
-        content: " <";
+        opacity: 1;
       }
     }
   }

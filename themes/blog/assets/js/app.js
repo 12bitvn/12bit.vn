@@ -30,7 +30,7 @@ if (toc) {
   }
 
   let observer = new IntersectionObserver(callback)
-  let targets = document.querySelectorAll('.article__content h2')
+  let targets = document.querySelectorAll('.article__content h2, .article__content h3')
   targets.forEach(target => {
     observer.observe(target);
   })
