@@ -379,7 +379,11 @@ figcaption{
   right: 50%;
   margin-right: 339px;
   width: 200px;
-  padding: 0 1rem;
+  padding: 0 .5rem;
+  display: none;
+  @include breakpoint(tablet) {
+    display: block;
+  }
   &__title{
     margin: 0;
   }
