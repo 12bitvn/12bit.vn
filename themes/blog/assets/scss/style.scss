@@ -394,6 +394,7 @@ figcaption{
   ul {
     list-style: none;
     padding: 0;
+    margin-top: 0;
   }
   li {
     line-height: 1.2;
@@ -410,6 +411,12 @@ figcaption{
     color: $color-light;
     &:hover {
       color: $color-dark;
+    }
+    &.active{
+      color: $color-primary;
+      &:after{
+        content: " <";
+      }
     }
   }
   /** Sticky **/
