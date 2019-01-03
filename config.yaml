@@ -1,0 +1,30 @@
+baseURL: 'https://12bit.vn/'
+languageCode: vi-vn
+copyright: This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+title: 12bit.vn
+theme: blog
+enableGitInfo: true
+disqusShortname: shortname
+enableEmoji: true
+enableRobotsTXT: true
+googleAnalytics: UA-131517577-1
+uglyURLs: true
+paginate: 20
+outputs:
+  home:
+  - HTML
+  - RSS
+params:
+  description: write and share to learn
+  favicon: img/icon/favicon.png
+blackfriday:
+  hrefTargetBlank: true
+  noreferrerLinks: true
+menu:
+  main:
+  - identifier: about
+    title: giới thiệu
+    url: /pages/about.html
+  - identifier: shortcodes
+    title: shortcodes
+    url: /pages/shortcodes.html

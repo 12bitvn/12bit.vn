@@ -1,0 +1,13 @@
+{{ partial "header" . }}
+<main id="content" class="site-content list">
+  <header>
+    <h1></h1>
+  </header>
+  <div class="tils">
+    {{ range .Paginator.Pages }}
+    {{ partial "article/list-item" . }}
+    {{ end }}
+  </div>
+  {{ template "_internal/pagination.html" . }}
+</main><!-- #content -->
+{{ partial "footer" . }}
