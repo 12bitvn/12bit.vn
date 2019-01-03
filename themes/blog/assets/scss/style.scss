@@ -176,6 +176,7 @@ sub, sup {
 /***** ARTICLE ITEM *****/
 .article {
   margin: 0 0 1rem;
+  position: relative;
   &:first-child {
     margin-top: 0;
   }
@@ -184,7 +185,7 @@ sub, sup {
   }
   &__title {
     margin-top: 0;
-    @include font-size(1.8);
+    @include font-size(1.7);
     line-height: 1.1;
     margin-bottom: 0;
     font-weight: $font-weight-normal;
@@ -394,6 +395,12 @@ figcaption{
   li {
     line-height: 1.2;
     margin-bottom: 10px;
+    > ul {
+      padding-left: 10px;
+    }
+  }
+  #TableOfContents > ul > li > ul{
+    padding-left: 0;
   }
   a {
     @include font-size(1);
