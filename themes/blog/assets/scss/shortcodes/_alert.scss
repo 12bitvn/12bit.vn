@@ -1,0 +1,35 @@
+.alert-box {
+  border: 2px dashed rgba($color-dark, .2);
+  border-radius: 4px;
+  margin: 1rem 0;
+  padding: 1.5rem 1rem 0;
+  $list: 'warning', 'success', 'danger', 'info';
+  p:first-child:before {
+    padding-right: 10px;
+  }
+  @each $alert in $list {
+    &--#{$alert} {
+      @extend %color-#{$alert}
+    }
+  }
+  &--info {
+    p:first-child:before {
+      content: '💡'
+    }
+  }
+  &--success {
+    p:first-child:before {
+      content: '🙌'
+    }
+  }
+  &--warning {
+    p:first-child:before {
+      content: '⚠️'
+    }
+  }
+  &--danger {
+    p:first-child:before {
+      content: '🚫'
+    }
+  }
+}
