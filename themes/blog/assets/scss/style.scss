@@ -509,3 +509,14 @@ figcaption{
   border: solid 1px #DDEEEE;
   padding: 10px;
 }
+
+.tags-section{
+  .tag{
+    text-decoration: none;
+    color: #56bd77;
+    padding: 5px;
+    background: #f3f3f3;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+}

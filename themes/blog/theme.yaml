@@ -2,14 +2,10 @@ name: Minitil
 license: MIT
 licenselink: 'https://github.com/12bit/minitil/blob/master/LICENSE'
 description: Minimal TIL theme for Hugo
-homepage: 'http://example.com/'
+homepage: 'https://12bit.vn/'
 tags: []
 features: []
 min_version: '0.41'
 author:
   name: 12bit
   homepage: 'https://12bit.vn'
-original:
-  name: ''
-  homepage: ''
-  repo: ''

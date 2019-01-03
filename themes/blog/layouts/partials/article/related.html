@@ -1,7 +1,7 @@
 <section class="single-section">
   {{ $related := .Site.RegularPages.Related . | first 5 }}
   {{ with $related }}
-  <h1 class="single-section__title">See Also</h1>
+  <h1 class="single-section__title">Đọc thêm</h1>
   <ul>
     {{ range . }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
