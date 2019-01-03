@@ -1,6 +1,6 @@
 {{ if .GitInfo }}
 <section class="gitinfo single-section">
   {{ $commit := getJSON "https://api.github.com/repos/12bitvn/12bit.vn/git/commits/" .GitInfo.Hash }}
-  <p>Sửa lần cuối bởi {{ $commit.committer.name }} vào ngày {{ $commit.committer.date| dateFormat "January 02, 2006"  }}: <a href="{{$commit.html_url}}" target="_blank">open on Github</a></p>
+  <p>Sửa lần cuối bởi {{ $commit.committer.name }} vào ngày {{ $commit.committer.date| dateFormat "January 02, 2006"  }}: <a href="{{$commit.html_url}}" target="_blank" title="{{$commit.message}}">xem commit</a></p>
 </section>
 {{ end }}
