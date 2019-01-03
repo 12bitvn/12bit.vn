@@ -430,6 +430,23 @@ figcaption{
   }
 }
 
+.related-section{
+  ul{
+    list-style: none;
+    padding-left: 0;
+    li{
+      padding-left: 25px;
+      position: relative;
+    }
+    li:before{
+      left: 5px;
+      position: absolute;
+      content: "-";
+      display: inline-block;
+    }
+  }
+}
+
 .footnotes{
   margin-bottom: 50px;
   margin-top: 50px;
