@@ -14,9 +14,7 @@ Nếu đã từng code với WordPress thì bạn sẽ ít nhất một lần ng
 
 ## Hook là gì?
 
-![](https://cdn-images-1.medium.com/max/1600/1*c4p2qOb4wiOwi2ICqG7r4g.jpeg)
-
-Nguồn: Google
+{{<figure src="https://cdn-images-1.medium.com/max/1600/1*c4p2qOb4wiOwi2ICqG7r4g.jpeg" title="Nguồn: Google">}}
 
 Hook trong tiếng Việt nghĩa là móc. Hook trong WordPress cũng mang ý nghĩa tương tự, cho phép "móc" code của bạn vào code của người khác mà không phải hack vào code của họ. Hoặc tạo ra một điểm cho người khác móc code của họ vào.
 
@@ -54,7 +52,7 @@ Chúng ta sẽ tìm hiểu về filter là chủ yếu, action thì cũng giốn
 
 Hãy mò vào source code của WordPress, và xem file wp-includes/plugin.php:
 
-![](https://cdn-images-1.medium.com/max/1600/1*ua53YRcKxOB8uN8l87YNuQ.png)
+{{<zoom-img src="https://cdn-images-1.medium.com/max/1600/1*ua53YRcKxOB8uN8l87YNuQ.png">}}
 
 Vậy các hook được lưu lại thành những biến global, là các array mà phần tử là instance của class `WP_Hook`.
 
@@ -62,7 +60,7 @@ Vậy các hook được lưu lại thành những biến global, là các array
 
 Đây là hàm `add_filter`:
 
-![](https://cdn-images-1.medium.com/max/1600/1*VP_CKlJhfKh7amTmnJm34g.png)
+{{<zoom-img src="https://cdn-images-1.medium.com/max/1600/1*VP_CKlJhfKh7amTmnJm34g.png">}}
 
 Cách đây khá lâu, mình cũng viết một bài về hook như vầy, hồi đó nó đơn giản hơn nhiều, `$wp_filter` là một array hai chiều, mỗi tag là một array với priority là key, giá trị là callable, khi filter được gọi, nó sẽ gọi các callbable này.
 
@@ -72,13 +70,13 @@ Nhưng tên của hàm và phương thức lại trùng nhau, vì vậy khi mìn
 
 Hãy xem phương thức `add_filter `có gì:
 
-![](https://cdn-images-1.medium.com/max/1600/1*uyk-hIQmF7mIeVCe1jC7xA.png)
+{{<zoom-img src="https://cdn-images-1.medium.com/max/1600/1*uyk-hIQmF7mIeVCe1jC7xA.png">}}
 
 Không có gì phức tạp, nhưng `nesting_level` là gì? Liệu nó có nghĩa là sẽ có các filter lồng vào nhau? Chúng ta sẽ tìm hiểu về nó sau khi hiểu hàm `apply_filters`.
 
 ### Phương thức apply_filters
 
-![](https://cdn-images-1.medium.com/max/1600/1*2VHhC38J3P0a_CDwZDC4ag.png)
+{{<zoom-img src="https://cdn-images-1.medium.com/max/1600/1*2VHhC38J3P0a_CDwZDC4ag.png">}}
 
 Có một hook đặc biệt tên là `all`, nó sẽ luôn được chạy khi bất kỳ hook nào được gọi. Và tham số của nó là reference của $args, nghĩa là bạn có thể thay đổi giá trị của `$args`.
 
@@ -86,11 +84,11 @@ Biến global `$wp_current_filter` dùng để chưa danh sách các hook đan
 
 Còn đây là phương thức để gọi tới hook `all`.
 
-![](https://cdn-images-1.medium.com/max/1600/1*wid3Xdr5GpEEKo2_QZ2iKw.png)
+{{<zoom-img src="https://cdn-images-1.medium.com/max/1600/1*wid3Xdr5GpEEKo2_QZ2iKw.png">}}
 
 Nó khá giống với `apply_filters` nên thôi ta sẽ bỏ qua. Giờ hãy xem phương thức `apply_filters`:
 
-![](https://cdn-images-1.medium.com/max/1600/1*6XcCDLVsGdIqVwfOW5I9Aw.png)
+{{<zoom-img src="https://cdn-images-1.medium.com/max/1600/1*6XcCDLVsGdIqVwfOW5I9Aw.png">}}
 
 Giờ là lúc quay lại với `nesting_level`.
 
@@ -110,11 +108,11 @@ WordPress đã hiện thực bằng cách: mỗi khi phương thức `apply_fil
 
 Như đã nói lúc đầu, action là filter mà thôi:
 
-![](https://cdn-images-1.medium.com/max/1600/1*iGpN18gxQ-Lite-UqGB7Kg.png)
+{{<zoom-img src="https://cdn-images-1.medium.com/max/1600/1*iGpN18gxQ-Lite-UqGB7Kg.png">}}
 
 Và đây là phương thức `do_action`:
 
-![](https://cdn-images-1.medium.com/max/1600/1*uI8oDw8wb8n8hkJKYTjPow.png)
+{{<zoom-img src="https://cdn-images-1.medium.com/max/1600/1*uI8oDw8wb8n8hkJKYTjPow.png">}}
 
 ## Lời kết
 
