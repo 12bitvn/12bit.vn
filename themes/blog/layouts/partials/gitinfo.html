@@ -2,8 +2,7 @@
 {{ $authorName := .GitInfo.AuthorName }}
 <section class="gitinfo single-section">
   <div class="gitinfo__edit">Sửa lần cuối bởi {{ .GitInfo.AuthorName }} vào ngày {{ .GitInfo.AuthorDate | dateFormat "02-01-2006"  }}: <a href="https://github.com/12bitvn/12bit.vn/commit/{{.GitInfo.Hash}}" target="_blank" title="{{.GitInfo.Subject}}">xem commit</a>, <a href="https://github.com/12bitvn/12bit.vn/edit/master/content/{{.File.Path}}" target="_blank">bài lỗi? sửa ngay</a></div>
-    {{ $splitedVersion := split .Hugo.Version "-" }}
-    {{ $suffix := index $splitedVersion 1 }}
+    {{ $suffix := index (split .Hugo.Version "-") 1 }}
     {{ if eq $suffix "12BIT" }}
       {{ $commits := .GitInfo.Commits }}
       {{ if .GitInfo.Contributors }}
