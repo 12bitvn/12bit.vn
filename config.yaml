@@ -29,6 +29,9 @@ menu:
   - identifier: rss
     title: RSS
     url: /index.xml
+  - identifier: chat
+    title: chat
+    url: https://discord.gg/uMJxpXB
   footer:
     - identifier: about
       title: giới thiệu
