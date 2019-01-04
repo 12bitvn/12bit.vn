@@ -431,8 +431,39 @@ figcaption{
 }
 
 .gitinfo{
-  font-style: italic;
   @include font-size(.9);
+  &__contributor{
+    display: inline-block;
+    text-decoration: none;
+    padding: 0px 5px;
+    background: #f3f3f3;
+    border-radius: 4px;
+    font-style: normal;
+    &[open]{
+      margin: 20px 0;
+      display: block;
+      padding: 10px;
+      summary{
+        margin-bottom: 5px;
+      }
+    }
+    summary{
+      outline: none;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    ul{
+      margin: 0;
+      padding-left: 15px;
+      list-style: none;
+      li{
+        margin-bottom: 5px;
+      }
+    }
+    time{
+      font-weight: 600;
+    }
+  }
 }
 
 .single-section{
