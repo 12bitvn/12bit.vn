@@ -63,8 +63,10 @@
     }
     .author time {
       font-weight: $font-weight-normal;
-      margin-left: 1rem;
       color: rgba($color-dark, .5);
+    }
+    .content {
+      white-space: pre;
     }
   }
 }

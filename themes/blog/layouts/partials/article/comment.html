@@ -1,8 +1,8 @@
 <section id="js_comment" class="comment single-section" data-slug="{{ .URL }}">
   <h1 class="comment__title single-section__title">Bình luận</h1>
-  <div class="comment__form">
+  <form class="comment__form" @submit.prevent="postComment">
       <div class="comment__form-input">
-      <textarea name="content" id="content" @focus="isFocusOnContent = true" v-model="content" placeholder="Bạn đang nghĩ gì?"></textarea>
+        <textarea name="content" id="content" @focus="isFocusOnContent = true" v-model="content" placeholder="Bạn đang nghĩ gì?" required></textarea>
       </div>
       <template v-if="isFocusOnContent">
       <div class="comment__form-input">
@@ -12,20 +12,20 @@
           </label>
       </div>
       <template v-if="!isAnonymous">
-          <div class="comment__form-input">
+        <div class="comment__form-input">
           <label for="name">Tên</label>
-          <input type="text" id="name" name="name" v-model="author">
-          </div>
-          <div class="comment__form-input">
+          <input type="text" id="name" name="name" v-model="author" required>
+        </div>
+        <div class="comment__form-input">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" v-model="email">
-          </div>
+          <input type="email" id="email" name="email" v-model="email" required>
+        </div>
       </template>
       </template>
       <div class="comment__form-input">
-      <input type="submit" value="Gửi bình luận" @click.prevent="postComment">
+        <input type="submit" value="Gửi bình luận">
       </div>
-  </div>
+    </form>
   <div class="comment__list">
       <div class="comment__item" v-for="comment in comments" :key="comment.id" :id="comment.id">
       <div class="left">
@@ -38,7 +38,7 @@
           <span v-text="comment.author"></span>
           <time v-text="formatDate(comment.createdAt)"></time>
           </h4>
-          <p class="content" v-text="comment.content"></p>
+          <p class="content" v-text="decodeURI(comment.content)"></p>
       </div>
       </div>
   </div>

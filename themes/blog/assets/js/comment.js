@@ -30,18 +30,17 @@ var app = new Vue({
         return
       }
 
-      if (!this.isAnonymous && this.author === '') {
+      if (!this.isAnonymous && (this.author === '' || this.email === '')) {
         return
       }
 
-      this.author = this.isAnonymous ? 'Anonymous' : this.author
-      this.email = this.isAnonymous ? '' : this.email
+      this.author = this.isAnonymous ? 'Ẩn danh' : this.author
 
       let query = `mutation {
         createComment(
           author: "${this.author}"
           email: "${this.email}"
-          content: "${this.content}"
+          content: "${encodeURI(this.content)}"
           slug: "${this.slug}"
         ) {
             id
@@ -73,17 +72,14 @@ var app = new Vue({
       this.content = ''
     },
     formatDate (dateStr) {
-      let monthNames = [
-        "January", "February", "March",
-        "April", "May", "June", "July",
-        "August", "September", "October",
-        "November", "December"
-      ];
       let date = new Date(dateStr)
       let day = date.getDate()
-      let monthIndex = date.getMonth()
+      let month = date.getMonth() + 1
       let year = date.getFullYear()
-      return monthNames[monthIndex] + ' ' + day + ', ' + year
+      let hour = date.getHours()
+      let min = date.getMinutes()
+      let sec = date.getSeconds()
+      return `lúc ${hour}:${min}:${sec} ngày ${day}-${month}-${year}`
     },
     getRandomHexColor (color = '#') {
       let hex = [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f']
@@ -94,10 +90,8 @@ var app = new Vue({
   filters: {
     avatar (email, name, color) {
       color = color.substr(1)
-      if (email === '' && name.toLowerCase() === 'anonymous') {
+      if (email === '') {
         return '/img/icon/default-avatar.png';
-      } else if (email === '') {
-        return `https://ui-avatars.com/api/?background=${color}&color=fff&rounded=true&site=60&name=${name[0]}`
       }
       return `https://www.gravatar.com/avatar/${md5(email)}?s=60`;
     }
