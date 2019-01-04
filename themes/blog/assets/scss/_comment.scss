@@ -62,11 +62,12 @@
       padding: 0;
     }
     .author time {
+      margin-left: 10px;
       font-weight: $font-weight-normal;
       color: rgba($color-dark, .5);
     }
     .content {
-      white-space: pre;
+      white-space: pre-line;
     }
   }
 }
