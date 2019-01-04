@@ -6,7 +6,7 @@ thumbnail: /img/articles/default-thumb-1200-630.png
 author:
     name: vominh
     github: vominh
-draft: false
+draft: true
 ---
 
 Lập trình javascript có lẽ không ai còn lạ gì console.log. Từ những bài helloWorld đầu tiên bạn đã được làm quen với nó như là những hàm print, log trong các ngôn ngữ khác.
