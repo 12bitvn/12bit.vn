@@ -10,13 +10,13 @@ author:
 draft: false
 ---
 
-Từ ngày 01/01/2019, 12bit.vn đã chuyển qua blog riêng, xây dựng bằng gohugo thay vì sử dụng Medium như trước. Vì vậy chúng mình cũng có cơ hội để tìm hiểu nhiều về gohugo hơn. Chúng mình từng thử custom lại code của gohugo để hỗ trợ hiển thị danh sách contributor của một bài post hoặc lấy commit author để làm author cho bài viết, nhưng nếu dùng cách đó thì các bạn cũng phải sử dụng bản gohugo của tụi mình để build, mà như vậy thì không tiện, cuối cùng chúng mình chọn shortcode, tiện hơn và dễ hơn.
+Từ ngày 01/01/2019, 12bit.vn đã chuyển qua blog riêng, xây dựng bằng Hugo thay vì sử dụng Medium như trước. Vì vậy chúng mình cũng có cơ hội để tìm hiểu nhiều về gohugo hơn. Chúng mình từng thử custom lại code của gohugo để hỗ trợ hiển thị danh sách contributor của một bài post hoặc lấy commit author để làm author cho bài viết, nhưng nếu dùng cách đó thì các bạn cũng phải sử dụng bản gohugo của tụi mình để build, mà như vậy thì không tiện, cuối cùng chúng mình chọn shortcode, tiện hơn và dễ hơn.
 
 Trong bài viết này mình sẽ giới thiệu cho các bạn những shortcode mà tụi mình đang sử dụng cho 12bit.vn:
 
-## Embed Codepend
+## Embed Codepen
 
-Blog về frontend thì không khỏi phải embed demo nào đó, Codepend là một công cụ rất hữu ích. Cú pháp shortcode có thể như sau:
+Blog về frontend thì không khỏi phải embed demo nào đó, Codepen là một công cụ rất hữu ích. Cú pháp shortcode có thể như sau:
 
 ```
 {{</* codepen username pen_id height_in_px */>}}
@@ -55,7 +55,7 @@ shortcodes/codepen.html:
 
 ## runkit
 
-Runkit cho phép bạn embed một đoạn code Nodejs vào website và run nó trực tiếp. Cái hay của Runkit là nó không giống như gist, bạn không cần phải truy cập vào website cua runkit để tạo một file sau đó mới embed, mà chỉ cần load script của họ, sau đó nó sẽ tự động lấy nội dung trên site của bạn và embed thành một iframe có thể run được, trong trường hợp runkit không hoạt động, thì người đọc vẫn có thể xem code được.
+Runkit cho phép bạn embed một đoạn code Nodejs vào website và run nó trực tiếp. Cái hay của Runkit là nó không giống như gist, bạn không cần phải truy cập vào website cua Runkit để tạo một file sau đó mới embed, mà chỉ cần load script của họ, sau đó nó sẽ tự động lấy nội dung trên site của bạn và embed thành một iframe có thể run được, trong trường hợp Runkit không hoạt động, thì người đọc vẫn có thể xem code được.
 
 Chúng ta sẽ có cấu trúc như sau:
 
@@ -65,7 +65,7 @@ your code block with ``` code and ```
 {{%/* /runkit */%}}
 ```
 
-`unique-id` ở đây chỉ là một id bất kỳ nào đó nhằm phân biệt giữa các đoạn code với nhau. Theo doc của runkit thì nó cần id này để sau khi script load xong sẽ dùng id này để lấy code và tạo embed.
+`unique-id` ở đây chỉ là một id bất kỳ nào đó nhằm phân biệt giữa các đoạn code với nhau. Theo document của Runkit thì nó cần id này để sau khi script load xong sẽ dùng id này để lấy code và tạo embed.
 
 {{% runkit abc %}}
 ```
@@ -113,7 +113,7 @@ shortcodes/caniuse.html:
 <div class="ciu_embed" data-feature="{{ .Get "feature" }}" data-periods="{{ $periods }}"></div>
 ```
 
-Chúng ta lưu giá trị "include_caniuse" vào Scratch, và check giá trị này ở footer để chỉ load script khi cần thiết:
+Chúng ta lưu giá trị `include_caniuse` vào Scratch, và check giá trị này ở footer để chỉ load script khi cần thiết:
 
 footer.html
 
@@ -278,4 +278,4 @@ Oembedly hỗ trợ chúng ta custom style của card bằng cách thêm style c
 ## Kết
 Còn nhiều shortcode khác trong repos của 12bit.vn mà bạn có thể xem tại đây: [github](https://github.com/12bitvn/12bit.vn/tree/master/themes/blog/layouts/shortcodes).
 
-Các bạn có thể xem thêm các shortcode khác tại trang [shortcode]({{< ref "pages/shortcodes.md" >}})
+Các bạn có thể xem thêm các shortcode khác tại trang [shortcode]({{< ref "/pages/shortcodes.md" >}})
