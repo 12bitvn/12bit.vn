@@ -1,13 +1,15 @@
 ---
-title: "Di chuyển blog từ WordPress.com qua Medium"
-date: 2018-03-24T07:01:27+07:00
-tags: ["WordPress", "API"]
-images:
-  - /img/articles/default-thumb-1200-630.png
 author:
-    name: vominh
-    github: vominh
+  github: vominh
+  name: vominh
+date: "2018-03-24T07:01:27+07:00"
 draft: false
+images:
+- /img/articles/default-thumb-1200-630.png
+tags:
+- WordPress
+- API
+title: Di chuyển blog từ WordPress.com qua Medium
 ---
 
 Mình có một blog bên WordPress.com, đã lâu không viết và cũng quên tài khoản đăng nhập. Dù cũng không còn viết gì nữa nhưng ở trong tình trạng vô chủ đó thì ai biết được nó sẽ đi về đâu. Nên mình muốn di chuyển nó qua một nơi chính chủ hơn --- Medium.

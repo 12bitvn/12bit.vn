@@ -1,13 +1,18 @@
 ---
-title: "Đóng gói toàn bộ website WordPress thành Ebook"
-date: 2018-04-20T21:51:07+07:00
-tags: [golang, wordpress, crawling, ebook, epub]
-images:
-  - https://cdn-images-1.medium.com/max/1000/1*T79HF0FcfTLwRKPjPXx3Cg.jpeg
 author:
-    name: vominh
-    github: vominh
+  github: vominh
+  name: vominh
+date: "2018-04-20T21:51:07+07:00"
 draft: false
+images:
+- https://cdn-images-1.medium.com/max/1000/1*T79HF0FcfTLwRKPjPXx3Cg.jpeg
+tags:
+- golang
+- wordpress
+- crawling
+- ebook
+- epub
+title: Đóng gói toàn bộ website WordPress thành Ebook
 ---
 
 Mình thích đọc, nhưng mình lười đọc bằng điện thoại, tuần trước mình có làm một video chia sẻ cách mình sử dụng [instapaper](https://instapaper.com/) và calibre để đóng gói các trang web thành ebook.

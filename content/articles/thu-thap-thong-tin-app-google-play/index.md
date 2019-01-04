@@ -1,13 +1,16 @@
 ---
-title: "Lấy thông tin app trên Play Store với Javascript"
-date: 2018-03-08T14:06:27+07:00
-tags: [scraping, JavaScript, NodeJs]
-images:
-  - /articles/thu-thap-thong-tin-app-google-play/images/thumbnail.png
 author:
-    name: vominh
-    github: vominh
+  github: vominh
+  name: vominh
+date: "2018-03-08T14:06:27+07:00"
 draft: false
+images:
+- /articles/thu-thap-thong-tin-app-google-play/images/thumbnail.png
+tags:
+- scraping
+- JavaScript
+- NodeJs
+title: Lấy thông tin app trên Play Store với Javascript
 ---
 
 Google không cho phép lấy thông tin của các application trên Play Store vì vậy chúng ta sẽ phải dùng cách rất thông dụng là parse và lấy thông tin từ HTML của nó.

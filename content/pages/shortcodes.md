@@ -1,12 +1,12 @@
 ---
-title: "Shortcodes"
-description: Danh sách custom shortcodes.
-date: 2018-12-28T13:15:32+07:00
-thumbnail: /img/articles/default-thumb-1200-630.png
 author:
-    name: 12bit Team
-    github: 12bitvn
+  github: 12bitvn
+  name: 12bit Team
+date: "2018-12-28T13:15:32+07:00"
+description: Danh sách custom shortcodes.
 draft: false
+thumbnail: /img/articles/default-thumb-1200-630.png
+title: Shortcodes
 ---
 
 Bên cạnh những [shortcode đã được tích hợp sẵn](https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes) trong Hugo, tụi mình còn build thêm một số shortcode để phục vụ cho việc thể hiện nội dung bài viết được rõ ràng và sinh động hơn.

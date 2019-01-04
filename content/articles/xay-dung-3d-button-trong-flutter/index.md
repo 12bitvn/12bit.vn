@@ -1,13 +1,16 @@
 ---
-title: "Xây dựng 3D button trong Flutter"
-date: 2018-12-10T16:24:00+07:00
-tags: [flutter, mobile, ui]
-images:
-  - https://cdn-images-1.medium.com/max/1000/1*RRIkgyR8vHZFB2bX5G9M3g.png
 author:
-    name: vominh
-    github: nguyenvanduocit
+  github: nguyenvanduocit
+  name: vominh
+date: "2018-12-10T16:24:00+07:00"
 draft: false
+images:
+- https://cdn-images-1.medium.com/max/1000/1*RRIkgyR8vHZFB2bX5G9M3g.png
+tags:
+- flutter
+- mobile
+- ui
+title: Xây dựng 3D button trong Flutter
 ---
 
 2 ngày trước, phiên bản 1.0 của Flutter được chính thức phát hành trong sự kiện Flutter Live.

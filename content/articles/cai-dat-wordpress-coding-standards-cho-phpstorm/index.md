@@ -1,14 +1,18 @@
 ---
-title: "Cài đặt WordPress Coding Standards cho PhpStorm"
-description: Bài viết sẽ hướng dẫn bạn cài đặt PHP Code Sniffer kết hợp với WordPress Coding Standards trên PhpStorm.
-date: 2018-06-12T09:39:29+07:00
-tags: [php, wordpress, coding standard]
-images:
-  - https://cdn-images-1.medium.com/max/1000/1*ZdYZmO3P_PL39PbkviqagQ.jpeg
 author:
-    name: Thien Nguyen
-    github: tatthien
+  github: tatthien
+  name: Thien Nguyen
+date: "2018-06-12T09:39:29+07:00"
+description: Bài viết sẽ hướng dẫn bạn cài đặt PHP Code Sniffer kết hợp với WordPress
+  Coding Standards trên PhpStorm.
 draft: false
+images:
+- https://cdn-images-1.medium.com/max/1000/1*ZdYZmO3P_PL39PbkviqagQ.jpeg
+tags:
+- php
+- wordpress
+- coding standard
+title: Cài đặt WordPress Coding Standards cho PhpStorm
 ---
 
 TL;DR

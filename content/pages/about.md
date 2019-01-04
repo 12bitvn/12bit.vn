@@ -1,12 +1,12 @@
 ---
-title: "Lời giới thiệu"
-date: 2018-12-27T05:06:27+07:00
-images:
-  - https://cdn-images-1.medium.com/max/1000/1*0pa-6XbI233XNvrMTEzMZg.jpeg
 author:
-    name: 12bit Team
-    github: 12bitvn
+  github: 12bitvn
+  name: 12bit Team
+date: "2018-12-27T05:06:27+07:00"
 draft: false
+images:
+- https://cdn-images-1.medium.com/max/1000/1*0pa-6XbI233XNvrMTEzMZg.jpeg
+title: Lời giới thiệu
 ---
 
 Chào các bạn.

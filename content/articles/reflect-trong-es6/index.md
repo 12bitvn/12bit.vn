@@ -1,13 +1,17 @@
 ---
-title: "Reflect trong ES6"
-date: 2018-03-28T10:33:00+07:00
-tags: ["javascript", "es6", "reflection", "reflect"]
-images:
-  - https://cdn-images-1.medium.com/max/1000/1*NMSSehwvDCy6X9J-xXYH9g.png
 author:
-    name: vominh
-    github: vominh
+  github: vominh
+  name: vominh
+date: "2018-03-28T10:33:00+07:00"
 draft: false
+images:
+- https://cdn-images-1.medium.com/max/1000/1*NMSSehwvDCy6X9J-xXYH9g.png
+tags:
+- javascript
+- es6
+- reflection
+- reflect
+title: Reflect trong ES6
 ---
 
 Trước khi tìm hiểu về Proxy thì reflect nghe khá lạ lẫm với mình, nhưng hóa ra thì reflect không phải là API chỉ có trong javascript, sau này mình nghĩ nó chỉ dùng để phối hợp với proxy, nhưng mà mình vẫn sai, hóa ra reflect còn tồn tại ở các ngôn ngữ lập trình động (dynamic language) khác thậm chí nó tồn tại trong ES5 dưới hình thức là static method của class Object.

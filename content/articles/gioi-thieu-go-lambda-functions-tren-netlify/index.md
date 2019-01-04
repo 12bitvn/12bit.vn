@@ -1,14 +1,18 @@
 ---
-title: "Giới thiệu Go Lambda Functions trên Netlify"
-description: Bài viết này mình xin giới thiệu cách deploy một lambda function viết bằng Go lên Netlify.
-date: 2018-12-06T17:44:44+07:00
-tags: [go, lambda function, netlify]
-images:
-  - /articles/gioi-thieu-go-lambda-functions-tren-netlify/images/01.png
 author:
-    name: Thien Nguyen
-    github: tatthien
+  github: tatthien
+  name: Thien Nguyen
+date: "2018-12-06T17:44:44+07:00"
+description: Bài viết này mình xin giới thiệu cách deploy một lambda function viết
+  bằng Go lên Netlify.
 draft: false
+images:
+- /articles/gioi-thieu-go-lambda-functions-tren-netlify/images/01.png
+tags:
+- go
+- lambda function
+- netlify
+title: Giới thiệu Go Lambda Functions trên Netlify
 ---
 
 Bài viết này mình xin giới thiệu cách deploy một lambda function viết bằng Go lên Netlify.

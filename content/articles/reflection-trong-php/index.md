@@ -1,13 +1,15 @@
 ---
-title: "Reflection trong PHP"
-date: 2018-03-19T13:49:07+07:00
-tags: [reflection, php]
-images:
-  - /articles/reflection-trong-php/images/thumbnail.png
 author:
-    name: vominh
-    github: vominh
+  github: vominh
+  name: vominh
+date: "2018-03-19T13:49:07+07:00"
 draft: false
+images:
+- /articles/reflection-trong-php/images/thumbnail.png
+tags:
+- reflection
+- php
+title: Reflection trong PHP
 ---
 
 Hôm trước mình có thử tìm hiểu về reflection trong ES6, và ngày hôm sau mình gặp một case có thể sử dụng reflection trong php. Nên mình viết bài này để chung ta cùng thảo luận.

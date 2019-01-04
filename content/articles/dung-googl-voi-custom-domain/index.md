@@ -1,13 +1,16 @@
 ---
-title: "Dùng goo.gl với custom domain"
-date: 2018-03-14T21:08:37+07:00
-tags: [nginx, custom domain, rewrite]
-images:
-  - https://cdn-images-1.medium.com/max/1000/1*qJdSUlaNE43xxrTaXoYoMA.png
 author:
-    name: vominh
-    github: vominh
+  github: vominh
+  name: vominh
+date: "2018-03-14T21:08:37+07:00"
 draft: false
+images:
+- https://cdn-images-1.medium.com/max/1000/1*qJdSUlaNE43xxrTaXoYoMA.png
+tags:
+- nginx
+- custom domain
+- rewrite
+title: Dùng goo.gl với custom domain
 ---
 
 Goo.gl không cho phép sử dụng custom domain như bit.ly và gói free của bit.ly cũng chỉ cho tối đa 500 link mà thôi, nên nếu bạn muốn sử dụng custom domain để rút gọn url mà không muốn tự host thì hãy tiếp tục đọc nhé.

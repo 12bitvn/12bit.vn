@@ -1,13 +1,15 @@
 ---
-title: "Tự động switch dark mode dựa trên thiết lập hệ thống"
-date: 2018-11-12T00:34:12+07:00
-tags: [javascript, dark mode]
-images:
-  - https://cdn-images-1.medium.com/max/1000/1*10yZFqVvZ_l7GBlo8CD0mw.png
 author:
-    name: vominh
-    github: vominh
+  github: vominh
+  name: vominh
+date: "2018-11-12T00:34:12+07:00"
 draft: false
+images:
+- https://cdn-images-1.medium.com/max/1000/1*10yZFqVvZ_l7GBlo8CD0mw.png
+tags:
+- javascript
+- dark mode
+title: Tự động switch dark mode dựa trên thiết lập hệ thống
 ---
 
 ![dark mode](https://cdn-images-1.medium.com/max/2000/1*10yZFqVvZ_l7GBlo8CD0mw.png)

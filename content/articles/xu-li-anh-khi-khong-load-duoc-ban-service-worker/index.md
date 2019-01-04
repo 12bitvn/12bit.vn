@@ -1,13 +1,14 @@
 ---
-title: "Xử lý khi không load được ảnh bằng cách sử dụng service worker"
-date: 2018-12-26T09:36:03+07:00
-tags: ["javascript"]
-images:
-  - https://cdn-images-1.medium.com/max/800/1*0kYnh-CVbxaqnu8blSwyUg.png
 author:
-    name: vominh
-    github: vominh
+  github: vominh
+  name: vominh
+date: "2018-12-26T09:36:03+07:00"
 draft: false
+images:
+- https://cdn-images-1.medium.com/max/800/1*0kYnh-CVbxaqnu8blSwyUg.png
+tags:
+- javascript
+title: Xử lý khi không load được ảnh bằng cách sử dụng service worker
 ---
 
 Có nhiều lý đo dể một website không load được ảnh, ví dụ như file ảnh đã bị xóa, ảnh quá nặng và bị timeout, … Trong những trường hợp đó thì tùy browser mà lỗi sẽ hiển thị khác nhau, có thể xấu có thể đẹp.

@@ -1,14 +1,15 @@
 ---
-title: "Tìm hiểu về Immediately-invoked function expression (IIFE) trong Javascript"
-description: A short description for the post.
-date: 2018-08-13T22:14:45+07:00
-tags: [javascript]
-images:
-  - https://cdn-images-1.medium.com/max/1000/1*wyEFyJkOy7IrrivMUhwvPg.png
 author:
-    name: Thien Nguyen
-    github: tatthien
+  github: tatthien
+  name: Thien Nguyen
+date: "2018-08-13T22:14:45+07:00"
+description: A short description for the post.
 draft: false
+images:
+- https://cdn-images-1.medium.com/max/1000/1*wyEFyJkOy7IrrivMUhwvPg.png
+tags:
+- javascript
+title: Tìm hiểu về Immediately-invoked function expression (IIFE) trong Javascript
 ---
 
 Trong bài viết này chúng ta cùng tìm hiểu một cách khai báo function rất quen thuộc trong Javascript. Tuy nó quen thuộc nhưng có thể chúng ta chưa biết tên gọi hoặc cách thức hoạt động của nó nhứ thế nào?

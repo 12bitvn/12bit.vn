@@ -1,13 +1,15 @@
 ---
-title: "JavaScript: in VS hasOwnProperty"
-date: 2018-08-15T10:46:30+07:00
-tags: [hasOwn, JavaScript]
-images:
-  - /articles/javascript-in-vs-has-own/images/thumbnail.png
 author:
-    name: vominh
-    github: vominh
+  github: vominh
+  name: vominh
+date: "2018-08-15T10:46:30+07:00"
 draft: false
+images:
+- /articles/javascript-in-vs-has-own/images/thumbnail.png
+tags:
+- hasOwn
+- JavaScript
+title: 'JavaScript: in VS hasOwnProperty'
 ---
 
 Trong lúc đọc change log của Vuejs thì thấy một commit thay đổi từ dùng in qua hasOwn nên mình cũng tìm hiểu xem nó gây ra lỗi gì và vì sao cần phải thay đổi:

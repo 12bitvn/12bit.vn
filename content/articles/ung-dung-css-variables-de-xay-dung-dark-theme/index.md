@@ -1,13 +1,14 @@
 ---
-title: "Ứng dụng CSS variables để xây dựng tính năng dark theme"
-date: 2018-10-26T17:42:49+07:00
-tags: ["css"]
-images:
-  - https://cdn-images-1.medium.com/max/1000/1*GDjDLQf4hWQ2q5ZQpycLIQ.jpeg
 author:
-    name: Thien Nguyen
-    github: tatthien
+  github: tatthien
+  name: Thien Nguyen
+date: "2018-10-26T17:42:49+07:00"
 draft: false
+images:
+- https://cdn-images-1.medium.com/max/1000/1*GDjDLQf4hWQ2q5ZQpycLIQ.jpeg
+tags:
+- css
+title: Ứng dụng CSS variables để xây dựng tính năng dark theme
 ---
 
 Mấy ngày trước mình có xây dựng tính năng dark theme cho trang [TIL của 12bit](https://til.12bit.vn/). Ban đầu hướng tiếp cận của mình khá là truyền thống đó là thay đổi class cho body để override lại CSS theo từng theme kiểu như:

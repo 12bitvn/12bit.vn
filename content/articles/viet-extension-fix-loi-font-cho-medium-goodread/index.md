@@ -1,14 +1,15 @@
 ---
-title: "Viết Chrome Extension fix lỗi font cho Medium"
-description: A short description for the post.
-date: 2018-06-25T06:14:44+07:00
-tags: ["Chrome Extension"]
-images:
-  - /articles/viet-extension-fix-loi-font-cho-medium-goodread/images/thumbnail.png
 author:
-    name: vominh
-    github: vominh
+  github: vominh
+  name: vominh
+date: "2018-06-25T06:14:44+07:00"
+description: A short description for the post.
 draft: false
+images:
+- /articles/viet-extension-fix-loi-font-cho-medium-goodread/images/thumbnail.png
+tags:
+- Chrome Extension
+title: Viết Chrome Extension fix lỗi font cho Medium
 ---
 
 Font trên web của Medium không hỗ trợ tiếng Việt, nên các bài viết của 12bit.vn khá khó đọc. Bạn cần phải cài extension của tụi mình thì mới có thể đọc được tốt.

@@ -1,14 +1,16 @@
 ---
-title: "Thay đổi giá trị CSS Variable bằng JavaScript"
-description: "Thay đổi giá trị CSS Variable bằng JavaScript"
-date: 2018-10-31T10:25:03+07:00
-tags: ["css variable", javascript]
-images:
-  - https://cdn-images-1.medium.com/max/2000/1*Sgkp2XjaIpdrcWnU-WlWVw.png
 author:
-    name: vominh
-    github: vominh
+  github: vominh
+  name: vominh
+date: "2018-10-31T10:25:03+07:00"
+description: Thay đổi giá trị CSS Variable bằng JavaScript
 draft: false
+images:
+- https://cdn-images-1.medium.com/max/2000/1*Sgkp2XjaIpdrcWnU-WlWVw.png
+tags:
+- css variable
+- javascript
+title: Thay đổi giá trị CSS Variable bằng JavaScript
 ---
 
 ![](https://cdn-images-1.medium.com/max/2000/1*Sgkp2XjaIpdrcWnU-WlWVw.png)

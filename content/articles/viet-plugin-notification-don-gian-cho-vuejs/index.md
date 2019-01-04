@@ -1,13 +1,16 @@
 ---
-title: "Viết plugin notification đơn giản cho Vue.js"
-date: 2018-03-05T17:45:43+07:00
-tags: [vuejs, javascript, plugin]
-images:
-  - https://cdn-images-1.medium.com/max/1000/1*3sMN6Ni2PRo_LEcrSdGc0g.jpeg
 author:
-    name: Thien Nguyen
-    github: tatthien
+  github: tatthien
+  name: Thien Nguyen
+date: "2018-03-05T17:45:43+07:00"
 draft: false
+images:
+- https://cdn-images-1.medium.com/max/1000/1*3sMN6Ni2PRo_LEcrSdGc0g.jpeg
+tags:
+- vuejs
+- javascript
+- plugin
+title: Viết plugin notification đơn giản cho Vue.js
 ---
 
 Bài viết hôm nay chúng ta sẽ cùng tìm hiểu cách viết plugin đơn giản cho Vue có chức năng hiển thị notification thông qua việc sử dụng thư viện [notie](https://github.com/jaredreich/notie).

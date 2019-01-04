@@ -1,13 +1,16 @@
 ---
-title: "Tìm hiểu về slot và scoped slots trong Vue.js"
-date: 2018-03-26T10:10:50+07:00
-tags: [vuejs, slot, javascript]
-images:
-  - https://cdn-images-1.medium.com/max/1000/1*qgwDRRz5olTU0BitXlSmVQ.jpeg
 author:
-    name: Thien Nguyen
-    github: tatthien
+  github: tatthien
+  name: Thien Nguyen
+date: "2018-03-26T10:10:50+07:00"
 draft: false
+images:
+- https://cdn-images-1.medium.com/max/1000/1*qgwDRRz5olTU0BitXlSmVQ.jpeg
+tags:
+- vuejs
+- slot
+- javascript
+title: Tìm hiểu về slot và scoped slots trong Vue.js
 ---
 
 Trong quá trình phát triển ứng dụng với Vue.js, chắc hẳn các bạn sẽ gặp những trường hợp muốn chèn nội dụng HTML vào bên trong component con giống như cách chúng ta viết HTML thông thường thay vì dùng `prop`. Ví dụ như:

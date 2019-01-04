@@ -1,13 +1,16 @@
 ---
-title: "4 cách duyệt array mà không cần dùng loop"
-date: 2018-11-28T17:12:38+07:00
-tags: ["javascript", "array", "loop"]
-images:
-  - https://cdn-images-1.medium.com/max/1000/0*ESt0_h3F72ZNiqCR
 author:
-    name: vominh
-    github: vominh
+  github: vominh
+  name: vominh
+date: "2018-11-28T17:12:38+07:00"
 draft: false
+images:
+- https://cdn-images-1.medium.com/max/1000/0*ESt0_h3F72ZNiqCR
+tags:
+- javascript
+- array
+- loop
+title: 4 cách duyệt array mà không cần dùng loop
 ---
 
 JavaScript cũng như nhiều ngôn ngữ khác, có rất nhiều cách để giải quyết vấn đề. Có lẽ ai học lập trình cũng đều phải biết rõ những cấu trúc cơ bản như vòng lặp và rẽ nhánh. Và trong hầu hết các trường hợp cần duyệt array thì các bạn đều có thể sử dụng cấu trúc loop.

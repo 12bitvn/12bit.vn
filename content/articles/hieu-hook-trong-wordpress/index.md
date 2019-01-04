@@ -1,13 +1,15 @@
 ---
-title: "Hiểu sâu về hook trong WordPress"
-date: 2018-06-24T06:54:18+07:00
-tags: ["WordPress Hook", "WordPress"]
-images:
-  - https://cdn-images-1.medium.com/max/1600/1*c4p2qOb4wiOwi2ICqG7r4g.jpeg
 author:
-    name: vominh
-    github: nguyenvanduocit
+  github: nguyenvanduocit
+  name: vominh
+date: "2018-06-24T06:54:18+07:00"
 draft: false
+images:
+- https://cdn-images-1.medium.com/max/1600/1*c4p2qOb4wiOwi2ICqG7r4g.jpeg
+tags:
+- WordPress Hook
+- WordPress
+title: Hiểu sâu về hook trong WordPress
 ---
 
 Nếu đã từng code với WordPress thì bạn sẽ ít nhất một lần nghe nói hoặc đã sử dụng hook (`add_action()`, `add_filter()`), nó là thứ rất quen thuộc trong WordPress. Chính nó đã đem lại cho theme, plugin và chính WordPress khả năng tùy biến mạnh mẽ mà không phải hack. Và cũng chính nhờ nó mà việc debug của dev chúng ta trở nên ... không lường.
