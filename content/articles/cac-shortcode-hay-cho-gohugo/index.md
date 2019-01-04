@@ -14,9 +14,9 @@ Từ ngày 01/01/2019, 12bit.vn đã chuyển qua blog riêng, xây dựng bằn
 
 Trong bài viết này mình sẽ giới thiệu cho các bạn những shortcode mà tụi mình đang sử dụng cho 12bit.vn:
 
-## Embed codepen
+## Embed Codepend
 
-Blog về frontend thì không khỏi phải embed demo nào đó, codepend là một công cụ rất hữu ích. Cú pháp shortcode có thể như sau:
+Blog về frontend thì không khỏi phải embed demo nào đó, Codepend là một công cụ rất hữu ích. Cú pháp shortcode có thể như sau:
 
 ```
 {{</* codepen username pen_id height_in_px */>}}
@@ -103,7 +103,7 @@ Chúng ta cần làm hai việc:
 1. Render div kèm theo attribute chứa tên các feature cần check.
 1. Load thư viện ở footer
 
-### mã nguồn
+### Mã nguồn
 
 shortcodes/caniuse.html:
 
@@ -274,5 +274,8 @@ footer.html
 ```
 
 Oembedly hỗ trợ chúng ta custom style của card bằng cách thêm style có class `embedly-css`. Nên mình dùng nó để ẩn header và footer của card đi.
+
+## Kết
+Còn nhiều shortcode khác trong repos của 12bit.vn mà bạn có thể xem tại đây: [github](https://github.com/12bitvn/12bit.vn/tree/master/themes/blog/layouts/shortcodes).
 
 Các bạn có thể xem thêm các shortcode khác tại trang [shortcode]({{< ref "pages/shortcodes.md" >}})
