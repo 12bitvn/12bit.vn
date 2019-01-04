@@ -275,6 +275,40 @@ footer.html
 
 Oembedly hỗ trợ chúng ta custom style của card bằng cách thêm style có class `embedly-css`. Nên mình dùng nó để ẩn header và footer của card đi.
 
+## Danh sách contributor của một repo
+
+Trong trang [giới thiệu]({{<ref "/page/about.md">}}) mình có liệt kê ra danh sách các bạn đã có đóng góp vào 12bit.vn bằng cách lấy danh sách contributor từ API của Github, lẽ ra lấy từ chính thư mục .git thì tốt hơn, nhưng như vậy thì phải build Hugo. Nên cuối cùng vẫn nên dùng API.
+
+Cú pháp như sau:
+
+
+```markdown
+{{</*contributors "12bitvn/12bit.vn"*/>}}
+```
+
+{{<contributors "12bitvn/12bit.vn">}}
+
+### Mã nguồn
+
+```
+{{ $repoName := .Get 0 }}
+{{ $url := print "https://api.github.com/repos/" $repoName "/stats/contributors?access_token=" $.Site.Data.auth.github_access_token}}
+{{ $contributes := getJSON $url }}
+<div class="contributors">
+  {{ range sort $contributes "total" "desc" }}
+  <div class="contributor">
+    <img class="contributor__avatar" src="{{.author.avatar_url}}" alt="">
+    <a href="{{.author.html_url}}" target="_blank" class="contributor__name">{{ .author.login }}</a>
+    <div class="contributor__metas">
+      <span>{{ .total }} commits</span>
+    </div>
+  </div>
+  {{ end }}
+</div>
+```
+
+Chúng ta dùng hàm getJSON do Hugo cung cấp để gọi tới API. Để tăng ratelimit thì mình có dùng access token, để tránh commit cái token này thì mình đặt nó trong file `data/auth.yaml`. File này có chưa key `githu_access_token`, chính là Personal Access Token của Github.
+
 ## Kết
 Còn nhiều shortcode khác trong repos của 12bit.vn mà bạn có thể xem tại đây: [github](https://github.com/12bitvn/12bit.vn/tree/master/themes/blog/layouts/shortcodes).
 
