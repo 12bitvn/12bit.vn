@@ -26,16 +26,16 @@ menu:
   - identifier: about
     title: giới thiệu
     url: /pages/about.html
-  - identifier: rss
-    title: RSS
-    url: /index.xml
   - identifier: chat
     title: chat
     url: https://discord.gg/uMJxpXB
+  - identifier: til
+    title: TIL
+    url: https://til.12bit.vn
   footer:
     - identifier: about
       title: giới thiệu
       url: /pages/about.html
-    - identifier: shortcodes
-      title: shortcodes
-      url: /pages/shortcodes.html
+    - identifier: rss
+      title: RSS
+      url: /index.xml
