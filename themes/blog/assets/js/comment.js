@@ -21,7 +21,7 @@ var app = new Vue({
     async getComments () {
       let query = `query {allComments(filter: {
         slug: "${this.slug}"
-      }) {id, author, email, content, createdAt, slug}}`
+      }, orderBy: createdAt_DESC) {id, author, email, content, createdAt, slug}}`
       let data = await this.request(query)
       return data
     },
