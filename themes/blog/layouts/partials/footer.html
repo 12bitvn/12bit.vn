@@ -9,21 +9,20 @@
 </footer><!-- #colophon -->
 </div>
 <!-- #wrap -->
-
 {{ template "_internal/google_analytics_async.html" . }}
-
-{{ $app := resources.Get "js/app.js" | resources.Minify | resources.Fingerprint }}
-{{ $commentJs := resources.Get "js/comment.js" | resources.Minify | resources.Fingerprint }}
-<script src="{{ $app.RelPermalink }}"></script>
-
+{{ $app := resources.Get "js/app.js"}}
 {{ if .IsPage }}
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
-<script src="/js/md5.min.js"></script>
-<script src="{{ $commentJs.RelPermalink }}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+  {{ $highlightJs := resources.Get "js/highlight.pack.js"}}
+  {{ $commentJs := resources.Get "js/comment.js" }}
+  {{ $md5 := resources.Get "lib/md5.js" }}
+  {{ $js := slice $app $highlightJs $md5 $commentJs | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint}}
+  <script src="{{ $js.RelPermalink }}" async defer onload="hljs.initHighlightingOnLoad();"></script>
+{{ else }}
+  {{ $js := $app | resources.Minify | resources.Fingerprint}}
+  <script src="{{ $js.RelPermalink }}" async defer></script>
 {{ end }}
 
-{{ $highlightJs := resources.Get "js/highlight.pack.js" | resources.Minify | resources.Fingerprint }}
-<script src="{{ $highlightJs.RelPermalink }}" async defer onload="hljs.initHighlightingOnLoad();"></script>
 
 {{ if ($.Page.Scratch.Get "include_embedly") "true" }}
 <style class="embedly-css">

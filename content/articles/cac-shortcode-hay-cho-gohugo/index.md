@@ -277,7 +277,7 @@ Oembedly hỗ trợ chúng ta custom style của card bằng cách thêm style c
 
 ## Danh sách contributor của một repo
 
-Trong trang [giới thiệu]({{<ref "/page/about.md">}}) mình có liệt kê ra danh sách các bạn đã có đóng góp vào 12bit.vn bằng cách lấy danh sách contributor từ API của Github, lẽ ra lấy từ chính thư mục .git thì tốt hơn, nhưng như vậy thì phải build Hugo. Nên cuối cùng vẫn nên dùng API.
+Trong trang [giới thiệu]({{<ref "/pages/about.md">}}) mình có liệt kê ra danh sách các bạn đã có đóng góp vào 12bit.vn bằng cách lấy danh sách contributor từ API của Github, lẽ ra lấy từ chính thư mục .git thì tốt hơn, nhưng như vậy thì phải build Hugo. Nên cuối cùng vẫn nên dùng API.
 
 Cú pháp như sau:
 
