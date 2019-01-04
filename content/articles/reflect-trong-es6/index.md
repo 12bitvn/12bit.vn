@@ -88,4 +88,4 @@ Như đã nói, Reflect có các phương thức tương ứng với các trap, 
 
 Bài viết ngắn gọn này nhằm sử dụng làm tham khảo cho các bài viết khác, cũng như cung cấp thông tin ngắn gọn về reflect và cách dùng nó với proxy.
 
-{{% caniuse feature="proxy" %}}
+{{% caniuse features="proxy" %}}

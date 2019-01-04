@@ -17,10 +17,10 @@
   {{ $commentJs := resources.Get "js/comment.js" }}
   {{ $md5 := resources.Get "lib/md5.js" }}
   {{ $js := slice $app $highlightJs $md5 $commentJs | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint}}
-  <script src="{{ $js.RelPermalink }}" async defer onload="hljs.initHighlightingOnLoad();"></script>
+  <script src="{{ $js.RelPermalink }}" defer onload="hljs.initHighlightingOnLoad();"></script>
 {{ else }}
   {{ $js := $app | resources.Minify | resources.Fingerprint}}
-  <script src="{{ $js.RelPermalink }}" async defer></script>
+  <script src="{{ $js.RelPermalink }}" defer></script>
 {{ end }}
 
 
@@ -36,17 +36,17 @@
   display:none;
 }
 </style>
-<script src="//cdn.embedly.com/widgets/platform.js" async defer></script>
+<script src="//cdn.embedly.com/widgets/platform.js" defer></script>
 {{ end }}
 
 {{ if ($.Page.Scratch.Get "include_caniuse") "true" }}
-<script async src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/caniuse-embed.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/caniuse-embed.min.js"></script>
 {{ end }}
 {{ if ($.Page.Scratch.Get "include_mermaid") "true" }}
-<script async src="https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js"></script>
+<script defer src="https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js"></script>
 {{ end }}
 {{ if ($.Page.Scratch.Get "include_image_zoom") "true" }}
-<script src="https://unpkg.com/medium-zoom@1.0.2/dist/medium-zoom.min.js" async defer onload="mediumZoom('[data-zoomable]');"></script>
+<script src="https://unpkg.com/medium-zoom@1.0.2/dist/medium-zoom.min.js" defer onload="mediumZoom('[data-zoomable]');"></script>
 {{ end }}
 </body>
 </html>

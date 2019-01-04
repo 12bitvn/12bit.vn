@@ -56,4 +56,4 @@ Demo
 
 {{<codepen tatthien LgMKpm>}}
 
-{{% caniuse feature="css-variables" %}}
+{{% caniuse features="css-variables" %}}

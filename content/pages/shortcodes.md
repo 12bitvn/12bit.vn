@@ -118,10 +118,10 @@ console.log(array1[2]);
 ## caniuse
 
 ```markdown
-{{</* caniuse feature="proxy" */>}}
+{{</* caniuse features="proxy" */>}}
 ```
 
-{{< caniuse feature="proxy" >}}
+{{< caniuse "proxy" >}}
 
 ## mermaid
 

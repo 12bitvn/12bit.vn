@@ -168,4 +168,4 @@ Ta có kết quả cuối cùng như sau:
 
 Flex giúp ích rất nhiều trong việc tạo layout, không còn cần phải sự dụng float hoặc table nữa. CSS Grid cũng là một tính năng vô cùng mạnh mẽ mà chúng ta sẽ tìm hiểu ở những bài tiếp theo với cùng một ví dụ.
 
-{{% caniuse feature="flexbox" %}}
+{{% caniuse features="flexbox" %}}
