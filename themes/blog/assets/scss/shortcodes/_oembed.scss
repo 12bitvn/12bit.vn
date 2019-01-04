@@ -5,8 +5,10 @@
   .embedly-card-hug{
     margin: 0 auto !important;
     min-width: 100% !important;
+    line-height: 0;
     iframe{
       min-width: 100% !important;
+      display: inline-block !important;
     }
   }
 }
