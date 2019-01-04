@@ -1,5 +1,5 @@
 {{ if .GitInfo }}
 <section class="gitinfo single-section">
-  <p>Sửa lần cuối bởi {{ .GitInfo.AuthorName }} vào ngày {{ .GitInfo.AuthorDate | dateFormat "02-01-2006"  }}: <a href="https://github.com/12bitvn/12bit.vn/commit/{{.GitInfo.Hash}}" target="_blank" title="{{.GitInfo.Subject}}">xem commit</a></p>
+  <p>Sửa lần cuối bởi {{ .GitInfo.AuthorName }} vào ngày {{ .GitInfo.AuthorDate | dateFormat "02-01-2006"  }}: <a href="https://github.com/12bitvn/12bit.vn/commit/{{.GitInfo.Hash}}" target="_blank" title="{{.GitInfo.Subject}}">xem commit</a>, <a href="https://github.com/12bitvn/12bit.vn/edit/master/content/{{.File.Path}}" target="_blank">bài lỗi? sửa ngay</a></p>
 </section>
 {{ end }}
