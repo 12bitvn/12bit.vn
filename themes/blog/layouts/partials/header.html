@@ -11,6 +11,13 @@
   <meta name="description" content="{{ .Description }}">
   {{ template "_internal/google_news.html" . -}}
   {{ template "_internal/opengraph.html" . -}}
+  {{ if .IsHome }}
+    {{- with .Site.Params.images }}
+    {{ range first 6 . }}
+    <meta property="og:image" content="{{ . | absURL }}">
+    {{ end }}
+    {{ end }}
+  {{ end }}
   {{ template "_internal/twitter_cards.html" . -}}
   {{ template "_internal/schema.html" . -}}
   {{ range .Params.css -}}
