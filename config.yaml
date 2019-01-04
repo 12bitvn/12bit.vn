@@ -16,6 +16,8 @@ outputs:
 params:
   description: write and share to learn
   favicon: img/icon/favicon.png
+  images:
+    - img/index.png
 blackfriday:
   hrefTargetBlank: true
   noreferrerLinks: true
