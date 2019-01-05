@@ -6,7 +6,7 @@
 body {
   font-family: $font-body;
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.4;
   font-weight: $font-weight-normal;
   color: $color-dark;
 }
@@ -433,6 +433,7 @@ figcaption{
 .gitinfo{
   @include font-size(.9);
   &__contributor{
+    margin-left: 5px;
     display: inline-block;
     text-decoration: none;
     padding: 0px 5px;
