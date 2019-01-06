@@ -10,7 +10,9 @@
       display: block;
       @include font-size(1)
     }
-    input, textarea {
+    input[type="text"],
+    input[type="email"],
+    textarea {
       width: 100%;
       border-radius: 4px;
       border: 2px solid rgba($color-dark, .2);
@@ -29,16 +31,8 @@
       width: auto;
     }
     input[type="submit"] {
-      background-color: $color-primary;
-      border: none;
-      color: #fff;
-      font-weight: $font-weight-bold;
       width: auto;
-      padding: 10px 15px;
-      cursor: pointer;
-      &:hover {
-        opacity: .8;
-      }
+      border: none;
     }
   }
   /** Comment Item **/

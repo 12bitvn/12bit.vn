@@ -1,39 +1,47 @@
+{{ $repoName := .Get 0 }}
+{{ $url := print "https://api.github.com/repos/" $repoName}}
+{{ $repo := getJSON $url }}
 <div class="gh-repo">
-  {{ $repoName := .Get 0 }}
-  {{ $url := print "https://api.github.com/repos/" $repoName}}
-  {{ $repo := getJSON $url }}
-  <table class="styled-table">
-    <tr>
-      <th>Name</th>
-      <td><a href="{{ $repo.html_url }}" target="_blank">{{ $repo.full_name }}</a></td>
-    </tr>
-    <tr>
-      <th>Description</th>
-      <td>{{ $repo.description }}</td>
-    </tr>
-    <tr>
-      <th>Owner</th>
-      <td><a href="{{ $repo.owner.url }}" target="_blank">{{ $repo.owner.login }}</a></td>
-    </tr>
-    <tr>
-      <th>Forks</th>
-      <td><a href="{{ $repo.forks_url }}" target="_blank">{{ $repo.forks_count }}</a></td>
-    </tr>
-    <tr>
-      <th>Watchers</th>
-      <td>{{ $repo.watchers }}</td>
-    </tr>
-    <tr>
-      <th>Open issues</th>
-      <td>{{ $repo.open_issues_count }}</td>
-    </tr>
-    <tr>
-      <th>Updated at</th>
-      <td>{{ $repo.updated_at }}</td>
-    </tr>
-    <tr>
-      <th>License</th>
-      <td>{{ $repo.license.name }}</td>
-    </tr>
-  </table>
+  <header class="gh-repo__header">
+      <svg height="48" width="48"viewBox="0 0 16 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+    <div>
+      <h2 class="repo-name"><a href="{{ $repo.html_url }}" target="_blank">{{ $repo.full_name }}</a></h2>
+      <h3 class="repo-desc">{{ $repo.description }}</h3>
+    </div>
+  </header>
+  <div class="gh-repo__body">
+    <ul class="gh-repo__fields">
+      <li class="gh-repo__field-item">
+        <div class="key">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
+          Star
+        </div>
+        <div class="value">{{ $repo.stargazers_count }}</div>
+      </lii>
+      <li class="gh-repo__field-item">
+        <div class="key">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          Fork
+        </div>
+        <div class="value">{{ $repo.forks_count }}</div>
+      </li>
+      <li class="gh-repo__field-item">
+        <div class="key">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg>
+          Issues
+        </div>
+        <div class="value">{{ $repo.open_issues_count }}</div>
+      </li>
+      <li class="gh-repo__field-item">
+        <div class="key">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M8 8h3v2H7c-.55 0-1-.45-1-1V4h2v4zM7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7z"/></svg>
+          Updated
+        </div>
+        <div class="value">{{ dateFormat "02-01-2006" $repo.updated_at }}</div>
+      </li>
+    </ul>
+  </div>
+  <footer class="gh-repo__footer">
+    <a href="{{ $repo.html_url }}" class="button button--outline" target="_blank">Xem trên GitHub</a>
+  </footer>
 </div>
