@@ -2,6 +2,7 @@
 @import 'mixins';
 @import 'comment';
 @import 'shortcodes/index.scss';
+@import 'components/index.scss';
 
 body {
   font-family: $font-body;
@@ -89,6 +90,7 @@ sub, sup {
   background-color: $color-primary;
   color: #fff !important;
   padding: 10px 15px;
+  border: none;
   &:hover {
     opacity: .9;
   }
