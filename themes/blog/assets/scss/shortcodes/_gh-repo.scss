@@ -1,6 +1,7 @@
 .gh-repo {
   margin-bottom: 1.5rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  border: 1px solid lighten($color-light, 70);
+  box-shadow: 0 0 12px rgba(0, 0, 0, .15);
   border-radius: 4px;
   &__header {
     display: grid;
