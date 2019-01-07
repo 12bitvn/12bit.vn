@@ -24,18 +24,21 @@ blackfriday:
 menu:
   main:
   - identifier: about
-    title: giới thiệu
+    title: Giới thiệu
     url: /pages/about.html
   - identifier: chat
-    title: chat
+    title: Chat
     url: https://discord.gg/uMJxpXB
   - identifier: til
     title: TIL
     url: https://til.12bit.vn
   footer:
-    - identifier: about
-      title: giới thiệu
-      url: /pages/about.html
-    - identifier: rss
+    - identifier: 1
+      title: Shortcodes
+      url: /pages/shortcodes.html
+    - identifier: 2
+      title: Donate
+      url:  https://ko-fi.com/12bitvn
+    - identifier: 3
       title: RSS
       url: /index.xml
