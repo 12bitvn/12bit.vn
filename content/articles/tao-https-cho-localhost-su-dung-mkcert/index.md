@@ -15,7 +15,7 @@ draft: false
 
 Ngày nay nhiều tính năng yêu cầu website của bạn phải có HTTPS để có thể hoạt động như Service Workers hoặc một vài payment gateway sẽ không hoạt động nếu website không có HTTPS. Và việc phát triển trên localhost với HTTP có thể gây ra lỗi khi deploy production sử dụng HTTPS.
 
-**mkcert** được tạo ra để giúp bạn giải quyết các vấn đề trên theo cách đơn giản nhất. Nó có thể hoạt động với bất kì hostname, IP và localhost.
+**mkcert** là một CLI tool được build bằng Golang giúp bạn giải quyết các vấn đề trên theo cách đơn giản nhất. Nó có thể tạo HTTPS cho bất kì hostname, IP và kể cả localhost.
 
 > mkcert is a simple tool for making locally-trusted development certificates. It requires no configuration.
 
