@@ -228,6 +228,7 @@ sub, sup {
   }
   &__content {
     margin-top: 30px;
+    margin-bottom: 50px;
     .runkit{
       margin-bottom: 1.5rem;
     }
@@ -562,4 +563,10 @@ figcaption{
     border-radius: 4px;
     @include font-size(.9)
   }
+}
+
+.save-section,
+.fb-save{
+  line-height: 0;
+  margin-right: 5px;
 }

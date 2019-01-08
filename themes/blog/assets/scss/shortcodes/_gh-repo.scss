@@ -17,6 +17,7 @@
       @include font-size(2);
       margin-bottom: 10px;
       line-height: 1;
+      color: $color-primary;
       &:before,
       a:after {
         display: none;
