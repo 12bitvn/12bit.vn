@@ -48,7 +48,7 @@ Chỉ cần chép url vào clipboard sau đó gọi workflow bitly, url sẽ đ�
 
 Cài workflow này bằng lệnh:
 
-```
+``` 
 npm install --global alfred-bitly
 ```
 
@@ -58,15 +58,15 @@ Thay vì mở PhpStorm lên, xong rồi open project, thì bạn có thể gõ t
 
 Tải workflow tại: [jetbrains-alfred-workflow](https://github.com/bchatard/jetbrains-alfred-workflow).
 
-## Mở repo trên gitlab
+## Mở repo trên GitLab
 
-Cũng tương tự như workflow phía trên, workflow alfred-gitlab cho phép bạn search repo của bạn trên gitlab và tự động mở nó bằng trình duyệt:
+Cũng tương tự như workflow phía trên, workflow alfred-gitlab cho phép bạn search repo của bạn trên GitLab và tự động mở nó bằng trình duyệt:
 
 Tải workflow tại: [alfred-gitlab](https://github.com/lukewaite/alfred-gitlab).
 
 ## Translate nhanh chóng
 
-Mình rất thường phải translate một cái gì đó, trước đây thì mình sẽ mở Google translate để sẵn, nhưng giờ thì chỉ cần gõ trực tiếp vào alfred là được.
+Mình rất thường phải translate một cái gì đó, trước đây thì mình sẽ mở Google Translate để sẵn, nhưng giờ thì chỉ cần gõ trực tiếp vào Alfred là được.
 
 ![](https://cdn-images-1.medium.com/max/1000/1*qefBCFgjCzNw6Z54AQZ3kQ.png)
 
@@ -80,11 +80,11 @@ npm install --global alfred-polyglot
 
 Giống như tính năng gõ tắt của các bộ gõ, khi bạn gõ đúng keyword vào input/editor thì nội dung snippet sẽ được thay thế vào vị trí của keyword đó.
 
-Ví dụ: Mình làm việc với Golang và rất hay cần phải gõ hàm main, giờ mình có thể tạo một snippet có keyword là `fnmain` với nội dung là code của hàm main mà mình thường dùng. Giờ khi gõ vào editor dòng `fnmain` thì alfred sẽ tự động thay thế keyword đó thành nội dung mà mình đã đặt trước.
+Ví dụ: Mình làm việc với Golang và rất hay cần phải gõ hàm main, giờ mình có thể tạo một snippet có keyword là `fnmain` với nội dung là code của hàm main mà mình thường dùng. Giờ khi gõ vào editor dòng `fnmain` thì Alfred sẽ tự động thay thế keyword đó thành nội dung mà mình đã đặt trước.
 
 ## Mở issue nhanh chóng
 
-Có một vấn đề trong team, đó là khi trao đổi về issue nào đó, thì mọi người không gửi nguyên link của issue (link trên redmine hoặc jira) mà chỉ nói tên của issue, muốn đọc nội dung thì sẽ phải tự lên jira search issue, nhưng Alfred có thể giúp.
+Có một vấn đề trong team, đó là khi trao đổi về issue nào đó, thì mọi người không gửi nguyên link của issue (link trên Redmine hoặc Jira) mà chỉ nói tên của issue, muốn đọc nội dung thì sẽ phải tự lên jira search issue, nhưng Alfred có thể giúp.
 
 Có nhiều cách để làm, trong trường hợp này mình sẽ sử dụng chức năng Web Search.
 
