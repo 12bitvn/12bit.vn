@@ -16,9 +16,9 @@ Ngày hôm nay mình sẽ không nói về những ưu điểm của Mac trong v
 
 ## Alfred
 
-Alfred là ứng dụng chỉ có trên Mac, giúp chúng ta thực hiện rất nhiều thao tác như xem lịch sử clipboard, search web, dịch, tính toán hoặc thậm chí là deploy code. Nó cũng gần giống như spotlight, nhưng cho phép bạn custom nhiều chức năng hơn.
+[Alfred](https://www.alfredapp.com/) là ứng dụng chỉ có trên Mac, giúp chúng ta thực hiện rất nhiều thao tác như xem lịch sử clipboard, search web, dịch, tính toán hoặc thậm chí là deploy code. Nó cũng gần giống như spotlight, nhưng cho phép bạn custom nhiều chức năng hơn.
 
-AlfredApp có gói miễn phí và thu phí, với gói miễn phí bạn không làm được gì nhiều, tương đương với spotlight mà thôi, bạn phải mua powerpack để có thể sử dụng được các workflow, đây mới là thứ đáng giá nhất của application này.
+Alfred có gói miễn phí và thu phí, với gói miễn phí bạn không làm được gì nhiều, tương đương với spotlight mà thôi, bạn phải mua powerpack để có thể sử dụng được các workflow, đây mới là thứ đáng giá nhất của application này.
 
 Workflow sẽ giúp bạn làm một tác vụ nào đó tự động, giống như task runner vậy, ví dụ như gọi API và trả về kết quả, progress clipboard, gọi các lệnh hệ thống hoặc run script ở một ngôn ngữ nào đó.
 
@@ -68,7 +68,7 @@ Tải workflow tại: [alfred-gitlab](https://github.com/lukewaite/alfred-gitla
 
 Mình rất thường phải translate một cái gì đó, trước đây thì mình sẽ mở Google Translate để sẵn, nhưng giờ thì chỉ cần gõ trực tiếp vào Alfred là được.
 
-![](https://cdn-images-1.medium.com/max/1000/1*qefBCFgjCzNw6Z54AQZ3kQ.png)
+{{<zoom-img src="https://cdn-images-1.medium.com/max/1000/1*qefBCFgjCzNw6Z54AQZ3kQ.png">}}
 
 Cài đặt workflow bằng cách:
 
@@ -84,19 +84,19 @@ Ví dụ: Mình làm việc với Golang và rất hay cần phải gõ hàm mai
 
 ## Mở issue nhanh chóng
 
-Có một vấn đề trong team, đó là khi trao đổi về issue nào đó, thì mọi người không gửi nguyên link của issue (link trên Redmine hoặc Jira) mà chỉ nói tên của issue, muốn đọc nội dung thì sẽ phải tự lên jira search issue, nhưng Alfred có thể giúp.
+Có một vấn đề trong team, đó là khi trao đổi về issue nào đó, thì mọi người không gửi nguyên link của issue (link trên Redmine hoặc Jira) mà chỉ nói tên của issue, muốn đọc nội dung thì sẽ phải tự lên Jira search issue, nhưng Alfred có thể giúp.
 
 Có nhiều cách để làm, trong trường hợp này mình sẽ sử dụng chức năng Web Search.
 
 Bạn truy cập vào Alfred Preference > Features > Web Search:
 
-![](https://cdn-images-1.medium.com/max/1000/1*UlJzCp1bRLsrrNuO8X0Mqg.png)
+{{<zoom-img src="https://cdn-images-1.medium.com/max/1000/1*UlJzCp1bRLsrrNuO8X0Mqg.png">}}
 
-Web Search
+## Web Search
 
 Click vào "Add Custom Search" và nhập vào như sau:
 
-![](https://cdn-images-1.medium.com/max/1000/1*8GWZ6yehVNvqJ8bt7SbCBA.png)
+{{<zoom-img src="https://cdn-images-1.medium.com/max/1000/1*8GWZ6yehVNvqJ8bt7SbCBA.png">}}
 
 Giờ mở Alfred lên và nhập vào 12bit kèm theo tên của từ khó bạn cần, thì nó sẽ tự mở browser với link như format ở input "Search URL"
 
