@@ -120,3 +120,8 @@ https.createServer(options, (req, res) => {
 Chúng ta có thể kiểm tra kết quả bằng cách truy cập vào https://localhost:8000
 
 {{<figure src="images/mkcert-03.png" title="Bạn sẽ thấy dòng chữ 'Issued by: mkcert'">}}
+
+## Tham khảo
+
+- https://github.com/FiloSottile/mkcert
+- https://blog.filippo.io/mkcert-valid-https-certificates-for-localhost/
