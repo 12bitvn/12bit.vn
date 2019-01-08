@@ -18,6 +18,7 @@ params:
   favicon: img/icon/favicon.png
   images:
     - img/index.png
+  mailChimpSubmitURL: 'https://12bit.us7.list-manage.com/subscribe/post?u=ed33685285a694c7d5b00b64b&amp;id=58d0a80dbd'
 blackfriday:
   hrefTargetBlank: true
   noreferrerLinks: true
