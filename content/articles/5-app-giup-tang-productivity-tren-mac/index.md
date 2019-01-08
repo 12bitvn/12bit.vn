@@ -67,7 +67,7 @@ Hiện mình định nghĩa một số gesture phổ biến, thực ra thì nế
 
 ![alfredd app](https://cdn-images-1.medium.com/max/2000/1*ti6wALPSXP9PifwJ7oLkJg.png)
 
-Mình có giới thiệu về app này trước đây, bạn đó thể đọc tại bài: Làm việc hiệu quả hơn với Alfred.
+Mình có giới thiệu về app này trước đây, bạn đó thể đọc tại bài: [Làm việc hiệu quả hơn với Alfred]({{< ref "/articles/lam-viec-hieu-qua-hon-voi-alfredapp/index.md" >}}).
 
 ## [Numi](https://numi.io/)
 
