@@ -123,5 +123,5 @@ Chúng ta có thể kiểm tra kết quả bằng cách truy cập vào https://
 
 ## Tham khảo
 
-- https://github.com/FiloSottile/mkcert
-- https://blog.filippo.io/mkcert-valid-https-certificates-for-localhost/
+- [mkcert repo](https://github.com/FiloSottile/mkcert)
+- [mkcert: valid HTTPS certificates for localhost](https://blog.filippo.io/mkcert-valid-https-certificates-for-localhost/)
