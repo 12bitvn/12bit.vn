@@ -4,7 +4,7 @@ description: A short description for the post.
 date: 2018-03-06T07:11:08+07:00
 tags: 
   - WordPress
-  - secirity
+  - security
 images:
   - /articles/thay-doi-username-trong-wordress/images/0_aiYn-XoZmj1Y3CJu.jpeg
 author:
