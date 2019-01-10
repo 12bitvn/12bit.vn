@@ -30,10 +30,10 @@
   <link rel="icon" href="{{ .Site.BaseURL }}/{{ .Site.Params.favicon }}" />
   {{ end }}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css">
+  {{ $highlightStyle := resources.Get "css/highlight.css" | resources.Minify }}
+  <link rel="stylesheet" href="{{ $highlightStyle.RelPermalink }}">
   {{ $style := resources.Get "scss/style.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
-  {{ $highlightStyle := resources.Get "css/github.css" }}
-  <link rel="stylesheet" href="{{ $highlightStyle.RelPermalink }}">
   <meta name="google-site-verification" content="7B5fRFFvOEQo2BaQdM97nA_hEEcoYaZsNke9Omubc_c" />
   {{if .NextPage}}
   <link rel="next" href="{{.NextPage.Permalink}}" />
