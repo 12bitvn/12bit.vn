@@ -48,5 +48,7 @@
 {{ if ($.Page.Scratch.Get "include_image_zoom") "true" }}
 <script src="https://unpkg.com/medium-zoom@1.0.2/dist/medium-zoom.min.js" defer onload="mediumZoom('[data-zoomable]');"></script>
 {{ end }}
+<!-- Include quicklink from dist -->
+<script src="https://unpkg.com/quicklink" async onload="quicklink()"></script>
 </body>
 </html>
