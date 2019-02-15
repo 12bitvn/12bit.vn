@@ -51,7 +51,6 @@ Hoặc các ký tự unicode:
 ### Mặt trăng
 
 ```js
-const applyMoon = document.getElementById('apply-moon');
 const moons = ['🌑', '🌒', '🌓', '🌔', '🌝', '🌖', '🌗', '🌘'];
 let currentIndex = 0;
 function loop() {
@@ -60,15 +59,8 @@ function loop() {
     if (currentIndex >= moons.length) {
       currentIndex = 0; 
     }
-    if (applyMoon.checked) {
-      setTimeout(loop, 100);
-    }
+    setTimeout(loop, 100);
 }
-applyMoon.addEventListener("change", (event) => {
-  if (event.target.checked) {
-    loop();
-  }
-});
 ```
 {{% alert success %}}
 <label><input id="apply-moon" type="checkbox"> Check vào đây để thấy mặt trăng</label>
@@ -99,14 +91,18 @@ applyMoon.addEventListener("change", (event) => {
 
 ```js
 var clocks = ['🕐','🕑','🕒','🕓','🕔','🕕','🕖','🕗','🕘','🕙','🕚','🕛'];
+let currentIndex = 0;
 function loop() {
-    location.hash = f[Math.floor((Date.now()/100)%f.length)];
-    setTimeout(loop, 50);
+    location.hash = clocks[currentIndex % clocks.length];
+    currentIndex++;
+    if (currentIndex >= clocks.length) {
+      currentIndex = 0; 
+    }
+    setTimeout(loop, 100);
 }
-loop();
 ```
 {{% alert success %}}
-<label><input id="apply-clock" type="checkbox"> Check vào đây để thấy mặt trăng</label>
+<label><input id="apply-clock" type="checkbox"> Check vào đây để thấy clock</label>
 {{% /alert %}}
 
 <script>
