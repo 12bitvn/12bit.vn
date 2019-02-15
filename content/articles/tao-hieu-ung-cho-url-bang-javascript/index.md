@@ -26,7 +26,7 @@ Với đặt tính của hash như vậy, Matthew có ý tưởng là sẽ liên
 Cái thú vị là có khá nhiều emoji thể hiện các trạng thái liên tiếp của một đối tượng nào đó, ví dụ như:
 
 * Mặt trăng: 🌑 🌒 🌓 🌔 🌝 🌖 🌗 🌘
-* Trái đât: 🌎🌍🌏
+* Trái đất: 🌎🌍🌏
 * Đồng hồ: 🕐🕑🕒🕓🕔🕕🕖🕗🕘🕙🕚🕛🕜🕝🕞🕟🕠🕡🕢🕣🕤🕥🕦🕧
 * Ổ khóa: 🔒🔓
 
@@ -139,5 +139,3 @@ Ngoài ra còn nhiều hiệu ứng khác thú vị hơn. Đặt biệt là ứn
 Bạn có thể xem thêm các ý tưởng rất thú vị này tại chính blog của Matthew: [Animating URLs with Javascript and Emojis](http://matthewrayfield.com/articles/animating-urls-with-javascript-and-emojis)
  
  Dù các hiệu ứng này thú vị và mới lạ, nhưng tính thực tế có lẽ không cao, vì nếu URL dài hoặc kích thước màn hình nhỏ thì thanh địa chỉ không thể được nhìn thấy, trên nhiều browser và trên mobile thì thanh address này còn bị ẩn đi.
- 
- Nhưng nếu 
