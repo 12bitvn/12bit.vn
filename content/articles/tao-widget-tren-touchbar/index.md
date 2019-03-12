@@ -16,17 +16,17 @@ draft: false
 
 Năm 2016 Apple giới thiệu Touchbar trên các dòng MacBook Pro. Thực ra lúc mới sử dụng nó thì mình cảm thấy nó không có ý nghĩa lắm, vì ít có phần mềm nào tích hợp, các nút có trên nó thì đều có thể dùng chuột được. Sau đó thì mình tìm ra phần mềm BetterTouchTool và khám phá ra nhiều việc có thể làm với touchbar, ví dụ như các shortcut hoặc app switcher, nhưng một thời gian thì cũng không có thói quen sử dụng, vị trí của nó không tiện dụng với mình lắm. Nên rồi mình cũng quên nó mất.
 
-Tình cờ xem được repo [tomato](https://github.com/ng-vu/tomato) của bạn [Vũ](https://github.com/ng-vu) nên tìm hiểu thử cách mà bạn sử dụng. Mình không biết code cho touchbar một cách native. Cách mà bạn sử dụng ở đây là dựa vào các chức năng do BetterTouchTool hỗ trợ thôi.
+Tình cờ xem được repo [tomato](https://github.com/ng-vu/tomato) của bạn [Vũ](https://github.com/ng-vu) nên tìm hiểu thử cách mà bạn sử dụng. Mình không biết code cho touchbar một cách native. Cách mà bạn sử dụng ở đây là dựa vào các chức năng do BetterTouchTool hỗ trợ.
 
 BetterTouchTool hỗ trợ tạo ra các widget và hiển thị trên touchbar và cho phép điều khiển widget đó thông qua HTTP API. Bạn có thể đọc tại đây: [Integrated Webserver](https://docs.bettertouchtool.net/docs/webserver.html).
 
 ## Shopify Widget
 
-Chúng ta sẽ làm một widget trên touchbar có chức năng hiển thị số lượng order mà shop có trong một khoản thời gian nhất định. Đơn giản là gọi API của Shopify để lấy số lượng order sau đó hiển thị lên touchbar thôi.
+Chúng ta sẽ làm một widget trên touchbar có chức năng hiển thị số lượng order mà shop có trong một khoản thời gian nhất định. Đơn giản là gọi API của Shopify để lấy số lượng order sau đó hiển thị lên touchbar.
 
 ## Tạo Widget bằng BetterTouchTool
 
-Như đã nói ở phần đầu, chúng ta cần phải tạo một widget trong BetterTouchToll:
+Như đã nói ở phần đầu, chúng ta cần phải tạo một widget trong BetterTouchTool:
 
 Bước 1: Mở app BetterTouchTool lên
 
@@ -36,15 +36,15 @@ Bước 3: Click vào nút `+widget/Gesture`
 
 Bước 4: Chọn widget `Run Apple Script and show Return value`
 
-![](/articles/tao-widget-tren-touchbar/images/1.png)
+{{< zoom-img src="/articles/tao-widget-tren-touchbar/images/1.png" >}}
 
 Bước 5: Đặt tên của widget, đặt icon và xóa nội dung trong phần script đi:
 
-![](/articles/tao-widget-tren-touchbar/images/2.png)
+{{< zoom-img src="/articles/tao-widget-tren-touchbar/images/2.png" >}}
 
  Bước 6: Copy UUID của widget bằng cách bấm chuột phải lên widget và chọn `Copy UUID`.
 
- ![](/articles/tao-widget-tren-touchbar/images/3.png)
+ {{< zoom-img src="/articles/tao-widget-tren-touchbar/images/3.png" >}}
 
 ## Enable webserver
 
@@ -54,7 +54,7 @@ Bước 1: Mở BetterTouchToll
 
 Bước 2: Bấm vào thẻ `Advanced Settings` > `Webserver`:
 
-![](/articles/tao-widget-tren-touchbar/images/4.png)
+{{< zoom-img src="/articles/tao-widget-tren-touchbar/images/4.png" >}}
 
 Chọn `Enable BetterTouchTool webserver`. Nhớ lưu lại address và port.
 
@@ -233,7 +233,7 @@ go run ./main.go [<các tham số>]
 
 Kết quả sẽ như sau:
 
-![](/articles/tao-widget-tren-touchbar/images/6.png)
+{{< zoom-img src="/articles/tao-widget-tren-touchbar/images/6.png" >}}
 
 ## Lời kết
 
