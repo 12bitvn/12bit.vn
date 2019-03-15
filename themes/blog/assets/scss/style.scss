@@ -570,3 +570,46 @@ figcaption{
   line-height: 0;
   margin-right: 5px;
 }
+
+#search-wrap {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+#search-box {
+  .ais-search-box, input {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+#hits {
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+  border-radius: 4px;
+  position: absolute;
+  top: 52px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  .ais-hits--item {
+    padding: 1rem;
+    border-bottom: 1px solid rgba($color-light, .1);
+    &:hover {
+      background-color: rgba($color-primary, .1);
+    }
+    h3 {
+      margin: 0;
+      color: $color-dark;
+      @include font-size(1);
+      em {
+        font-style: normal;
+        background-color: rgba($color-primary, .3);
+      }
+    }
+  }
+  .na {
+    padding: 1rem;
+    display: block;
+  }
+}

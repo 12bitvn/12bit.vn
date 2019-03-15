@@ -1,8 +1,12 @@
 {
   "scripts": {
-    "precache": "sw-precache --config=./sw-precache-config.js --verbose"
+    "precache": "sw-precache --config=./sw-precache-config.js --verbose",
+    "algolia": "atomic-algolia"
   },
   "dependencies": {
     "sw-precache": "^5.2.1"
+  },
+  "devDependencies": {
+    "atomic-algolia": "^0.3.17"
   }
 }

@@ -31,6 +31,10 @@
   <link rel="icon" href="{{ .Site.BaseURL }}/{{ .Site.Params.favicon }}" />
   {{ end }}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch-theme-algolia.min.css">
+
   {{ $highlightStyle := resources.Get "css/highlight.css" | resources.Minify }}
   <link rel="stylesheet" href="{{ $highlightStyle.RelPermalink }}">
   {{ $style := resources.Get "scss/style.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
@@ -104,3 +108,13 @@
         </nav>
       </div>
     </header><!-- #masthead -->
+
+    <div id="search-wrap">
+      <div id="search-box">
+        <!-- SearchBox widget will appear here -->
+      </div>
+
+      <div id="hits">
+        <!-- Hits widget will appear here -->
+      </div>
+    </div>
