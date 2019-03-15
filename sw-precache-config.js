@@ -4,5 +4,5 @@ module.exports = {
     'public/**/*.{html,jpg,png,css,js}',
   ],
   navigateFallback: '/offline.html',
-  stripPrefix: 'public/'
+  stripPrefix: 'public'
 };
