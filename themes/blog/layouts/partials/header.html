@@ -62,7 +62,7 @@
     <header id="masthead" class="site-header">
       <div class="left">
         <h1 class="site-title">
-          <a href="{{ .Site.BaseURL }}">
+          <a href="/">
             <svg class="logo" viewBox="0 0 154 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 <path d="M141,19 L154,19 L154,33 L141,33 L141,52 L154,52 L154,66 L127,66 L127,52 L127,6 L141,6 L141,19 Z" id="t" fill="#1E221D"></path>
@@ -108,13 +108,7 @@
         </nav>
       </div>
     </header><!-- #masthead -->
-
-    <div id="search-wrap">
-      <div id="search-box">
-        <!-- SearchBox widget will appear here -->
-      </div>
-
-      <div id="hits">
-        <!-- Hits widget will appear here -->
-      </div>
-    </div>
+{{if .IsHome}}
+    {{ .Page.Scratch.Set "include_search" true }}
+    {{ partial "search-box" . }}
+{{end}}

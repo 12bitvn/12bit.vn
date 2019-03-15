@@ -9,9 +9,16 @@
 </footer><!-- #colophon -->
 </div>
 <!-- #wrap -->
+{{ if ($.Page.Scratch.Get "include_search") "true" }}
 <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4"></script>
+{{ $search := resources.Get "js/search.js"}}
+{{ $searchJs := $search | resources.Minify | resources.Fingerprint}}
+<script src="{{ $searchJs.RelPermalink }}" defer></script>
+{{ end }}
+
 {{ template "_internal/google_analytics_async.html" . }}
 {{ $app := resources.Get "js/app.js"}}
+
 {{ if .IsPage }}
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
   {{ $highlightJs := resources.Get "js/highlight.pack.js"}}
@@ -49,7 +56,5 @@
 {{ if ($.Page.Scratch.Get "include_image_zoom") "true" }}
 <script src="https://unpkg.com/medium-zoom@1.0.2/dist/medium-zoom.min.js" defer onload="mediumZoom('[data-zoomable]');"></script>
 {{ end }}
-<!-- Include quicklink from dist -->
-<!--<script src="https://unpkg.com/quicklink" async onload="quicklink({origins:['12bit.vn']})"></script>-->
 </body>
 </html>
