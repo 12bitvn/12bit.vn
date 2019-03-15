@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'mixins';
+@import "reset";
 @import 'comment';
 @import 'shortcodes/index.scss';
 @import 'components/index.scss';
@@ -610,6 +611,15 @@ figcaption{
   }
   .na {
     padding: 1rem;
+    display: block;
+  }
+}
+
+.offline{
+  & &--hide{
+    display: none !important;
+  }
+  & &--display__block{
     display: block;
   }
 }
