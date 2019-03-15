@@ -1,7 +1,7 @@
 module.exports = {
   root: 'public',
   staticFileGlobs: [
-    'public/**/*.{html,jpg,png,css,js}',
+    'public/**/*.*',
   ],
   runtimeCaching: [
     {
@@ -13,6 +13,9 @@ module.exports = {
       handler: 'cacheFirst'
     },{
       urlPattern: /^https:\/\/fonts\.gstatic\.com\//,
+      handler: 'cacheFirst'
+    },{
+      urlPattern: /^https:\/\/d33wubrfki0l68\.cloudfront\.net\//,
       handler: 'cacheFirst'
     }],
   navigateFallback: '/offline.html',
