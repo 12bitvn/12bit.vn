@@ -1,5 +1,5 @@
 build:
-	hugo  --gc --minify --buildFuture --enableGitInfo && yarn run precache && yarn algolia
+	rm -rf ./public && hugo  --gc --minify --buildFuture --enableGitInfo && yarn run precache && yarn algolia
 
 preview: build
 	netlify deploy
