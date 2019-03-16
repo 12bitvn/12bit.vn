@@ -534,6 +534,18 @@ figcaption{
   .ais-search-box, input {
     max-width: 100%;
     width: 100%;
+    box-shadow: none;
+    border-width: 2px;
+    border-color: rgba($color-dark, .2);
+    &:focus {
+      border-color: $color-primary;
+    }
+    &:focus + span > div > svg {
+      fill: $color-primary;
+    }
+  }
+  svg {
+    fill: rgba($color-dark, .2);
   }
 }
 
