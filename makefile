@@ -1,5 +1,8 @@
-preview:
-	rm -rf public && hugo  --gc --minify --buildFuture --enableGitInfo && yarn run precache && yarn algolia && netlify deploy
+build:
+	hugo  --gc --minify --buildFuture --enableGitInfo && yarn run precache && yarn algolia
 
-deploy:
-	rm -rf public && hugo  --gc --minify --buildFuture --enableGitInfo && yarn run precache && yarn algolia && netlify deploy --prod
+preview: build
+	netlify deploy
+
+deploy: build
+	netlify deploy --prod
