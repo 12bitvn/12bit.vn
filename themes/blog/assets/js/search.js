@@ -20,6 +20,7 @@ const resultPanel = document.getElementById('hits')
 
 search.addWidget(
   instantsearch.widgets.searchBox({
+    label: 'tìm kiếm',
     container: '#search-box',
     placeholder: 'Tìm kiếm',
     reset: false,

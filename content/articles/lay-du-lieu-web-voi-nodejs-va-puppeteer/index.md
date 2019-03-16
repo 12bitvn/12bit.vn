@@ -12,6 +12,7 @@ tags:
 - puppeteer
 - web scraping
 title: Lấy dữ liệu web với Node.js và Puppeteer
+description: Một trong những case study mà bạn có thể gặp đó là lấy dữ liệu từ những website khác và lưu vào database
 ---
 
 Một trong những case study mà bạn có thể gặp đó là lấy dữ liệu từ những website khác và lưu vào database của riêng mình dùng để làm những trang như tổng hợp link, tin tức.

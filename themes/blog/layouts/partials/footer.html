@@ -4,13 +4,13 @@
     <a href="{{ .URL }}" class="sub-color">{{ .Title }}</a>
     {{ end }}
   </nav>
-  <a class="license-url" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img src="/img/license.png" height="15"></a>
+  <a class="license-url" aria-label="license" rel="noopener" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img src="/img/license.png" alt="Content license" height="15"></a>
   <p>Đóng góp nội dung trên <a href="https://github.com/12bitvn/12bit.vn" target="_blank">GitHub</a></p>
 </footer><!-- #colophon -->
 </div>
 <!-- #wrap -->
 {{ if ($.Page.Scratch.Get "include_search") "true" }}
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4" defer></script>
 {{ $search := resources.Get "js/search.js"}}
 {{ $searchJs := $search | resources.Minify | resources.Fingerprint}}
 <script src="{{ $searchJs.RelPermalink }}" defer></script>

@@ -1,10 +1,15 @@
 @import 'variables';
 @import 'mixins';
 @import "reset";
+@import "font";
 @import 'comment';
+@import "highlight";
 @import 'shortcodes/index.scss';
 @import 'components/index.scss';
 
+*{
+  font-display: swap;
+}
 body {
   font-family: $font-body;
   font-size: 18px;
@@ -351,7 +356,7 @@ sub, sup {
   }
   &__nav {
     a {
-      padding: 0 0.5rem;
+      padding: 10px;
     }
   }
   a:after{
@@ -558,7 +563,7 @@ figcaption{
 .tags-section{
   .tag{
     text-decoration: none;
-    color: #56bd77;
+    color: $color-primary;
     padding: 5px;
     background: #f3f3f3;
     border-radius: 4px;
