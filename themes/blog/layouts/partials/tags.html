@@ -1,4 +1,3 @@
-{{ $currentPageUrl := .URL }}
 {{ if and .Params.tags .Site.Taxonomies.tags }}
 {{ $name := index .Params.tags 0 }}
 {{ $name := $name | urlize }}
