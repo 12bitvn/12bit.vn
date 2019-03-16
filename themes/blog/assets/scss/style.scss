@@ -213,7 +213,7 @@ sub, sup {
     @include font-size(1.7);
     line-height: 1.1;
     margin-bottom: 0;
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-bold;
     color: $color-primary;
     a {
       color: $color-primary;
@@ -240,6 +240,9 @@ sub, sup {
     }
     p {
       margin: 0 0 1.5rem;
+      a {
+        text-decoration: underline;
+      }
     }
     ol,
     ul {
