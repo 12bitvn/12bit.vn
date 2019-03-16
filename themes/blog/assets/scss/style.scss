@@ -213,7 +213,7 @@ sub, sup {
     @include font-size(1.7);
     line-height: 1.1;
     margin-bottom: 0;
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-bold;
     color: $color-primary;
     a {
       color: $color-primary;
@@ -240,6 +240,9 @@ sub, sup {
     }
     p {
       margin: 0 0 1.5rem;
+      a {
+        text-decoration: underline;
+      }
     }
     ol,
     ul {
@@ -398,61 +401,6 @@ figcaption{
     text-align: center;
     font-weight: normal;
     @include font-size(.9)
-  }
-}
-
-.toc{
-  position: absolute;
-  right: 50%;
-  margin-right: 339px;
-  width: 250px;
-  padding: 0 .5rem;
-  &__title{
-    display: none;
-    margin: 0;
-  }
-  @media (max-width: $break-tablet) {
-    position: static !important;
-    &__title{
-      display: block;
-    }
-  }
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  li {
-    line-height: 1.2;
-    margin-bottom: 10px;
-    > ul {
-      padding-left: 10px;
-    }
-  }
-  #TableOfContents > ul > li > ul{
-    padding-left: 0;
-  }
-  a {
-    @include font-size(1);
-    color: $color-light;
-    &:hover {
-      color: $color-dark;
-    }
-    &:after{
-      opacity: 0;
-      content: "↫";
-      margin-left: 5px;
-      transition: opacity 0.2s ease-in-out;
-    }
-    &.active{
-      color: $color-primary;
-      &:after{
-        opacity: 1;
-      }
-    }
-  }
-  /** Sticky **/
-  &.sticky {
-    position: fixed;
   }
 }
 
