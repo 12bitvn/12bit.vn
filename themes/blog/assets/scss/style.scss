@@ -129,7 +129,6 @@ sub, sup {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
-  margin-bottom: 30px;
   flex-flow: column;
   @include breakpoint(tablet) {
     padding: 2rem 0;
@@ -197,6 +196,10 @@ sub, sup {
       }
     }
   }
+}
+
+.site-content{
+  margin-top: 50px;
 }
 
 /***** ARTICLE ITEM *****/
@@ -528,7 +531,7 @@ figcaption{
 
 #search-wrap {
   position: relative;
-  margin-bottom: 2rem;
+  margin-top: 20px;
 }
 
 #search-box {
