@@ -9,7 +9,7 @@
     {{ with .Params.tags }}
     {{ range .}}
     <li class="db dib-l mr3">
-      <a class="tag" href="/tags/{{ .| urlize }}">
+      <a class="tag" href="/tags/{{ .| urlize }}/index.html">
         #{{ . | lower }}
       </a>
     </li>
