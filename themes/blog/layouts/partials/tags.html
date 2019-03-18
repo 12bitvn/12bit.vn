@@ -1,4 +1,3 @@
-{{ $currentPageUrl := .URL }}
 {{ if and .Params.tags .Site.Taxonomies.tags }}
 {{ $name := index .Params.tags 0 }}
 {{ $name := $name | urlize }}
@@ -10,7 +9,7 @@
     {{ with .Params.tags }}
     {{ range .}}
     <li class="db dib-l mr3">
-      <a class="tag" href="/tags/{{ .| urlize }}.html">
+      <a class="tag" href="/tags/{{ .| urlize }}/index.html">
         #{{ . | lower }}
       </a>
     </li>

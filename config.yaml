@@ -7,7 +7,6 @@ enableGitInfo: true
 enableEmoji: true
 enableRobotsTXT: true
 googleAnalytics: UA-131517577-1
-uglyURLs: true
 paginate: 40
 outputs:
   home:
