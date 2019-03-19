@@ -6,18 +6,25 @@ module.exports = {
   runtimeCaching: [
     {
       urlPattern: /^https:\/\/cdn\.jsdelivr\.net\//,
-      handler: 'cacheFirst'
+      handler: 'fastest'
     },
     {
       urlPattern: /^https:\/\/fonts\.googleapis\.com\//,
-      handler: 'cacheFirst'
-    },{
+      handler: 'fastest'
+    }, {
       urlPattern: /^https:\/\/fonts\.gstatic\.com\//,
-      handler: 'cacheFirst'
-    },{
+      handler: 'fastest'
+    }, {
       urlPattern: /^https:\/\/d33wubrfki0l68\.cloudfront\.net\//,
-      handler: 'cacheFirst'
-    }],
+      handler: 'fastest'
+    }, {
+      urlPattern: /^https:\/\/codesandbox\.io\//,
+      handler: 'fastest'
+    }, {
+      urlPattern: /^https:\/\/caniuse\.bitsofco\.de\//,
+      handler: 'fastest'
+    }
+  ],
   navigateFallback: '/offline.html',
   stripPrefix: 'public'
 }
