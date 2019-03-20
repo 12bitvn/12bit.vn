@@ -7,7 +7,7 @@ tags:
   - golang
   - shopify
 images:
-  - /articles/tao-https-cho-localhost-su-dung-mkcert/thumbnail.png
+  - /articles/tao-widget-tren-touchbar/thumbnail.png
 authors:
   - vominh
 draft: false
