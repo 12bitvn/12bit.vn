@@ -2,10 +2,9 @@
 title: "Console còn gì khác ngoài console.log()"
 date: 2019-03-05T10:57:55+07:00
 tags: [max, three, tags]
-thumbnail: /img/articles/default-thumb-1200-630.png
-author:
-    name: vominh
-    github: vominh
+thumbnail: /articles/console-con-gi-khac-ngoai-console-log/thumbnail.png
+authors:
+  - vominh
 draft: true
 ---
 

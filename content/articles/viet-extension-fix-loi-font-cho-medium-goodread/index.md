@@ -1,7 +1,6 @@
 ---
-author:
-  github: vominh
-  name: vominh
+authors:
+  - vominh
 date: "2018-06-25T06:14:44+07:00"
 description: A short description for the post.
 draft: false

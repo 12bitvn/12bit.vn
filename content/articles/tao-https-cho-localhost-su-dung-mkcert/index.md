@@ -7,9 +7,8 @@ tags:
   - mkcert
 images:
   - /articles/tao-https-cho-localhost-su-dung-mkcert/images/thumbnail.jpg
-author:
-    name: Thien Nguyen
-    github: tatthien
+authors:
+  - tatthien
 draft: false
 ---
 

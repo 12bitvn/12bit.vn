@@ -1,7 +1,6 @@
 ---
-author:
-  github: tatthien
-  name: Thien Nguyen
+authors:
+  - tatthien
 date: "2018-03-09T14:09:42+07:00"
 description: polygon định nghĩa một hình đóng (closed shape) bao gồm những đoạn thẳng.
   Điểm cuối sẽ kết nối với điểm đầu.

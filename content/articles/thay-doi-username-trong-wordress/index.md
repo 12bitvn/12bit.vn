@@ -7,9 +7,8 @@ tags:
   - security
 images:
   - /articles/thay-doi-username-trong-wordress/images/0_aiYn-XoZmj1Y3CJu.jpeg
-author:
-    name: vominh
-    github: vominh
+authors:
+  - vominh
 draft: false
 ---
 

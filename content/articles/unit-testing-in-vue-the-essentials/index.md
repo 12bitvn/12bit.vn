@@ -1,7 +1,6 @@
 ---
-author:
-  github: vominh
-  name: vominh
+authors:
+  - vominh
 date: "2018-03-10T20:22:07+07:00"
 description: Bài thuyết trình của Phan An — vuejs core team, tại buổi meetup đầu tiên
   của Vuejs Việt Nam.

@@ -1,7 +1,6 @@
 ---
-author:
-  github: vominh
-  name: vominh
+authors:
+  - vominh
 date: "2018-04-20T21:51:07+07:00"
 draft: false
 images:

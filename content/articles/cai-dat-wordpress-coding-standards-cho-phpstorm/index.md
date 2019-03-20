@@ -1,7 +1,6 @@
 ---
-author:
-  github: tatthien
-  name: Thien Nguyen
+authors:
+  - tatthien
 date: "2018-06-12T09:39:29+07:00"
 description: Bài viết sẽ hướng dẫn bạn cài đặt PHP Code Sniffer kết hợp với WordPress
   Coding Standards trên PhpStorm.

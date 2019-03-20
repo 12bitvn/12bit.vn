@@ -1,7 +1,6 @@
 ---
-author:
-  github: nguyenvanduocit
-  name: vominh
+authors:
+  - vominh
 date: "2018-12-10T16:24:00+07:00"
 draft: false
 images:

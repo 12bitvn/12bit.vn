@@ -6,9 +6,8 @@ tags:
   - alfredapp
 images:
   - /articles/lam-viec-hieu-qua-hon-voi-alfredapp/images/1_zHs2UXc0IPtyBwFMhTaucQ.png
-author:
-    name: vominh
-    github: vominh
+authors:
+  - vominh
 draft: false
 ---
 

@@ -1,7 +1,6 @@
 ---
-author:
-  github: tatthien
-  name: Thien Nguyen
+authors:
+  - tatthien
 date: "2018-12-06T17:44:44+07:00"
 description: Bài viết này mình xin giới thiệu cách deploy một lambda function viết
   bằng Go lên Netlify.

@@ -1,11 +1,10 @@
 ---
-author:
-  github: vominh
-  name: vominh
+authors:
+  - vominh
 date: "2019-01-04T07:14:35+07:00"
 draft: false
 images:
-- /img/articles/default-thumb-1200-630.png
+- /articles/cac-shortcode-hay-cho-gohugo/thumbnail.png
 tags:
 - Hugo
 - shortcode

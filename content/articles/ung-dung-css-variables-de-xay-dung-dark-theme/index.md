@@ -1,7 +1,6 @@
 ---
-author:
-  github: tatthien
-  name: Thien Nguyen
+authors:
+  - tatthien
 date: "2018-10-26T17:42:49+07:00"
 draft: false
 images:

@@ -7,10 +7,9 @@ tags:
   - golang
   - shopify
 images:
-  - /img/articles/default-thumb-1200-630.png
-author:
-    name: vominh
-    github: vominh
+  - /articles/tao-https-cho-localhost-su-dung-mkcert/thumbnail.png
+authors:
+  - vominh
 draft: false
 ---
 

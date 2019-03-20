@@ -1,7 +1,6 @@
 ---
-author:
-  github: tatthien
-  name: Thien Nguyen
+authors:
+  - tatthien
 date: "2018-03-07T17:22:17+07:00"
 description: Phần 1 hướng tới các bạn đang vận hành những site sử dụng WordPress và
   không bắt buộc phải có kỹ năng về lập trình.

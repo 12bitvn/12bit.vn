@@ -1,7 +1,6 @@
 ---
-author:
-  github: tatthien
-  name: Thien Nguyen
+authors:
+  - tatthien
 date: "2018-08-13T22:14:45+07:00"
 description: A short description for the post.
 draft: false

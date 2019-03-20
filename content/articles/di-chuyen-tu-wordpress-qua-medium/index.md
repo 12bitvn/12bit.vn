@@ -1,11 +1,10 @@
 ---
-author:
-  github: vominh
-  name: vominh
+authors:
+  - vominh
 date: "2018-03-24T07:01:27+07:00"
 draft: false
 images:
-- /img/articles/default-thumb-1200-630.png
+- /articles/di-chuyen-tu-wordpress-qua-medium/thumbnail.png
 tags:
 - WordPress
 - API

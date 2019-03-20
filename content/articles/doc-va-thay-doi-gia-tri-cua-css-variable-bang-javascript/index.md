@@ -1,7 +1,6 @@
 ---
-author:
-  github: vominh
-  name: vominh
+authors:
+  - vominh
 date: "2018-10-31T10:25:03+07:00"
 description: Thay đổi giá trị CSS Variable bằng JavaScript
 draft: false

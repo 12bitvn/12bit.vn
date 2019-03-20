@@ -7,7 +7,7 @@ tags:
   - three
   - tags
 images:
-  - /img/articles/default-thumb-1200-630.png
+  - /img/articles/{{.Name}}/thumbnail.png
 author:
     name: Your Name
     github: github_username

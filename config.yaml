@@ -8,6 +8,16 @@ enableEmoji: true
 enableRobotsTXT: true
 googleAnalytics: UA-131517577-1
 paginate: 40
+social:
+  facebook: 12bit.vn
+author:
+  email: contact@12bit.vn
+  name: 12bit.vn
+authors:
+  vominh:
+    displayName: Vô Minh
+  tatthien:
+    displayName: Tất Thiện
 outputs:
   home:
   - HTML
@@ -56,4 +66,4 @@ menu:
       title: RSS
       url: /index.xml
 hooks:
-  onPageCreated: echo "{title} {date} {author}"
+  onPageCreated: social-image-gen --ignore-md --output={abs_publish_dir} --title={title} --date={date} --author={author}

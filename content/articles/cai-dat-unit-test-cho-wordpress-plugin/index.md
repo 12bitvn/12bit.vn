@@ -1,7 +1,6 @@
 ---
-author:
-  github: tatthien
-  name: Thien Nguyen
+authors:
+  - tatthien
 date: "2018-03-14T11:35:13+07:00"
 description: Đối với developers thì dường như viết unit test là điều gì đó rất đáng
   sợ và tốn thời gian.
