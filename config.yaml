@@ -56,4 +56,4 @@ menu:
       title: RSS
       url: /index.xml
 hooks:
-  onPageCreated: echo "{title} {date} {author}"
+  onPageCreated: social-image-gen --ignore-md --output={abs_publish_dir} --title={title} --date={date} --author={author}
