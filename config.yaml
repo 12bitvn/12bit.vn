@@ -16,8 +16,12 @@ author:
 authors:
   vominh:
     displayName: Vô Minh
+    social:
+      website: https://12bit.vn
   tatthien:
     displayName: Tất Thiện
+    social:
+      website: https://thien.dev
 outputs:
   home:
   - HTML
