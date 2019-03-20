@@ -9,9 +9,8 @@ tags:
 - web screenshot
 images:
   - /articles/chup-hinh-trang-web-voi-nodejs-va-puppeteer/thumbnail.png
-author:
-    name: Thien Nguyen
-    github: tatthien
+authors:
+  - tatthien
 draft: false
 ---
 
