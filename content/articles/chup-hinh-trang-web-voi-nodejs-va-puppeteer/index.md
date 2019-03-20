@@ -1,6 +1,6 @@
 ---
 title: "Chụp hình web với Node.js và Puppeteer"
-description: A short description for the post.
+description: Cùng tìm hiểu về cách screenshort một trang web sử dụng Puppeteer
 date: 2019-03-20T13:17:02+07:00
 tags:
 - javascript
