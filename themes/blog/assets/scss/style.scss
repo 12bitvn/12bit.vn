@@ -235,6 +235,11 @@ sub, sup {
     @at-root .list &{
       @include font-size(0.9);
     }
+    a {
+      &:after {
+        display: none;
+      }
+    }
   }
   &__content {
     margin-top: 30px;
