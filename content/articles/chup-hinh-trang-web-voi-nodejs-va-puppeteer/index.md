@@ -6,7 +6,7 @@ tags:
 - javascript
 - nodejs
 - puppeteer
-- web screenshot
+- screenshot
 images:
   - /articles/chup-hinh-trang-web-voi-nodejs-va-puppeteer/thumbnail.png
 authors:
@@ -14,7 +14,7 @@ authors:
 draft: false
 ---
 
-12bit đã có một bài [giới thiệu về Puppeteer](/articles/lay-du-lieu-web-voi-nodejs-va-puppeteer/). Với ứng dụng vào việc scraping dữ liệu. Bài viết hôm nay, chúng ta cùng tìm hiểu một tính năng nữa của Puppeteer đó là screenshot. Theo mình đây là một tính răng rất thú vị và hữu ích.
+12bit đã có một bài [giới thiệu về Puppeteer](/articles/lay-du-lieu-web-voi-nodejs-va-puppeteer/) ứng dụng vào việc scraping dữ liệu. Bài viết hôm nay, chúng ta cùng tìm hiểu một tính năng nữa của Puppeteer đó là **screenshot**. Đây là một tính răng rất thú vị và hữu ích, bạn có thể thỏa sức sáng tạo để mà dùng tính năng này.
 
 ## API
 Trước khi đi vào ứng dụng, chúng ta cùng xem qua API của `screenshot` có những options nào. Các bạn có thể truy cập [vào đây](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagescreenshotoptions) để xem danh sách các API mà Puppeteer cung cấp, mà cụ thể ở đây là `screenshot`
@@ -29,11 +29,11 @@ Cùng xem qua danh sách các options:
 - `omitBackground`: Trang web nào có background màu trắng sẽ bị loại bỏ thay vào đó là một transparency background.
 - `encoding`: Định dạng mã hóa của hình, `base64` hoặc `binary`.
 
-Giá trị trả về khi bạn gọi tới method `sreenshot` đó là một `Promise`. Giá trị trả về khi resolve là string hoặc Buffer tùy vào việc bạn gán  `encoding` là gì.
+Giá trị trả về khi bạn gọi tới method `sreenshot` đó là một `Promise`. Khi **resolve** giá trị nhận được là string hoặc Buffer tùy vào việc bạn gán `encoding` là gì.
 
 ## 📷 Screenshot
 
-### Full page
+### Chụp toàn bộ trang web
 Sau khi đọc qua API, chúng ta sẽ thử chụp hình một trang web. Giả sử mình muốn chụp toàn bộ trang web https://thien.dev và lưu thành `screenshot.png`
 
 *Việc cài đặt puppeteer vào khởi tạo browser bạn có thể xem qua ở bài trước nhé.*
@@ -54,7 +54,7 @@ Sau khi đọc qua API, chúng ta sẽ thử chụp hình một trang web. Giả
 
 Kết quả là:
 
-{{< zoom-img src="images/puppeteer-screenshot-1.gif" >}}
+{{< figure src="images/puppeteer-screenshot-1.gif" title="bấm vô hình để zoom nè.">}}
 
 ### Chụp một phần
 
@@ -81,7 +81,7 @@ Kết quả sẽ là một bức hình với kích thước 800x400px
 
 {{< zoom-img src="images/puppeteer-screenshot-2.png" >}}
 
-### Lấy data base64
+### Encoding
 
 Không phải lúc nào chúng ta cũng muốn lấy một file hình. Sẽ có lúc cần lấy kết quả trả về ở dạng base64. Việc này rất đơn giản, chỉ cần thay đổi option `encoding` thành `base64` như sau:
 
@@ -122,7 +122,7 @@ body {
 
 ## Những vấn đề gặp phải
 
-Trong quá trình làm việc với `screenshot` mình gặp phải một vài vấn đề sau:
+Trong quá trình làm việc với `screenshot` mình gặp phải một vài vấn đề có thể bạn cũng sẽ gặp.
 
 ### Error: Failed to launch chrome!
 
@@ -130,7 +130,6 @@ Việc khởi tạo một browser bằng puppeteer có thể sẽ phải thêm n
 
 ```js
 const browser = await puppeteer.launch({
-  headless: true,
   args: ['--no-sandbox', '--disable-setuid-sandbox'],
 })
 ```
@@ -159,9 +158,20 @@ Kết quả trước và sau khi set view port:
 {{< zoom-img src="images/puppeteer-screenshot-4.png" >}}
 {{< zoom-img src="images/puppeteer-screenshot-3.png" >}}
 
+### Lỗi font
+
+Có một trường hợp mình gặp phải đó là khi chụp hình thì bị lỗi font đối với những trang có sử dụng webfont. Nguyên nhân là do font chưa kịp load xong thì hình đã được chụp. Để xử lí vấn đề này `puppeteer` cung cấp option là `waitUntil `. Khi bạn gọi `page.goto('url', { waitUntil: 'some-value' })` có nghĩa việc "navigation" vào trang web sẽ đợi khi nào sự kiện ở `waitUntil` thực thi xong thì mới trả về kết quả thành công.
+
+Bạn có thể xem qua phần docs của `page.goto()` [tại đây](https://pptr.dev/#?product=Puppeteer&version=v1.13.0&show=api-pagegotourl-options) để xem `waitUntil` có những sự kiện nào.
+
+Trường hợp của mình sử dụng event là `networkidle0` tức là sẽ đợi tới khi không còn một connection (cụ thể là connection tới webfont) nào nữa trong khoảng thời gian là ít nhất `500` ms.
+
+Mời bạn xem qua ví dụ trong library tụi mình mới viết [social-image-gen](https://github.com/12bitvn/social-image-gen)
+
+{{< figure src="images/puppeteer-screenshot-5.gif" title="bấm vô hình để zoom nè.">}}
 
 ## Kết luận
 
-Bạn có thể ứng dụng tính năng sreenshot vào nhiều ngữ cảnh cách khau. Đối với 12bit, tụi mình đã dùng tính năng này để auto generate social image mỗi khi publish post (vì tụi mình quá lười để thiết kế một tấm hình đại diện cho bài viết :D). Cá bạn có thể tham khảo tạo repo trên GitHub của 12bit.vn
+Bạn có thể ứng dụng tính năng sreenshot vào nhiều ngữ cảnh cách khau. Đối với 12bit, tụi mình đã dùng tính năng này để tự động generate social image mỗi khi publish post (vì tụi mình quá lười để thiết kế một tấm hình đại diện cho bài viết :joy:). Cá bạn có thể tham khảo tạo repo trên GitHub của 12bit.vn
 
 {{<gh-repos "12bitvn/social-image-gen">}}
