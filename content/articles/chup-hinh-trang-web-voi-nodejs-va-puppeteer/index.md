@@ -17,7 +17,7 @@ draft: false
 12bit đã có một bài [giới thiệu về Puppeteer](/articles/lay-du-lieu-web-voi-nodejs-va-puppeteer/) ứng dụng vào việc scraping dữ liệu. Bài viết hôm nay, chúng ta cùng tìm hiểu một tính năng nữa của Puppeteer đó là **screenshot**. Đây là một tính răng rất thú vị và hữu ích, bạn có thể thỏa sức sáng tạo để mà dùng tính năng này.
 
 ## API
-Trước khi đi vào ứng dụng, chúng ta cùng xem qua API của `screenshot` có những options nào. Các bạn có thể truy cập [vào đây](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagescreenshotoptions) để xem danh sách các API mà Puppeteer cung cấp, mà cụ thể ở đây là `screenshot`
+Trước khi đi vào ứng dụng, chúng ta cùng xem qua method `screenshot` có những options nào. Các bạn có thể truy cập [vào đây](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagescreenshotoptions) để xem danh sách các method mà Puppeteer cung cấp, mà cụ thể ở đây là `screenshot`
 
 Cùng xem qua danh sách các options:
 
@@ -36,7 +36,7 @@ Giá trị trả về khi bạn gọi tới method `sreenshot` đó là một `P
 ### Chụp toàn bộ trang web
 Sau khi đọc qua API, chúng ta sẽ thử chụp hình một trang web. Giả sử mình muốn chụp toàn bộ trang web https://thien.dev và lưu thành `screenshot.png`
 
-*Việc cài đặt puppeteer vào khởi tạo browser bạn có thể xem qua ở bài trước nhé.*
+*Việc cài đặt puppeteer vào khởi tạo browser bạn có thể xem qua ở [bài trước](/articles/lay-du-lieu-web-voi-nodejs-va-puppeteer/#lấy-dữ-liệu) nhé.*
 
 ```js
 (async () => {
