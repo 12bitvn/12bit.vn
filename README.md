@@ -8,8 +8,9 @@
 2. Fork repo này về GitHub của các bạn.
 3. Gõ lệnh `hugo new articles/your-post-name/index.md` trên terminal để tạo một bài viết mới. Sau khi gõ lệnh một file markdown sẽ được tạo ở đường dẫn `content/articles/your-post-name/index.md`.
 
-Các bạn có thể tham khảo phần front matter bên dưới để định dạng cho bài viết của mình:
-    ```yaml
+  Các bạn có thể tham khảo phần front matter bên dưới để định dạng cho bài viết của mình:
+  
+    ```
     ---
     title: Widget hiển thị số order trên Touchbar với BetterTouchTool
     description: Hướng dẫn tạo widget hiển thị số lượng order từ shopfiy lên touchbar
