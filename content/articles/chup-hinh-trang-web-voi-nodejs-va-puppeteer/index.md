@@ -172,6 +172,6 @@ Mời bạn xem qua ví dụ trong library tụi mình mới viết [social-imag
 
 ## Kết luận
 
-Bạn có thể ứng dụng tính năng sreenshot vào nhiều ngữ cảnh cách khau. Đối với 12bit, tụi mình đã dùng tính năng này để tự động generate social image mỗi khi publish post (vì tụi mình quá lười để thiết kế một tấm hình đại diện cho bài viết :joy:). Cá bạn có thể tham khảo tạo repo trên GitHub của 12bit.vn
+Bạn có thể ứng dụng tính năng sreenshot vào nhiều ngữ cảnh cách khau. Đối với 12bit, tụi mình đã dùng tính năng này để tự động generate social image mỗi khi publish post (vì tụi mình quá lười để thiết kế một tấm hình đại diện cho bài viết :joy:). Các bạn có thể tham khảo tạo repo trên GitHub của 12bit.vn
 
 {{<gh-repos "12bitvn/social-image-gen">}}
