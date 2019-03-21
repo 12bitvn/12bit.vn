@@ -1,47 +1,48 @@
 # 12bit.vn
 
-## Contribute
+12bit.vn là blog chuyên về phát triển web. Tụi mình viết về những công nghệ mà tụi mình đang làm hằng ngày như Golang, Vue.js, PHP, WordPress hoặc những công nghệ mà bạn biết. Mời các bạn đọc qua bài [giới thiệu](https://12bit.vn/pages/about.html) để hiểu về tinh thần của tụi mình khi xây dựng 12bit
 
-1. Make sure you have [Hugo installed](https://gohugo.io/getting-started/installing/).
-2. Fork this repo.
-3. Execute `hugo new articles/your-post.md` in your terminal. A `content/articles/your-post.md` file will be created with some placeholder content, like this:
+## Đóng góp nội dung
+
+1. Vì blog phát triển dựa trên Hugo vì vậy các bạn cần phải [cài đặt Hugo](https://github.com/12bitvn/hugo). **Vì tụi mình đã tùy chỉnh lại Hugo để thêm những tính năng mà Hugo mặc định không có, vì vậy các bạn hãy cài đặt Hugo theo bản custom của tụi mình nhé.**
+2. Fork repo này về GitHub của các bạn.
+3. Gõ lệnh `hugo new articles/your-post-name/index.md` trên terminal để tạo một bài viết mới. Sau khi gõ lệnh một file markdown sẽ được tạo ở đường dẫn `content/articles/your-post-name/index.md`.
+
+Các bạn có thể tham khảo phần front matter bên dưới để định dạng cho bài viết của mình:
     ```yaml
     ---
-    title: "Test"
-    description: A short description for the post.
-    date: 2018-12-27T09:55:11+07:00
-    tags: [max, three, tags]
-    images: [/img/articles/default-thumb-1200-630.jpg]
-    author:
-        name: Your Name
-        github: github_username
-    draft: true
+    title: Widget hiển thị số order trên Touchbar với BetterTouchTool
+    description: Hướng dẫn tạo widget hiển thị số lượng order từ shopfiy lên touchbar
+    date: 2019-03-08T14:13:39+07:00
+    tags:
+      - touchbar
+      - golang
+      - shopify
+    images:
+      - /articles/tao-widget-tren-touchbar/thumbnail.png
+    authors:
+      - vominh
+    draft: false
     ---
     ```
 
-4. Update your file. The post can be previewed with `hugo serve`.
-5. Once you're happy with your post, commit the file and create a PR.
-
-## Post format
-
-Before creating a post, make sure you know how to use Markdown.
-
-### Header
-
-| Variable        | Description           |
-| ------------- |-------------|
-| `title`      | The post title. |
-| `description`      | The post description.      |
-| `date` | The post date, it will be generated automatically. A date is specified in the format `YYYY-MM-DD HH:MM:SS +/-TTTT`.    |
-| `tags` | One or multiple tags can be added to a post. We recommend you to add maximum 3 tags per post.|
-| `images` | The featured image. Although it's defined as an array (YAML array), you just need to add one image. It should be placed in the same folder with post content. Eg `/articles/my-awesome-post/images/`|
-| `author` | Please provide your `name` and your `github_username`. We'll use them to generate the author information for each post.|
-| `draft` | Set to `true` if you don't want a specific post to show up when the site is generated. |
-
-### Conventions
+4. Trong lúc viết bài các bạn hãy dùng `hugo serve` để xem những thay đổi.
+5. Sau khi viết bài xong, các bạn hãy tạo Pull Request. Tụi mình sẽ review bài viết và có những feedback ngược lại nếu cần.
 
 **Shortcodes**
 
-If you want to embed things such as Codepen, Gist, Youtube, please use [Hugo Shortcode](https://gohugo.io/content-management/shortcodes/) instead of insert the raw HTML. Beside the built-in shortcodes that Hugo're supporting, we also add a list of custom shortcodes [here](https://12bit.vn/pages/shortcodes.html)
+Trong lúc viết bài, các bạn có thể sử dụng shortcode của Hugo để bài viết trực quan hơn mà không phải viết HTML. Các bạn truy cập vào [trang shortcode của Hugo](https://gohugo.io/content-management/shortcodes/) để xem những shortcode được hỗ trợ. Ngoài những shortcode mặc định, tụi mình có tạo thêm khá nhiều shotcode. Các bạn có thể xem [tại đây](https://12bit.vn/pages/shortcodes.html)
 
-Don't find your shortcodes? create a pull request now!
+**Hình ảnh**
+
+Tất cả hình ảnh cho bài viết các bạn có thể đặt trong `content/articles/your-post-name/images`. Và được gọi ra bài viết như sau:
+
+```
+![image title](/articles/your-post-name/images/wonderful-pic.jpg)
+```
+
+**Hình đại diện cho bài viết**
+
+Hình đại diện này được sử dụng cho việc hiển thị bài viết được share trên mạng xã hội. Nếu bạn tự thiết kế được thì quá tốt, nếu không thì có thể dùng tool [social-image-gen](https://github.com/12bitvn/social-image-gen) để tự generate ra hình dựa theo nội dung bài viết, ví dụ như hình bên dưới tụi mình đã dùng tool để tự tạo.
+
+![social image gen](https://user-images.githubusercontent.com/3280351/54678731-55b9c300-4b38-11e9-9311-3ae3ed0a0676.png)
