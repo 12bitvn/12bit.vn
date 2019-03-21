@@ -5,8 +5,9 @@
 ## Đóng góp nội dung
 
 1. Vì blog phát triển dựa trên Hugo vì vậy các bạn cần phải [cài đặt Hugo](https://github.com/12bitvn/hugo). **Vì tụi mình đã tùy chỉnh lại Hugo để thêm những tính năng mà Hugo mặc định không có, vì vậy các bạn hãy cài đặt Hugo theo bản custom của tụi mình nhé.**
-2. Fork repo này về GitHub của các bạn.
-3. Gõ lệnh `hugo new articles/your-post-name/index.md` trên terminal để tạo một bài viết mới. Sau khi gõ lệnh một file markdown sẽ được tạo ở đường dẫn `content/articles/your-post-name/index.md`.
+1. Fork repo này về GitHub của các bạn.
+1. Cài đ các package cần thiết: `yarn install`
+1. Gõ lệnh `hugo new articles/your-post-slug/index.md` trên terminal để tạo một bài viết mới. Sau khi gõ lệnh một file markdown sẽ được tạo ở đường dẫn `content/articles/your-post-slug/index.md`.
 
   Các bạn có thể tham khảo phần front matter bên dưới để định dạng cho bài viết của mình:
   
@@ -27,8 +28,8 @@
     ---
     ```
 
-4. Trong lúc viết bài các bạn hãy dùng `hugo serve` để xem những thay đổi.
-5. Sau khi viết bài xong, các bạn hãy tạo Pull Request. Tụi mình sẽ review bài viết và có những feedback ngược lại nếu cần.
+1. Trong lúc viết bài các bạn hãy dùng `hugo serve` để xem những thay đổi.
+1. Sau khi viết bài xong, các bạn hãy tạo Pull Request. Tụi mình sẽ review bài viết và có những feedback ngược lại nếu cần.
 
 **Shortcodes**
 
@@ -36,10 +37,10 @@ Trong lúc viết bài, các bạn có thể sử dụng shortcode của Hugo đ
 
 **Hình ảnh**
 
-Tất cả hình ảnh cho bài viết các bạn có thể đặt trong `content/articles/your-post-name/images`. Và được gọi ra bài viết như sau:
+Tất cả hình ảnh cho bài viết các bạn có thể đặt trong `content/articles/your-post-slug/images`. Và được gọi ra bài viết như sau:
 
 ```
-![image title](/articles/your-post-name/images/wonderful-pic.jpg)
+![image title](/articles/your-post-slug/images/wonderful-pic.jpg)
 ```
 
 **Hình đại diện cho bài viết**
