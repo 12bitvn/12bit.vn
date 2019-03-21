@@ -3,10 +3,10 @@ title: "Chụp hình web với Node.js và Puppeteer"
 description: Cùng tìm hiểu về cách screenshort một trang web sử dụng Puppeteer
 date: 2019-03-20T13:17:02+07:00
 tags:
+- screenshot
+- puppeteer
 - javascript
 - nodejs
-- puppeteer
-- screenshot
 images:
   - /articles/chup-hinh-trang-web-voi-nodejs-va-puppeteer/thumbnail.png
 authors:
