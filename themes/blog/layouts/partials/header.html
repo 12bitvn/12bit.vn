@@ -16,7 +16,7 @@
   {{ else }}
   <meta name="description" content="{{ .Description }}">
   {{ end }}
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="{{ "manifest.json" | absURL}}">
   {{ template "_internal/google_news.html" . -}}
   {{ template "_internal/opengraph.html" . -}}
   {{ if .IsHome }}
@@ -35,7 +35,7 @@
   <link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
   {{ end }}
   {{ if isset .Site.Params "favicon" }}
-  <link rel="icon" href="/{{ .Site.Params.favicon }}" />
+  <link rel="icon" href="{{ .Site.Params.favicon | absURL }}" />
   {{ end }}
 
   {{ $mainStyle := resources.Get "scss/style.scss" }}
@@ -117,6 +117,7 @@
         </nav>
       </div>
     </header><!-- #masthead -->
+    <div id="site-message-container"></div>
 {{ if ($.Page.Scratch.Get "include_search") "true" }}
     {{ partial "search-box" . }}
 {{end}}

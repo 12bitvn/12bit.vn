@@ -73,6 +73,7 @@ if ('serviceWorker' in navigator) {
         let installingWorker = reg.installing;
 
         installingWorker.onstatechange = function() {
+          const masthead = document.getElementById("site-message-container")
           switch (installingWorker.state) {
             case 'installed':
               if (navigator.serviceWorker.controller) {
@@ -81,10 +82,12 @@ if ('serviceWorker' in navigator) {
                 // It's the perfect time to display a "New content is available; please refresh."
                 // message in the page's interface.
                 console.log('New or updated content is available.');
+                masthead.innerHTML = `<div class="alert-box alert-box--success"><p>Website có update, bạn cần refresh trang để có thể xem nội dung mới.</p></div>`
               } else {
                 // At this point, everything has been precached.
                 // It's the perfect time to display a "Content is cached for offline use." message.
                 console.log('Content is now available offline!');
+                masthead.innerHTML = `<div class="alert-box alert-box--success"><p>Bạn có thể truy cập website mà không cần internet, Toàn bộ nội dung đã được tải xuống.</p></div>`
               }
               break;
 
