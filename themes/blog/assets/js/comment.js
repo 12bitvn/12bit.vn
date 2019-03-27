@@ -3,6 +3,8 @@ var app = new Vue({
   data: {
     isAnonymous: false,
     isFocusOnContent: false,
+    isPreview: false,
+    previewContent: 'Không có gì để xem hết',
     content: '',
     author: '',
     email: '',
@@ -16,6 +18,13 @@ var app = new Vue({
     // Make sure that DOM is rendered already then get commetns by the article slug.
     let data = await this.getComments()
     this.comments = data.allComments
+  },
+  watch: {
+    isPreview (newVal) {
+      if (newVal && this.content !== '') {
+        this.previewContent = this.formatComment(this.content)
+      }
+    }
   },
   methods: {
     async getComments() {

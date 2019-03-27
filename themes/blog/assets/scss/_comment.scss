@@ -1,11 +1,30 @@
 .comment {
-  /** Comment Heading **/
-  &__form {
-    margin-bottom: 2rem;
+  /** Comment tabs **/
+  &__tabs {
+    font-size: 0;
+  }
+  &__tab-btn {
+    background-color: #fff;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: -1px;
+    @include font-size(1);
+    &.active {
+      border: 1px solid $color-gray;
+      border-bottom-color: #fff;
+      font-weight: $font-weight-bold;
+      cursor: initial;
+      border-radius: 4px 4px 0 0;
+    }
   }
   /** Form Input **/
   &__form-input {
     margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
     input[type="text"],
     input[type="email"],
     textarea {
@@ -29,6 +48,10 @@
     input[type="submit"] {
       width: auto;
       border: none;
+    }
+    small {
+      display: block;
+      text-align: right;
     }
   }
   /** Comment Item **/
