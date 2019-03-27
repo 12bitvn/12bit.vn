@@ -38,7 +38,7 @@
           <span v-text="comment.author"></span>
           <time v-text="formatDate(comment.createdAt)"></time>
           </h4>
-          <p class="content" v-text="decodeURI(comment.content)"></p>
+          <div class="content article__content" v-html="formatComment(comment.content)"></div>
       </div>
       </div>
   </div>

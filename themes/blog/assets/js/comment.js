@@ -10,7 +10,7 @@ var app = new Vue({
     comments: [],
     graphqlEndpoint: 'https://api.graph.cool/simple/v1/cjq6ekfc67g5w0179c5v9205a'
   },
-  async mounted () {
+  async mounted() {
     this.slug = this.$el.dataset.slug
 
     // Make sure that DOM is rendered already then get commetns by the article slug.
@@ -18,14 +18,14 @@ var app = new Vue({
     this.comments = data.allComments
   },
   methods: {
-    async getComments () {
+    async getComments() {
       let query = `query {allComments(filter: {
         slug: "${this.slug}"
       }, orderBy: createdAt_DESC) {id, author, email, content, createdAt, slug}}`
       let data = await this.request(query)
       return data
     },
-    async postComment () {
+    async postComment() {
       if (this.content === '') {
         return
       }
@@ -55,7 +55,7 @@ var app = new Vue({
       this.comments.push(data.createComment)
       this.cleanForm()
     },
-    async request (query, method = 'GET') {
+    async request(query, method = 'GET') {
       let res = await fetch(this.graphqlEndpoint, {
         method: 'POST',
         mode: 'cors',
@@ -68,10 +68,10 @@ var app = new Vue({
       let json = await res.json()
       return json.data
     },
-    cleanForm () {
+    cleanForm() {
       this.content = ''
     },
-    formatDate (dateStr) {
+    formatDate(dateStr) {
       let date = new Date(dateStr)
       let day = date.getDate()
       let month = date.getMonth() + 1
@@ -81,14 +81,29 @@ var app = new Vue({
       let sec = date.getSeconds()
       return `lúc ${hour}:${min}:${sec} ngày ${day}-${month}-${year}`
     },
-    getRandomHexColor (color = '#') {
-      let hex = [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f']
+    formatComment(comment) {
+      let md = window.markdownit({
+        highlight: function (str, lang) {
+          if (lang && hljs.getLanguage(lang)) {
+            try {
+              return '<pre class="hljs"><code>' + hljs.highlight(lang, str, true).value + '</code></pre>'
+            } catch (__) { }
+          }
+
+          return ''; // use external default escaping
+        }
+      })
+      comment = md.render(decodeURI(comment))
+      return comment
+    },
+    getRandomHexColor(color = '#') {
+      let hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f']
       color += hex[Math.floor(Math.random() * 16)]
       return color.length === 7 ? color : this.getRandomHexColor(color)
     }
   },
   filters: {
-    avatar (email, name, color) {
+    avatar(email, name, color) {
       color = color.substr(1)
       if (email === '') {
         return '/img/icon/default-avatar.png';

@@ -6,10 +6,6 @@
   /** Form Input **/
   &__form-input {
     margin-bottom: 1rem;
-    label {
-      display: block;
-      @include font-size(1)
-    }
     input[type="text"],
     input[type="email"],
     textarea {
@@ -39,8 +35,7 @@
   &__item {
     display: flex;
     align-items: flex-start;
-    margin: 1.5rem 0;
-    @include font-size(1);
+    margin-bottom: 1.5rem;
     .avatar {
       margin-right: 1rem;
       width: 60px;
@@ -61,7 +56,10 @@
       color: rgba($color-dark, .5);
     }
     .content {
-      white-space: pre-line;
+      margin: 0;
+      p {
+        margin-bottom: 1rem;
+      }
     }
   }
 }
