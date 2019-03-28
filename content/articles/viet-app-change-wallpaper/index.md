@@ -6,7 +6,7 @@ tags:
   - golang
   - schedule
 images:
-  - /articles/viet-app-change-wallpaper/thumbnail.png
+  - /articles/viet-app-change-wallpaper/images/preview.jpg
 authors:
   - vominh
 draft: false
