@@ -8,9 +8,8 @@ tags:
   - tags
 images:
   - /articles/{{.Name}}/thumbnail.png
-author:
-    name: Your Name
-    github: github_username
+authors:
+  - username
 draft: true
 ---
 
