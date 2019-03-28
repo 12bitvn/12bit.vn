@@ -5,20 +5,20 @@
     <button :class="[!isPreview ? 'active' : '', 'comment__tab-btn']" @click.prevent="isPreview = false">Viết</button>
     <button :class="[isPreview ? 'active' : '', 'comment__tab-btn']" @click.prevent="isPreview = true">Xem trước</button>
   </nav>
-  <div style="padding: 15px; border: 1px solid #ccc; margin-bottom: 2rem;">
+  <div class="comment__tab-content">
     <div class="comment__preview article-format" v-html="previewContent" v-if="isPreview"></div>
     <form class="comment__form" @submit.prevent="postComment" v-if="!isPreview">
         <div class="comment__form-input">
           <textarea name="content" id="content" @focus="isFocusOnContent = true" v-model="content" placeholder="Bạn đang nghĩ gì?" required></textarea>
-          <small>Hỗ trợ markdown</small>
+          <small class="comment__form-input__tip">Hỗ trợ markdown</small>
         </div>
         <template v-if="isFocusOnContent">
-        <div class="comment__form-input">
+       <!-- <div class="comment__form-input">
             <label for="anonymous">
             <input type="checkbox" id="anonymous" v-model="isAnonymous">
             <span>Bình luận ẩn danh</span>
             </label>
-        </div>
+        </div>-->
         <template v-if="!isAnonymous">
           <div class="comment__form-input">
             <label for="name">Tên</label>

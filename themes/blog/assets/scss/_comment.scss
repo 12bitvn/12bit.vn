@@ -1,19 +1,24 @@
 .comment {
+  &__list{
+    margin-top: 40px;
+  }
+  &__tab-content{
+    margin-top: 20px;
+  }
   /** Comment tabs **/
   &__tabs {
     font-size: 0;
   }
   &__tab-btn {
     background-color: #fff;
-    padding: 10px 15px;
+    padding: 10px;
     border: none;
     outline: none;
     cursor: pointer;
     margin-bottom: -1px;
     @include font-size(1);
     &.active {
-      border: 1px solid $color-gray;
-      border-bottom-color: #fff;
+      border-bottom: 2px solid $color-primary;
       font-weight: $font-weight-bold;
       cursor: initial;
       border-radius: 4px 4px 0 0;
@@ -22,6 +27,13 @@
   /** Form Input **/
   &__form-input {
     margin-bottom: 1rem;
+    position: relative;
+    &__tip{
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      opacity: .5;
+    }
     &:last-child {
       margin-bottom: 0;
     }
