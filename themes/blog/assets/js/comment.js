@@ -23,6 +23,8 @@ var app = new Vue({
     isPreview (newVal) {
       if (newVal && this.content !== '') {
         this.previewContent = this.formatComment(this.content)
+      } else {
+        this.previewContent = 'Không có gì để xem hết'
       }
     }
   },
