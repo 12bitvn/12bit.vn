@@ -94,12 +94,12 @@ https://12bit.vn là nơi chia sẻ kiến thức lập trình web.
 ## runkit
 
 ```markdown
-{{%/* runkit unique-id */%}}
+{{%/* runkit */%}}
 your code block with ``` code and ```
 {{%/* /runkit */%}}
 ```
 
-{{% runkit abc %}}
+{{% runkit %}}
 ```
 const object1 = {};
 Reflect.set(object1, 'property1', 42);

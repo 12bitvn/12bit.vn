@@ -1,2 +1,4 @@
-<div class="runkit" id="{{ .Get 0 }}">{{ .Inner }}</div>
-<script src="https://embed.runkit.com" data-element-id="{{ .Get 0 }}" defer></script>
+{{ .Page.Scratch.Add "runkitID" 1 }}
+{{ $runitID := .Page.Scratch.Get "runkitID" }}
+<div class="runkit" id="{{ $runitID }}">{{ .Inner }}</div>
+<script src="https://embed.runkit.com" data-element-id="{{ $runitID }}" defer></script>
