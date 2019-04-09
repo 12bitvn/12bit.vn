@@ -2,9 +2,10 @@
 title: "Tìm hiểu Webpack: Cài đặt cơ bản"
 description: Series tìm hiểu Webpack là gì và hoạt động như thế nào.
 date: 2019-04-06T21:16:42+07:00
-tags: 
+tags:
   - webpack
-  - series
+series:
+  - webpack
 images:
   - /articles/hoc-webpack-1/thumbnail.png
 authors:
@@ -64,7 +65,7 @@ new Vue({
 
 Nếu bạn sử dụng `src/index.js` trong html thì chắc chắn sẽ không thấy kết quả gì cả vì trình duyệt không tương thích với dạng module như chúng ta viết bên trên. Chính vì vậy mới cần tới bundler để có thể compile.
 
-Bây giờ chúng ta sẽ build thử bằng cách chạy command line sau: 
+Bây giờ chúng ta sẽ build thử bằng cách chạy command line sau:
 
 ```bash
 ./node_modules/.bin/webpack
@@ -87,7 +88,7 @@ main.js  68.8 KiB       0  [emitted]  main
 Mặc định file `main.js` sau khi build sẽ nằm trong thư mục `dist`. Chính vì vậy mà trong file html chúng ta trỏ tới `./dist/main.js`
 
 {{% alert info %}}
-Chúng ta có thể thay đổi output thông qua webpack.config.js mình sẽ đề cập tiếp tự ở bài sau
+Chúng ta có thể thay đổi output thông qua webpack.config.js mình sẽ đề cập tiếp tục ở bài sau
 {{% /alert %}}
 
 {{< figure src="images/webpack-1.png" title=":tada:">}}

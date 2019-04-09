@@ -1,0 +1,11 @@
+<section class="single-section related-section">
+  {{ $series := where (where .Site.Pages "Type" "articles") ".Params.series" "intersect" .Params.series }}
+  {{ with $series }}
+  <h1 class="single-section__title">Xem những bài viết cùng series</h1>
+  <ul>
+    {{ range . }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</section>
