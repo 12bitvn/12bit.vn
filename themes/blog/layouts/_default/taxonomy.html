@@ -1,7 +1,7 @@
 {{ partial "header" . }}
 <main id="content" class="site-content list">
   <header>
-    <h1>Tag: {{ .Title -}}</h1>
+    <h1><span style="text-transform: capitalize">{{ .Type }}</span>: {{ .Title -}}</h1>
   </header>
   <div>
     {{ range .Paginator.Pages }}
