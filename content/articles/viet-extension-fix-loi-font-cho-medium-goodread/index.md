@@ -15,7 +15,7 @@ Font trên web của Medium không hỗ trợ tiếng Việt, nên các bài vi�
 
 Nội dung của bài này không có gì nhiều cả. Chỉ là giới thiệu về về một giải pháp mà mình đã sử dụng, khi bạn cần vấn đề gì tương tự thì cũng dễ tìm hiểu.
 
-Giờ để đọc bài viết này, bạn có thể cài đặt extension trước rồi tính:
+Đây là kết quả:
 
 1. Dành cho Chrome: [Vietnamese Fonts](https://chrome.google.com/webstore/detail/vietnamese-fonts/kgobddnnjblfgabopmdcdloiaajmpgha)
 1. Dành cho Firefox: [Vietnamese Fonts](https://addons.mozilla.org/en-US/firefox/addon/vietnamese-fonts/)
