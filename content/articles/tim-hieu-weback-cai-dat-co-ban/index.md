@@ -7,7 +7,7 @@ tags:
 series:
   - Tìm hiểu Webpack
 images:
-  - /articles/hoc-webpack-1/thumbnail.png
+  - /articles/tim-hieu-weback-cai-dat-co-ban/thumbnail.png
 authors:
   - tatthien
 draft: false
