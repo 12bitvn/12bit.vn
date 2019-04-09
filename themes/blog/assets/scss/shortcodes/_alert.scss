@@ -1,8 +1,8 @@
 .alert-box {
   border: 2px dashed rgba($color-dark, .2);
   border-radius: 4px;
-  margin: 1rem 0;
-  padding: 1.5rem 1rem 0;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem 1rem;
   $list: 'warning', 'success', 'danger', 'info';
   p:first-child:before {
     padding-right: 10px;
