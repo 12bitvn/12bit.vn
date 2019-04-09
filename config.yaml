@@ -74,4 +74,4 @@ taxonomies:
   series: series
   tag: tags
 hooks:
-  onPageCreated: social-image-gen --ignore-md --output={abs_publish_dir} --title={title} --date={date} --author={author} --template=./social-image.html
+  onPageCreated: social-image-gen --output={abs_publish_dir} --title={title} --date={date} --author={author} --template=./social-image.html
