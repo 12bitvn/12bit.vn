@@ -5,7 +5,7 @@ date: 2019-04-06T21:16:42+07:00
 tags:
   - webpack
 series:
-  - webpack
+  - Tìm hiểu Webpack
 images:
   - /articles/hoc-webpack-1/thumbnail.png
 authors:
