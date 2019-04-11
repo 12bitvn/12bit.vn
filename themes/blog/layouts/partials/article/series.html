@@ -2,10 +2,10 @@
   {{ $series := where (where .Site.Pages "Type" "articles") ".Params.series" "intersect" .Params.series }}
   {{ with $series }}
   <h1 class="single-section__title">Xem những bài viết cùng series</h1>
-  <ul>
-    {{ range . }}
+  <ol>
+    {{ range sort . "Date" "asc" }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
     {{ end }}
-  </ul>
+  </ol>
   {{ end }}
 </section>
