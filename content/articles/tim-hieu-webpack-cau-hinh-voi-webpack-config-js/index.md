@@ -88,6 +88,14 @@ Lúc này, sau khi gõ lệnh `npx webpack` thì file output không phải là `
 │   └── main.js
 ```
 
+{{% alert info %}}
+Tips: việc dùng [hash] như trên được gọi là cache busting. Vì browser sẽ cache nội dung của static files như css, js dựa theo file path. Nếu mỗi lần build mà tên file không thay đổi, ví dụ luôn là style.css. Thì browser vẫn sẽ lấy nội dung có trong cache dựa theo tên cũ. Vì vậy, việc dùng hash hoặc versioning sẽ giúp browser update lại nội dung của static files.
+{{% /alert %}}
+
+{{% alert info %}}
+Một điểm thú vị là nếu bạn không thay đổi nội dung trong file css hoặc js thì hash vẫn sẽ không thay đổi qua mỗi lần build.
+{{% /alert %}}
+
 ## Thuộc tính
 
 Có rất nhiều thuộc tính trong file config như `entry`, `output`, `loaders`, `plugins`,... Trong bài này mình sẽ nói về 2 thuộc tính căn bản là `entry` và `output`.
