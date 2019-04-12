@@ -1,5 +1,5 @@
 ---
-title: "Tìm hiểu Webpack: webpack.config.js"
+title: "Tìm hiểu Webpack: Cấu hình entry và output"
 description: Series tìm hiểu Webpack là gì và hoạt động như thế nào.
 date: 2019-04-10T08:49:16+07:00
 tags:
@@ -18,6 +18,8 @@ draft: false
 Đây là phần thứ 2 trong series [tìm hiểu webpack](/series/tìm-hiểu-webpack/). Các bạn có thể xem lại bài thứ nhất [tại đây](/articles/tim-hieu-weback-cai-dat-co-ban/).
 
 Nếu bạn để ý bài trước, chúng ta có thể chạy lệnh `npx webpack` mà không cần thêm bất kì config nào. Việc này được hỗ trợ trong webpack v4. Tuy nhiên, đối với những project cần những cấu hình phức tạp thì việc đưa nội dung cấu hình đó vào file config sẽ tiện lợn và tránh việc phải gõ quá nhiều câu lệnh.
+
+Bài viết này chúng ta tìm hiểu về `entry` và `output`, hai thuộc tính này sẽ được khai báo trong file config, cụ thể là `webpack.config.js`
 
 ## Cài đặt
 
