@@ -61,6 +61,9 @@ menu:
     title: TIL
     url: https://til.12bit.vn
   footer:
+    - identifier: 0
+      title: Series
+      url: /series.html
     - identifier: 1
       title: Shortcodes
       url: /pages/shortcodes.html
