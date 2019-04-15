@@ -21,10 +21,12 @@ if (toc) {
       if (entry.isIntersecting) {
         let elem = entry.target
         let tocLink = document.querySelector('a[href="#' + elem.id + '"]')
-        tocLinks.forEach(a => {
-          a.classList.remove('active')
-        })
-        tocLink.classList.add('active')
+        if (tocLink !== null) {
+          tocLinks.forEach(a => {
+            a.classList.remove('active')
+          })
+          tocLink.classList.add('active')
+        }
       }
     })
   }

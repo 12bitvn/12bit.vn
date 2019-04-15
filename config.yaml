@@ -76,5 +76,6 @@ menu:
 taxonomies:
   series: series
   tag: tags
+  reference-tag: reference-tags
 hooks:
   onPageCreated: social-image-gen --output={abs_publish_dir} --title={title} --date={date} --author={author} --template=./social-image.html
