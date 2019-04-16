@@ -5,9 +5,9 @@
 ## Đóng góp nội dung
 
 1. Vì blog phát triển dựa trên Hugo vì vậy các bạn cần phải [cài đặt Hugo](https://github.com/12bitvn/hugo). **Vì tụi mình đã tùy chỉnh lại Hugo để thêm những tính năng mà Hugo mặc định không có, vì vậy các bạn hãy cài đặt Hugo theo bản custom của tụi mình nhé.**
-1. Fork repo này về GitHub của các bạn.
-1. Cài đ các package cần thiết: `yarn install`
-1. Gõ lệnh `hugo new articles/your-post-slug/index.md` trên terminal để tạo một bài viết mới. Sau khi gõ lệnh một file markdown sẽ được tạo ở đường dẫn `content/articles/your-post-slug/index.md`.
+2. Fork repo này về GitHub của các bạn.
+3. Cài đ các package cần thiết: `yarn install`
+4. Gõ lệnh `hugo new articles/your-post-slug/index.md` trên terminal để tạo một bài viết mới. Sau khi gõ lệnh một file markdown sẽ được tạo ở đường dẫn `content/articles/your-post-slug/index.md`.
 
   Các bạn có thể tham khảo phần front matter bên dưới để định dạng cho bài viết của mình:
   
@@ -28,8 +28,8 @@
     ---
     ```
 
-1. Trong lúc viết bài các bạn hãy dùng `hugo serve` để xem những thay đổi.
-1. Sau khi viết bài xong, các bạn hãy tạo Pull Request. Tụi mình sẽ review bài viết và có những feedback ngược lại nếu cần.
+5. Trong lúc viết bài các bạn hãy dùng `hugo serve` để xem những thay đổi.
+6. Sau khi viết bài xong, các bạn hãy tạo Pull Request. Tụi mình sẽ review bài viết và có những feedback ngược lại nếu cần.
 
 **Shortcodes**
 
@@ -47,4 +47,4 @@ Tất cả hình ảnh cho bài viết các bạn có thể đặt trong `conten
 
 Hình đại diện này được sử dụng cho việc hiển thị bài viết được share trên mạng xã hội. Nếu bạn tự thiết kế được thì quá tốt, nếu không thì có thể dùng tool [social-image-gen](https://github.com/12bitvn/social-image-gen) để tự generate ra hình dựa theo nội dung bài viết, ví dụ như hình bên dưới tụi mình đã dùng tool để tự tạo.
 
-![social image gen](https://user-images.githubusercontent.com/3280351/54678731-55b9c300-4b38-11e9-9311-3ae3ed0a0676.png)
+![thumbnail](https://user-images.githubusercontent.com/3280351/56181308-1c8d4980-6037-11e9-959b-fa59e91aaba6.png)
