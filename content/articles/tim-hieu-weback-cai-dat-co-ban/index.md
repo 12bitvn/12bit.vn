@@ -15,7 +15,7 @@ draft: false
 
 ## Giới thiệu
 
-Có lẽ viết về task runner hay bundlers trong front-end development là điều không còn mới mẻ nữa. Mình viết series về webpack lần này sẽ không đề cập quá nhiều đến những khái niệm, nhưng tập trung vào việc cấu hình, giải quyết những tình huống thực tế.
+Có lẽ viết về [task runner]({{<ref "/references/task-runner-la-gi.md">}}) hay bundlers trong front-end development là điều không còn mới mẻ nữa. Mình viết series về webpack lần này sẽ không đề cập quá nhiều đến những khái niệm, nhưng tập trung vào việc cấu hình, giải quyết những tình huống thực tế.
 
 Đây sẽ là những bài viết ngắn và đương nhiên không có tag TL;DR =))
 
