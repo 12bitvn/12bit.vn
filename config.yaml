@@ -68,12 +68,9 @@ menu:
       title: References
       url: /references
     - identifier: 2
-      title: Shortcodes
-      url: /pages/shortcodes.html
-    - identifier: 3
       title: Donate
       url:  https://ko-fi.com/12bitvn
-    - identifier: 4
+    - identifier: 3
       title: RSS
       url: /index.xml
 taxonomies:
