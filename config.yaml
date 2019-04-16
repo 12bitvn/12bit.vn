@@ -63,10 +63,10 @@ menu:
   footer:
     - identifier: 0
       title: Series
-      url: /series.html
+      url: /series/
     - identifier: 1
       title: References
-      url: /references
+      url: /references/
     - identifier: 2
       title: Donate
       url:  https://ko-fi.com/12bitvn
