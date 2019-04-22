@@ -20,9 +20,9 @@ authors:
     social:
       website: https://12bit.vn
   tatthien:
-    displayName: Tất Thiện
+    displayName: Thiện
     social:
-      website: https://thien.dev
+      website: https://12bit.vn
 outputs:
   home:
   - HTML
@@ -57,9 +57,9 @@ menu:
   - identifier: chat
     title: Chat
     url: https://discord.gg/uMJxpXB
-  - identifier: til
-    title: TIL
-    url: https://til.12bit.vn
+  - identifier: links
+    title: Links
+    url: https://news.12bit.vn
   footer:
     - identifier: 0
       title: Series
