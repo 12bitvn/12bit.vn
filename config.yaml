@@ -57,8 +57,8 @@ menu:
   - identifier: chat
     title: Chat
     url: https://discord.gg/uMJxpXB
-  - identifier: links
-    title: Links
+  - identifier: News
+    title: News
     url: https://news.12bit.vn
   footer:
     - identifier: 0

@@ -39,10 +39,10 @@
   {{ end }}
 
   {{ $mainStyle := resources.Get "scss/style.scss" }}
-  {{ $searchStyle := resources.Get "scss/instance-search.scss" }}
   {{ $styleFiles := slice $mainStyle}}
 
   {{ if ($.Page.Scratch.Get "include_search") "true" }}
+    {{ $searchStyle := resources.Get "scss/instance-search.scss" }}
     {{ $styleFiles := $styleFiles | append $searchStyle}}
   {{end}}
   {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
@@ -57,8 +57,9 @@
   <!-- Code snippet to speed up Google Fonts rendering: googlefonts.3perf.com -->
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link rel="dns-prefetch" href="https://connect.facebook.net">
+  <link rel="preconnect" href="https://connect.facebook.net" crossorigin="anonymous">
   <!-- End of code snippet for Google Fonts -->
-
   {{end}}
 </head>
 
