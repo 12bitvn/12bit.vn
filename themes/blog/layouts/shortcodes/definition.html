@@ -1,0 +1,5 @@
+{{- $title := default (.Get "title") (.Get 0) -}}
+<dl>
+  <dt>{{$title}}</dt>
+  <dd>{{ .Inner }}</dd>
+</dl>
