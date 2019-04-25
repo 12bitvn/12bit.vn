@@ -24,7 +24,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+dt{
   font-family: $font-title;
   font-weight: $font-weight-bold;
 }
@@ -44,6 +45,10 @@ a {
       color: $color-dark;
     }
   }
+}
+
+dd {
+  margin-left: 0;
 }
 
 ol, ul{
@@ -256,7 +261,7 @@ sub, sup {
   .runkit{
     margin-bottom: 1.5rem;
   }
-  p {
+  p, dd {
     margin: 0 0 1.5rem;
     a {
       text-decoration: underline;
@@ -313,7 +318,7 @@ sub, sup {
       color: #fff;
     }
   }
-  h1, h2, h3 {
+  h1, h2, h3, dt {
     margin-top: 0;
     &:before {
       font-weight: normal;
@@ -324,7 +329,8 @@ sub, sup {
   h1:before {
     content: '#'
   }
-  h2{
+  h2, dt{
+    margin-bottom: 18px;
     @include font-size(1.4);
     &:before {
       content: '##'

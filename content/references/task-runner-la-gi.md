@@ -11,6 +11,5 @@ authors:
 draft: false
 ---
 
-{{% definition "Task Runner" %}}
-Đúng như tên gọi của nó, task runner là các chương trình giúp bạn run các task một cách tự động dựa trên một hoặc nhiều điều kiện nào đó hoặc run thủ công do do chính bạn trigger.
-{{% /definition %}}
+Task Runner
+: Đúng như tên gọi của nó, task runner là các chương trình giúp bạn run các task một cách tự động dựa trên một hoặc nhiều điều kiện nào đó hoặc run thủ công do do chính bạn trigger.

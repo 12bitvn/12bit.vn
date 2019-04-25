@@ -1,6 +1,5 @@
 ---
 title: "npx là gì"
-slug: npx
 description: A short description for the post.
 date: 2019-04-15T10:06:34+07:00
 reference-tags: 
@@ -12,7 +11,8 @@ authors:
 draft: false
 ---
 
-`npx` là một công cụ giúp bạn execute các package từ npm registry một cách đơn giản và nhanh chóng.
+npx
+: là một công cụ giúp bạn execute các package từ npm registry một cách đơn giản và nhanh chóng.
 
 ![](https://cdn-images-1.medium.com/max/1600/1*OlIRsvVO5aK7ja9HmwXz_Q.gif)
 

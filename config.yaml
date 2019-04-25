@@ -49,6 +49,7 @@ outputFormats:
 blackfriday:
   hrefTargetBlank: true
   noreferrerLinks: true
+  nofollowLinks: true
 menu:
   main:
   - identifier: about
