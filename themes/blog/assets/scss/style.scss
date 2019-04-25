@@ -383,10 +383,7 @@ sub, sup {
   }
   &__nav {
     a {
-      padding: 5px 15px;
-      @include breakpoint(phone){
-        padding: 30px 15px;
-      }
+      padding: 15px 15px;
     }
   }
   a:after{
