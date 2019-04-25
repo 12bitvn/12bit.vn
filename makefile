@@ -5,4 +5,4 @@ preview: build
 	netlify deploy
 
 deploy: build
-	netlify deploy --prod
+	firebase deploy
