@@ -18,13 +18,46 @@ const search = instantsearch({
 // initialize SearchBox
 const resultPanel = document.getElementById('hits')
 
+// Create a render function
+const renderSearchBox = (renderOptions, isFirstRender) => {
+  const { query, refine, widgetParams } = renderOptions;
+
+  if (isFirstRender) {
+    const container = document.createElement('div')
+    container.classList.add('ais-search-box')
+
+    const magnifier = document.createElement('span')
+    magnifier.classList.add("ais-search-box--magnifier-wrapper")
+    magnifier.innerHTML = `<div class="ais-search-box--magnifier"> <svg xmlns="http://www.w3.org/2000/svg" id="sbx-icon-search-13" viewBox="0 0 40 40" width="100%" height="100%"> <path d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z" fill-rule="evenodd"> </path> </svg> </div>`
+
+    const input = document.createElement('input');
+    input.setAttribute('placeholder', 'Tìm kiếm')
+    input.id = 'instance-search-input'
+    input.classList.add('ais-search-box--input')
+
+    const label = document.createElement('label')
+    label.innerText = 'search'
+    label.setAttribute('for', input.id)
+    input.addEventListener('input', event => {
+      refine(event.target.value);
+    });
+    container.appendChild(label);
+    container.appendChild(input);
+    container.appendChild(magnifier);
+    widgetParams.container.appendChild(container);
+  }
+  widgetParams.container.querySelector('input').value = query;
+};
+
+// create custom widget
+const customSearchBox = instantsearch.connectors.connectSearchBox(
+  renderSearchBox
+);
+
+// instantiate custom widget
 search.addWidget(
-  instantsearch.widgets.searchBox({
-    label: 'tìm kiếm',
-    container: '#search-box',
-    placeholder: 'Tìm kiếm',
-    reset: false,
-    autofocus: false
+  customSearchBox({
+    container: document.querySelector('#search-box')
   })
 );
 

@@ -389,7 +389,7 @@ sub, sup {
   }
   &__nav {
     a {
-      padding: 15px 15px;
+      padding: 17px;
     }
   }
   a:after{
@@ -561,6 +561,9 @@ figcaption{
 }
 
 #search-box {
+  .ais-search-box label{
+    display: block;
+  }
   .ais-search-box, input {
     max-width: 100%;
     width: 100%;
