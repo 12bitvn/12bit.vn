@@ -1,3 +1,5 @@
+$articleElementGap: 1.5rem;
+
 @import 'variables';
 @import 'mixins';
 @import "reset";
@@ -259,10 +261,10 @@ sub, sup {
 
 .article-format {
   .runkit{
-    margin-bottom: 1.5rem;
+    margin-bottom: $articleElementGap;
   }
   p, dd {
-    margin: 0 0 1.5rem;
+    margin: 0 0 $articleElementGap;
     a {
       text-decoration: underline;
     }
@@ -619,5 +621,46 @@ figcaption{
   }
   & &--display__block{
     display: block;
+  }
+}
+
+.scrimba{
+  background-color: #e7ecf3;
+  border-radius: 4px;
+  color: $color-primary;
+  margin-bottom: $articleElementGap;
+  a{
+    color: $color-primary;
+    position: relative;
+    padding: 20px 20px 20px 67px;
+    display: block;
+    &:hover{
+      background: transparent;
+      color: #3d547a;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      display: block;
+      width: 30px;
+      height: 30px;
+      left: 22px;
+      top: 18px;
+      border-radius: 50%;
+      background-color: #73abfe;
+    }
+    &:after{
+      margin: 0;
+      content: '';
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      left: 34px;
+      top: 28px;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 8px solid #fff;
+    }
   }
 }

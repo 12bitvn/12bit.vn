@@ -21,6 +21,8 @@ Hàm hasOwn mà commit sử dụng chính là TypeScript Wrapper của phương 
 
 Trước tiên chúng ta thử tìm hiểu document của toán tử in và phương thức hasOwnProperty.
 
+{{< scrimba "https://scrimba.com/c/cdJzKpsr">}}
+
 ## Toán tử "in"
 
 > The in operator returns true if the specified property is in the specified object or its prototype chain.

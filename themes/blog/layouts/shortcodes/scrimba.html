@@ -1,0 +1,5 @@
+{{ $url := default (.Get "url") (.Get 0) }}
+{{ $title := default (.Get "title") (.Get 1) | default "Xem hướng dẫn tại scrimba" }}
+<div class="scrimba">
+  <a target="_blank" rel="nofollow noopener" href="{{ $url }}" title="{{ $title }}">{{ $title }}</a>
+</div>
