@@ -1,0 +1,12 @@
+{
+  "hosting": {
+    "public": "public",
+    "headers": [{
+      "source": "**/*.@(jpg|jpeg|gif|png|js|css)",
+      "headers": [ {
+        "key": "Cache-Control",
+        "value": "max-age=31536000"
+      } ]
+    }]
+  }
+}
