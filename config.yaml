@@ -14,15 +14,6 @@ social:
 author:
   email: contact@12bit.vn
   name: 12bit.vn
-authors:
-  vominh:
-    displayName: Vô Minh
-    social:
-      website: https://12bit.vn
-  tatthien:
-    displayName: Thiện
-    social:
-      website: https://12bit.vn
 outputs:
   home:
   - HTML
@@ -78,5 +69,3 @@ taxonomies:
   series: series
   tag: tags
   reference-tag: reference-tags
-hooks:
-  onPageCreated: social-image-gen --output={abs_publish_dir} --title={title} --date={date} --author={author} --template=./social-image.html

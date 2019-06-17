@@ -35,7 +35,7 @@ Bước 3: Click vào nút `+widget/Gesture`
 
 Bước 4: Chọn widget `Run Apple Script and show Return value`
 
-{{< zoom-img src="/articles/tao-widget-tren-touchbar/images/1.png" >}}
+{{< zoom-img src="/articles/tao-widget-tren-touchbar/images/1.jpg" >}}
 
 Bước 5: Đặt tên của widget, đặt icon và xóa nội dung trong phần script đi:
 

@@ -1,5 +1,8 @@
+include .env.makefile
 build:
-	rm -rf ./public && hugo  --gc --minify --buildFuture --enableGitInfo && yarn run precache && yarn algolia
+	hugo  --gc --minify --buildFuture --cleanDestinationDir
+	yarn run precache
+	yarn algolia
 
 deploy: build
-	firebase deploy
+	firebase deploy --token "${FIREBASE_TOKEN}"

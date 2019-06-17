@@ -1,5 +1,6 @@
 public/
 .env
+.env.markfile
 node_modules/
 .DS_Store
 \.idea/
@@ -7,3 +8,5 @@ node_modules/
 resources/
 
 data/auth\.yaml
+
+\.env\.makefile
