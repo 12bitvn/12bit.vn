@@ -45,7 +45,7 @@ menu:
   main:
   - identifier: about
     title: Giới thiệu
-    url: /pages/about.html
+    url: /pages/about
   - identifier: chat
     title: Chat
     url: https://discord.gg/uMJxpXB
