@@ -9,6 +9,7 @@ enableEmoji: true
 enableRobotsTXT: true
 googleAnalytics: UA-131517577-1
 paginate: 40
+newContentEditor: pstorm
 social:
   facebook: 12bit.vn
 author:
