@@ -6,7 +6,7 @@ tags:
   - Google Assistant
   - Golang
 images:
-  - /articles/dieu-khien-may-tinh-bang-google-assistant/thumbnail.jpg
+  - /articles/dieu-khien-may-tinh-bang-google-assistant/images/thumbnail.png
 authors:
   - vominh
 ---
