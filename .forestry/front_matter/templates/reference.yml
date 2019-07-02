@@ -5,15 +5,15 @@ fields:
 - type: text
   name: title
   label: title
-- type: text
-  name: description
-  label: description
 - type: datetime
   name: date
   label: date
 - type: list
   name: reference-tags
   label: reference-tags
+- type: text
+  name: description
+  label: description
 - type: image_gallery
   name: images
   label: images
