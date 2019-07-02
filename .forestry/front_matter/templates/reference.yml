@@ -20,3 +20,5 @@ fields:
 - type: list
   name: authors
   label: authors
+pages:
+- content/references/openlayers-là-gì.md
