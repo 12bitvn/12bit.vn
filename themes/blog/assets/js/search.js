@@ -32,16 +32,14 @@ const renderSearchBox = (renderOptions, isFirstRender) => {
 
     const input = document.createElement('input');
     input.setAttribute('placeholder', 'Tìm kiếm')
+    input.setAttribute('aria-label', 'Tìm kiếm')
     input.id = 'instance-search-input'
     input.classList.add('ais-search-box--input')
 
-    const label = document.createElement('label')
-    label.innerText = 'search'
-    label.setAttribute('for', input.id)
     input.addEventListener('input', event => {
       refine(event.target.value);
     });
-    container.appendChild(label);
+
     container.appendChild(input);
     container.appendChild(magnifier);
     widgetParams.container.appendChild(container);
