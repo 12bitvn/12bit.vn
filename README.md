@@ -6,11 +6,11 @@
 
 1. Vì blog phát triển dựa trên Hugo vì vậy các bạn cần phải [cài đặt Hugo](https://github.com/12bitvn/hugo). **Vì tụi mình đã tùy chỉnh lại Hugo để thêm những tính năng mà Hugo mặc định không có, vì vậy các bạn hãy cài đặt Hugo theo bản custom của tụi mình nhé.**
 2. Fork repo này về GitHub của các bạn.
-3. Cài đ các package cần thiết: `yarn install`
+3. Cài đặt các package cần thiết: `yarn install`
 4. Gõ lệnh `hugo new articles/your-post-slug/index.md` trên terminal để tạo một bài viết mới. Sau khi gõ lệnh một file markdown sẽ được tạo ở đường dẫn `content/articles/your-post-slug/index.md`.
 
   Các bạn có thể tham khảo phần front matter bên dưới để định dạng cho bài viết của mình:
-  
+
     ```
     ---
     title: Widget hiển thị số order trên Touchbar với BetterTouchTool
@@ -27,6 +27,11 @@
     draft: false
     ---
     ```
+
+  Phần authors sẽ liên kết bài viết tới tài khoản github của bạn. Với ví dụ trên thì tài khoản github sẽ là:
+```
+https://github.com/vominh
+```
 
 5. Trong lúc viết bài các bạn hãy dùng `hugo serve` để xem những thay đổi.
 6. Sau khi viết bài xong, các bạn hãy tạo Pull Request. Tụi mình sẽ review bài viết và có những feedback ngược lại nếu cần.
