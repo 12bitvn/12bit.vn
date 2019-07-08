@@ -20,6 +20,8 @@
           }
         ]
       }
-    ]
+    ],
+    "appAssociation": "AUTO",
+    "rewrites": [ { "source": "/r/**", "dynamicLinks": true } ]
   }
 }
