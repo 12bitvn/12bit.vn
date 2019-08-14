@@ -117,4 +117,4 @@ Và đây là phương thức `do_action`:
 
 ## Lời kết
 
-Như vậy chúng ta đã tìm hiểu xong về hook bằng cách mò mẫm vào mã nguồn của WordPress. Hiểu được nó chính là hiện thực của even-driver pattern. Điểm mạnh và điểm yếu mà nó đem lại. Và cũng thấy được rằng core của WordPress cũng thường thay đổi để đáp ứng nhu cầu phát triển ngày càng lớn, ta cũng yên tâm hơn rằng project này vẫn rất sôi động và vòng đời có lẽ còn dài.
+Như vậy chúng ta đã tìm hiểu xong về hook bằng cách mò mẫm vào mã nguồn của WordPress. Hiểu được nó chính là hiện thực của event-driven pattern. Điểm mạnh và điểm yếu mà nó đem lại. Và cũng thấy được rằng core của WordPress cũng thường thay đổi để đáp ứng nhu cầu phát triển ngày càng lớn, ta cũng yên tâm hơn rằng project này vẫn rất sôi động và vòng đời có lẽ còn dài.
