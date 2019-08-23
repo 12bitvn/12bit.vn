@@ -10,3 +10,5 @@ resources/
 data/auth\.yaml
 
 \.env\.makefile
+
+.log

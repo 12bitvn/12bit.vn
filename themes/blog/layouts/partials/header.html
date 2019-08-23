@@ -55,6 +55,12 @@
   {{if .PrevPage}}
   <link rel="prev" href="{{.PrevPage.Permalink}}" />
   {{end}}
+
+  {{ if eq (getenv "HUGO_ENV") "development" }}
+  <meta name="robots" content="noindex">
+  <meta name="googlebot" content="noindex">
+  {{ end }}
+
   <!-- Code snippet to speed up Google Fonts rendering: googlefonts.3perf.com -->
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
