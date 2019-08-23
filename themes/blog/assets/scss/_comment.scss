@@ -97,4 +97,11 @@
       }
     }
   }
+
+  /** Comment preview **/
+  &__preview {
+    background-color: rgba($color-dark, .1);
+    border-radius: 4px;
+    padding: 1rem;
+  }
 }

@@ -12,13 +12,6 @@
           <textarea name="content" id="content" @focus="isFocusOnContent = true" v-model="content" placeholder="Bạn đang nghĩ gì?" required></textarea>
           <small class="comment__form-input__tip">Hỗ trợ markdown</small>
         </div>
-        <template v-if="isFocusOnContent">
-       <!-- <div class="comment__form-input">
-            <label for="anonymous">
-            <input type="checkbox" id="anonymous" v-model="isAnonymous">
-            <span>Bình luận ẩn danh</span>
-            </label>
-        </div>-->
         <template v-if="!isAnonymous">
           <div class="comment__form-input">
             <label for="name">Tên</label>

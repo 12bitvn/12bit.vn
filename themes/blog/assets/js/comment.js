@@ -4,7 +4,7 @@ var app = new Vue({
     isAnonymous: false,
     isFocusOnContent: false,
     isPreview: false,
-    previewContent: 'Không có gì để xem hết',
+    previewContent: 'Chưa có nội dung',
     content: '',
     author: '',
     email: '',
@@ -24,7 +24,7 @@ var app = new Vue({
       if (newVal && this.content !== '') {
         this.previewContent = this.formatComment(this.content)
       } else {
-        this.previewContent = 'Không có gì để xem hết'
+        this.previewContent = 'Chưa có nội dung'
       }
     }
   },
