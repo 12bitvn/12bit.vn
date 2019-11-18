@@ -4,7 +4,8 @@
     "algolia": "atomic-algolia"
   },
   "dependencies": {
-    "sw-precache": "^5.2.1"
+    "sw-precache": "^5.2.1",
+    "workbox": "^0.0.0"
   },
   "devDependencies": {
     "atomic-algolia": "^0.3.17"

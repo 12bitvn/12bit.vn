@@ -1,8 +1,9 @@
 {{ partial "header" . }}
-{{ $paginator := .Paginate (where .Pages "Type" "articles") }}
+{{ $pages := where .Site.RegularPages "Type" "articles" }}
+{{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
 <main id="content" class="site-content index list">
   <div>
-    {{ range .Paginator.Pages }}
+    {{ range $paginator.Pages }}
     {{ partial "article/list-item" . }}
     {{ end }}
   </div>
