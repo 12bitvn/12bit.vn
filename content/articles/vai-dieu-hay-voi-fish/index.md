@@ -47,9 +47,17 @@ Như bạn thấy trong ảnh dưới đây, những command hoặc thư mục, 
 
 ## Tự gợi ý những lệnh đã  trong quá khứ
 
-Khi bạn gõ lệnh, Fish sẽ cố gợi ý cho bạn bằng những lệnh mờ mờ phía sau, nếu bấm phím mũi tên hướng lên, thì fish sẽ search những command trong quá khứ:
+Khi bạn gõ lệnh, Fish sẽ cố gợi ý cho bạn bằng những lệnh mờ mờ phía sau, bấm tab hoặc mũi tên qua phải để sử , nếu bấm phím mũi tên hướng lên, thì fish sẽ search những command trong quá khứ:
 
 ![](/articles/vai-dieu-hay-voi-fish/images/fish-shell-2.gif)
+
+### Gợi ý các target trong Makefile
+
+![Syntax highlighting](/articles/vai-dieu-hay-voi-fish/images/fish-shell-6.gif)
+
+### Gợi ý các script trong package.json
+
+![Syntax highlighting](/articles/vai-dieu-hay-voi-fish/images/fish-shell-7.gif)
 
 ## Wildcard
 
@@ -104,3 +112,5 @@ sleep 2s
 ```
 
 Bạn có thể thay đổi một số tùy chỉnh trong file `~/.config/fish/config.fish` theo hướng dẫn [tại đây](https://github.com/franciscolourenco/done).
+
+![](/articles/vai-dieu-hay-voi-fish/images/fish-shell-5.gif)
