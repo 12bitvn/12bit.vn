@@ -6,8 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Hugo Actions
-        uses: srt32/hugo-action@v0.0.3
+      - name: Hugo setup
+        uses: peaceiris/actions-hugo@v2.3.0
       - name: Build site for production
         run: |
           HUGO_ENV=production hugo  --gc --minify --buildFuture --cleanDestinationDir
