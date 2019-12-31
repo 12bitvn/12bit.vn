@@ -13,8 +13,6 @@ title: 2019 Recap
 
 Chỉ còn 1 ngày nữa là bước qua năm 2020. Đây cũng là cơ hội để 12bit nhìn lại 1 năm vừa qua.
 
-> Tính đến tháng 3/2020 thì 12bit đã thành lập được 2 năm. Một con số quá trẻ so với những blog về technical khác.
-
 ## Nhìn lại 2019
 
 Mở đầu năm 2019 là bài viết về các [shortcodes trong Hugo](https://12bit.vn/articles/cac-shortcode-hay-cho-gohugo/). Đây cũng là bài viết đánh dấu 12bit chuyển qua nên tảng mới từ Medium sang Hugo.
@@ -41,4 +39,4 @@ Nếu các bạn muốn viết bài cho 12bit, chỉ cần fork repo 12bit.vn tr
 
 Hiện tại tụi mình chưa có kế hoạch cho 2020, chưa biết sẽ có nhiều bài viết hơn hay không. Nhưng một điều mình chắc chắn đó là 12bit sẽ luôn tiếp tục duy trì tinh thần mà tụi mình đã lập ra đó chính là [Tinh thần chia sẻ](https://12bit.vn/pages/about/#tinh-th%E1%BA%A7n-chia-s%E1%BA%BB).
 
-H
+Happy New Year :tada:
