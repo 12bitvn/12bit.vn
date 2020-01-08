@@ -59,6 +59,10 @@ Khi bạn gõ lệnh, Fish sẽ cố gợi ý cho bạn bằng những lệnh m�
 
 ![Syntax highlighting](/articles/vai-dieu-hay-voi-fish/images/fish-shell-7.gif)
 
+### Gợi ý các progress
+
+![Auto compelete progress](/articles/vai-dieu-hay-voi-fish/images/fish-shell-auto-complete-progress-id.gif)
+
 ## Wildcard
 
 À há, kiểm tra git status của các thư mục con trong project dễ hơn bao giờ hết:
