@@ -3,20 +3,15 @@ $articleElementGap: 1.5rem;
 @import 'variables';
 @import 'mixins';
 @import "reset";
-@import "font";
 @import 'comment';
 @import "highlight";
 @import 'shortcodes/index.scss';
 @import 'components/index.scss';
 
-* {
-  font-display: swap;
-}
-
 body {
   font-family: $font-body;
-  font-size: 18px;
-  line-height: 1.4;
+  font-size: 16px;
+  line-height: 1.6;
   font-weight: $font-weight-normal;
   color: $color-dark;
 }
@@ -223,7 +218,6 @@ sub, sup {
   &__title {
     margin-top: 0;
     @include font-size(1.7);
-    line-height: 1.1;
     margin-bottom: 0;
     font-weight: $font-weight-bold;
     color: $color-primary;
@@ -316,6 +310,7 @@ sub, sup {
   }
   a {
     color: $color-primary;
+    font-weight: $font-weight-semibold;
     &:hover {
       background-color: $color-primary;
       color: #fff;
