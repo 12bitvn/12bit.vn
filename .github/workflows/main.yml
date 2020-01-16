@@ -13,6 +13,8 @@ jobs:
     - name: Build
       run: hugo --gc --minify --buildFuture --cleanDestinationDir
     - uses: actions/setup-node@master
+    - name: Install deps
+      run: yarn install
     - name: Preacache
       run: yarn run precache
     - name: Algolia
@@ -20,7 +22,7 @@ jobs:
       env:
         ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
         ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
-        ALGOLIA_INDEX_NAME: prod_12bit_blog
-        ALGOLIA_INDEX_FILE: public/algolia.json
     - name: Deploy
-      run: firebase deploy --token "${{ secrets.FIREBASE_TOKEN }}" --only hosting:production
+      run: yarn run deploy
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

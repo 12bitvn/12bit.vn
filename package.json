@@ -1,13 +1,13 @@
 {
   "scripts": {
     "precache": "sw-precache --config=./sw-precache-config.js",
-    "algolia": "atomic-algolia"
+    "algolia": "algolia import -s ./public/algolia.json -a $ALGOLIA_APP_ID -k $ALGOLIA_ADMIN_KEY -n prod_12bit_blog",
+    "deploy": "firebase deploy --token $FIREBASE_TOKEN --only hosting:production"
   },
   "dependencies": {
+    "@algolia/cli": "^4.0.7",
+    "firebase-tools": "^7.12.1",
     "sw-precache": "^5.2.1",
     "workbox": "^0.0.0"
-  },
-  "devDependencies": {
-    "atomic-algolia": "^0.3.17"
   }
 }

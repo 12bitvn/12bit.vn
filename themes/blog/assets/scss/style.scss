@@ -221,9 +221,6 @@ sub, sup {
     margin-bottom: 0;
     font-weight: $font-weight-bold;
     color: $color-primary;
-    a {
-      color: $color-primary;
-    }
     @at-root .list &{
       @include font-size(1.3);
     }
