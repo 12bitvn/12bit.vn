@@ -5,15 +5,7 @@ jobs:
     name: Lighthouse CI
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Hugo setup
-        uses: peaceiris/actions-hugo@v2.3.0
+      - name: Hugo build and Firebase Deploy
+        uses: pulimento/github-action-hugo-deploy-to-firebase@1.1.0
         with:
-          extended: true
-      - name: Build site for production
-        run: |
-          HUGO_ENV=production hugo  --gc --minify --buildFuture --cleanDestinationDir
-      - name: run Lighthouse CI
-        run: |
-          npm install -g @lhci/cli@0.3.x
-          lhci autorun --upload.target=temporary-public-storage || echo "LHCI failed!"
+          firebase-token: 1/jU4KX_1heg7g_NGu-51oRz6yfQMtBQPa6kz1RRcULT6O0EQF_3TWkMSY6nw-hIp-
