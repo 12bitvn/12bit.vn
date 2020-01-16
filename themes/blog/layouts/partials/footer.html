@@ -49,6 +49,7 @@
   display:none;
 }
 </style>
+
 <script src="//cdn.embedly.com/widgets/platform.js" defer></script>
 {{ end }}
 
@@ -61,5 +62,15 @@
 {{ if ($.Page.Scratch.Get "include_image_zoom") "true" }}
 <script src="https://unpkg.com/medium-zoom@1.0.2/dist/medium-zoom.min.js" defer onload="mediumZoom('[data-zoomable]');"></script>
 {{ end }}
+
+<script>
+  function initFreshChat() {
+    window.fcWidget.init({
+      token: "5e9c3bf3-8450-48b3-99a2-fd4d0073dbce",
+      host: "https://wchat.freshchat.com"
+    });
+  }
+  function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
+</script>
 </body>
 </html>
