@@ -1,11 +1,12 @@
-name: Build project and Run Lighthouse CI
 on: [push]
+name: Publish blog
 jobs:
-  lhci:
-    name: Lighthouse CI
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Hugo build and Firebase Deploy
-        uses: pulimento/github-action-hugo-deploy-to-firebase@1.1.0
-        with:
-          firebase-token: 1/jU4KX_1heg7g_NGu-51oRz6yfQMtBQPa6kz1RRcULT6O0EQF_3TWkMSY6nw-hIp-
+    - uses: actions/checkout@v1
+      with:
+        submodules: true
+    - uses: pulimento/github-action-hugo-deploy-to-firebase@master
+      with:
+        firebase-token: ${{ secrets.secret_firebase_token }}
