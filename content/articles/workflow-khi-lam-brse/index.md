@@ -6,7 +6,7 @@ tags:
   - brse
   - workflow
 images:
- - /articles/workflow-khi-lam-brse/thumbnail.png
+ - /articles/workflow-khi-lam-brse/images/workflow_voi_nguoi_giao_va_nhan_viec_dua_ra_y_tuong.svg
 authors:
  - loclv
 ---
