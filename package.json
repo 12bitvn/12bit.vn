@@ -2,7 +2,8 @@
   "scripts": {
     "precache": "sw-precache --config=./sw-precache-config.js",
     "algolia": "algolia import -s ./public/algolia.json -a $ALGOLIA_APP_ID -k $ALGOLIA_ADMIN_KEY -n prod_12bit_blog",
-    "deploy": "firebase deploy --token $FIREBASE_TOKEN --only hosting:production"
+    "deploy": "firebase deploy --token $FIREBASE_TOKEN --only hosting:production",
+    "preview": "firebase deploy --token $FIREBASE_TOKEN --only hosting:dev"
   },
   "dependencies": {
     "@algolia/cli": "^4.0.7",

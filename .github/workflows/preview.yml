@@ -1,10 +1,10 @@
-on: [push]
-name: Publish blog
+on: [pull_request]
+name: Preview
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
       with:
@@ -15,14 +15,7 @@ jobs:
     - uses: actions/setup-node@master
     - name: Install deps
       run: yarn install
-    - name: Preacache
-      run: yarn run precache
-    - name: Algolia
-      run: yarn run algolia
-      env:
-        ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
-        ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
     - name: Deploy
-      run: yarn run deploy
+      run: yarn run preview
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

@@ -1,0 +1,28 @@
+on: [push]
+name: deploy
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: 'latest'
+        extended: true
+    - name: Build
+      run: hugo --gc --minify --buildFuture --cleanDestinationDir
+    - uses: actions/setup-node@master
+    - name: Install deps
+      run: yarn install
+    - name: Preacache
+      run: yarn run precache
+    - name: Algolia
+      run: yarn run algolia
+      env:
+        ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+        ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
+    - name: Deploy
+      run: yarn run deploy
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
