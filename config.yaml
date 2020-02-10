@@ -37,11 +37,24 @@ outputFormats:
     isPlainText: true
     mediaType: application/json
     notAlternative: true
-
-blackfriday:
-  hrefTargetBlank: true
-  noreferrerLinks: true
-  nofollowLinks: true
+markup:
+  goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
+    parser:
+      attribute: true
+      autoHeadingID: true
+      autoHeadingIDType: github
+    renderer:
+      hardWraps: false
+      unsafe: true
+      xHTML: false
 menu:
   main:
   - identifier: about
