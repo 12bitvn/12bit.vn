@@ -2,7 +2,7 @@
 authors:
   - tatthien
 date: "2020-02-10T09:22:38+07:00"
-draft: true
+draft: false
 tags:
 - git
 - til
