@@ -5,7 +5,6 @@ on:
 name: deploy
 jobs:
   buildHugo:
-    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Setup Hugo
@@ -21,6 +20,7 @@ jobs:
       - name: Preacache
         run: yarn run precache
   deploy:
+    runs-on: ubuntu-latest
     steps:
       - name: Algolia
         run: yarn run algolia
