@@ -42,6 +42,6 @@ Mình sẽ sử dụng hashids bởi vì:
 
 ![](/articles/login-bang-qr-code/assets/exchangeLoginCodeWithConfirmation.webp)
 
-## Websocket
+## Real-time notification
 
-Để web có thể nhận được notification từ server chúng ta có thể sưẻ dụng web socket. Khi người dùng lấy được loginCode thành công thì chúng ta sẽ tạo một kết nối bằng websocket giữa server và web. Khi người dùng sử dụng điện thoại để quét mã và điện thoại gửi loginCode này lên server, nếu loginCode hợp lệ thì ta sẽ tạo kết nối websocket giưa điện thoại và server đồng thời gửi notification tới web yêu cầu xác nhận. Rồi tuỳ theo trả lời của web mà trả lời lại cho điện thoại thông qua websocket.
+Để web có thể nhận được notification từ server chúng ta có thể sử dụng web socket. Khi người dùng lấy được loginCode thành công thì chúng ta sẽ tạo một kết nối bằng websocket giữa server và web. Khi người dùng sử dụng điện thoại để quét mã và điện thoại gửi loginCode này lên server, nếu loginCode hợp lệ thì ta sẽ tạo kết nối websocket giưa điện thoại và server đồng thời gửi notification tới web yêu cầu xác nhận. Rồi tuỳ theo trả lời của web mà trả lời lại cho điện thoại thông qua websocket.
