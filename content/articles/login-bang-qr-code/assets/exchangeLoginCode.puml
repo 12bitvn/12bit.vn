@@ -1,0 +1,14 @@
+@startuml
+start
+:loginCode = parse(request);
+:userId, randomNumber = hashIds.decode(loginCode, salt);
+if (db.foundCode(userId, loginCode) then (false)
+  stop
+endif
+if (isExpired(loginCode)) then (true)
+  stop
+endif
+:deactivateLoginCode(loginCode);
+:return jwt = generateJwt();
+stop
+@enduml

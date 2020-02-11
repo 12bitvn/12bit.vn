@@ -1,0 +1,8 @@
+@startuml
+start
+:userId = context.userId;
+:loginCode = hashIds.generate(userId, randomNumber, salt);
+:db.save(userId, randomNumber, loginCode, loginCode, timeToLive);
+:return loginCode;
+stop
+@enduml

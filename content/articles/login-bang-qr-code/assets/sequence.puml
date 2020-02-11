@@ -1,0 +1,21 @@
+@startuml
+web -> server: get login code
+activate server
+return login code
+mobile-> web: scan qr code
+activate mobile
+  web --> mobile: login code
+  mobile -> server: exchange for jwt
+  activate server
+    server -> server: validate login code
+    activate server
+    deactivate server
+    opt with confirm
+      server -> web: ask for conformation
+      web --> server: confirm
+    end opt
+    server -> web: login notification
+    server -> mobile: jwt
+  deactivate server
+deactivate mobile
+@enduml
