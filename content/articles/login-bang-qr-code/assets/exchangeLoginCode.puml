@@ -1,4 +1,5 @@
 @startuml
+
 start
 :loginCode = parse(request);
 :userId, randomNumber = hashIds.decode(loginCode, salt);
