@@ -2,6 +2,7 @@
 authors:
   - tatthien
 date: "2018-03-26T10:10:50+07:00"
+description: Trong quá trình phát triển ứng dụng với Vue.js, chắc hẳn các bạn sẽ gặp những trường hợp muốn chèn nội dụng HTML vào bên trong component con giống như cách chúng ta viết HTML thông thường thay vì dùng prop.
 draft: false
 images:
 - https://cdn-images-1.medium.com/max/1000/1*qgwDRRz5olTU0BitXlSmVQ.jpeg
