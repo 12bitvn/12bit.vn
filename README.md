@@ -2,7 +2,7 @@
 
 # 12bit.vn
 
-12bit.vn là blog chuyên về phát triển web. Tụi mình viết về những công nghệ mà tụi mình đang làm hằng ngày như Golang, Vue.js, PHP, WordPress hoặc [những công nghệ mà bạn biết](#đóng-góp-nội-dung). Mời các bạn đọc qua bài [giới thiệu](https://12bit.vn/pages/about.html) để hiểu về tinh thần của tụi mình khi xây dựng 12bit
+12bit.vn là blog chuyên về phát triển web. Tụi mình viết về những công nghệ mà tụi mình đang làm hằng ngày như Golang, Vue.js, PHP, WordPress hoặc [những công nghệ mà bạn biết](#đóng-góp-nội-dung). Mời các bạn đọc qua bài [giới thiệu](https://12bit.vn/pages/about/) để hiểu về tinh thần của tụi mình khi xây dựng 12bit
 
 ## Đóng góp nội dung
 
