@@ -1,6 +1,6 @@
 ---
 title: JWT là gì
-description: JWT laf moot
+description: JWT là phương thức xác thực danh tính nhằm đảm bảo sự bảo mật trong giao tiếp giữa hai đối tượng
 date: 2020-02-25T10:40:53+07:00
 reference-tags:
   - authentication
@@ -16,7 +16,6 @@ JWT là viết tắt của "JSON Web Tokens". Là một phương thức gọn nh
  > JSON Web Tokens are an open, industry standard [RFC 7519](https://tools.ietf.org/html/rfc7519) method for representing claims securely between two parties.
 
 Nói một cách đơn giản thì JWT là JSON object được mã hoá (signing) và có thể được giải mã bởi server.
-
 
 
 ## Flow
