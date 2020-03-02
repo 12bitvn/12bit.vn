@@ -105,3 +105,5 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+// Print styled log
+console.log('%c12bit.vn %cwrite for us', 'color:white;background:rgb(86, 189, 119);padding: 3px 5px; border-radius: 2px 0 0 2px', 'color:#222; background: #fff; padding: 3px 5px; border-radius: 0 2px 2px 0');
