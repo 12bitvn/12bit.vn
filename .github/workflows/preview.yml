@@ -1,21 +1,21 @@
 on: [pull_request]
 name: Preview
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2
-      with:
-        hugo-version: 'latest'
-        extended: true
-    - name: Build
-      run: hugo --gc --minify --buildFuture --cleanDestinationDir
-    - uses: actions/setup-node@master
-    - name: Install deps
-      run: yarn install
-    - name: Deploy
-      run: yarn run preview
-      env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      - uses: actions/checkout@v2
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+      - name: Build
+        run: hugo --gc --minify --buildFuture --cleanDestinationDir
+      - uses: actions/setup-node@master
+      - name: Install dependencies
+        run: yarn install
+      - name: Deploy preview
+        run: yarn preview
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
