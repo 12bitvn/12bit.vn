@@ -9,7 +9,7 @@ tags:
   - continuous delivery
   - agile development
 series:
-  - continuous delivery
+  - Continuous Delivery
 images:
   - /articles/gioi-thieu-feature-flags/images/feature_flag_driven_release.jpeg
 authors:
