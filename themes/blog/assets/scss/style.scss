@@ -487,12 +487,22 @@ figcaption{
   }
   ul {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
     li {
-      margin: 0 .5rem;
+      margin: .5rem .5rem;
     }
+  }
+  .tag{
+    text-decoration: none;
+    color: $color-primary;
+    padding: 5px;
+    background: #f3f3f3;
+    border-radius: 4px;
+    white-space: nowrap;
+    @include font-size(.9)
   }
 }
 
@@ -535,17 +545,6 @@ figcaption{
 .styled-table tbody td {
   border: solid 1px #DDEEEE;
   padding: 10px;
-}
-
-.tags-section{
-  .tag{
-    text-decoration: none;
-    color: $color-primary;
-    padding: 5px;
-    background: #f3f3f3;
-    border-radius: 4px;
-    @include font-size(.9)
-  }
 }
 
 .save-section {

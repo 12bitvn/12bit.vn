@@ -4,7 +4,6 @@
 {{ $tags := index .Site.Taxonomies.tags $name }}
 
 <section class="single-section tags-section">
-  <h1 class="single-section__title">Tags:</h1>
   <ul class="list dib nested-links ml0 pl0">
     {{ with .Params.tags }}
     {{ range .}}
