@@ -4,7 +4,6 @@ description: feature flags một kỹ thuật cơ bản trong phát triển ph�
 date: 2020-03-03T11:38:01+07:00
 tags:
   - feature flags
-  - ff
   - canary release
   - continuous delivery
   - agile development
@@ -31,11 +30,11 @@ Một chú thợ tên A lên tiếng:
 
 Chú B đáp lại:
 
-- Anh đồng ý vế sau, còn vế trước anh không đồng ý. Sự ra đi của anh sẽ là sự tổn thất lớn cho gia đình và xã hội hơn sự ra đi của chú em.
+- Anh đồng ý vế sau, còn vế trước anh không đồng ý. Sự ra đi của anh sẽ là sự tổn thất lớn cho gia đình và xã hội hơn sự ra đi của chú em. Chú em cứ đi, gia đình của chú anh sẽ lo :sweat:
 
 Thế là hai chú oánh nhau túi bụi vì không chú nào chịu hy sinh. Một bước đi vạn dặm đau.
 
-### Đằng nào cũng ngỏm thì ...
+### Đằng nào cũng ngỏm thì ... nghĩ
 
 Chú C vốn là kỹ sư tài năng của đại học CMU, trên thông thiên văn, dưới tường địa lý phát biểu:
 
@@ -56,7 +55,7 @@ Mình đoán anh em phát triển tính năng đó bị chửi mà vẫn nhiều
 
 Giữa những bộn bề lo toan, cùng lắm anh em chăm viết test hơn một chút chứ bắt anh em phải suy nghĩ về tính nóng lạnh thất thường của end user là quá sức chịu đựng.
 
-May mà có [17 ông thần](https://agilemanifesto.org/) nghĩ ra một quy trình phát triển phần mềm mới, trong đó có bài toán **Continuous Delivery** nan giải với những triết lý bình dị mà mình sẽ từ từ viết tiếp trong series. Ở đây chúng ta sẽ nói về công cụ feature flags để thực hiện Canary Release.
+May mà có [17 ông thần](https://agilemanifesto.org/) nghĩ ra một quy trình phát triển phần mềm mới, trong đó có bài toán **Continuous Delivery** (CD) nan giải với những triết lý bình dị mà mình sẽ từ từ viết tiếp trong series. Ở đây chúng ta sẽ nói về công cụ feature flags để thực hiện Canary Release.
 
 ## Canary Release (CR) là vầy
 
@@ -64,20 +63,20 @@ May mà có [17 ông thần](https://agilemanifesto.org/) nghĩ ra một quy tr�
 
 _a photo by Kaikara Dharma on unsplash_
 
-Release thì anh em dev quen rồi, canary thì là con chim hoàng yến mình nói phía trên. Đại loại CR là hành động launch một phiên bản mới mà anh em đã test tất tần tật rồi anh em muốn đưa nó lên trên production cho user chơi bời nhưng không muốn tất cả user đều chứng kiến sự thay đổi đó.
+Release thì anh em dev quen rồi, canary thì là con chim hoàng yến mình nói phía trên. Đại loại CR là hành động launch một phiên bản mới mà anh em đã test tất tần tật. Một mặt anh em muốn đưa nó lên trên production cho user chơi bời, mặt khác không muốn tất cả user đều chứng kiến sự thay đổi đó.
 
-Anh em muốn thăm dò trước tính năng với một vài kiểu users theo độ tuổi, văn hóa hay vùng địa lý. Khi tính năng được phản hồi tích cực, anh em tà tà triển khai thêm (incremental rollout). Lỡ tính năng bị chê bai thì anh em rút lại (rollback) và khảo sát ý kiến phản hồi.
+Anh em muốn thăm dò trước tính năng với một vài kiểu user theo độ tuổi, văn hóa hay vùng địa lý. Khi tính năng được phản hồi tích cực, anh em tà tà triển khai thêm (incremental rollout). Lỡ tính năng bị chê bai thì anh em rút lại (rollback) và khảo sát ý kiến phản hồi.
 
 Ví dụ:
 
 - Google hay triển khai phiên bản mới của Chrome gọi là "Chrome Canary"
 - Facebook cũng thử tính năng "Dating" cho các anh em chưa in-a-relationship trước, hay có đợt Việt Nam được thử nghiệm giao diện mới trước
 
-Điểm yếu là anh em phải tốn xiền nuôi chim (devops), lựa hang (user), xử lý MQ hay DB migration chua lè, làm các việc anh em căm phẫn như phân tích thống kê báo cáo. Mình chỉ khuyên khi product lớn mạnh, anh em chuẩn hóa từ đầu đến bước cuối cùng là release thì hãy apply.
+Điểm yếu là anh em phải tốn xiền quản lý chim (devops), lựa hang (lọc user), xử lý MQ hay DB migration chua lè, làm các việc anh em căm phẫn như phân tích thống kê báo cáo. Mình chỉ khuyên khi product lớn mạnh, anh em chuẩn hóa từ đầu đến bước cuối cùng là release thì hãy apply.
 
 Điểm mạnh là anh em có mức độ tự tin cao hơn khi release, tập user có phản hồi tích cực sẽ tăng lên là thứ mà các anh em bỏ tiền cũng không dễ kiếm.
 
-> 1:star: trên AppStore liệu có dễ quên
+> ào ạt 1:star: trên AppStore có vẻ đáng sợ
 
 Tiếp theo là một trong nhiều cách thực hiện. Các anh em có thể thiết kế các hệ thống cloud orchestration như Kubernetes (K8s), có thể dùng router/load balancer hoặc chơi chiêu feature flags.
 
@@ -88,9 +87,9 @@ Như đã nói, chúng ta có nhiều cách thực hiện chuyện CR nhưng vì
 - super legacy code smell apps mà không chịu refactor
 - outsourcing :D
 
-khiến anh em phải dấn thân vào feature flags. Nếu có điều kiện và thời cơ chín muồi, chúng ta nên phân tách thành microservices sẽ xử lý bài toán mượt mà hơn.
+khiến anh em phải dấn thân vào feature flags. Nếu có điều kiện và thời cơ chín muồi, chúng ta nên phân tách app thành microservices sẽ xử lý bài toán mượt mà hơn.
 
-Flags thì anh hiểu là true/false, toggles thì on/off. Nghĩa là các tiền bối khuyên chúng ta thực hiện quản lý feature bằng giá trị BOOLEAN cho dễ nhớ.
+Flags là true/false, toggles thì on/off. Nghĩa là các tiền bối khuyên chúng ta thực hiện quản lý feature bằng giá trị BOOLEAN cho dễ nhớ.
 
 Để dễ hình dung mời anh em xem hình sau
 
@@ -104,17 +103,17 @@ Ngoài việc hỗ trợ CR, feature flags còn hỗ trợ một số yêu cầu
 
 **code chưa xong module chính nhưng vẫn muốn commit**
 
-Anh em hẳn từng trải qua cảm giác bị conflict code vì ráng chờ 5 tuần để release. Agile nó bắt các anh em phải commit để deploy liên tục đó.
+Anh em hẳn từng trải qua cảm giác bị conflict code vì ráng chờ 5 tuần để release. Cơ mà agile nó bắt các anh em phải commit để deploy liên tục đó.
 
 **hệ thống quá tải, yêu cầu tắt ngay vài tính năng không quan trọng nhưng tốn tài nguyên**
 
-Cái này thực tế hơn. Anh em làm việc cho đại gia giàu có hay bật autoscaling, chứ thử chơi với con nhà nghèo anh em sẽ phải biết đóng hết những thứ không quan trọng đi.
+Cái này thực tế hơn. Anh em làm việc cho đại gia giàu có hay bật autoscaling, chứ thử chơi với con nhà nghèo thì anh em sẽ phải biết đóng hết những thứ không quan trọng đi.
 
-Giải pháp có sẵn là [LaunchDarkly](https://launchdarkly.com/), còn nếu thích tìm tòi thì [đây](https://featureflags.io/feature-flags/), thư viện sẵn cho Android, Go, Java, Javascript, iOS, .Net, Node, PHP, Python, Rails.
+Giải pháp có sẵn là [LaunchDarkly](https://launchdarkly.com/), còn nếu anh em thích tìm tòi thì [đây](https://featureflags.io/feature-flags/), thư viện sẵn cho Android, Go, Java, Javascript, iOS, .Net, Node, PHP, Python, Ruby on Rails.
 
 ## Lời cuối
 
-Hy vọng các anh em hiểu sơ được feature flags và có bức tranh cơ bản về continuous delivery. Đây là kỹ thuật đơn giản, nhiều lúc chúng ta cần biết để chỉ mặt gọi tên.
+Hy vọng các anh em hiểu sơ được feature flags và có bức tranh cơ bản về continuous delivery. Đây là kỹ thuật đơn giản nhưng quan trọng trong hiện thực hóa CD, nhiều lúc chúng ta cần biết cách gọi tên.
 
 ## Tham khảo thêm
 
