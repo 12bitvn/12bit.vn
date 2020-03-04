@@ -1,4 +1,4 @@
-![](https://github.com/12bitvn/12bit.vn/workflows/deploy/badge.svg)
+![Deploy](https://github.com/12bitvn/12bit.vn/workflows/Deploy%20Production/badge.svg)
 
 # 12bit.vn
 
