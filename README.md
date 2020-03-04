@@ -49,3 +49,9 @@ Tất cả hình ảnh cho bài viết các bạn có thể đặt trong `conten
 ```
 ![image title](/articles/slug-bai-viet/images/wonderful-pic.jpg)
 ```
+
+**12bit ❤️ Coffee**
+
+Tụi mình yêu cà phê và tin rằng các bạn cũng vậy. 
+
+<a href="https://www.buymeacoffee.com/12bitvn" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/lato-orange.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
