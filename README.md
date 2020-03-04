@@ -40,7 +40,7 @@ https://github.com/vominh
 
 **Shortcodes**
 
-Trong lúc viết bài, các bạn có thể sử dụng shortcode của Hugo để bài viết trực quan hơn mà không phải viết HTML. Các bạn truy cập vào [trang shortcode của Hugo](https://gohugo.io/content-management/shortcodes/) để xem những shortcode được hỗ trợ. Ngoài những shortcode mặc định, tụi mình có tạo thêm khá nhiều shotcode. Các bạn có thể xem [tại đây](https://12bit.vn/pages/shortcodes.html)
+Trong lúc viết bài, các bạn có thể sử dụng shortcode của Hugo để bài viết trực quan hơn mà không phải viết HTML. Các bạn truy cập vào [trang shortcode của Hugo](https://gohugo.io/content-management/shortcodes/) để xem những shortcode được hỗ trợ. Ngoài những shortcode mặc định, tụi mình có tạo thêm khá nhiều shotcode. Các bạn có thể xem [tại đây](https://12bit.vn/pages/shortcodes)
 
 **Hình ảnh**
 
