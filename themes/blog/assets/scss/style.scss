@@ -671,3 +671,10 @@ figcaption{
     }
   }
 }
+
+.expand-width {
+  @media screen and (min-width: 992px) {
+    margin-left: -12vw;
+    margin-right: -12vw;
+  }
+}
