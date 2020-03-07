@@ -1,5 +1,5 @@
 ---
-title: "Cập nhật tất cả về slot trong Vue.js"
+title: "Cập nhật mới nhất về slot trong Vue.js"
 description: A short description for the post.
 date: 2020-03-06T09:41:00+07:00
 tags: 
@@ -26,7 +26,7 @@ Tuy nhiên bạn vẫn có thể sử dụng `slot` và `slot-scope` trong các 
 
 Giả sử chúng ta có 1 component là `Cart.vue` với nội dung như sau:
 
-<div class="filename">Cart.vue</div>
+<div class="filename">Card.vue</div>
 
 ```html
 <div class="card">
@@ -46,7 +46,7 @@ Giả sử chúng ta có 1 component là `Cart.vue` với nội dung như sau:
 
 Để truyền nội dung vào phần title và description chúng ta sẽ viết như sau:
 
-Cách mới:
+**Cách mới:**
 
 <div class="filename">App.vue</div>
 
@@ -79,7 +79,7 @@ Các bạn chú ý rằng `v-slot` chỉ có thể sử dụng trong `<template>
   ></iframe>
 </div>
 
-Cách cũ:
+**Cách cũ:**
 
 <div class="filename">App.vue</div>
 
@@ -97,3 +97,54 @@ Cách cũ:
 ```
 
 ## Cập nhật 2: Scoped slots
+
+Vẫn không có sự thay đổi nhiều về phần này. Cơ chế binding data vẫn như cũ. Chỉ khác một điểm đó là sử dụng `v-slot` thay vì `slot-scope`.
+
+<div class="filename">User.vue</div>
+
+```html
+<div class="user">
+  <slot v-bind:user="user"></slot>
+</div>
+```
+
+Với phần `user` có data như sau:
+
+```javascript
+user: {
+  firstName: "Thien",
+  lastName: "Nguyen",
+  email: "hello@12bit.vn"
+}
+```
+
+Mình sẽ có 2 tình huống sử dụng như sau:
+
+```html
+<div class="app">
+  <User v-slot="props">
+    {{ props.user.firstName }}
+    {{ props.user.lastName }}
+  </User>
+  <hr>
+  <User v-slot="{ user }">
+    {{ user.firstName }}
+    {{ user.lastName }}
+    <strong>{{ user.email }}</strong>
+  </User>
+</div>
+```
+
+Như bạn thấy, trong component `User` mình chỉ đơn giản binding `user` vào `slot` để parent của nó có thể sử dụng được data từ `user`. 
+
+`v-slot="props"` với `props` chỉ đơn giản là tên biến chúng ta dùng để chứa tất cả slot props. Bạn có thể dùng tên gì cũng được.
+
+<div class="expand-width">
+<iframe
+  src="https://codesandbox.io/embed/12bitvn-demo-named-slot-1ubiz?fontsize=14&hidenavigation=1&theme=dark"
+  style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+  title="12bit.vn - [Demo] Scoped Slots"
+  allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
+  sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+></iframe>
+</div>
