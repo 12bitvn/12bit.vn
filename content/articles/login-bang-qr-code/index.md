@@ -12,6 +12,8 @@ title: Login bằng QR code
 
 Trong trường hợp mà việc login trên điện thoại phức tạp, ví dụ như phải thông qua website của bên thứ ba hoặc trải qua nhiều bước nhưng lại có thể được xác thực bởi một phiên login trước đó ví dụ như phiên login trên website thì chúng ta có thể sử dụng giải pháp login bằng QR code giống như Viber và Zalo sử dụng. Cách mà chúng ta sẽ trình bày này chỉ là một cách đơn giản, có thể sẽ không giống với cách mà Viber và Zalo hiện thực.
 
+{{< youtube 3g9_HnakKyQ >}}
+
 ## Sequence diagram
 
 Dưới đây là mô tả bằng sequence diagram:
