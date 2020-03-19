@@ -18,7 +18,7 @@ Bài viết này mình xin giới thiệu cách deploy một lambda function vi�
 
 Thật ra chúng ta đang sử dịch vụ AWS Lambda của Amazon, tuy nhiên functions được quản lí thông qua Netlify và bạn không cần phải có tài khoản AWS. [Gói miễn phí](https://www.netlify.com/pricing/) của Netlify cung cấp 125.000 function requests/tháng và 100 giờ run time/tháng. Trong khi đó, [gói free của AWS](https://aws.amazon.com/vi/lambda/pricing/) cung cấp cho bạn 1 triệu request/tháng và 400 nghìn Gb-Giây (gb*giây).
 
-{{< youtube jreIXWse66I >}}
+{{< youtube SXveNa5ZQxs >}}
 
 ## Chuẩn bị
 
