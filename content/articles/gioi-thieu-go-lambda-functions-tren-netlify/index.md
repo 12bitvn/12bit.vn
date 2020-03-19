@@ -18,6 +18,8 @@ Bài viết này mình xin giới thiệu cách deploy một lambda function vi�
 
 Thật ra chúng ta đang sử dịch vụ AWS Lambda của Amazon, tuy nhiên functions được quản lí thông qua Netlify và bạn không cần phải có tài khoản AWS. [Gói miễn phí](https://www.netlify.com/pricing/) của Netlify cung cấp 125.000 function requests/tháng và 100 giờ run time/tháng. Trong khi đó, [gói free của AWS](https://aws.amazon.com/vi/lambda/pricing/) cung cấp cho bạn 1 triệu request/tháng và 400 nghìn Gb-Giây (gb*giây).
 
+{{< youtube jreIXWse66I >}}
+
 ## Chuẩn bị
 
 Cài đặt [Netlify Command Line Interface](https://www.netlify.com/docs/cli/), giúp chúng ta deploy project lên Netlify.
@@ -41,7 +43,7 @@ Khởi tạo project với cấu trúc sau:
 Đầu tiên chúng ta cần cài đặt package chính thức của AWS hỗ trợ AWS Lambda Functions.
 
 ```sh
-go get https://github.com/aws/aws-lambda-go
+go get github.com/aws/aws-lambda-go
 ```
 
 Code của chúng ta sẽ nằm trong `main.go`
@@ -116,7 +118,7 @@ Chúng ta sẽ dùng Make và định nghĩa các câu lệnh trong `Makefile` �
 build:
    mkdir -p functions
    go get ./...
-   GOOS=linux GOARCH=386 go build -o functions/hello main.go
+   GOOS=linux go build -o functions/hello main.go
 ```
 
 Lệnh build gồm 3 bước:
