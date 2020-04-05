@@ -12,6 +12,8 @@ title: Vài điều thú vị với Fish shell
 
 Gần đây mình mới chuyển qua sử dụng [Fish shell](http://fishshell.com/) thấy tâm trạng cũng vui nên nay chia sẻ một số điều mình làm với Fish Shell xem như cho có bài để viết.
 
+{{< youtube 0nDD5wh2Unc >}}
+
 ## Cài đặt
 
 Nhưng trước hết cần phải cài đặt nó trước:
