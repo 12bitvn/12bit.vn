@@ -41,7 +41,7 @@
   {{ $mainStyle := resources.Get "scss/style.scss" }}
   {{ $styleFiles := slice $mainStyle}}
 
-  {{ if ($.Page.Scratch.Get "include_search") "true" }}
+  {{ if ($.Page.Scratch.Get "include_search") }}
     {{ $searchStyle := resources.Get "scss/instance-search.scss" }}
     {{ $styleFiles := $styleFiles | append $searchStyle}}
   {{end}}
@@ -132,6 +132,6 @@
       </div>
     </header><!-- #masthead -->
     <div id="site-message-container"></div>
-{{ if ($.Page.Scratch.Get "include_search") "true" }}
+{{ if ($.Page.Scratch.Get "include_search") }}
     {{ partial "search-box" . }}
 {{end}}

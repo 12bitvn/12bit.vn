@@ -9,7 +9,7 @@
 </footer><!-- #colophon -->
 </div>
 <!-- #wrap -->
-{{ if ($.Page.Scratch.Get "include_search") "true" }}
+{{ if ($.Page.Scratch.Get "include_search") }}
 <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4" defer></script>
 {{ $search := resources.Get "js/search.js"}}
 {{ $searchJs := $search | resources.Minify | resources.Fingerprint}}
@@ -36,7 +36,7 @@
 {{ end }}
 
 
-{{ if ($.Page.Scratch.Get "include_embedly") "true" }}
+{{ if ($.Page.Scratch.Get "include_embedly") }}
 <style class="embedly-css">
 .card.sm-img .art-bd,
 .pair-bd .art-bd{
@@ -53,13 +53,13 @@
 <script src="//cdn.embedly.com/widgets/platform.js" defer></script>
 {{ end }}
 
-{{ if ($.Page.Scratch.Get "include_caniuse") "true" }}
+{{ if ($.Page.Scratch.Get "include_caniuse") }}
 <script defer src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/caniuse-embed.min.js"></script>
 {{ end }}
-{{ if ($.Page.Scratch.Get "include_mermaid") "true" }}
+{{ if ($.Page.Scratch.Get "include_mermaid") }}
 <script defer src="https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js"></script>
 {{ end }}
-{{ if ($.Page.Scratch.Get "include_image_zoom") "true" }}
+{{ if ($.Page.Scratch.Get "include_image_zoom") }}
 <script src="https://unpkg.com/medium-zoom@1.0.2/dist/medium-zoom.min.js" defer onload="mediumZoom('[data-zoomable]');"></script>
 {{ end }}
 
