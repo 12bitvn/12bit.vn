@@ -6,8 +6,8 @@
     "preview": "firebase deploy --token $FIREBASE_TOKEN --only hosting:dev"
   },
   "dependencies": {
-    "@algolia/cli": "^4.0.7",
-    "firebase-tools": "^7.12.1",
+    "@algolia/cli": "^4.0.8",
+    "firebase-tools": "^8.6.0",
     "sw-precache": "^5.2.1",
     "workbox": "^0.0.0"
   }

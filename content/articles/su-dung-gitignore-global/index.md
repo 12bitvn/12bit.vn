@@ -15,38 +15,41 @@ Lấy một ví dụ, nếu bạn dùng JetBrain IDE sẽ sinh ra `.idea` nhưng
 
 Cách làm cũng khá đơn giản với 3 bước sau:
 
-**Bước 1**: chúng ta sẽ tạo một file để chứa nội dung cần ignore bởi Git.
+**Bước 1**: Tạo một file để chứa nội dung cần ignore:
 
-```bash
-$ touch ~/.gitignore_global
+```shell script
+$ touch ~/.gitignore
 ```
 
-**Bước 2**: cấu hình để Git sử dụng file chúng ta vừa tạo để dùng cho tất cả các repo.
+**Bước 2**: Config git để sử dụng file này:
 
-```bash
-$ git config --global core.excludesfile ~/.gitignore_global
+```shell script
+$ git config --global core.excludesfile ~/.gitignore
 ```
 
-Lưu ý rằng command phía trên không tạo ra file `.gitignore_global`. Mà nó sẽ thêm một dòng là 
+Lưu ý rằng command phía trên không tạo ra file `.gitignore`. Mà nó sẽ thêm một dòng config vào dưới section `core` trong file `.gitconfig`.
 
+```shell script
+excludesfile = ~/.gitignore
 ```
-excludesfile = ~/.gitignore_global
+
+**Bước 3**: Thêm những gì muốn ignore vào file `.gitignore`
+
+```shell script
+$ vim ~/.gitignore
 ```
 
-bến dưới section `core` trong file `.gitconfig`.
-
-**Bước 3**: bây giờ bạn chỉ cần thêm những gì muốn ignore vào file `.gitignore_global`
-
-```bash
-$ vim ~/.gitignore_global
-
-~
+```shell script
 .DS_Store
 .idea/
-~
-~
 ```
 
 Như vậy Git đã có thể ignore tất cả các file `.DS_Store` và folder `.idea/` cho các repo của mình mà không cần phải cấu hình riêng cho từng file `.gitignore`.
+
+### Một số gitignore phổ biến
+
+Không có gì là quá mới lạ trong ngành này, kể cả ignore cũng thế. Bạn có thể tìm thấy rất nhiều file ignore thường dùng tại repo của Github: [github/ignore](https://github.com/github/gitignore).
+
+Hoặc thậm chí là một công cụ generate file ignore cho các stack mà bạn sử dụng: [ignore.io](https://gitignore.io ).
 
 Tuy nhiên cũng có một vài ý kiến cho rằng không nên dùng cách này, vì những người khác coloborate vào thì họ sẽ không có chung một file gitignore global như chúng ta. Thay vào đó bỏ tất cả vào `.gitignore` thì tốt hơn. Không biết quan điểm của các bạn như thế nào? Hãy cùng bình luận nhé!
