@@ -115,6 +115,15 @@ Giải pháp có sẵn là [LaunchDarkly](https://launchdarkly.com/), còn nếu
 
 Hy vọng các anh em hiểu sơ được feature flags và có bức tranh cơ bản về continuous delivery. Đây là kỹ thuật đơn giản nhưng quan trọng trong hiện thực hóa CD, nhiều lúc chúng ta cần biết cách gọi tên.
 
+## Ebook
+
+_updated by duocnguyen_
+
+Trong lúc vò đầu bứt tóc vì phải tự hiện thực feature flag thì mình đã đóng gói một số trang tham khảo về thành ebook cho tiện theo dõi. Các bạn có thể tải về bằng hai link dưới đây:
+
+1. [feature-flagging-guide.epub](./books/feature-flagging-guide.epub)
+1. [feature-flagging-guide.mobi](./books/feature-flagging-guide.mobi)
+
 ## Tham khảo thêm
 
 - [Canary Release - Martin Fowler](https://martinfowler.com/bliki/CanaryRelease.html)
