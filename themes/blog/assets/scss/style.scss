@@ -292,7 +292,8 @@ sub, sup {
   }
   code, pre {
     font-family: $font-body;
-    border-radius: 3px;
+    border-radius: 4px;
+    font-size: 16px;
     margin-top: 0;
     margin-bottom: 1.5rem;
   }
@@ -300,10 +301,9 @@ sub, sup {
     background: rgba(0,0,0,.05);
     padding: 3px 4px;
     margin: 0 2px;
-    font-size: 14px;
   }
-  pre > code {
-    font-size: 14px;
+  .hljs {
+    padding: 1em;
   }
   a {
     color: $color-primary;
