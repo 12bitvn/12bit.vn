@@ -34,7 +34,7 @@
     padding-left: 0;
   }
   a {
-    @include font-size(1);
+    @include font-size(0.9);
     color: $color-light;
     &:hover {
       color: $color-dark;
