@@ -47,8 +47,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   }
 }
-```
-
 {{% alert info %}}
 Scope của bài này thì mình chỉ nói về entry và output. Những phần cấu hình khác sẽ đề cập tiếp tục ở các bài tiếp theo.
 {{% /alert %}}
@@ -86,8 +84,6 @@ Lúc này, sau khi gõ lệnh `npx webpack` thì file output không phải là `
 ├── dist
 │   ├── main.281f1e1941357df0a46b.js # filename được định nghĩa trong webpack.config.js
 │   └── main.js
-```
-
 {{% alert info %}}
 Tips: việc dùng [hash] như trên được gọi là cache busting. Vì browser sẽ cache nội dung của static files như css, js dựa theo file path. Nếu mỗi lần build mà tên file không thay đổi, ví dụ luôn là style.css. Thì browser vẫn sẽ lấy nội dung có trong cache dựa theo tên cũ. Vì vậy, việc dùng hash hoặc versioning sẽ giúp browser update lại nội dung của static files.
 {{% /alert %}}

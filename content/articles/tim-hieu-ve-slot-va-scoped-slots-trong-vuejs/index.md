@@ -59,8 +59,6 @@ Nội dung sau khi render ra như sau:
     <p>Hello from parent</p>
   </div>
 </div>
-```
-
 {{<codepen tatthien rdGJeG>}}
 
 ### Fallback content
@@ -93,8 +91,6 @@ Kết quả khi render ra sẽ hiển thị nội dung fallback:
     <p>This is the fallback content</p>
   </div>
 </div>
-```
-
 {{<codepen tatthien XEeZjV>}}
 
 ### Slot được đặt tên
@@ -149,8 +145,6 @@ Kết quả render:
     <p>Created by Evan You</p>
   </footer>
 </div>
-```
-
 {{<codepen tatthien WzZMjG>}}
 
 ### Scoped slots

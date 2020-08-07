@@ -2,7 +2,7 @@
 title: "Tạo hiệu ứng cho URL bằng JavaScript"
 description: A short description for the post.
 date: 2019-02-15T10:19:23+07:00
-tags: 
+tags:
   - JavaScript
   - Animation
 images:
@@ -45,7 +45,7 @@ Hoặc các ký tự unicode:
 
 ## Code
 
-Ý tưởng thì khá độc đáo nhưng cách làm thì khá đơn giản nên cũng không biết phải đặt heading sao cho phù hợp. Bạn có một array các emoji, bạn loop trong array này và set hash cho `location.hash`. 
+Ý tưởng thì khá độc đáo nhưng cách làm thì khá đơn giản nên cũng không biết phải đặt heading sao cho phù hợp. Bạn có một array các emoji, bạn loop trong array này và set hash cho `location.hash`.
 
 ### Mặt trăng
 
@@ -56,11 +56,10 @@ function loop() {
     location.hash = moons[currentIndex % moons.length];
     currentIndex++;
     if (currentIndex >= moons.length) {
-      currentIndex = 0; 
+      currentIndex = 0;
     }
     setTimeout(loop, 100);
 }
-```
 {{% alert success %}}
 <label><input id="apply-moon" type="checkbox"> Check vào đây để thấy mặt trăng</label>
 {{% /alert %}}
@@ -73,7 +72,7 @@ function loopMoon() {
     location.hash = moons[currentMoonIndex % moons.length];
     currentMoonIndex++;
     if (currentMoonIndex >= moons.length) {
-      currentMoonIndex = 0; 
+      currentMoonIndex = 0;
     }
     if (applyMoon.checked) {
       setTimeout(loopMoon, 100);
@@ -95,11 +94,10 @@ function loop() {
     location.hash = clocks[currentIndex % clocks.length];
     currentIndex++;
     if (currentIndex >= clocks.length) {
-      currentIndex = 0; 
+      currentIndex = 0;
     }
     setTimeout(loop, 100);
 }
-```
 {{% alert success %}}
 <label><input id="apply-clock" type="checkbox"> Check vào đây để thấy clock</label>
 {{% /alert %}}
@@ -112,7 +110,7 @@ function loopClock() {
     location.hash = clocks[currentClockIndex % clocks.length];
     currentClockIndex++;
     if (currentClockIndex >= clocks.length) {
-      currentIndex = 0; 
+      currentIndex = 0;
     }
     if (applyClock.checked) {
       setTimeout(loopClock, 100);
@@ -132,5 +130,5 @@ Ngoài ra còn nhiều hiệu ứng khác thú vị hơn. Đặt biệt là ứn
 ![](/articles/tao-hieu-ung-cho-url-bang-javascript/img/video-progress.gif)
 
 Bạn có thể xem thêm các ý tưởng rất thú vị này tại chính blog của Matthew: [Animating URLs with Javascript and Emojis](http://matthewrayfield.com/articles/animating-urls-with-javascript-and-emojis)
- 
+
  Dù các hiệu ứng này thú vị và mới lạ, nhưng tính thực tế có lẽ không cao, vì nếu URL dài hoặc kích thước màn hình nhỏ thì thanh địa chỉ không thể được nhìn thấy, trên nhiều browser và trên mobile thì thanh address này còn bị ẩn đi.

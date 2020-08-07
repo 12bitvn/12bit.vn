@@ -49,7 +49,6 @@ Bạn có thể tạo certificate cho nhiều host, IP cùng lúc như sau:
 
 ```markdown
 mkcert example.com "*.example.org" myapp.dev localhost 127.0.0.1 ::1
-```
 {{%/alert%}}
 
 Trong bài viết này, mình sẽ áp dụng cho `localhost`. Vì vậy, lệnh tạo certificate sẽ như sau:

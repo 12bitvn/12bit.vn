@@ -19,23 +19,18 @@ Trong bài viết này mình sẽ giới thiệu cho các bạn những shortcod
 
 Blog về frontend thì không khỏi phải embed demo nào đó, Codepen là một công cụ rất hữu ích. Cú pháp shortcode có thể như sau:
 
-```
 {{</* codepen username pen_id height_in_px */>}}
 ```
 
 Nếu không set giá trị `height` thì `height` mặc định sẽ là 500px. Ví dụ:
 
-```
 {{</* codepen tatthien LgMKpm 400 */>}}
-```
-
 {{<codepen tatthien LgMKpm 400>}}
 
 ### Mã nguồn
 
 shortcodes/codepen.html:
 
-```
 {{ $height := 500 }}
 {{ if isset .Params 2 }}
   {{ $height = .Get 2 }}
@@ -62,14 +57,12 @@ Chúng ta sẽ có cấu trúc như sau:
 
 ```markdown
 {{%/* runkit unique-id */%}}
-your code block with ``` code and ```
-{{%/* /runkit */%}}
+your code block with ``` code and {{%/* /runkit */%}}
 ```
 
 `unique-id` ở đây chỉ là một id bất kỳ nào đó nhằm phân biệt giữa các đoạn code với nhau. Theo document của Runkit thì nó cần id này để sau khi script load xong sẽ dùng id này để lấy code và tạo embed.
 
-{{% runkit abc %}}
-```
+{{< runkit abc  >}}
 const object1 = {};
 Reflect.set(object1, 'property1', 42);
 
@@ -81,8 +74,7 @@ Reflect.set(array1, 2, 'goose');
 
 console.log(array1[2]);
 // expected output: "goose"
-```
-{{% /runkit %}}
+{{< /runkit >}}
 
 ### Mã nguồn
 
@@ -108,7 +100,6 @@ Chúng ta cần làm hai việc:
 
 shortcodes/caniuse.html:
 
-```
 {{ .Page.Scratch.Set "include_caniuse" true }}
 {{ $periods := .Get "periods" | default "future_1,current,past_1,past_2" }}
 {{ $features := default (.Get "features") (.Get 0) }}
@@ -121,7 +112,6 @@ Chúng ta lưu giá trị `include_caniuse` vào Scratch, và check giá trị n
 
 footer.html
 
-```
 {{ if ($.Page.Scratch.Get "include_caniuse") "true" }}
 <script async src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/caniuse-embed.min.js"></script>
 {{ end }}
@@ -131,8 +121,6 @@ footer.html
 
 ```markdown
 {{</* caniuse features="proxy" */>}}
-```
-
 {{< caniuse features="proxy" >}}
 
 ## image-zoom
@@ -141,15 +129,12 @@ Không phải hiếm gặp các trường hợp phải đăng ảnh chụp một
 
 ```markdown
 {{</* zoom-img src="/img/articles/default-thumb-1200-630.png" */>}}
-```
-
 {{< zoom-img src="/img/articles/default-thumb-1200-630.png" >}}
 
 ### Mã nguồn
 
 shortcodes/zoom-img.html
 
-```
 {{ .Page.Scratch.Set "include_image_zoom" true }}
 {{- $title := .Get "url" | default "" -}}
 {{- $src := .Get "src" | default "" -}}
@@ -168,7 +153,6 @@ Tương tự như shortcode caniuse, chúng ta cũng set giá trị cho `include
 
 footer.html
 
-```
 {{ if ($.Page.Scratch.Get "include_image_zoom") "true" }}
 <script src="https://unpkg.com/medium-zoom@1.0.2/dist/medium-zoom.min.js" async defer onload="mediumZoom('[data-zoomable]');"></script>
 {{ end }}
@@ -194,8 +178,6 @@ graph TB
     c1-->c2
     end
 {{</* /mermaid */>}}
-```
-
 {{< mermaid >}}
 graph TB
     c1-->a2
@@ -214,7 +196,6 @@ graph TB
 
 shortcodes/mermaid.html
 
-```
 {{ .Page.Scratch.Set "include_mermaid" true }}
 <div class="mermaid">
   {{ .Inner }}
@@ -223,7 +204,6 @@ shortcodes/mermaid.html
 
 tương tự như các shortcode cần load thêm script, chúng ta cũng set giá trị cho `include_mermaid` và check trong footer.html
 
-```
 {{ if ($.Page.Scratch.Get "include_mermaid") "true" }}
 <script async src="https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js"></script>
 {{ end }}
@@ -247,7 +227,6 @@ Kết quả:
 
 shortcodes/oembed.html
 
-```
 {{ .Page.Scratch.Set "include_embedly" true }}
 {{- $url := .Get "url" -}}
 {{- $title := .Get "url" | default "" -}}
@@ -260,7 +239,6 @@ shortcodes/oembed.html
 
 footer.html
 
-```
 {{ if ($.Page.Scratch.Get "include_embedly") "true" }}
 <style class="embedly-css">
 .pair-bd .art-bd{

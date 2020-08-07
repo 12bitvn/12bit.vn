@@ -47,8 +47,7 @@ Reflect có các phương thức tương ứng với các trap mà bạn đã bi
 
 Bạn có thể sử dụng reflect như sau:
 
-{{% runkit example-1 %}}
-```
+{{< runkit example-1  >}}
 const object1 = {};
 Reflect.set(object1, 'property1', 42);
 
@@ -60,8 +59,7 @@ Reflect.set(array1, 2, 'goose');
 
 console.log(array1[2]);
 // expected output: "goose"
-```
-{{% /runkit %}}
+{{< /runkit >}}
 
 Có thể làm tương tự với các phương thức khác.
 
@@ -69,8 +67,7 @@ Có thể làm tương tự với các phương thức khác.
 
 Ta có ví dụ nhự sau:
 
-{{% runkit example-2 %}}
-```
+{{< runkit example-2  >}}
 var obj = new Proxy({}, {
   get: function (target, key, receiver) {
     console.log('getting ${key}!');
@@ -82,8 +79,7 @@ var obj = new Proxy({}, {
   }
 });
 obj.count+2
-```
-{{% /runkit %}}
+{{< /runkit >}}
 
 Như đã nói, Reflect có các phương thức tương ứng với các trap, vì vậy bạn chỉ cần return trực tiếp là được.
 

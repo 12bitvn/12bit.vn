@@ -160,8 +160,6 @@ Bạn thấy đó! code vẫn vậy, điều này sẽ khiến cho những trìn
 
 ```
 $ yarn add -D rollup-plugin-babel@latest @babel/core @babel/preset-env
-```
-
 {{% alert info %}}
 Chúng ta cần phải cài thêm @babel/core và @babel/preset-env thì plugin mới hoạt động được.
 {{% /alert %}}

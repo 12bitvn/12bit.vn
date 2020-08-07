@@ -86,8 +86,6 @@ Sau khi bật lên bạn sẽ thấy 3 setting chính đó là:
 
 ```sh
 C:\Users\{your_username}\AppData\Roaming\Composer\vendor\bin\phpcs.bat
-```
-
 {{<figure src="https://cdn-images-1.medium.com/max/800/1*-Z446mmp9mu9WVsa5aFcvA.png" title="Đường dẫn tới phpcs.bat">}}
 
 Nếu bạn dùng hệ điều hành khác thì hãy để lại đường dẫn phpcs ở phần bình luận nhé.
@@ -108,8 +106,6 @@ Sau khi tải về, hãy giải nén và copy các folder **WordPress-*** vào t
 
 ```sh
 C:\Users\{your_username}\AppData\Roaming\Composer\vendor\squizlabs\php_codesniffer\src\Standards
-```
-
 {{<figure src="https://cdn-images-1.medium.com/max/800/1*1NVXsFcivun6-1oF5BsLdA.png" title="Thư mục chứa các coding standard của PHP Code Sniffer">}}
 
 Như bạn thấy, phpcs đã có sẵn một vài coding standard như PSR1, PSR2. Bây giờ chúng ta cung cấp thêm WordPress Coding Standards.
@@ -149,8 +145,6 @@ Như bạn thấy, phpcs đang báo lỗi naming convention và missing doc. Vì
 function test_wordpress_coding_standard() {
    echo '12bit.vn';
 }
-```
-
 {{<figure src="https://cdn-images-1.medium.com/max/800/1*LXABmBIO4rEybX_5BZrdFQ.png" title="Như vậy là đã hết báo lỗi">}}
 
 ### Tự động format code theo chuẩn WordPress

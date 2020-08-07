@@ -20,26 +20,22 @@ Trong bài viết này chúng ta sẽ tìm hiểu vài cách khác nhau để du
 
 Giống như cái tên của nó, map giúp chúng ta map lại các phần tử của một array thành một array mới. Chúng ta có ví dụ sau:
 
-{{% runkit demo-1 %}}
-```
+{{< runkit demo-1  >}}
 const evens = [2, 4, 6, 8, 10];
 let odds = [];
 for (let index = 0; index < evens.length; index++) {
     odds.push(evens[index]+1);
 }
 console.log(odds);
-```
-{{% /runkit %}}
+{{< /runkit >}}
 
 Mục đích của chúng ta là map, nhưng chúng ta dùng một vòng lặp, và chúng ta phải comment vào là `//Tui đang map một chuỗi số chẵn thành số lẻ nhé`. Code sẽ dễ hiểu và có nghĩa hơn nếu chúng ta dùng phương thức map như sau:
 
-{{% runkit demo-2 %}}
-```
+{{< runkit demo-2  >}}
 const evens = [2, 4, 6, 8, 10];
 let odds = evens.map(number => number + 1)
 console.log(odds);
-```
-{{% /runkit %}}
+{{< /runkit >}}
 
 Code đã gọn hơn rất nhiều mà lại không làm tối nghĩa, khi bạn đọc và bạn sẽ hiểu phương thức map là dùng để map các phần tử của evens thành với số 1 để tạo thành một array các số lẻ chứ không phải động não để hiểu vòng lặp for nữa.
 
@@ -53,8 +49,7 @@ var new_array = arr.map(function callback(currentValue[, index[, array]]) {
 
 Giá trị hoặc reference mà bạn trả về từ hàm callback sẽ được dùng để làm phần tử của mảng mới, vì vậy bạn cần chú ý về giá trị mà bạn return: value hay reference.
 
-{{% runkit 1545992740713%}}
-```
+{{< runkit 1545992740713 >}}
 const object = {
     prop1: 1
 };
@@ -63,15 +58,13 @@ let a = [object].map(o => o);
 
 a[0].prop1 = 2;
 console.log(object, a);
-```
-{{% /runkit %}}
+{{< /runkit >}}
 
 ## filter()
 
 Filter một array là việc rất thường làm, bạn có thể có ví dụ như sau:
 
-{{% runkit 1545992765617%}}
-```
+{{< runkit 1545992765617 >}}
 const randoms = [4,6,78,2,34,8,90,34,23,23,5,6,234,435];
 let odds = [];
 randoms.forEach(number => {
@@ -80,18 +73,15 @@ randoms.forEach(number => {
     }
 })
 console.log(odds);
-```
-{{% /runkit %}}
+{{< /runkit >}}
 
 Nhưng cũng như map, nhìn vào đoạn code này bạn phải đọc logic bên trong vòng lặp for sau đó mới ngộ ra: ồ, thì ra đang filter đây mà. nhưng hãy nhìn đoạn code dưới đây, liệu bạn có cần phải đọc gì nhiều ngoài keyword filter:
 
-{{% runkit 1545992783479%}}
-```
+{{< runkit 1545992783479 >}}
 const randoms = [4,6,78,2,34,8,90,34,23,23,5,6,234,435];
 let odds = randoms.filter(number => number % 2 != 0);
 console.log(odds);
-```
-{{% /runkit %}}
+{{< /runkit >}}
 
 Lại một lần nữa code gọn và dễ hiểu hơn rất nhiều.
 
@@ -101,8 +91,7 @@ Khác với map(), hàm callback của phương thức filter chấp nhận giá
 
 Chắc các bạn từng gặp vấn đề như sau: Kiểu tra xem có phải tất cả element của một array đều thỏa một điều kiện nào đó hay không?
 
-{{% runkit 1545992803057%}}
-```
+{{< runkit 1545992803057 >}}
 const numbers = [2, 4, 6, 8, 11];
 let isEveryEvens = true;
 numbers.forEach(e => {
@@ -111,28 +100,23 @@ numbers.forEach(e => {
     }
 });
 console.log(isEveryEvens);
-```
-{{% /runkit %}}
+{{< /runkit >}}
 
 Phương thức every() sẽ duyệt qua tất cả các phần tử của array và đảm bảo rằng mọi phần tử đều thỏa hàm callback, hàm callback sẽ trả về true hoặc fail.
 
-{{% runkit 1545992824674%}}
-```
+{{< runkit 1545992824674 >}}
 const numbers = [2, 4, 6, 8, 12];
 let isEveryEvens = numbers.every(e => e %2 == 0)
 console.log(isEveryEvens);
-```
-{{% /runkit %}}
+{{< /runkit >}}
 
 Trong trường hợp ngược lại, chúng ta dùng phương thức some() nếu muốn check xem có bất kỳ phần tử nào trong array thỏa điều kiện hay không:
 
-{{% runkit 1545992837038%}}
-```
+{{< runkit 1545992837038 >}}
 const numbers = [2, 4, 6, 8, 11];
 let isSomeOdd = numbers.some(e => e %2 !== 0)
 console.log(isSomeOdd);
-```
-{{% /runkit %}}
+{{< /runkit >}}
 
 ## Lời kết
 

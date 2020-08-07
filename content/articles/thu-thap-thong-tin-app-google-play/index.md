@@ -69,8 +69,7 @@ _Update ngày 11/06/2018: Google đã không dùng class có tên dễ hiểu n�
 
 Gộp tất cả lại chúng ta có đoạn code như sau:
 
-{{% runkit 1546499442715%}}
-```
+{{< runkit 1546499442715 >}}
 require('request')
 const request = require('request-promise-native')
 const cheerio = require('cheerio')
@@ -98,8 +97,7 @@ function getAppInfo(appId) {
 const appID = 'com.orangenose.riskyrider'
 const appInfo = await getAppInfo(appID)
 console.log(appInfo)
-```
-{{% /runkit %}}
+{{< /runkit >}}
 
 Bạn có thể chạy thử để thấy kế quả. Như vậy coi như là đã xong, không có gì quá phức tạp cả.
 

@@ -2,7 +2,7 @@
 title: "Spread operator (…) trong ES6"
 description: Spread là trây trét, API giúp bạn trây trét những kiểu dữ liệu có thể trây trét được. Giống như bạn trây trét bơ lên bánh mì hoặc trây trét kem vậy.
 date: 2018-03-05T17:31:49+07:00
-tags: 
+tags:
   - spread
   - javascript
   - es6
@@ -51,43 +51,36 @@ myFunction(-1, ...args, 2, ...[3]);
 
 Thú vị là có thể dùng với các phương thức có sẵn như Max:
 
-{{% runkit 1 %}}
-```
+{{< runkit 1  >}}
 let numbers = [1, 4, 11, 6, 2, 4, 7, 0]
 console.log(Math.max(...numbers))
-```
-{{% /runkit %}}
+{{< /runkit >}}
 
 ## Giúp thao tác với mảng tiện lợi hơn
 
 Để nối array ngày xưa cũng không phức tạp, có thể dùng phương thức `concat`.
 
-{{% runkit 2 %}}
-```$xslt
+{{< runkit 2  >}}$xslt
 let a1 = [1, 2];
 let a2 = [3, 4];
 let a3 = [...a1, ...a2]
 console.log(a3)
-```
-{{% /runkit %}}
+{{< /runkit >}}
 
 Nhưng còn muốn chèn array vào giữa hoặc tệ hơn là vào vị trí bất kỳ nào đó thì sao? Với spread thì đơn giản hơn nhiều:
 
-{{% runkit 3 %}}
-```
+{{< runkit 3  >}}
 let a1 = [1, 2];
 let a2 = [3, 4];
 let a3 = [5, 6, ...a1, 7, 8, ...a2, 9, 10]
 console.log(a3)
-```
-{{% /runkit %}}
+{{< /runkit >}}
 
 ## Merge object
 
 Merge object cũng đơn giản và ngắn gọn hơn:
 
-{{% runkit 4 %}}
-```
+{{< runkit 4  >}}
 var obj1 = { foo: 'bar', x: 42 };
 var obj2 = { foo: 'baz', y: 13 };
 
@@ -96,54 +89,45 @@ var clonedObj = { ...obj1 };
 
 var mergedObj = { ...obj1, ...obj2 };
 // Object { foo: "baz", x: 42, y: 13 }
-```
-{{% /runkit %}}
+{{< /runkit >}}
 
 ## Copy array
 
 Hãy xem cách copy sau đây:
 
-{{% runkit 5 %}}
-```
+{{< runkit 5  >}}
 var arr = ['a', 'b', 'c'];
 var arr2 = arr;
 
 console.log(arr2);
-```
-{{% /runkit %}}
+{{< /runkit >}}
 
 Nhìn nó có vẻ ổn nhỉ. nhưng thực ra nó không đúng. Vì đây chỉ là copy preference thôi chứ không phải thực sự copy giá trị:
 
-{{% runkit 6 %}}
-```
+{{< runkit 6  >}}
 var arr = ['a', 'b', 'c'];
 var arr2 = arr;
 arr2.push('should not be pushed to arr')
 console.log(arr);
-```
-{{% /runkit %}}
+{{< /runkit >}}
 
 Nhưng với spread thì hoạt động hoàn hảo:
 
-{{% runkit 7 %}}
-```
+{{< runkit 7  >}}
 var arr = ['a', 'b', 'c'];
 var arr2 = [...arr];
 arr2.push('should not be pushed to arr')
 console.log(arr);
-```
-{{% /runkit %}}
+{{< /runkit >}}
 
 ## Chuyển string thành array
 
 Chỉ cần xem string như là một kiểu dữ liệu lặp đi lặp lại các ký tự, thì chúng ta có thể sử dụng spread như sau:
 
-{{% runkit 8 %}}
-```
+{{< runkit 8  >}}
 let senviet = 'senviet'
 console.log(...senviet)
-```
-{{% /runkit %}}
+{{< /runkit >}}
 
 ## Lời kết
 

@@ -45,8 +45,6 @@ Chúng ta cùng xem `<polygon>` hoạt động như thế nào. Bên dưới là
     xmlns="http://www.w3.org/2000/svg">
   <polygon points="60,20 100,40 100,80 60,100 20,80 20,40"/>
 </svg>
-```
-
 {{< codepen tatthien xWxjyK >}}
 
 Cách vẽ hình này cũng rất đơn giản, bạn cần phải khai báo tọa độ của 6 điểm gồm có `x,y` trong thuộc tính `points`.
