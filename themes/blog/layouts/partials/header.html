@@ -28,15 +28,9 @@
   {{ end }}
   {{ template "_internal/twitter_cards.html" . -}}
   {{ template "_internal/schema.html" . -}}
-  {{ range .Params.css -}}
-  <link rel="stylesheet" href="{{ . }}">
-  {{ end }}
-  {{ if .Site.RSSLink }}
-  <link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-  {{ end }}
-  {{ if isset .Site.Params "favicon" }}
-  <link rel="icon" href="{{ .Site.Params.favicon | absURL }}" />
-  {{ end }}
+  {{ range .Params.css -}}<link rel="stylesheet" href="{{ . }}">{{ end }}
+  {{ if .Site.RSSLink }}<link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />{{ end }}
+  {{ if isset .Site.Params "favicon" }}<link rel="icon" href="{{ .Site.Params.favicon | absURL }}" />{{ end }}
 
   {{ $mainStyle := resources.Get "scss/style.scss" }}
   {{ $styleFiles := slice $mainStyle}}
@@ -49,12 +43,8 @@
   {{ $style := $styleFiles | resources.Concat "scss/bundle.scss" | toCSS $options| minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
   <meta name="google-site-verification" content="7B5fRFFvOEQo2BaQdM97nA_hEEcoYaZsNke9Omubc_c" />
-  {{if .NextPage}}
-  <link rel="next" href="{{.NextPage.Permalink}}" />
-  {{end}}
-  {{if .PrevPage}}
-  <link rel="prev" href="{{.PrevPage.Permalink}}" />
-  {{end}}
+  {{if .NextPage}}<link rel="next" href="{{.NextPage.Permalink}}" />{{end}}
+  {{if .PrevPage}}<link rel="prev" href="{{.PrevPage.Permalink}}" />{{end}}
 
   {{ if eq (getenv "HUGO_ENV") "development" }}
   <meta name="robots" content="noindex,follow">
