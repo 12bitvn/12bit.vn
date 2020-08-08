@@ -8,14 +8,14 @@ draft: false
 images:
 - /articles/dong-bo-app-settings-tren-mac-os/images/thumbnail.jpg
 tags:
-- productive
+- productivity
 ---
 
 ## Mình có MỘTs  cái mac
 
 Mình có một cái mac thôi, nhưng MỘT ở công ty, MỘT ở phòng ngủ, MỘT ở nhà vệ sinh, MỘT ở phòng khách. Và vấn đề là:
 
-> Làm sao để config của các ứng dụng trên MỘTs máy này đồng bộ với nhau?
+> Làm sao để config của các ứng dụng trên các máy này đồng bộ với nhau?
 
 Việc đầu tiên có thể nghĩ đến chính là các ứng dụng cli thường lưu config ở như mục `home` hoặc `~/.config`. Có thể chép nội dung ở các thư mục này rồi bỏ vào iDrive để đồng bộ, sau đó sử dụng nó trên những máy khác.
 
@@ -137,7 +137,7 @@ Giờ các file config đã được restore hệt như trên máy mà bạn đ�
 
 ## Lời kết
 
-Đồng bộ config giữa các máy thật là điều tiện lợi, vì khi làm việc với máy nào thì quen với config trên máy đó rồi, đến lúc đổi máy lại phải thay đổi để thích nghi với config mới thì rất bất tiện, việc config bằng tay cũng bất tiện không kém.
+Đồng bộ config giữa các máy thật là điều tiện lợi, vì khi làm việc với máy nào thì quen với config trên máy, đến lúc đổi máy lại phải thay đổi để thích nghi với config mới thì rất bất tiện, việc config bằng tay thì khỏi phải nói rồi.
 
 Tuy nhiên đồng bộ cũng có cái dở của nó đó là không đồng bộ đầy đủ dependency. Ví dụ một application phụ thuộc vào một application khác, nhưng bạn lại không cài nó trong máy thì cũng không sử dụng được.
 
