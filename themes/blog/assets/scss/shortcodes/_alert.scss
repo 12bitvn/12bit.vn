@@ -7,6 +7,9 @@
   p:first-child:before {
     padding-right: 10px;
   }
+  p:last-child{
+    margin-bottom: 0;
+  }
   @each $alert in $list {
     &--#{$alert} {
       @extend %color-#{$alert}
