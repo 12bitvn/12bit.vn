@@ -49,9 +49,3 @@ Tất cả hình ảnh cho bài viết các bạn có thể đặt trong `conten
 ```
 ![image title](/articles/slug-bai-viet/images/wonderful-pic.jpg)
 ```
-
-**12bit ❤️ Coffee**
-
-Tụi mình yêu cà phê và tin rằng các bạn cũng vậy.
-
-<a href="https://ko-fi.com/12bitvn" target="_blank"><img src="https://user-images.githubusercontent.com/3280351/83833752-dd2c2b80-a716-11ea-81c0-b490203e6aff.png" alt="Buy Me A Coffee"></a>
