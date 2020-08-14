@@ -1,4 +1,4 @@
-{{ partial "header" . }}
+{{ define "main" }}
 <main id="content" class="site-content site-content--{{ .Type }} post single">
   {{ partial "article/single" . }}
   {{ partial "article/series" . }}
@@ -7,4 +7,4 @@
   {{ partial "mailchimp" . }}
   {{ partial "article/related" . }}
 </main><!-- #content -->
-{{ partial "footer" . }}
+{{ end }}

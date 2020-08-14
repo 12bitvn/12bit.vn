@@ -1,4 +1,4 @@
-{{ partial "header" . }}
+{{ define "main" }}
 <main id="content" class="site-content list">
     <header>
         <h1><span style="text-transform: capitalize">{{ .Title }}</span></h1>
@@ -16,4 +16,4 @@
     </div>
     {{ template "_internal/pagination.html" . }}
 </main><!-- #content -->
-{{ partial "footer" . }}
+{{ end }}

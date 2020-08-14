@@ -1,0 +1,63 @@
+<!-- #wrap -->
+{{ if ($.Page.Scratch.Get "include_search") }}
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4" defer></script>
+{{ $search := resources.Get "js/search.js"}}
+{{ $searchJs := $search | resources.Minify | resources.Fingerprint}}
+<script src="{{ $searchJs.RelPermalink }}" defer></script>
+{{ end }}
+
+{{ if eq (getenv "HUGO_ENV") "production" }}
+{{ template "_internal/google_analytics_async.html" . }}
+{{ end }}
+
+{{ $app := resources.Get "js/app.js"}}
+
+{{ if .IsPage }}
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+{{ $highlightJs := resources.Get "js/highlight.pack.js"}}
+{{ $markdownJs := resources.Get "js/markdown.min.js" }}
+{{ $md5 := resources.Get "lib/md5.js" }}
+{{ $js := slice $app $highlightJs $markdownJs $md5 | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint}}
+<script src="{{ $js.RelPermalink }}" defer onload="hljs.initHighlightingOnLoad();"></script>
+{{ else }}
+{{ $js := $app | resources.Minify | resources.Fingerprint}}
+<script src="{{ $js.RelPermalink }}" defer></script>
+{{ end }}
+
+
+{{ if ($.Page.Scratch.Get "include_embedly") }}
+<style class="embedly-css">
+  .card.sm-img .art-bd,
+  .pair-bd .art-bd{
+    padding: 0;
+  }
+  .card .hdr {
+    display:none;
+  }
+  .card .brd {
+    display:none;
+  }
+</style>
+
+<script src="//cdn.embedly.com/widgets/platform.js" defer></script>
+{{ end }}
+
+{{ if ($.Page.Scratch.Get "include_caniuse") }}
+<script defer src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/caniuse-embed.min.js"></script>
+{{ end }}
+{{ if ($.Page.Scratch.Get "include_mermaid") }}
+<script defer src="https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js"></script>
+{{ end }}
+{{ if ($.Page.Scratch.Get "include_image_zoom") }}
+<script src="https://unpkg.com/medium-zoom@1.0.2/dist/medium-zoom.min.js" defer onload="mediumZoom('[data-zoomable]');"></script>
+{{ end }}
+
+<script>
+  function initFreshChat() {
+    window.fcWidget.init({
+      token: "5e9c3bf3-8450-48b3-99a2-fd4d0073dbce",
+      host: "https://wchat.freshchat.com"
+    });
+  }
+  function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
+</script>

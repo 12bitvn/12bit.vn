@@ -1,10 +1,10 @@
-{{ partial "header" . }}
+{{ define "main" }}
 <main id="content" class="site-content list">
   <div>
     {{ range .Paginator.Pages }}
-    {{ partial "article/list-item" . }}
+      {{ partial "article/list-item" . }}
     {{ end }}
   </div>
-{{ template "_internal/pagination.html" . }}
-</main><!-- #content -->
-{{ partial "footer" . }}
+  {{ template "_internal/pagination.html" . }}
+</main>
+{{ end }}

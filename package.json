@@ -7,8 +7,17 @@
   },
   "dependencies": {
     "@algolia/cli": "^4.0.8",
+    "conventional-changelog-cli": "^2.1.0",
     "firebase-tools": "^8.6.0",
     "sw-precache": "^5.2.1",
     "workbox": "^0.0.0"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "3.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

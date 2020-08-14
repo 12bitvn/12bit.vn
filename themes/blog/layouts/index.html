@@ -1,4 +1,4 @@
-{{ partial "header" . }}
+{{ define "main" }}
 {{ $pages := where .Site.RegularPages "Type" "articles" }}
 {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
 <main id="content" class="site-content index list">
@@ -9,4 +9,4 @@
   </div>
 {{ template "_internal/pagination.html" . }}
 </main><!-- #content -->
-{{ partial "footer" . }}
+{{ end }}
