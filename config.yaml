@@ -74,9 +74,6 @@ menu:
     - identifier: 1
       title: References
       url: /references/
-    - identifier: 2
-      title: Donate
-      url: https://ko-fi.com/12bitvn
     - identifier: 3
       title: RSS
       url: /index.xml
