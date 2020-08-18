@@ -13,19 +13,23 @@ Bên cạnh những [shortcode đã được tích hợp sẵn](https://gohugo.i
 
 ## codepen
 
+```
 {{</* codepen username pen_id height_in_px */>}}
 ```
 
 Nếu không set giá trị `height` thì `height` mặc định sẽ là 500px. Ví dụ:
 
+```
 {{</* codepen tatthien LgMKpm 400 */>}}
+```
+
 {{<codepen tatthien LgMKpm 400>}}
 
 ## alert
 
 Thay vì dùng `{{</* */>}}` chúng ta sẽ dùng `{{%/* */%}}` để có thể sử dụng Markdown bên trong shortcode.
 
-```markdown
+```
 {{%/* alert type */%}}
 Nội dung bên trong. **Tự tin dùng markdown đi các bạn!**
 {{%/* /alert */%}}
@@ -33,10 +37,12 @@ Nội dung bên trong. **Tự tin dùng markdown đi các bạn!**
 
 ### success
 
-```markdown
+```
 {{%/* alert success */%}}
 Chúc mừng! **bạn đã được tăng lương**.
 {{%/* /alert */%}}
+```
+
 {{% alert success %}}
 Chúc mừng! **bạn đã được tăng lương**.
 {{% /alert %}}
@@ -47,6 +53,8 @@ Chúc mừng! **bạn đã được tăng lương**.
 {{%/* alert warning */%}}
 Chú ý ngã 4
 {{%/* /alert */%}}
+```
+
 {{% alert warning %}}
 Chú ý ngã 4
 {{% /alert %}}
@@ -57,6 +65,8 @@ Chú ý ngã 4
 {{%/* alert danger */%}}
 Xin đừng hút thuốc
 {{%/* /alert */%}}
+```
+
 {{% alert danger %}}
 Xin đừng hút thuốc
 {{% /alert %}}
@@ -67,6 +77,8 @@ Xin đừng hút thuốc
 {{%/* alert info */%}}
 https://12bit.vn là nơi chia sẻ kiến thức lập trình web.
 {{%/* /alert */%}}
+```
+
 {{% alert info %}}
 https://12bit.vn là nơi chia sẻ kiến thức lập trình web.
 {{% /alert %}}
@@ -75,7 +87,10 @@ https://12bit.vn là nơi chia sẻ kiến thức lập trình web.
 
 ```markdown
 {{%/* runkit */%}}
-your code block with ``` code and {{%/* /runkit */%}}
+your code block here
+{{%/* /runkit */%}}
+```
+
 {{< runkit  >}}
 const object1 = {};
 Reflect.set(object1, 'property1', 42);
@@ -92,13 +107,15 @@ console.log(array1[2]);
 
 ## caniuse
 
-```markdown
+```
 {{</* caniuse features="proxy" */>}}
+```
+
 {{< caniuse "proxy" >}}
 
 ## mermaid
 
-```markdown
+```
 {{</* mermaid */>}}
 graph TB
     c1-->a2
@@ -112,6 +129,8 @@ graph TB
     c1-->c2
     end
 {{</* /mermaid */>}}
+```
+
 {{< mermaid >}}
 graph TB
     c1-->a2
@@ -128,14 +147,18 @@ graph TB
 
 ## image-zoom
 
-```markdown
+```
 {{</* zoom-img src="/img/articles/default-thumb-1200-630.png" */>}}
+```
+
 {{< zoom-img src="/img/articles/default-thumb-1200-630.png" >}}
 
 ## oembed
 
-```markdown
+```
 {{</* oembed url="https://open.spotify.com/playlist/37i9dQZEVXbc3uyDjJcA7l" title="ahhi" */>}}
+```
+
 {{< oembed url="https://open.spotify.com/playlist/37i9dQZEVXbc3uyDjJcA7l">}}
 
 {{< oembed url="https://www.facebook.com/12bit.vn/photos/a.204143553518059/341131916485888/?type=3&theater">}}
@@ -144,4 +167,6 @@ graph TB
 
 ```markdown
 {{</*gh-repos "vuejs/vue"*/>}}
+```
+
 {{<gh-repos "vuejs/vue">}}
