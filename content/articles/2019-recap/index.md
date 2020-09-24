@@ -13,6 +13,12 @@ title: 2019 Recap
 
 Chỉ còn 1 ngày nữa là bước qua năm 2020. Đây cũng là cơ hội để 12bit nhìn lại 1 năm vừa qua.
 
+Hello, mình đang test viết bài trong Vim.
+
+Phải nói là một trải nghiệm tuyệt vời.
+
+**Các bạn cũng nên thử** :joy:
+
 ## Nhìn lại 2019
 
 Mở đầu năm 2019 là bài viết về các [shortcodes trong Hugo](https://12bit.vn/articles/cac-shortcode-hay-cho-gohugo/). Đây cũng là bài viết đánh dấu 12bit chuyển qua nên tảng mới từ Medium sang Hugo.
