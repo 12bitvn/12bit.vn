@@ -297,6 +297,7 @@ sub, sup {
     margin-top: 0;
     margin-bottom: 1.5rem;
   }
+  li code,
   p code {
     background: rgba(0,0,0,.05);
     padding: 3px 4px;
@@ -344,7 +345,7 @@ sub, sup {
   }
   blockquote {
     font-style: italic;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     border-left: 2px solid rgba($color-dark, .2);
     margin-left: 0;
     margin-right: 0;
