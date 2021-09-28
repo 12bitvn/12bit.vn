@@ -35,7 +35,7 @@
   }
   a {
     @include font-size(0.9);
-    color: $color-light;
+    color: rgba($color-dark, 0.3);
     &:hover {
       color: $color-dark;
     }
@@ -46,7 +46,7 @@
       transition: opacity 0.2s ease-in-out;
     }
     &.active{
-      color: $color-primary;
+      color: $color-dark;
       &:after{
         opacity: 1;
       }
