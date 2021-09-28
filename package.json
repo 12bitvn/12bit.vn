@@ -1,6 +1,5 @@
 {
   "scripts": {
-    "precache": "sw-precache --config=./sw-precache-config.js",
     "algolia": "algolia import -s ./public/algolia.json -a $ALGOLIA_APP_ID -k $ALGOLIA_ADMIN_KEY -n prod_12bit_blog",
     "deploy": "firebase deploy --token $FIREBASE_TOKEN --only hosting:production",
     "preview": "firebase deploy --token $FIREBASE_TOKEN --only hosting:dev"
@@ -8,9 +7,7 @@
   "dependencies": {
     "@algolia/cli": "^4.0.8",
     "conventional-changelog-cli": "^2.1.0",
-    "firebase-tools": "^8.6.0",
-    "sw-precache": "^5.2.1",
-    "workbox": "^0.0.0"
+    "firebase-tools": "^9.18.0"
   },
   "devDependencies": {
     "cz-conventional-changelog": "3.2.0"

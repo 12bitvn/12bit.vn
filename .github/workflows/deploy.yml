@@ -19,7 +19,6 @@ jobs:
       - name: Install deps
         run: yarn install
       - name: Preacache
-        run: yarn run precache
       - name: Algolia indexing
         run: yarn run algolia
         env:

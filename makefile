@@ -7,11 +7,9 @@ hugo-build-prod:
 	HUGO_ENV=production hugo  --gc --minify --buildFuture --cleanDestinationDir
 
 build-dev: hugo-build-dev
-	yarn run precache
 	yarn algolia
 
 build-prod: hugo-build-prod
-	yarn run precache
 	yarn algolia
 
 deploy-dev: build-dev
