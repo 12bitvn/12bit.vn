@@ -13,11 +13,8 @@
 {{ $app := resources.Get "js/app.js"}}
 
 {{ if .IsPage }}
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
 {{ $highlightJs := resources.Get "js/highlight.pack.js"}}
-{{ $markdownJs := resources.Get "js/markdown.min.js" }}
-{{ $md5 := resources.Get "lib/md5.js" }}
-{{ $js := slice $app $highlightJs $markdownJs $md5 | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint}}
+{{ $js := slice $app $highlightJs | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint}}
 <script src="{{ $js.RelPermalink }}" defer onload="hljs.initHighlightingOnLoad();"></script>
 {{ else }}
 {{ $js := $app | resources.Minify | resources.Fingerprint}}

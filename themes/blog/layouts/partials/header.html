@@ -1,61 +1,54 @@
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&autoLogAppEvents=1&version=v3.2&appId={{ .Site.Params.facebookAppId }}';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-  <header id="masthead" class="site-header">
-    <div class="left">
-      <h1 class="site-title">
-        <a href="/" aria-label="Trang chủ">
-          <svg class="logo" viewBox="0 0 154 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-              <path d="M141,19 L154,19 L154,33 L141,33 L141,52 L154,52 L154,66 L127,66 L127,52 L127,6 L141,6 L141,19 Z" id="t" fill="#1E221D"></path>
-              <path d="M107,19 L121,19 L121,66 L107,66 L107,19 Z M107,0 L121,0 L121,14 L107,14 L107,0 Z" id="i" fill="#1E221D"></path>
-              <path d="M101,33 L101,52 L101,66 L67,66 L67,52 L67,0 L81,0 L81,19 L101,19 L101,33 Z M87,33 L81,33 L81,52 L87,52 L87,33 Z" id="b" fill="#1E221D"></path>
-              <path d="M41,52 L61,52 L61,66 L41,66 L27,66 L27,26 L41,26 L47,26 L47,14 L27,14 L27,0 L61,0 L61,14 L61,40 L47,40 L41,40 L41,52 Z" id="2" fill="#56BD77"></path>
-              <path d="M21,14 L21,66 L7,66 L7,14 L0,14 L0,0 L21,0 L21,14 Z" id="1" fill="#56BD77"></path>
-            </g>
-          </svg>
-        </a>
-      </h1>
-    </div>
-    <div class="right">
-      {{ $currentPage := . }}
-      <nav class="site-navigation">
-        <ul>
-          {{ $currentPage := . }}
-          {{ range .Site.Menus.main }}
-            {{ if .HasChildren }}
-            <li class="site-navigation__item {{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
-            <a href="#">
-              {{ .Pre }}
-              <span>{{ .Title }}</span>
-            </a>
-            </li>
-            <ul class="sub-menu">
-              {{ range .Children }}
-              <li class="site-navigation__item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-                <a href="{{ .URL }}">{{ .Title }}</a>
-              </li>
-              {{ end }}
-            </ul>
-            {{ else }}
-            <li class="site-navigation__item">
-              <a href="{{ .URL }}">
-                {{ .Pre }}
-                <span>{{ .Title }}</span>
-              </a>
-            </li>
-            {{ end }}
+<header id="masthead" class="site-header">
+  <div class="left">
+    <h1 class="site-title">
+      <a href="/" aria-label="Trang chủ">
+        <svg class="logo" viewBox="0 0 154 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <path d="M141,19 L154,19 L154,33 L141,33 L141,52 L154,52 L154,66 L127,66 L127,52 L127,6 L141,6 L141,19 Z" id="t" fill="#1E221D"></path>
+          <path d="M107,19 L121,19 L121,66 L107,66 L107,19 Z M107,0 L121,0 L121,14 L107,14 L107,0 Z" id="i" fill="#1E221D"></path>
+          <path d="M101,33 L101,52 L101,66 L67,66 L67,52 L67,0 L81,0 L81,19 L101,19 L101,33 Z M87,33 L81,33 L81,52 L87,52 L87,33 Z" id="b" fill="#1E221D"></path>
+          <path d="M41,52 L61,52 L61,66 L41,66 L27,66 L27,26 L41,26 L47,26 L47,14 L27,14 L27,0 L61,0 L61,14 L61,40 L47,40 L41,40 L41,52 Z" id="2" fill="#56BD77"></path>
+          <path d="M21,14 L21,66 L7,66 L7,14 L0,14 L0,0 L21,0 L21,14 Z" id="1" fill="#56BD77"></path>
+          </g>
+        </svg>
+      </a>
+    </h1>
+  </div>
+  <div class="right">
+    {{ $currentPage := . }}
+    <nav class="site-navigation">
+      <ul>
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+        {{ if .HasChildren }}
+        <li class="site-navigation__item {{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+          <a href="#">
+            {{ .Pre }}
+            <span>{{ .Title }}</span>
+          </a>
+        </li>
+        <ul class="sub-menu">
+          {{ range .Children }}
+          <li class="site-navigation__item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+            <a href="{{ .URL }}">{{ .Title }}</a>
+          </li>
           {{ end }}
         </ul>
-      </nav>
-    </div>
-  </header><!-- #masthead -->
-  <div id="site-message-container"></div>
+        {{ else }}
+        <li class="site-navigation__item">
+          <a href="{{ .URL }}">
+            {{ .Pre }}
+            <span>{{ .Title }}</span>
+          </a>
+        </li>
+        {{ end }}
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+</header><!-- #masthead -->
+<div id="site-message-container"></div>
+
 {{ if ($.Page.Scratch.Get "include_search") }}
     {{ partial "search-box" . }}
 {{end}}
