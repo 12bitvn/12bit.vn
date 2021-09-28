@@ -64,9 +64,6 @@ menu:
   - identifier: chat
     title: Chat
     url: https://discord.gg/uMJxpXB
-  - identifier: News
-    title: News
-    url: https://news.12bit.vn
   footer:
     - identifier: 0
       title: Series
