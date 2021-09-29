@@ -219,12 +219,15 @@ sub, sup {
   }
   &__title {
     margin-top: 0;
-    @include font-size(1.7);
-    margin-bottom: 0;
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    margin-bottom: 0.5rem;
     font-weight: $font-weight-bold;
     color: $color-primary;
     @at-root .list &{
-      @include font-size(1.3);
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      margin-bottom: 0;
     }
   }
   &__intro {
@@ -246,11 +249,7 @@ sub, sup {
     margin-top: 30px;
     margin-bottom: 50px;
   }
-  /* Article customize */
-  &--pages {
-
-  }
-}
+ }
 
 .article-format {
   iframe,
@@ -276,7 +275,7 @@ sub, sup {
   }
   ul {
     list-style: none;
-    padding: 0;
+    padding: 0 0 0 8px;
     li {
       padding-left: 15px;
       &:before {
@@ -295,9 +294,11 @@ sub, sup {
   code, pre {
     font-family: $font-body;
     border-radius: 4px;
-    font-size: 16px;
     margin-top: 0;
     margin-bottom: 1.5rem;
+  }
+  pre {
+    font-size: 14px;
   }
   li code,
   p code {

@@ -27,11 +27,8 @@
     line-height: 1.2;
     margin-bottom: 10px;
     > ul {
-      padding-left: 10px;
+      padding-left: 8px;
     }
-  }
-  #TableOfContents > ul > li > ul{
-    padding-left: 0;
   }
   a {
     @include font-size(0.9);
