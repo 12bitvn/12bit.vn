@@ -28,10 +28,13 @@ Vì vậy, cách tốt nhất là cài đặt coding standard cho từng project
 
 Sau đây là những package cần thiết mà bạn cần cài đặt cho project của mình:
 
+<div class="filename">>_</div>
+
 ```shell
-composer require --dev "squizlabs/php_codesniffer=*"
-composer require --dev wp-coding-standards/wpcs:"*" 
-composer require --dev dealerdirect/phpcodesniffer-composer-installer:"^0.7"
+$ composer require --dev \
+    squizlabs/php_codesniffer:"*" \
+    wp-coding-standards/wpcs:"*" \
+    dealerdirect/phpcodesniffer-composer-installer:"^0.7"
 ```
 
 Như vậy là đủ các package. Mình sẽ giải thích một chút về các package này.
@@ -42,7 +45,9 @@ Như vậy là đủ các package. Mình sẽ giải thích một chút về cá
 
 Sau khi cài đặt xong, các bạn có thể kiểm tra coding standard đã có WordPress hay chưa bằng cách:
 
-```
+<div class="filename">>_</div>
+
+```shell
 $ ./vendor/bin/phpcs -i
 The installed coding standards are PEAR, Zend, PSR2, MySource, Squiz, PSR1, PSR12, PHPCompatibility, PHPCompatibilityParagonieRandomCompat, PHPCompatibiliyParagonieSodiumCompat, PHPCompatibilityWP, WordPress, WordPress-Extra, WordPress-Docs and WordPress-Core
 ```
@@ -61,6 +66,8 @@ Làm sao để code không theo chuẩn WordPress? Bạn hãy tham khảo coding
 
 Giả sử mình có một đoạn code đơn giản như vầy, xem thử sau khi validate sẽ có bao nhiêu lỗi nào.
 
+<div class="filename">test.php</div>
+
 ```php
 <?php
 
@@ -70,6 +77,8 @@ function sayHello($name) {
 ```
 
 Chúng ta sẽ chạy command `phpcs`, sử dụng `--standard=WordPress` và khai báo file hoặc folder cần validate. Trường hợp mình đang code trong file `test.php`.
+
+<div class="filename">>_</div>
 
 ```shell
 $ ./vendor/bin/phpcs --standard=WordPress test.php
@@ -89,6 +98,8 @@ Chạy thử `phpcbf`. 4 lỗi đã được fix.
 
 Sau khi fix xong thì code sẽ như sau:
 
+<div class="filename">test.php</div>
+
 ```php
 <?php
 
@@ -102,6 +113,8 @@ Kiểm tra lại 1 lần nữa.
 {{<zoom-img src="img/figure-3.png">}}
 
 Những lỗi còn lại chúng ta sẽ phải tự fix. Để biết cách fix các bạn cần phải xem qua coding standard của WordPress. Mình sẽ không giải thích từng lỗi nhé.
+
+<div class="filename">test.php</div>
 
 ```php
 <?php
@@ -127,7 +140,7 @@ Chạy lại `phpcs` một lần nữa. Lần này hết lỗi rồi đó!
 
 Để có thể tùy chỉnh nhiều hơn cho PHP CS như exclude files, thêm custom rule thì các bạn nên sử dụng file config của PHP CS là `phpcs.xml`.
 
-WordPress đã tạo sẵn một [file mẫu](https://github.com/WordPress/WordPress-Coding-Standards/blob/develop/phpcs.xml.dist.sample). Các bạn có thể tham khảo.
+WordPress đã tạo sẵn một [file config mẫu](https://github.com/WordPress/WordPress-Coding-Standards/blob/develop/phpcs.xml.dist.sample). Các bạn có thể tham khảo.
 
 ## Kết luận
 
