@@ -17,13 +17,13 @@ jobs:
         run: hugo --gc --minify --buildFuture --cleanDestinationDir
       - uses: actions/setup-node@master
       - name: Install deps
-        run: yarn install
+        run: pnpm install
       - name: Algolia indexing
-        run: yarn run algolia
+        run: pnpm run algolia
         env:
           ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
           ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
       - name: Deploy
-        run: yarn run deploy
+        run: pnpm run deploy
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

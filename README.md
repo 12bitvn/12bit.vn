@@ -8,7 +8,7 @@ Trên 12bit, tụi mình viết về những công nghệ mà tụi mình đang 
 
 1. Vì blog phát triển dựa trên Hugo vì vậy các bạn cần phải [cài đặt Hugo](https://gohugo.io/getting-started/installing/).
 2. Fork repo này về GitHub của các bạn.
-3. Cài đặt các package cần thiết: `yarn install`
+3. Cài đặt các package cần thiết: `pnpm install`
 4. Gõ lệnh `hugo new articles/slug-bai-viet/index.md` trên terminal để tạo một bài viết mới. Sau khi gõ lệnh một file markdown sẽ được tạo ở đường dẫn `content/articles/slug-bai-viet/index.md`.
 
   Các bạn có thể tham khảo phần front matter bên dưới để định dạng cho bài viết của mình:

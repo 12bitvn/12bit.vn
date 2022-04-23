@@ -14,8 +14,8 @@ jobs:
         run: hugo --gc --minify --buildFuture --cleanDestinationDir
       - uses: actions/setup-node@master
       - name: Install dependencies
-        run: yarn install
+        run: pnpm install
       - name: Deploy preview
-        run: yarn preview
+        run: pnpm preview
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

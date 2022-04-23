@@ -7,10 +7,10 @@ hugo-build-prod:
 	HUGO_ENV=production hugo  --gc --minify --buildFuture --cleanDestinationDir
 
 build-dev: hugo-build-dev
-	yarn algolia
+	pnpm algolia
 
 build-prod: hugo-build-prod
-	yarn algolia
+	pnpm algolia
 
 deploy-dev: build-dev
 	firebase deploy --token "${FIREBASE_TOKEN}" --only hosting:dev
