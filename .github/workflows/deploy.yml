@@ -15,7 +15,7 @@ jobs:
           extended: true
       - name: Build
         run: hugo --gc --minify --buildFuture --cleanDestinationDir
-      - uses: actions/setup-node@master
+      - uses: pnpm/action-setup@master
       - name: Install deps
         run: pnpm install
       - name: Algolia indexing
