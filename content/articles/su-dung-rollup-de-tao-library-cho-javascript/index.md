@@ -454,7 +454,3 @@ Nếu bạn muốn build app hãy dùng Webpack, muốn xây dựng thư viện 
 - [Webpack and Rollup: the same but different](https://medium.com/webpack/webpack-and-rollup-the-same-but-different-a41ad427058c)
 
 ---
-
-À. Đừng quên star :star: cho project nhé.
-
-{{<gh-repos "tatthien/reeverse">}}
