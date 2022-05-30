@@ -7,10 +7,10 @@
   "dependencies": {
     "@algolia/cli": "^4.0.8",
     "conventional-changelog-cli": "^2.2.2",
-    "firebase-tools": "^9.23.3"
+    "firebase-tools": "^11.0.1"
   },
   "devDependencies": {
-    "cz-conventional-changelog": "3.2.0"
+    "cz-conventional-changelog": "^3.3.0"
   },
   "config": {
     "commitizen": {
