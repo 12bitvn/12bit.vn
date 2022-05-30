@@ -6,7 +6,7 @@ draft: false
 tags:
     - Golang
     - Go mod
-title: Custoom domain cho Go mod giúp migrate đơn giản hơn
+title: Custom domain cho Go mod giúp migrate đơn giản hơn
 ---
 
 Trong dự án TrueProfit[^1] mình đã từng dịch chuyển giữa hai git server khác nhau, Ban đầu dùng Gitlab, sau đó đổi qua Bitbucket và về sau này đang chuyển đổi một số repo qua Github.
