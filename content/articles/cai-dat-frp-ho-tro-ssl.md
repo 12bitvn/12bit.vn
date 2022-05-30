@@ -3,7 +3,7 @@ authors:
   - vominh
 date: 2022-05-30T11:31:57+07:00
 draft: false
-title: Cài đặt FRP hỗ trợ SSL
+title: Sử dụng FRP để public localhost hỗ trợ SSL
 ---
 
 Có khá nhiều feature, tốt hơn ngrok, localtunnel, nhưng ở đây chỉ bắt đầu với việc sử dụng frp để expose **localhost** dưới một **subdomain** bất kỳ, có **SSL**.
