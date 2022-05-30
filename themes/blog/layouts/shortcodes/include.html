@@ -1,1 +1,2 @@
-{{ $file := .Get 0 }} {{ if strings.HasSuffix $file ".md" }} {{ $file | readFile | replaceRE "---[^\f]*---" "$1" | .Page.RenderString }} {{ end }}
+{{$file := .Get 0}}
+{{ with .Site.GetPage $file }}{{ .Content }}{{ end }}

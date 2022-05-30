@@ -6,7 +6,7 @@ draft: false
 title: Những cách implement microfrontend
 ---
 
-{{% include "/content/references/microfrontend-la-gi.md" %}}
+{{% include "/references/microfrontend-la-gi.md" %}}
 
 # Các giải pháp cho microfrontend
 
@@ -19,12 +19,12 @@ Cũng từ định nghĩa đơn giản đó, ta có thể có nhiều cách đ�
 
 # Frontend sử dụng iframe
 
-{{% include "/content/references/microfrontend-su-dung-iframe.md" %}}
+{{% include "/references/microfrontend-su-dung-iframe.md" %}}
 
 # Frontend sử dụng package
 
-{{% include "/content/references/microfrontend-su-dung-package.md" %}}
+{{% include "/references/microfrontend-su-dung-package.md" %}}
 
 # Frontend sử dụng federated module
 
-{{% include "/content/references/microfrontend-su-dung-federated-module.md" %}}
+{{% include "/references/microfrontend-su-dung-federated-module.md" %}}

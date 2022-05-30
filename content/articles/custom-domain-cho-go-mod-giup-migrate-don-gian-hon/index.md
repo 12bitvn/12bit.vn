@@ -49,7 +49,7 @@ Giờ hãy cài đặt Nginx lên server của mình. Bạn có thể bỏ qua n
 
 [Hướng dẫn cài đặt Nginx](/references/cai-dat-nginx/)
 
-{{% include "/content/references/cai-dat-nginx.md" %}}
+{{% include "/references/cai-dat-nginx.md" %}}
 
 Setup Nginx: `/etc/nginx/sites-available/pkg.trueprofit.dev`
 
@@ -107,6 +107,6 @@ exports.handler = async (event) => {
 
 [Go mod private repeo](/references/go-mod-private-repo)
 
-{{% include "/content/references/go-mod-private-repo.md" %}}
+{{% include "/references/go-mod-private-repo.md" %}}
 
 [^1]: Một dự án mình làm ở công ty
