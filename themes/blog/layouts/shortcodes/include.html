@@ -1,2 +1,10 @@
 {{$file := .Get 0}}
-{{ with .Site.GetPage $file }}{{ .Content }}{{ end }}
+{{$includeReference := .Get 1}}
+{{ with .Site.GetPage $file }}
+{{ .Content }}
+  {{ if $includeReference }}
+  <p>
+    Xem thêm: <a target="_blank" href="{{ .Permalink }}">{{ .Title }}</a>
+  </p>
+  {{ end }}
+{{ end }}

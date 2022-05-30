@@ -47,8 +47,6 @@ Hãy đảm bảo là domain đã trỏ về server.
 
 Giờ hãy cài đặt Nginx lên server của mình. Bạn có thể bỏ qua nếu đã cài.
 
-[Hướng dẫn cài đặt Nginx](/references/cai-dat-nginx/)
-
 {{% include "/references/cai-dat-nginx.md" %}}
 
 Setup Nginx: `/etc/nginx/sites-available/pkg.trueprofit.dev`
