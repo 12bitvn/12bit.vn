@@ -39,11 +39,17 @@ Do đó ta chỉ cần làm sao cho server trả về content như vậy là đ�
 
 ## Cài đặt server
 
-Ban đầu mình sử dụng nginx [^2] sau đó đổi qua lambda[^3] .
+Ban đầu mình sử dụng nginx sau đó đổi qua lambda .
 
 ### Cài đặt custom domain cho go mod sử dụng nginx
 
-Point domain vào server cài nginx, và config nó.
+Hãy đảm bảo là domain đã trỏ về server.
+
+Giờ hãy cài đặt Nginx lên server của mình. Bạn có thể bỏ qua nếu đã cài.
+
+[Hướng dẫn cài đặt Nginx](/references/cai-dat-nginx/)
+
+{{% include "/content/references/cai-dat-nginx.md" %}}
 
 Setup Nginx: `/etc/nginx/sites-available/pkg.trueprofit.dev`
 
@@ -99,13 +105,8 @@ exports.handler = async (event) => {
 
 ## Sử dụng
 
-Đồng thời go get cũng thực hiện checksum code bằng dịch vụ của go, nhưng private repo thì không được checksum vì vậy sẽ bị lỗi.
+[Go mod private repeo](/references/go-mod-private-repo)
 
-Nếu bạn server trả về private repo, thì bạn cần phải setup biết môi trường `GOPRIVATE` và chỉ định git sử dụng `ssl` thay vì `http`:
+{{% include "/content/references/go-mod-private-repo.md" %}}
 
-Setup Private trên máy cần get
-
-```bash
-set -x GOPRIVATE "pkg.trueprofit.goldencloud.dev/*,bitbucket.org/trueprofit/*"
-git config --global url."git@bitbucket.org:".insteadOf "https://bitbucket.org/"
-```
+[^1]: Một dự án mình làm ở công ty
