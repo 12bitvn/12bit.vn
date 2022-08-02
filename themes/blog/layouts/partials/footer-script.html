@@ -7,7 +7,7 @@
 {{ end }}
 
 {{ if eq (getenv "HUGO_ENV") "production" }}
-{{ template "_internal/google_analytics_async.html" . }}
+<script async defer data-website-id="96103d90-238a-4dc5-b662-584c3275f858" src="https://umami.thien.dev/umami.js"></script>
 {{ end }}
 
 {{ $app := resources.Get "js/app.js"}}
