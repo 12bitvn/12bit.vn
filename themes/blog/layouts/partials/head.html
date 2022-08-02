@@ -56,4 +56,8 @@
   <link rel="dns-prefetch" href="https://connect.facebook.net">
   <link rel="preconnect" href="https://connect.facebook.net" crossorigin="anonymous">
   <!-- End of code snippet for Google Fonts -->
+
+  {{ if eq (getenv "HUGO_ENV") "production" }}
+  <script async defer data-website-id="96103d90-238a-4dc5-b662-584c3275f858" src="https://umami.thien.dev/umami.js"></script>
+  {{ end }}
 </head>
