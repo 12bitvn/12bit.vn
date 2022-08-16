@@ -1,17 +1,17 @@
-$font-body: "JetBrains Mono", monospace;
-$font-title: "JetBrains Mono", monospace;
+$font-body: "Work Sans", sans-serif;
+$font-title: "Work Sans", sans-serif;
+$font-mono: "JetBrains Mono", monospace;
 $font-weight-normal: 400;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
 $content-width: 700px;
 
-$color-primary: #4267b2;
+$color-primary: #495057;
 $color-secondary: "";
-$color-dark: #2c2c2c;
+$color-dark: #495057;
 $color-gray: #ccc;
-$color-light: rgba($color-dark, .8);
-
+$color-light: rgba($color-dark, .7);
 $color-success: #56bd77;
 
 %color-warning {

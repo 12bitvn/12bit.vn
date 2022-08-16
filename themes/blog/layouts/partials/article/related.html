@@ -4,7 +4,7 @@
   <h1 class="single-section__title">Đọc thêm</h1>
   <ul>
     {{ range . }}
-    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    <li><a href="{{ .RelPermalink }}" class="sub-color">{{ .Title }}</a></li>
     {{ end }}
   </ul>
 </section>

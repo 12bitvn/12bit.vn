@@ -9,7 +9,7 @@ tags:
   - short
 ---
 
-Các bạn chắc hẳn đã biết khi muốn import một package trong node thì chúng ta sẽ dùng `require`.
+Chắc hẳn các bạn đã biết khi muốn import một package trong node thì chúng ta sẽ dùng `require`.
 
 Khi `require` node sẽ hiểu như sau:
 
@@ -24,7 +24,24 @@ Vậy bạn có biết Node.js sẽ resolve `x` như thế nào không? Thông t
 
 Tuy nhiên nếu trong `working-dir/node_modules` không có thì sẽ thế nào? Rất đơn giản, chúng ta có thể xem những nơi (path) mà node sẽ dùng để resolve `x` thông qua `module.paths`.
 
-![module-paths](./module-paths.png)
+```bash
+$ node
+Welcome to Node.js v16.16.0.
+Type ".help" for more information.
+> module.paths
+[
+  '/Users/thien/projects/code/12bit.vn/repl/node_modules',
+  '/Users/thien/projects/code/12bit.vn/node_modules',
+  '/Users/thien/projects/code/node_modules',
+  '/Users/thien/projects/node_modules',
+  '/Users/thien/node_modules',
+  '/Users/node_modules',
+  '/node_modules',
+  '/Users/thien/.node_modules',
+  '/Users/thien/.node_libraries',
+  '/Users/thien/Library/pnpm/nodejs/16.16.0/lib/node'
+]
+```
 
 **Ví dụ:**
 

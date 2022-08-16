@@ -37,8 +37,6 @@ Bây giờ chúng ta sẽ bundle thử một ví dụ nhỏ sau để xem cách 
 
 ![simple build](images/simple-build.png)
 
-<div class="filename">main.js</div>
-
 ```javascript
 const hello = function(name) {
   return 'Hello ' + name
@@ -57,8 +55,6 @@ $ rollup main.js --file bundle.js --format iife --name hello
 
 Sau khi build, file `bundle.js` của chúng ta sẽ như sau:
 
-<div class="filename">bundle.js</div>
-
 ```javascript
 var hello = (function() {
   'use strict';
@@ -72,8 +68,6 @@ var hello = (function() {
 ```
 
 Mình sẽ include file `bundle.js` và gọi function `hello('12bit.vn')`
-
-<div class="filename">index.html</div>
 
 ```html
 ...
@@ -170,8 +164,6 @@ Khi đã dùng plugin, chúng ta cần phải khai báo plugin trong file config
 
 Các bạn sẽ tạo một file tên là `rollup.config.js`, với nội dung như sau:
 
-<div class="filename">rollup.config.js</div>
-
 ```js
 import babel from 'rollup-plugin-babel'
 
@@ -267,8 +259,6 @@ Sau khi đã tìm hiểu khái quát về Rollup như command-line, file config,
 
 Mặc dù chưa code gì hết, nhưng mình hình dung ra cách mà chúng ta sẽ sử dụng thư viện như sau:
 
-<div class="filename">reeverse-test/index.js</div>
-
 ```javascript
 const reverse = require('reeverse')
 
@@ -305,8 +295,6 @@ Các bạn sẽ thấy có thêm một plugin là `rollup-plugin-terser` có tá
 ### Cấu hình file config
 
 Tiếp theo, chúng ta khai báo nội dung cho `rollup.config.js`
-
-<div class="filename">rollup.config.js</div>
 
 ```js
 import babel from 'rollup-plugin-babel';
@@ -370,8 +358,6 @@ Tiếp theo là định nghĩa các môi trường ứng với file output.
 ### Viết code
 
 Sau khi đã config xong, chúng ta sẽ viết code cho file `index.js`.
-
-<div class="filename">index.js</div>
 
 ```js
 const reverse = input =>

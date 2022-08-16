@@ -35,8 +35,6 @@ Bây giờ chúng ta sẽ tạo file `webpack.config.js` trong root directory c�
 ├── webpack.config.js
 ```
 
-<div class="filename">webpack.config.js</div>
-
 ```js
 const path = require('path')
 

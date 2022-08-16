@@ -19,18 +19,23 @@ Trong bài viết này mình sẽ giới thiệu cho các bạn những shortcod
 
 Blog về frontend thì không khỏi phải embed demo nào đó, Codepen là một công cụ rất hữu ích. Cú pháp shortcode có thể như sau:
 
-{{</* codepen username pen_id height_in_px */>}}
+```
+{{</*codepen username pen_id height_in_px*/>}}
 ```
 
 Nếu không set giá trị `height` thì `height` mặc định sẽ là 500px. Ví dụ:
 
-{{</* codepen tatthien LgMKpm 400 */>}}
+```
+{{</*codepen tatthien LgMKpm 400*/>}}
+```
+
 {{<codepen tatthien LgMKpm 400>}}
 
 ### Mã nguồn
 
-shortcodes/codepen.html:
+`shortcodes/codepen.html`
 
+```html
 {{ $height := 500 }}
 {{ if isset .Params 2 }}
   {{ $height = .Get 2 }}
@@ -78,14 +83,14 @@ console.log(array1[2]);
 
 ### Mã nguồn
 
-shortcodes/runkit.html:
+`shortcodes/runkit.html`
 
-```
+```html
 <div class="runkit" id="{{ .Get 0 }}">{{ .Inner }}</div>
 <script src="https://embed.runkit.com" data-element-id="{{ .Get 0 }}"></script>
 ```
 
-## caniuse
+## Can I use
 
 Có nhiều bài viết trên 12bit giới thiệu về các API mới mà không phải mọi browser đều hỗ trợ, sẽ thật tiện nếu các bạn có thể biết được API đó đã hỗ trợ trên những browser nào rồi. caniuse là website cho các bạn biết điều đó, nên sẽ tiện lắm nếu có thể embed vào trực tiếp trên website.
 
@@ -98,29 +103,33 @@ Chúng ta cần làm hai việc:
 
 ### Mã nguồn
 
-shortcodes/caniuse.html:
+`shortcodes/caniuse.html`
 
+```html
 {{ .Page.Scratch.Set "include_caniuse" true }}
 {{ $periods := .Get "periods" | default "future_1,current,past_1,past_2" }}
 {{ $features := default (.Get "features") (.Get 0) }}
-<div class="ciu-embed" data-feature="{{ $features }}" data-periods="{{ $periods }}">
+<div class="ciu_embed" data-feature="{{ $features }}" data-periods="{{ $periods }}">
   <a href="http://caniuse.com/#feat={{ $features }}">Can I Use {{ $features }}?</a>
 </div>
 ```
 
 Chúng ta lưu giá trị `include_caniuse` vào Scratch, và check giá trị này ở footer để chỉ load script khi cần thiết:
 
-footer.html
+`footer.html`
 
+```html
 {{ if ($.Page.Scratch.Get "include_caniuse") "true" }}
 <script async src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/caniuse-embed.min.js"></script>
 {{ end }}
 ```
 
-### cách dùng
+### Cách dùng
 
 ```markdown
 {{</* caniuse features="proxy" */>}}
+```
+
 {{< caniuse features="proxy" >}}
 
 ## image-zoom
@@ -129,12 +138,15 @@ Không phải hiếm gặp các trường hợp phải đăng ảnh chụp một
 
 ```markdown
 {{</* zoom-img src="/img/articles/default-thumb-1200-630.png" */>}}
+```
+
 {{< zoom-img src="/img/articles/default-thumb-1200-630.png" >}}
 
 ### Mã nguồn
 
-shortcodes/zoom-img.html
+`shortcodes/zoom-img.html`
 
+```html
 {{ .Page.Scratch.Set "include_image_zoom" true }}
 {{- $title := .Get "url" | default "" -}}
 {{- $src := .Get "src" | default "" -}}
@@ -151,8 +163,9 @@ shortcodes/zoom-img.html
 
 Tương tự như shortcode caniuse, chúng ta cũng set giá trị cho `include_image_zoom` để có thể load script ở dưới footer, vì chúng ta không muốn load script ngay tại đây đúng không.
 
-footer.html
+`footer.html`
 
+```html
 {{ if ($.Page.Scratch.Get "include_image_zoom") "true" }}
 <script src="https://unpkg.com/medium-zoom@1.0.2/dist/medium-zoom.min.js" async defer onload="mediumZoom('[data-zoomable]');"></script>
 {{ end }}
@@ -178,6 +191,8 @@ graph TB
     c1-->c2
     end
 {{</* /mermaid */>}}
+```
+
 {{< mermaid >}}
 graph TB
     c1-->a2
@@ -194,16 +209,18 @@ graph TB
 
 ### Mã nguồn
 
-shortcodes/mermaid.html
+`shortcodes/mermaid.html`
 
+```
 {{ .Page.Scratch.Set "include_mermaid" true }}
 <div class="mermaid">
   {{ .Inner }}
 </div>
 ```
 
-tương tự như các shortcode cần load thêm script, chúng ta cũng set giá trị cho `include_mermaid` và check trong footer.html
+tương tự như các shortcode cần load thêm script, chúng ta cũng set giá trị cho `include_mermaid` và check trong `footer.html`
 
+```
 {{ if ($.Page.Scratch.Get "include_mermaid") "true" }}
 <script async src="https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js"></script>
 {{ end }}
@@ -225,8 +242,9 @@ Kết quả:
 
 ### Mã nguồn
 
-shortcodes/oembed.html
+`shortcodes/oembed.html`
 
+```html
 {{ .Page.Scratch.Set "include_embedly" true }}
 {{- $url := .Get "url" -}}
 {{- $title := .Get "url" | default "" -}}
@@ -237,8 +255,9 @@ shortcodes/oembed.html
 
 ```
 
-footer.html
+`footer.html`
 
+```
 {{ if ($.Page.Scratch.Get "include_embedly") "true" }}
 <style class="embedly-css">
 .pair-bd .art-bd{

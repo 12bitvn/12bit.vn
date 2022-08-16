@@ -9,9 +9,9 @@
 {{ $app := resources.Get "js/app.js"}}
 
 {{ if .IsPage }}
-{{ $highlightJs := resources.Get "js/highlight.pack.js"}}
+{{ $highlightJs := resources.Get "js/highlight.js"}}
 {{ $js := slice $app $highlightJs | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint}}
-<script src="{{ $js.RelPermalink }}" defer onload="hljs.initHighlightingOnLoad();"></script>
+<script src="{{ $js.RelPermalink }}" defer onload="hljs.highlightAll();"></script>
 {{ else }}
 {{ $js := $app | resources.Minify | resources.Fingerprint}}
 <script src="{{ $js.RelPermalink }}" defer></script>
@@ -36,7 +36,7 @@
 {{ end }}
 
 {{ if ($.Page.Scratch.Get "include_caniuse") }}
-<script defer src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/caniuse-embed.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/public/caniuse-embed.min.js"></script>
 {{ end }}
 {{ if ($.Page.Scratch.Get "include_mermaid") }}
 <script defer src="https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js"></script>

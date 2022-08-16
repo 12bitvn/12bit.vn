@@ -1,14 +1,14 @@
 languageCode: vi-vn
 copyright: This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
 title: 12bit.vn
-description: write and share to learn
-baseURL: https://12bit.vn/
+description: Write and share to learn
+# baseURL: https://12bit.vn/
 theme: blog
 enableGitInfo: true
 enableEmoji: true
 enableRobotsTXT: true
 googleAnalytics: UA-131517577-1
-paginate: 40
+paginate: 20
 newContentEditor: pstorm
 enableInlineShortcodes: true
 social:
@@ -22,7 +22,7 @@ outputs:
   - RSS
   - Algolia
 params:
-  description: write and share to learn
+  description: Write and share to learn
   favicon: img/icon/favicon.png
   images:
     - img/index.png

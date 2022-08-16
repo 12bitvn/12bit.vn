@@ -50,7 +50,7 @@ server {
 
 Bạn có thể thay goo.gl thành bit.ly để sử dụng cho dịch vụ của bit.ly
 
-##Lời kết
+## Lời kết
 
 Như đã nói lúc đầu, việc này thú vị nhưng cũng có chút nguy hiểm. Thực ra thì cũng không khó để tự deploy một site rút gọn link, có nhiều opensource project cho bạn lựa chọn:
 
