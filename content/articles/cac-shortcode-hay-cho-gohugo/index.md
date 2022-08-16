@@ -103,7 +103,7 @@ shortcodes/caniuse.html:
 {{ .Page.Scratch.Set "include_caniuse" true }}
 {{ $periods := .Get "periods" | default "future_1,current,past_1,past_2" }}
 {{ $features := default (.Get "features") (.Get 0) }}
-<div class="ciu_embed" data-feature="{{ $features }}" data-periods="{{ $periods }}">
+<div class="ciu-embed" data-feature="{{ $features }}" data-periods="{{ $periods }}">
   <a href="http://caniuse.com/#feat={{ $features }}">Can I Use {{ $features }}?</a>
 </div>
 ```

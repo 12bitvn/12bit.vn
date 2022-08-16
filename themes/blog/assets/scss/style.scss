@@ -1,20 +1,22 @@
-$articleElementGap: 1.5rem;
+$article-element-gap: 1.5rem;
 
-@import 'variables';
-@import 'mixins';
-@import "reset";
-@import 'comment';
-@import "highlight";
-@import 'shortcodes/index.scss';
-@import 'components/index.scss';
+@import "../lib/highlight";
+@import "../lib/reset";
+@import "../lib/instance-search";
+
+@import "variables";
+@import "mixins";
+@import "comment";
+@import "shortcodes/index";
+@import "components/index";
 
 body {
   font-family: $font-body;
   font-size: 16px;
-  line-height: 1.6;
   font-weight: $font-weight-normal;
+  line-height: 1.6;
   color: $color-dark;
-  letter-spacing: -0.2px;
+  letter-spacing: -.2px;
   word-spacing: -2px;
 }
 
@@ -32,8 +34,8 @@ p{
   margin-top: 0;
 }
 a {
-  text-decoration: none;
   color: $color-primary;
+  text-decoration: none;
   &:hover {
     color: $color-dark;
   }
@@ -50,37 +52,40 @@ dd {
   margin-left: 0;
 }
 
-ol, ul{
+ol,
+ul{
   li {
     margin-bottom: 15px;
     &:last-child{
       margin-bottom: 0;
     }
-    > ol,ul{
+    > ol,
+    ul{
       margin-top: 15px;
     }
   }
 }
 
 a[target="_blank"] {
-  &:after {
+  &::after {
     $newtab-link-icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' class='i-external' viewBox='0 0 32 32' width='14' height='14' fill='none' stroke='#{$color-light}' stroke-linecap='round' stroke-linejoin='round' stroke-width='9.38%'><path d='M14 9 L3 9 3 29 23 29 23 18 M18 4 L28 4 28 14 M28 4 L14 18'/></svg>";
-    content: url($newtab-link-icon);
-    margin-left: 5px;
     position: relative;
     top: -2px;
+    margin-left: 5px;
+    content: url($newtab-link-icon);
   }
 }
 
 .heart {
-  color: red;
+  color: rgb(230, 29, 29);
 }
 
 .rendered-text {
   text-indent: -999999px;
 }
 
-sub, sup {
+sub,
+sup {
   font-size: 80%;
 }
 
@@ -97,47 +102,47 @@ sub, sup {
 }
 
 .button {
-  border-radius: 4px;
-  background-color: $color-primary;
-  color: #fff !important;
   padding: 10px 15px;
-  border: none;
+  color: #fff;
   cursor: pointer;
+  background-color: $color-primary;
+  border: none;
+  border-radius: 4px;
   &:hover {
     opacity: .9;
   }
   &--outline {
+    color: $color-primary;
     background-color: #fff;
-    color: $color-primary !important;
     border: 1px solid $color-primary;
     &:hover {
-      color: #fff !important;
+      color: #fff;
     }
   }
 }
 
 #wrap {
-  max-width: $content-width;
-  margin: 0 auto;
   position: relative;
-  padding-left: 15px;
+  max-width: $content-width;
   padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
   @include breakpoint(tablet) {
-    padding-left: 25px;
     padding-right: 25px;
+    padding-left: 25px;
   }
 }
 
 /***** HEADER *****/
 .site-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
   flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
   @include breakpoint(tablet) {
-    padding: 2rem 0;
     flex-flow: row;
+    padding: 2rem 0;
   }
   .left {
     text-align: center;
@@ -154,32 +159,32 @@ sub, sup {
       @include font-size(3);
     }
     a {
-      color: $color-dark;
       font-size: 0;
+      color: $color-dark;
     }
     .logo{
       height: 25px;
     }
   }
   .site-desc {
-    font-weight: $font-weight-normal;
     margin: 0;
+    font-weight: $font-weight-normal;
   }
   .site-navigation {
     ul{
-      list-style: none;
-      margin: 0;
-      padding: 0;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      list-style: none;
       li{
         margin: 0;
       }
       a{
         display: block;
-        color: $color-dark;
         font-weight: $font-weight-bold;
+        color: $color-dark;
       }
     }
     &__item{
@@ -190,11 +195,11 @@ sub, sup {
       word-spacing: -5px;
     }
     .cta {
-      border: 2px solid $color-primary;
-      color: $color-primary;
-      border-radius: 4px;
       padding: 5px 15px;
       font-weight: $font-weight-bold;
+      color: $color-primary;
+      border: 2px solid $color-primary;
+      border-radius: 4px;
       &:hover {
         color: #fff;
         background-color: $color-primary;
@@ -209,8 +214,8 @@ sub, sup {
 
 /***** ARTICLE ITEM *****/
 .article {
-  margin: 0 0 1rem;
   position: relative;
+  margin: 0 0 1rem;
   &:first-child {
     margin-top: 0;
   }
@@ -219,28 +224,28 @@ sub, sup {
   }
   &__title {
     margin-top: 0;
+    margin-bottom: .5rem;
     font-size: 1.75rem;
-    line-height: 2.25rem;
-    margin-bottom: 0.5rem;
     font-weight: $font-weight-bold;
+    line-height: 2.25rem;
     color: $color-primary;
     @at-root .list &{
+      margin-bottom: 0;
       font-size: 1.25rem;
       line-height: 1.75rem;
-      margin-bottom: 0;
     }
   }
   &__intro {
     color: $color-light;
   }
   &__meta {
-    color: $color-light;
     margin-bottom: 10px;
+    color: $color-light;
     @at-root .list &{
-      @include font-size(0.9);
+      @include font-size(.9);
     }
     a {
-      &:after {
+      &::after {
         display: none;
       }
     }
@@ -249,15 +254,16 @@ sub, sup {
     margin-top: 30px;
     margin-bottom: 50px;
   }
- }
+}
 
 .article-format {
   iframe,
   .runkit{
-    margin-bottom: $articleElementGap;
+    margin-bottom: $article-element-gap;
   }
-  p, dd {
-    margin: 0 0 $articleElementGap;
+  p,
+  dd {
+    margin: 0 0 $article-element-gap;
     a {
       text-decoration: underline;
     }
@@ -265,23 +271,23 @@ sub, sup {
   ol,
   ul {
     li {
-      margin-bottom: 10px;
       position: relative;
+      margin-bottom: 10px;
     }
   }
   ol {
-    list-style: numeric;
     padding-left: 30px;
+    list-style: numeric;
   }
   ul {
-    list-style: none;
     padding: 0 0 0 8px;
+    list-style: none;
     li {
       padding-left: 15px;
-      &:before {
-        content: '-';
+      &::before {
         position: absolute;
         left: 0;
+        content: "-";
       }
     }
   }
@@ -291,48 +297,53 @@ sub, sup {
   em {
     font-style: italic;
   }
-  code, pre {
-    font-family: $font-body;
-    border-radius: 4px;
+  code,
+  pre {
     margin-top: 0;
     margin-bottom: 1.5rem;
+    font-family: $font-body;
+    border-radius: 4px;
   }
   pre {
     font-size: 14px;
   }
   li code,
   p code {
-    background: rgba(0,0,0,.05);
     padding: 3px 4px;
     margin: 0 2px;
+    background: rgba(0, 0, 0, .05);
   }
   .hljs {
     padding: 1em;
   }
   a {
-    color: $color-primary;
     font-weight: $font-weight-semibold;
+    color: $color-primary;
     &:hover {
-      background-color: $color-primary;
       color: #fff;
+      background-color: $color-primary;
     }
   }
-  h1, h2, h3, dt {
+  h1,
+  h2,
+  h3,
+  dt {
     margin-top: 0;
-    &:before {
-      font-weight: normal;
-      color: $color-light;
+    &::before {
       margin-right: 5px;
+      font-weight: 400;
+      color: $color-light;
     }
   }
-  h1:before {
-    content: '#'
+  h1::before {
+    content: "#";
   }
-  h2, dt{
+  h2,
+  dt{
     margin-bottom: 18px;
     @include font-size(1.4);
-    &:before {
-      content: '##'
+    &::before {
+      content: "##";
     }
   }
   h3{
@@ -342,18 +353,18 @@ sub, sup {
     display: block;
     max-width: 100%;
     height: auto;
-    margin-left: auto;
     margin-right: auto;
     margin-bottom: 1rem;
+    margin-left: auto;
   }
   blockquote {
-    font-style: italic;
-    font-size: 1.5rem;
-    border-left: 2px solid rgba($color-dark, .2);
-    margin-left: 0;
-    margin-right: 0;
     padding-left: 1rem;
-    color: rgba($color-dark, .75)
+    margin-right: 0;
+    margin-left: 0;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: rgba($color-dark, .75);
+    border-left: 2px solid rgba($color-dark, .2);
   }
   figure {
     padding: 0;
@@ -361,33 +372,33 @@ sub, sup {
     text-align: center;
     a {
       font-size: 0;
-      &:after {
+      &::after {
         display: none;
       }
     }
   }
   .filename {
-    background-color: #000;
-    color: #fff;
-    border-radius: 4px 4px 0 0;
+    position: relative;
     padding: .5rem 1rem;
     margin-bottom: -3px;
-    position: relative;
     font-size: 14px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 4px 4px 0 0;
   }
 }
 
 /***** FOOTER *****/
 .site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 2rem 0;
   margin-top: 4rem;
   font-family: $font-title;
-  border-top: 1px solid lighten($color-light, 70);
   text-align: center;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  @include font-size(0.9);
+  border-top: 1px solid lighten($color-light, 70);
+  @include font-size(.9);
   p {
     margin: 0;
   }
@@ -396,7 +407,7 @@ sub, sup {
       padding: 17px;
     }
   }
-  a:after{
+  a::after{
     display: none;
   }
   .license-url{
@@ -407,12 +418,12 @@ sub, sup {
 
 /***** PAGINATION *****/
 .pagination{
-  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0;
   margin: 60px 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  list-style: none;
   .page-item{
     margin: 0;
     a{
@@ -422,8 +433,8 @@ sub, sup {
       border: 2px solid $color-primary;
       border-radius: 4px;
       a {
-        color: $color-primary;
         font-weight: $font-weight-bold;
+        color: $color-primary;
       }
     }
   }
@@ -432,38 +443,38 @@ sub, sup {
 figcaption{
   h4{
     margin: 0;
+    font-weight: 400;
     text-align: center;
-    font-weight: normal;
-    @include font-size(.9)
+    @include font-size(.9);
   }
 }
 
 .gitinfo{
   @include font-size(.9);
   &__contributor{
-    margin-left: 5px;
     display: inline-block;
+    padding: 0 5px;
+    margin-left: 5px;
+    font-style: normal;
     text-decoration: none;
-    padding: 0px 5px;
     background: #f3f3f3;
     border-radius: 4px;
-    font-style: normal;
     &[open]{
-      margin: 20px 0;
       display: block;
       padding: 10px;
+      margin: 20px 0;
       summary{
         margin-bottom: 5px;
       }
     }
     summary{
-      outline: none;
-      cursor: pointer;
       font-weight: 600;
+      cursor: pointer;
+      outline: none;
     }
     ul{
-      margin: 0;
       padding-left: 15px;
+      margin: 0;
       list-style: none;
       li{
         margin-bottom: 5px;
@@ -493,80 +504,80 @@ figcaption{
   ul {
     display: flex;
     flex-wrap: wrap;
-    list-style: none;
     padding: 0;
     margin: 0;
+    list-style: none;
     li {
-      margin: .5rem .5rem;
+      margin: .5rem;
     }
   }
   .tag{
-    text-decoration: none;
-    color: $color-primary;
     padding: 5px;
+    color: $color-primary;
+    text-decoration: none;
+    white-space: nowrap;
     background: #f3f3f3;
     border-radius: 4px;
-    white-space: nowrap;
-    @include font-size(.9)
+    @include font-size(.9);
   }
 }
 
 .related-section{
   ul{
-    list-style: none;
     padding-left: 0;
+    list-style: none;
     li{
-      padding-left: 25px;
       position: relative;
+      padding-left: 25px;
     }
-    li:before{
-      left: 5px;
+    li::before{
       position: absolute;
-      content: "-";
+      left: 5px;
       display: inline-block;
+      content: "-";
     }
   }
 }
 
 .footnotes{
-  margin-bottom: 50px;
   margin-top: 50px;
+  margin-bottom: 50px;
   hr{
     opacity: .3;
   }
 }
 
 .styled-table {
-  border: solid 1px #acd8ee;
-  border-collapse: collapse;
   border-spacing: 0;
+  border-collapse: collapse;
+  border: solid 1px #acd8ee;
 }
 .styled-table th {
-  border: solid 1px #ffffff;
-  background-color: #DDEFEF;
   padding: 10px;
   text-align: left;
+  background-color: #ddefef;
+  border: solid 1px #fff;
 }
 .styled-table tbody td {
-  border: solid 1px #DDEEEE;
   padding: 10px;
+  border: solid 1px #dee;
 }
 
 .save-section {
-  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
   margin-top: 50px;
   background: #f3f3f3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 0;
   border: 1px dashed $color-primary;
+  border-radius: 4px;
 }
 
 .save-section,
 .fb-save{
-  line-height: 0;
   margin-right: 5px;
+  line-height: 0;
 }
 
 #search-wrap {
@@ -578,12 +589,13 @@ figcaption{
   .ais-search-box label{
     display: block;
   }
-  .ais-search-box, input {
-    max-width: 100%;
+  .ais-search-box,
+  input {
     width: 100%;
-    box-shadow: none;
-    border-width: 2px;
+    max-width: 100%;
     border-color: rgba($color-dark, .2);
+    border-width: 2px;
+    box-shadow: none;
     &:focus {
       border-color: $color-primary;
     }
@@ -597,14 +609,14 @@ figcaption{
 }
 
 #hits {
-  background-color: #fff;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
-  border-radius: 4px;
   position: absolute;
   top: 52px;
-  left: 0;
   right: 0;
+  left: 0;
   z-index: 1000;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
   .ais-hits--item {
     padding: 1rem;
     border-bottom: 1px solid rgba($color-light, .1);
@@ -622,14 +634,14 @@ figcaption{
     }
   }
   .na {
-    padding: 1rem;
     display: block;
+    padding: 1rem;
   }
 }
 
 .offline{
   & &--hide{
-    display: none !important;
+    display: none;
   }
   & &--display__block{
     display: block;
@@ -637,39 +649,39 @@ figcaption{
 }
 
 .scrimba{
+  margin-bottom: $article-element-gap;
+  color: $color-primary;
   background-color: #e7ecf3;
   border-radius: 4px;
-  color: $color-primary;
-  margin-bottom: $articleElementGap;
   a{
-    color: $color-primary;
     position: relative;
-    padding: 20px 20px 20px 67px;
     display: block;
+    padding: 20px 20px 20px 67px;
+    color: $color-primary;
     &:hover{
-      background: transparent;
       color: #3d547a;
+      background: transparent;
     }
-    &:before{
-      content: '';
+    &::before{
       position: absolute;
+      top: 18px;
+      left: 22px;
       display: block;
       width: 30px;
       height: 30px;
-      left: 22px;
-      top: 18px;
-      border-radius: 50%;
+      content: "";
       background-color: #73abfe;
+      border-radius: 50%;
     }
-    &:after{
-      margin: 0;
-      content: '';
+    &::after{
       position: absolute;
+      top: 28px;
+      left: 34px;
       display: block;
       width: 0;
       height: 0;
-      left: 34px;
-      top: 28px;
+      margin: 0;
+      content: "";
       border-top: 5px solid transparent;
       border-bottom: 5px solid transparent;
       border-left: 8px solid #fff;

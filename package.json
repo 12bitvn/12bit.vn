@@ -2,7 +2,8 @@
   "scripts": {
     "algolia": "algolia import -s ./public/algolia.json -a $ALGOLIA_APP_ID -k $ALGOLIA_ADMIN_KEY -n prod_12bit_blog",
     "deploy": "firebase deploy --token $FIREBASE_TOKEN --only hosting:production",
-    "preview": "firebase deploy --token $FIREBASE_TOKEN --only hosting:dev"
+    "preview": "firebase deploy --token $FIREBASE_TOKEN --only hosting:dev",
+    "stylelint": "stylelint themes/**/*.scss"
   },
   "dependencies": {
     "@algolia/cli": "^4.0.8",
@@ -10,7 +11,10 @@
     "firebase-tools": "^11.0.1"
   },
   "devDependencies": {
-    "cz-conventional-changelog": "^3.3.0"
+    "cz-conventional-changelog": "^3.3.0",
+    "stylelint": "^14.10.0",
+    "stylelint-config-twbs-bootstrap": "^5.0.0",
+    "stylelint-scss": "^4.3.0"
   },
   "config": {
     "commitizen": {

@@ -32,10 +32,6 @@
   {{ $mainStyle := resources.Get "scss/style.scss" }}
   {{ $styleFiles := slice $mainStyle}}
 
-  {{ if ($.Page.Scratch.Get "include_search") }}
-  {{ $searchStyle := resources.Get "scss/instance-search.scss" }}
-  {{ $styleFiles := $styleFiles | append $searchStyle}}
-  {{end}}
   {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
   {{ $style := $styleFiles | resources.Concat "scss/bundle.scss" | toCSS $options| minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">

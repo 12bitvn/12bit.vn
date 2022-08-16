@@ -1,15 +1,15 @@
 .toc{
   position: absolute;
   left: 50%;
-  margin-left: 380px;
   width: 250px;
   padding: 0 .5rem;
+  margin-left: 380px;
   &__title{
     display: none;
     margin: 0;
   }
   @media (max-width: $break-tablet) {
-    position: static !important;
+    position: static;
     left: 0;
     margin-left: 0;
     &__title{
@@ -20,35 +20,36 @@
     }
   }
   ul {
-    list-style: none;
     padding: 0;
+    list-style: none;
   }
   li {
-    line-height: 1.2;
     margin-bottom: 10px;
+    line-height: 1.2;
     > ul {
       padding-left: 8px;
     }
   }
   a {
-    @include font-size(0.9);
-    color: rgba($color-dark, 0.3);
+    @include font-size(.9);
+    color: rgba($color-dark, .3);
     &:hover {
       color: $color-dark;
     }
-    &:after{
-      opacity: 0;
-      content: "↫";
+    &::after{
       margin-left: 5px;
-      transition: opacity 0.2s ease-in-out;
+      content: "↫";
+      opacity: 0;
+      transition: opacity .2s ease-in-out;
     }
     &.active{
       color: $color-dark;
-      &:after{
+      &::after{
         opacity: 1;
       }
     }
   }
+
   /** Sticky **/
   &.sticky {
     position: fixed;

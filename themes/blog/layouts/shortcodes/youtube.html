@@ -3,7 +3,7 @@
 {{- $ytHost := cond $pc.PrivacyEnhanced  "www.youtube-nocookie.com" "www.youtube.com" -}}
 {{- $id := .Get "id" | default (.Get 0) -}}
 {{- $class := .Get "class" | default (.Get 1) }}
-<div class="youtube_embed {{ $class }}">
+<div class="youtube-embed {{ $class }}">
   <iframe src="//{{ $ytHost }}/embed/{{ $id }}{{ with .Get "autoplay" }}{{ if eq . "true" }}?autoplay=1{{ end }}{{ end }}" allowfullscreen="" title="YouTube Video"></iframe>
 </div>
 {{ end -}}

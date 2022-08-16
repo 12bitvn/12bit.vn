@@ -1,0 +1,14 @@
+{
+  "extends": "stylelint-config-twbs-bootstrap",
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    "selector-max-id": 1,
+    "selector-max-type": 4,
+    "selector-max-compound-selectors": 5,
+    "selector-no-qualifying-type": null
+  }
+}

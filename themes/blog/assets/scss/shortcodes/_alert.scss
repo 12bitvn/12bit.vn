@@ -1,10 +1,10 @@
 .alert-box {
+  padding: 1.5rem 1rem;
+  margin-bottom: 1.5rem;
   border: 2px dashed rgba($color-dark, .2);
   border-radius: 4px;
-  margin-bottom: 1.5rem;
-  padding: 1.5rem 1rem;
-  $list: 'warning', 'success', 'danger', 'info';
-  p:first-child:before {
+  $list: "warning", "success", "danger", "info";
+  p:first-child::before {
     padding-right: 10px;
   }
   p:last-child{
@@ -12,27 +12,27 @@
   }
   @each $alert in $list {
     &--#{$alert} {
-      @extend %color-#{$alert}
+      @extend %color-#{$alert};
     }
   }
   &--info {
-    p:first-child:before {
-      content: '💡'
+    p:first-child::before {
+      content: "💡";
     }
   }
   &--success {
-    p:first-child:before {
-      content: '🙌'
+    p:first-child::before {
+      content: "🙌";
     }
   }
   &--warning {
-    p:first-child:before {
-      content: '⚠️'
+    p:first-child::before {
+      content: "⚠️";
     }
   }
   &--danger {
-    p:first-child:before {
-      content: '🚫'
+    p:first-child::before {
+      content: "🚫";
     }
   }
 }

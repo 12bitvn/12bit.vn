@@ -1,5 +1,5 @@
-$font-body: 'JetBrains Mono', monospace;
-$font-title: 'JetBrains Mono', monospace;
+$font-body: "JetBrains Mono", monospace;
+$font-title: "JetBrains Mono", monospace;
 $font-weight-normal: 400;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
@@ -7,30 +7,30 @@ $font-weight-bold: 700;
 $content-width: 700px;
 
 $color-primary: #4267b2;
-$color-secondary: '';
+$color-secondary: "";
 $color-dark: #2c2c2c;
 $color-gray: #ccc;
 $color-light: rgba($color-dark, .8);
 
-$color-success: #56BD77;
+$color-success: #56bd77;
 
 %color-warning {
-    color: #856404;
-    background-color: #fff3cd;
-    border-color: #ffeeba;
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
 }
 %color-success {
-    color: #155724;
-    background-color: #d4edda;
-    border-color: #c3e6cb;
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
 }
 %color-danger {
-    color: #721c24;
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
 }
 %color-info {
-    color: #0c5460;
-    background-color: #d1ecf1;
-    border-color: #bee5eb;
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
 }

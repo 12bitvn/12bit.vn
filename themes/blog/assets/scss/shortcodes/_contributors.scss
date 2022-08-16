@@ -1,28 +1,28 @@
 .contributors{
-  justify-content: center;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   grid-gap: 20px;
+  justify-content: center;
   margin-bottom: 1.5rem;
   .contributor{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     &__avatar{
-      margin-bottom: 10px;
       width: 100px;
       height: 100px;
+      margin-bottom: 10px;
       border-radius: 50%;
     }
     &__name{
-      line-height: 1.0;
-      &:after{
+      line-height: 1;
+      &::after{
         display: none;
       }
     }
     &__metas{
-      @include font-size(0.9 )
+      @include font-size(.9 );
     }
   }
 }
