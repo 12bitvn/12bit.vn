@@ -222,7 +222,7 @@ sup {
     margin-top: 0;
     margin-bottom: .5rem;
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 2.25rem;
     color: $color-primary;
     @at-root .list &{
@@ -325,7 +325,7 @@ sup {
     padding: 0 4px;
   }
   a {
-    font-weight: $font-weight-semibold;
+    font-weight: 500;
     color: $color-primary;
     &:hover {
       color: #fff;
