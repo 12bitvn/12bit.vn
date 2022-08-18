@@ -15,7 +15,7 @@ jobs:
           hugo-version: 'latest'
           extended: true
       - name: Build
-        run: HUGO_ENV=development hugo --gc --minify --buildFuture --cleanDestinationDir
+        run: HUGO_ENV=development HUGO_BASEURL=https://next-12bitvn.firebaseapp.com hugo --gc --minify --buildFuture --cleanDestinationDir
       - name: Cache pnpm modules
         uses: actions/cache@v2
         with:
