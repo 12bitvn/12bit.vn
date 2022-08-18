@@ -95,6 +95,10 @@ your_server_ip:8025
 
 Hoặc config [NGINX reverse proxy](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/) để không phải gõ IP dài dòng nữa.
 
+{{% alert info %}}
+Xem thêm [Cài đặt Nginx trên Ubuntu](/references/cai-dat-nginx)
+{{% /alert %}}
+
 {{<zoom-img src="img/figure-1.png">}}
 
 Ngoài ra chúng ta còn có một SMTP server để các ứng dụng khác có thể gởi mail tới MailHog thông qua SMTP. Chúng ta sẽ tìm hiểu ở phần [Testing](#testing).
