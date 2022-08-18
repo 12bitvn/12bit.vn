@@ -10,6 +10,11 @@
   p:last-child{
     margin-bottom: 0;
   }
+  p {
+    a {
+      color: inherit;
+    }
+  }
   @each $alert in $list {
     &--#{$alert} {
       @extend %color-#{$alert};

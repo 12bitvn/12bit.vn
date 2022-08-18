@@ -620,25 +620,25 @@ figcaption{
   border-radius: 4px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
   .search-result-item {
-    padding: 0.5rem 1rem;
-    border-bottom: 1px solid rgba($color-light, .1);
     display: block;
+    padding: .5rem 1rem;
     font-size: 1rem;
+    border-bottom: 1px solid rgba($color-light, .1);
     &:hover {
       background-color: rgba($color-primary, .1);
     }
     .title {
       margin: 0;
-      color: $color-dark;
-      font-weight: 400;
       font-size: 1rem;
+      font-weight: 400;
+      color: $color-dark;
       em {
         font-style: normal;
         background-color: rgba($color-primary, .3);
       }
     }
     .meta {
-      font-size: 0.875rem;
+      font-size: .875rem;
       color: $color-light;
 
       .type {
