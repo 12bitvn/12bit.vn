@@ -1,12 +1,11 @@
 ---
-author:
-  github: 12bitvn
-  name: 12bit Team
 date: "2018-12-27T05:06:27+07:00"
 draft: false
 images:
 - https://cdn-images-1.medium.com/max/1000/1*0pa-6XbI233XNvrMTEzMZg.jpeg
 title: Lời giới thiệu
+authors:
+  - 12bitvn
 ---
 
 Chào các bạn.
@@ -15,7 +14,11 @@ Chào các bạn.
 
 Đây không phải là blog đầu tiên chúng mình tạo ra để chia sẻ những gì chúng mình đang tìm hiểu và để kết nối với các bạn, để học hỏi thêm nhiều cái mới. Và cũng không phải là ý tưởng lớn nhất, nhưng nó là cái tốt nhất ở hiện tại.
 
-Chúng mình đã nghĩ tới nhiều ý tưởng hầm hố hơn, nhiều chức năng thú vị và tiện dụng cho người dùng, nhưng cùng với nó thì chúng mình đã mất rất nhiều thời gian mà vẫn chưa thể hiện thực xong, nhưng thực sự thì người đọc cần gì chứ? Cần nội dung, vậy thì ở thời điểm này tại sao tụi mình là không thật chuyên tâm vào nội dung và để những vấn đề về chức năng cho người khác đảm nhiệm phụ. Chính vì thế mà tụi mình đã ngưng phát triển một nền tảng blog riêng, ~~thay vào đó là sử dụng Medium~~, **tụi mình đã quyết định chuyển từ Medium sang Hugo**. Như vậy tụi mình sẽ bớt phân tâm vào những điều chưa thực sự cần thiết.
+Chúng mình đã nghĩ tới nhiều ý tưởng hầm hố hơn, nhiều chức năng thú vị và tiện dụng cho người dùng, nhưng cùng với nó thì chúng mình đã mất rất nhiều thời gian mà vẫn chưa thể hiện thực xong, nhưng thực sự thì người đọc cần gì chứ? Cần nội dung, vậy thì ở thời điểm này tại sao tụi mình là không thật chuyên tâm vào nội dung và để những vấn đề về chức năng cho người khác đảm nhiệm phụ. Chính vì thế mà tụi mình đã ngưng phát triển một nền tảng blog riêng, thay vào đó là sử dụng Medium. Như vậy tụi mình sẽ bớt phân tâm vào những điều chưa thực sự cần thiết.
+
+{{% alert info %}}
+Từ ngày 01/01/2019 tụi mình chính thức xây dựng website riêng sử dụng [Hugo](https://gohugo.io/)
+{{% /alert %}}
 
 Nhưng tụi mình cũng chỉ là những đứa khờ dại đang trên con đường học hỏi vô tận mà thôi. Những gì tụi mình học được cũng không thực sự đầy đủ và đôi khi là không đúng đắn. Việc viết bài như là một cách để kết nối với các bạn, cùng các bạn thảo luận về một vấn đề nào đó thông qua việc trình bày những gì tụi mình đã tìm hiểu. Từ cơ sở đó chúng mình hy vọng giúp các bạn tiết kiệm được thời gian tìm hiểu và cũng mong nhận được bình luận, đóng góp của các bạn để những kiến thức đó hoàn thiện hơn, có lợi hơn cho những người khác nữa.
 

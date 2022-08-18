@@ -4,25 +4,21 @@
   width: 250px;
   padding: 0 .5rem;
   margin-left: 380px;
+
+  @media (max-width: $break-tablet) {
+    display: none;
+  }
+
   &__title{
     display: none;
     margin: 0;
   }
-  @media (max-width: $break-tablet) {
-    position: static;
-    left: 0;
-    margin-left: 0;
-    &__title{
-      display: block;
-    }
-    ul li > a + ul {
-      display: none;
-    }
-  }
+
   ul {
     padding: 0;
     list-style: none;
   }
+
   li {
     margin-bottom: 10px;
     line-height: 1.2;
@@ -30,6 +26,7 @@
       padding-left: 8px;
     }
   }
+
   a {
     @include font-size(.9);
     color: rgba($color-dark, .3);

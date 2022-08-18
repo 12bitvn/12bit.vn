@@ -30,13 +30,13 @@
         <ul class="sub-menu">
           {{ range .Children }}
           <li class="site-navigation__item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-            <a href="{{ .URL }}">{{ .Title }}</a>
+            <a href="{{ .URL }}" class="sub-color">{{ .Title }}</a>
           </li>
           {{ end }}
         </ul>
         {{ else }}
         <li class="site-navigation__item">
-          <a href="{{ .URL }}">
+          <a href="{{ .URL }}" class="sub-color">
             {{ .Pre }}
             <span>{{ .Title }}</span>
           </a>

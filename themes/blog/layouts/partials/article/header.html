@@ -1,6 +1,13 @@
 <header>
   <h1 class="article__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
   <div class="article__meta">
-      <time class="article__date">{{ .Date.Format "02-01-2006" }}</time>{{ range $.Param "authors" }}<span> / </span><a href="https://github.com/{{ . }}" target="_blank" rel="noopener" class="sub-color">{{ . }}</a>{{ end }}
+      <time class="article__date">{{ .Date.Format "02-01-2006" }}</time>
+      {{ range $.Param "authors" }}
+        <span> / </span>
+        <a href="https://github.com/{{ . }}" target="_blank" rel="noopener" class="sub-color">{{ . }}</a>
+      {{ end }}
+      {{ if eq ($.Param "guest") true }}
+        <span class="guest-post">guest post</span>
+      {{ end }}
   </div>
 </header>

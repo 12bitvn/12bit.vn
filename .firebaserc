@@ -5,8 +5,8 @@
   "targets": {
     "twelve-bit": {
       "hosting": {
-        "dev": [
-          "dev-12bitvn"
+        "next": [
+          "next-12bitvn"
         ],
         "production": [
           "prod-12bitvn"

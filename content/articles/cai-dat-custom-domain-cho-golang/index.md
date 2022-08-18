@@ -46,7 +46,7 @@ Point domain to nginx, và config nó.
 
 Setup Nginx: `/etc/nginx/sites-available/pkg.trueprofit.goldencloud.dev`
 
-```nginx
+```
 server {
     server_name pkg.trueprofit.goldencloud.dev;
     location ~ /.well-known {
@@ -99,11 +99,11 @@ exports.handler = async (event) => {
 
 Map function này với API gateway:
 
-![](20220526174453.png)
+{{<zoom-img src="20220526174453.png">}}
 
 Map custom domain vào resource mới tạo này:
 
-![](20220526174654.png)
+{{<zoom-img src="20220526174654.png">}}
 
 ## Sử dụng
 

@@ -1,0 +1,38 @@
+# Next version can be accessed at: https://next-12bitvn.firebaseapp.com/
+name: Deploy Next Version
+on:
+  push:
+    branches:
+      - next
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+      - name: Build
+        run: HUGO_ENV=development hugo --gc --minify --buildFuture --cleanDestinationDir
+      - name: Cache pnpm modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-
+      - uses: pnpm/action-setup@master
+        with:
+          version: 6.0.2
+          run_install: true
+      - name: Algolia indexing
+        run: pnpm run algolia
+        env:
+          ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+          ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
+      - name: Deploy
+        run: pnpm run deploy:next
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

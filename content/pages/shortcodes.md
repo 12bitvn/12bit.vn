@@ -14,13 +14,13 @@ Bên cạnh những [shortcode đã được tích hợp sẵn](https://gohugo.i
 ## codepen
 
 ```
-{{</* codepen username pen_id height_in_px */>}}
+{{</*codepen username pen_id height_in_px*/>}}
 ```
 
 Nếu không set giá trị `height` thì `height` mặc định sẽ là 500px. Ví dụ:
 
 ```
-{{</* codepen tatthien LgMKpm 400 */>}}
+{{</*codepen tatthien LgMKpm 400*/>}}
 ```
 
 {{<codepen tatthien LgMKpm 400>}}
@@ -49,7 +49,7 @@ Chúc mừng! **bạn đã được tăng lương**.
 
 ### warning
 
-```markdown
+```
 {{%/* alert warning */%}}
 Chú ý ngã 4
 {{%/* /alert */%}}
@@ -108,10 +108,10 @@ console.log(array1[2]);
 ## caniuse
 
 ```
-{{</* caniuse features="proxy" */>}}
+{{</*caniuse features="proxy"*/>}}
 ```
 
-{{< caniuse "proxy" >}}
+{{<caniuse "proxy">}}
 
 ## mermaid
 
@@ -159,13 +159,11 @@ graph TB
 {{</* oembed url="https://open.spotify.com/playlist/37i9dQZEVXbc3uyDjJcA7l" title="ahhi" */>}}
 ```
 
-{{< oembed url="https://open.spotify.com/playlist/37i9dQZEVXbc3uyDjJcA7l">}}
-
-{{< oembed url="https://www.facebook.com/12bit.vn/photos/a.204143553518059/341131916485888/?type=3&theater">}}
+{{<oembed url="https://open.spotify.com/playlist/6HmxnDzA0NRLHoruPFpIPE">}}
 
 ## gh-repos
 
-```markdown
+```
 {{</*gh-repos "vuejs/vue"*/>}}
 ```
 

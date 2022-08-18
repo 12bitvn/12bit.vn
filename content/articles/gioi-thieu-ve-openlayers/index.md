@@ -10,6 +10,7 @@ images:
  - /articles/gioi-thieu-ve-openlayers/thumbnail.png
 authors:
  - loclv
+guest: true
 ---
 
 Bài viết này mình xin giới thiệu về một thư viện frontend mã nguồn mở dùng để vẽ map.

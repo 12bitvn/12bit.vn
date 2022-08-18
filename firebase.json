@@ -1,7 +1,7 @@
 {
   "hosting": [
     {
-      "target": "dev",
+      "target": "next",
       "public": "public",
       "headers": [
         {

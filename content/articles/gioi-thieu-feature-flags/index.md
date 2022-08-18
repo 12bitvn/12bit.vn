@@ -14,6 +14,7 @@ images:
 authors:
   - keymastervn
 draft: false
+guest: true
 ---
 
 ## Câu chuyện ngày xưa

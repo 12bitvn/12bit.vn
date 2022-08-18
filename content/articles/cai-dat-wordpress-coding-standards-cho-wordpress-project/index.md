@@ -28,8 +28,6 @@ Vì vậy, cách tốt nhất là cài đặt coding standard cho từng project
 
 Sau đây là những package cần thiết mà bạn cần cài đặt cho project của mình:
 
-<div class="filename">>_</div>
-
 ```shell
 $ composer require --dev \
     squizlabs/php_codesniffer:"*" \
@@ -44,8 +42,6 @@ Như vậy là đủ các package. Mình sẽ giải thích một chút về cá
 - `phpcodesniffer-composer-installer`: đây là package quan trọng nhất. Nó giúp bạn cài đặt các rulesets cho PHP CS thông qua `composer` một cách dễ dàng. Nếu bạn có đọc qua document của WordPress về cách cài đặt coding standard hoặc bài của mình từng viết thì việc tải và cài đặt rulesets khá phức tạp.
 
 Sau khi cài đặt xong, các bạn có thể kiểm tra coding standard đã có WordPress hay chưa bằng cách:
-
-<div class="filename">>_</div>
 
 ```shell
 $ ./vendor/bin/phpcs -i
@@ -66,8 +62,6 @@ Làm sao để code không theo chuẩn WordPress? Bạn hãy tham khảo coding
 
 Giả sử mình có một đoạn code đơn giản như vầy, xem thử sau khi validate sẽ có bao nhiêu lỗi nào.
 
-<div class="filename">test.php</div>
-
 ```php
 <?php
 
@@ -77,8 +71,6 @@ function sayHello($name) {
 ```
 
 Chúng ta sẽ chạy command `phpcs`, sử dụng `--standard=WordPress` và khai báo file hoặc folder cần validate. Trường hợp mình đang code trong file `test.php`.
-
-<div class="filename">>_</div>
 
 ```shell
 $ ./vendor/bin/phpcs --standard=WordPress test.php
@@ -98,8 +90,6 @@ Chạy thử `phpcbf`. 4 lỗi đã được fix.
 
 Sau khi fix xong thì code sẽ như sau:
 
-<div class="filename">test.php</div>
-
 ```php
 <?php
 
@@ -113,8 +103,6 @@ Kiểm tra lại 1 lần nữa.
 {{<zoom-img src="img/figure-3.png">}}
 
 Những lỗi còn lại chúng ta sẽ phải tự fix. Để biết cách fix các bạn cần phải xem qua coding standard của WordPress. Mình sẽ không giải thích từng lỗi nhé.
-
-<div class="filename">test.php</div>
 
 ```php
 <?php

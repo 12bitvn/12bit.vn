@@ -78,11 +78,11 @@ Thuật ngữ về trạng thái task:
 
 ### Workflow nhận yêu cầu từ khách hàng
 
-![](./images/workflow_voi_nguoi_giao_va_nhan_viec.svg)
+{{<zoom-img src="images/workflow_voi_nguoi_giao_va_nhan_viec.svg">}}
 
 ### Workflow đưa ra ý tưởng
 
-![](./images/workflow_voi_nguoi_giao_va_nhan_viec_dua_ra_y_tuong.svg)
+{{<zoom-img src="images/workflow_voi_nguoi_giao_va_nhan_viec_dua_ra_y_tuong.svg">}}
 
 # Tham khảo
 

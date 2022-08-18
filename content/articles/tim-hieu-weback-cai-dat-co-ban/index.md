@@ -32,8 +32,6 @@ yarn add webpack-cli -D
 
 tiếp theo chúng ta tạo file `index.html` và `src/index.js` với nội dung như bên dưới.
 
-<div class="filename">src/index.js</div>
-
 ```js
 import Vue from "vue";
 new Vue({
@@ -46,9 +44,6 @@ new Vue({
 }).$mount("#app");
 
 ```
-
-
-<div class="filename">index.html</div>
 
 ```html
 <!doctype html>
