@@ -27,11 +27,6 @@ jobs:
         with:
           version: 6.0.2
           run_install: true
-      - name: Algolia indexing
-        run: pnpm run algolia
-        env:
-          ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
-          ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
       - name: Deploy
         run: pnpm run deploy:next
         env:
