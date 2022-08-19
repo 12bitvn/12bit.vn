@@ -38,7 +38,7 @@ Trước tiên cùng xem qua demo nhé
 ```
 
 {{% alert info %}}
-Các bạn nhớ set `aria-hidden="true"` cho những phần nhân đôi lên, để ẩn nội dung đó khỏi screen reader.
+Liên quan đến vấn đề accessibility, các bạn nhớ set `aria-hidden="true"` cho những phần nhân đôi lên, để ẩn nội dung đó khỏi screen reader.
 {{% /alert %}}
 
 ## CSS
@@ -86,4 +86,3 @@ Mình quyết định không break out từng CSS rule ra để giải thích, t
 
 - Mình tham khảo code từ [bài viết này](https://ryanmulligan.dev/blog/css-marquee/)
 - Logo trong phần demo được lấy từ [Figma](https://www.figma.com/community/file/776004440443044051)
-
