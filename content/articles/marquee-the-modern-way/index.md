@@ -3,6 +3,8 @@ title: "Marquee - The modern way"
 date: 2022-08-18T17:25:13+07:00
 tags:
   - marquee
+  - short
+  - interactive-demo
 authors:
   - tatthien
 draft: false
