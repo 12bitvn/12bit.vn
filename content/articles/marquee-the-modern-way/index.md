@@ -1,11 +1,8 @@
 ---
 title: "Marquee - The modern way"
-description: A short description for the post.
 date: 2022-08-18T17:25:13+07:00
 tags:
   - marquee
-images:
-  - /articles/marquee/thumbnail.png
 authors:
   - tatthien
 draft: false
