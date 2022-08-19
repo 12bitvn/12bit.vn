@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marquee - The modern way (Interactive demo)</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      color: #495057;
+    }
+
+    input[type="checkbox"] {
+      position: relative;
+      top: 2px;
+      margin-right: 4px;
+    }
+
+    .marquee {
+      --gap: 1rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .marquee__content {
+      list-style: none;
+    }
+
+    @keyframes scroll {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(calc(-100% - var(--gap)));
+      }
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const marquee = document.querySelectorAll('.marquee');
+      const marqueeContent = document.querySelectorAll('.marquee__content');
+      const marqueeStyle = document.getElementById('marquee-style');
+      const marqueeContentStyle = document.getElementById('marquee-content-style');
+
+      const marqueeRules = [
+        {
+          key: 'display',
+          value: 'flex',
+        },
+        {
+          key: 'gap',
+          value: 'var(--gap)',
+        },
+        {
+          key: 'overflow',
+          value: 'hidden',
+        },
+      ]
+
+      const marqueeContentRules = [
+        {
+          key: 'display',
+          value: 'flex',
+        },
+        {
+          key: 'flex-shrink',
+          value: '0',
+        },
+        {
+          key: 'min-width',
+          value: '100%',
+        },
+        {
+          key: 'justify-content',
+          value: 'space-around',
+        },
+        {
+          key: 'animation',
+          value: 'scroll 10s infinite linear',
+        },
+      ]
+
+      for (const rule of marqueeRules) {
+        const id = `rule-${rule.key}-${rule.value}`
+        marqueeStyle.innerHTML += `<label id="${id}"><input type="checkbox" id="${id}" data-rule="${rule.key}" data-value="${rule.value}" class="marquee-css-rule"><span>${rule.key}: ${rule.value}</span><br></label>`
+      }
+
+      for (const rule of marqueeContentRules) {
+        const id = `rule-${rule.key}-${rule.value}`
+        marqueeContentStyle.innerHTML += `<label id="${id}"><input type="checkbox" id="${id}" data-rule="${rule.key}" data-value="${rule.value}" class="marquee-content-css-rule"><span>${rule.key}: ${rule.value}</span><br></label>`
+      }
+
+      document.querySelectorAll('.marquee-css-rule').forEach((el) => {
+        el.addEventListener('change', (e) => {
+          const { rule, value } = e.target.dataset;
+          marquee.forEach((marquee) => {
+            marquee.style[rule] = e.target.checked ? value : '';
+          })
+        })
+      })
+
+      document.querySelectorAll('.marquee-content-css-rule').forEach((el) => {
+        el.addEventListener('change', (e) => {
+          const { rule, value } = e.target.dataset;
+          marqueeContent.forEach((marqueeContent) => {
+            marqueeContent.style[rule] = e.target.checked ? value : '';
+          })
+        })
+      })
+
+      document.querySelector('#toggle-all').addEventListener('change', (el) => {
+        document.querySelectorAll('pre input[type="checkbox"]').forEach((rule) => {
+          rule.checked = el.target.checked;
+          rule.dispatchEvent(new Event('change'));
+        })
+      })
+    })
+  </script>
+</head>
+<body>
+  <div>
+    <div style="margin-bottom: 1rem; font-family: monospace;">
+      <label for="toggle-all">
+        <input type="checkbox" id="toggle-all">
+        <span>Check all</span>
+      </label>
+    </div>
+    <div class="interactive-code">
+      <pre>.marquee {</pre>
+      <pre style="padding-left: 0.75rem">--gap: 1rem</pre>
+      <pre style="padding-left: 0.75rem">user-select: none;</pre>
+      <pre id="marquee-style" style="padding-left: 0.75rem"></pre>
+      <pre>}</pre>
+      <pre>.marquee__content {</pre>
+      <pre style="padding-left: 0.75rem">list-style: none;</pre>
+      <pre id="marquee-content-style" style="padding-left: 0.75rem"></pre>
+      <pre>}</pre>
+    </div>
+    <div class="marquee">
+      <ul class="marquee__content">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+      </ul>
+      <ul class="marquee__content" aria-hidden="true">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
