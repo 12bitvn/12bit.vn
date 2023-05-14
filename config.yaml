@@ -18,6 +18,24 @@ languages:
   en:
     title: 12bit
     weight: 1
+    menu:
+      main:
+        - identifier: about
+          title: About us
+          url: /pages/about
+        - identifier: chat
+          title: Chat
+          url: https://discord.gg/uMJxpXB
+      footer:
+        - identifier: 0
+          title: Series
+          url: /series/
+        - identifier: 1
+          title: References
+          url: /references/
+        - identifier: 3
+          title: RSS
+          url: /index.xml
 social:
   facebook: 12bit.vn
 author:
