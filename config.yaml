@@ -10,6 +10,14 @@ googleAnalytics: UA-131517577-1
 paginate: 20
 newContentEditor: pstorm
 enableInlineShortcodes: true
+defaultContentLanguage: vi
+languages:
+  vi:
+    title: 12bit
+    weight: 1
+  en:
+    title: 12bit
+    weight: 1
 social:
   facebook: 12bit.vn
 author:
