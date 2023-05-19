@@ -10,13 +10,13 @@
   "dependencies": {
     "@algolia/cli": "^4.0.8",
     "conventional-changelog-cli": "^2.2.2",
-    "firebase-tools": "^11.0.1"
+    "firebase-tools": "^12.0.1"
   },
   "devDependencies": {
     "cz-conventional-changelog": "^3.3.0",
-    "stylelint": "^14.10.0",
-    "stylelint-config-twbs-bootstrap": "^5.0.0",
-    "stylelint-scss": "^4.3.0"
+    "stylelint": "^15.6.2",
+    "stylelint-config-twbs-bootstrap": "^10.0.0",
+    "stylelint-scss": "^5.0.0"
   },
   "config": {
     "commitizen": {
