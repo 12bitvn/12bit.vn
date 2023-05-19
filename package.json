@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "description": "12bit.vn blog",
   "scripts": {
-    "algolia": "echo 'algolia import -s ./public/algolia.json -a $ALGOLIA_APP_ID -k $ALGOLIA_ADMIN_KEY -n prod_12bit_blog'",
+    "algolia": "algolia import -s ./public/algolia.json -a $ALGOLIA_APP_ID -k $ALGOLIA_ADMIN_KEY -n prod_12bit_blog",
     "deploy": "firebase deploy --token $FIREBASE_TOKEN --only hosting:production",
     "deploy:next": "firebase deploy --token $FIREBASE_TOKEN --only hosting:next",
     "stylelint": "stylelint themes/**/*.scss"
