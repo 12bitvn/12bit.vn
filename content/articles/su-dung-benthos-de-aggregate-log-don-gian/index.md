@@ -116,7 +116,7 @@ benthos -c benthos.yaml
 
 example output:
 
-```log
+```bash
 INFO Running main config from specified file       @service=benthos path=./benthos.yaml
 INFO Listening for HTTP requests at: http://0.0.0.0:4195  @service=benthos
 INFO Launching a benthos instance, use CTRL+C to close  @service=benthos
@@ -147,7 +147,7 @@ benthos -c benthos.yaml
 
 Metric không show ra trong output mà sẽ show to page: http://0.0.0.0:4195/metrics
 
-```
+```bash
 ...
 total_ops{label="",path="root.pipeline.processors.0"} 348
 ...
