@@ -4,7 +4,7 @@ authors:
 date: "2023-05-19T12:49:07+07:00"
 draft: false
 tags:
-  - bentos
+  - benthos
   - log
   - data-pipeline
 title: Aggregate log đơn giản bằng Benthos
@@ -39,7 +39,7 @@ Cái mình muốn:
 
 ## Solution
 
-Để có được kết quả như vậy, mình phải stream, parse được log và lưu lại được giá trị. Cũng không khó để viết một script, tuy nhiên trong quá trình tìm hiểu về xử lý data thì mình có biết tới Bentos.
+Để có được kết quả như vậy, mình phải stream, parse được log và lưu lại được giá trị. Cũng không khó để viết một script, tuy nhiên trong quá trình tìm hiểu về xử lý data thì mình có biết tới benthos.
 
 ## Benthos là gì?
 
@@ -49,7 +49,7 @@ Benthos là một data processor, có thể nhận vào data từ nhiều source
 
 {{< youtube 88DSzCFV4Ng >}}
 
-Mình sẽ có bài giới thiệu chi tiết về Bentos sau. Còn trong bài này mình sẽ chỉ sử dụng nó trong một usecase đơn giản để làm quen: Sử dụng stdin như là input, và trả về metric dưới dạn prometheus.
+Mình sẽ có bài giới thiệu chi tiết về benthos sau. Còn trong bài này mình sẽ chỉ sử dụng nó trong một usecase đơn giản để làm quen: Sử dụng stdin như là input, và trả về metric dưới dạn prometheus.
 
 ## Cài đặt
 
