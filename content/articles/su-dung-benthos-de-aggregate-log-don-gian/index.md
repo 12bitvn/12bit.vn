@@ -19,8 +19,13 @@ Cái mình có là log như vầy:
 ```json
 {
   "node": "xxx",
-  "ops_per_second": 3434,
-  "avg_latency_ns": 3434
+  "ops_per_second": 10,
+  "avg_latency_ns": 2
+}
+{
+  "node": "yyy",
+  "ops_per_second": 10,
+  "avg_latency_ns": 4
 }
 ```
 
@@ -28,7 +33,7 @@ Cái mình muốn:
 
 ```json
 {
-  "total_ops": 2345
+  "total_ops": 20
 }
 ```
 
