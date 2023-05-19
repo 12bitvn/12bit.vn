@@ -53,4 +53,13 @@
   {{ if eq (getenv "HUGO_ENV") "production" }}
   <script async defer data-website-id="352e7bf7-4c32-4fe6-8c3c-51702b8e10a5" src="https://umami.thien.dev/umami.js"></script>
   {{ end }}
+
+  {{- if .IsTranslated -}}
+    {{ range .Page.AllTranslations }}
+    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+      {{ if eq .Language.Lang "en" }}
+        <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+      {{ end }}
+    {{ end }}
+  {{ end }}
 </head>

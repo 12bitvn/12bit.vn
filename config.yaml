@@ -11,6 +11,8 @@ paginate: 20
 newContentEditor: pstorm
 enableInlineShortcodes: true
 defaultContentLanguage: vi
+canonifyURLs: true
+relativeURLs: true
 languages:
   vi:
     title: 12bit
